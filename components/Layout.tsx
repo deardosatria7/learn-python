@@ -4,7 +4,7 @@ const Layout = ({children}: any) => {
   return (
     <>
       <Head>
-        <title>Learn python</title>
+        <title>Belajar python</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link
           rel="stylesheet"
