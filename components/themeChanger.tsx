@@ -1,13 +1,14 @@
 import {useState, useEffect} from "react";
 import {useTheme} from "next-themes";
 
-export default function ThemeChanger({children}: any) {
+export default function ThemeChanger() {
   const {systemTheme, theme, setTheme} = useTheme();
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => setMounted(true), []);
   if (!mounted) return null;
 
+  // get system theme
   const renderThemeChanger = () => {
     const currTheme = theme === "system" ? systemTheme : theme;
 
@@ -54,14 +55,5 @@ export default function ThemeChanger({children}: any) {
     }
   };
 
-  return (
-    <>
-      <nav className="py-10 flex justify-between">
-        <div className="flex gap-5 justify-center">{children}</div>
-        <ul className="flex justify-center gap-2">
-          <li>{renderThemeChanger()}</li>
-        </ul>
-      </nav>
-    </>
-  );
+  return <>{renderThemeChanger()}</>;
 }

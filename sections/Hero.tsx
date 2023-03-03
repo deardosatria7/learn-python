@@ -1,16 +1,11 @@
-const Hero = () => {
+import Editor from "@/components/Editor";
+
+const Hero = ({children}: any) => {
   return (
     <>
-      <div>
-        <div>
-          <div dangerouslySetInnerHTML={{__html: `<py-repl></py-repl>`}} />
-        </div>
-        <div>
-          <div
-            dangerouslySetInnerHTML={{__html: `<py-terminal></py-terminal>`}}
-          />
-        </div>
-      </div>
+      <body>
+        <main>{children}</main>
+      </body>
     </>
   );
 };
