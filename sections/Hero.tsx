@@ -1,11 +1,5 @@
 const Hero = ({children}: any) => {
-  return (
-    <>
-      <body>
-        <main>{children}</main>
-      </body>
-    </>
-  );
+  return <></>;
 };
 
 export default Hero;

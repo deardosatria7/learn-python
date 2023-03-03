@@ -8,7 +8,7 @@ const Header = ({children}: any) => {
           <div>{children}</div>
           <div>
             <ul className="flex justify-center gap-2">
-              <li>{renderThemeChanger()}</li>
+              <li></li>
             </ul>
           </div>
         </div>
