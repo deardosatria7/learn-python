@@ -1,6 +1,7 @@
 import {Inter} from "next/font/google";
 import Hero from "@/sections/Hero";
 import Header from "@/sections/Header";
+import Link from "next/link";
 
 const inter = Inter({subsets: ["latin"]});
 
@@ -23,12 +24,13 @@ export default function Home() {
                 Platform mobile belajar Python berbahasa Indonesia
               </div>
               <div className="flex items-center pt-8">
-                <a
+                <Link
                   href="/playground"
                   className="px-4 py-2 bg-slate-700 hover:bg-slate-500 rounded-lg"
+                  legacyBehavior
                 >
                   Coba Python
-                </a>
+                </Link>
               </div>
             </div>
           </div>
