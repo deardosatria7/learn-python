@@ -24,12 +24,10 @@ export default function Home() {
                 Platform mobile belajar Python berbahasa Indonesia
               </div>
               <div className="flex items-center pt-8">
-                <Link
-                  href="/playground"
-                  className="px-4 py-2 bg-slate-700 hover:bg-slate-500 rounded-lg"
-                  legacyBehavior
-                >
-                  Coba Python
+                <Link href={"/playground"} legacyBehavior>
+                  <div className="px-4 py-2 bg-slate-700 hover:bg-slate-500 rounded-lg">
+                    Coba Python
+                  </div>
                 </Link>
               </div>
             </div>
