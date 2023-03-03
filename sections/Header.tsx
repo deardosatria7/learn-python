@@ -1,4 +1,4 @@
-import renderThemeChanger from "@/components/ThemeChanger";
+import renderThemeChanger from "../components/ThemeChanger";
 
 const Header = ({children}: any) => {
   return (
