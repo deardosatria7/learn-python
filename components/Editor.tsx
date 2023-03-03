@@ -5,7 +5,7 @@ const Editor = () => {
         <div className="pt-5 pr-5 pl-5 pb-3">
           <div
             dangerouslySetInnerHTML={{
-              __html: `<py-repl>print ("Hello World!")</py-repl>`,
+              __html: `<py-config>terminal = false </py-config><py-repl>print ("Hello World!")</py-repl>`,
             }}
           />
         </div>
