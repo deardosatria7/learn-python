@@ -1,5 +1,3 @@
-import Editor from "@/components/Editor";
-
 const Hero = ({children}: any) => {
   return (
     <>
