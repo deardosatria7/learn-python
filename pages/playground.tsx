@@ -8,7 +8,11 @@ const playground = () => {
         <div>
           <div className="pl-5">
             <Link href={"/"}>
-              <div>Back to home</div>
+              <div>
+                <span className="bg-slate-500 hover:bg-slate-600 text-white px-2 py-2 text-sm rounded-sm">
+                  Back to home
+                </span>
+              </div>
             </Link>
           </div>
           <div>
