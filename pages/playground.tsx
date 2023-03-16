@@ -10,7 +10,7 @@ const playground = () => {
             <Link href={"/"}>
               <div>
                 <span className="bg-slate-500 hover:bg-slate-600 text-white px-2 py-2 text-sm rounded-sm">
-                  Back to home
+                  Kembali
                 </span>
               </div>
             </Link>
