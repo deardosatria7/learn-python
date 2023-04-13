@@ -26,9 +26,9 @@ const playground = () => {
               Bagaimana cara untuk menjalankan kode?
             </div>
             <div>
-              <div className="font-light text-md">
+              <div className="font-light text-md pt-4">
                 Anda dapat menjalankan kode dengan menekan tombol segitiga hijau
-                di pojok kanan terminal &#40;
+                di pojok kanan editor &#40;
                 <span className="italic">
                   tombol tidak terlihat hingga anda menekan/mengarahkan kursor
                   Anda ke bagian tersebut
