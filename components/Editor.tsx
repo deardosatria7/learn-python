@@ -19,7 +19,7 @@ const Editor = () => {
               terminal = false
               </py-config>
               <py-repl output="replOutput">
-              print ("Belajar Python itu menyenangkan!")
+              print ("Ayo belajar Python!")
               </py-repl>`,
             }}
           />
