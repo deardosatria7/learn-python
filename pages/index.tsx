@@ -23,10 +23,15 @@ export default function Home() {
               <div className="text-xl text-blue-600 font-semibold font-sans">
                 Platform mobile belajar Python berbahasa Indonesia
               </div>
-              <div className="flex items-center pt-8">
+              <div className="flex items-center pt-8 gap-2">
                 <Link href={"/playground"}>
                   <div className="px-4 py-2 text-white bg-slate-600 hover:bg-slate-500 rounded-lg">
                     Coba Python
+                  </div>
+                </Link>
+                <Link href={"/latihan/latihan1"}>
+                  <div className="px-4 py-2 text-white bg-slate-600 hover:bg-slate-500 rounded-lg">
+                    Ke Latihan
                   </div>
                 </Link>
               </div>
