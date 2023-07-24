@@ -10,10 +10,10 @@ export default function Home() {
     <>
       <Header>
         <div>
-          <h4 className="text-lg text-black">Belajar-Python</h4>
+          <h4 className="text-lg text-white">Belajar-Python</h4>
         </div>
       </Header>
-      <div>
+      <div className="p-4">
         <div className="mt-20">
           <div className="flex flex-col bg-neutral-200 py-10 px-4 rounded-md">
             <div className="">
@@ -24,14 +24,14 @@ export default function Home() {
                 Platform mobile belajar Python berbahasa Indonesia
               </div>
               <div className="flex items-center pt-8 gap-2">
-                <Link href={"/playground"}>
+                <Link href={"/latihan"}>
                   <div className="px-4 py-2 text-white bg-slate-600 hover:bg-slate-500 rounded-lg">
-                    Coba Python
+                    Mulai Belajar!
                   </div>
                 </Link>
-                <Link href={"/latihan/latihan1"}>
-                  <div className="px-4 py-2 text-white bg-slate-600 hover:bg-slate-500 rounded-lg">
-                    Ke Latihan
+                <Link href={"/playground"}>
+                  <div className="px-4 py-2 text-neutral-500 hover:text-neutral-700 underline">
+                    Coba Python
                   </div>
                 </Link>
               </div>

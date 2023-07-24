@@ -1,7 +1,7 @@
 const Header = ({children}: any) => {
   return (
     <>
-      <nav className="p-4">
+      <nav className="p-4 bg-neutral-600">
         <div className="flex justify-between">
           <div>{children}</div>
           <div>

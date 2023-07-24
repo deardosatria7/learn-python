@@ -7,7 +7,7 @@ const Layout = ({children}: any) => {
         <title>Belajar python</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      <section className="p-4">{children}</section>
+      <section>{children}</section>
     </>
   );
 };

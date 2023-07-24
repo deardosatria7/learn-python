@@ -3,18 +3,22 @@ import Link from "next/link";
 import Image from "next/image";
 import tutor2 from "../public/tutorial1.png";
 import tutor1 from "../public/tutorial2.png";
+import Header from "@/sections/Header";
 
 const playground = () => {
   return (
     <>
+      <Header>
+        <div>
+          <h4 className="text-lg text-white">Belajar-Python</h4>
+        </div>
+      </Header>
       <main>
-        <div className="pl-5">
+        <div className="pl-5 pt-5">
           <div>
             <Link href={"/"}>
               <div>
-                <span className="bg-slate-500 hover:bg-slate-600 text-white px-2 py-2 text-sm rounded-sm">
-                  Kembali
-                </span>
+                <span className=" px-2 py-2 text-sm underline">Kembali</span>
               </div>
             </Link>
           </div>
