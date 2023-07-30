@@ -23,7 +23,19 @@ const playground = () => {
             </Link>
           </div>
           <div>
-            <Editor />
+            <Editor>
+              <div
+                dangerouslySetInnerHTML={{
+                  __html: `
+              <py-config>
+              terminal = false
+              </py-config>
+              <py-repl output="replOutput">
+              print ("Ayo belajar python!")
+              </py-repl>`,
+                }}
+              />
+            </Editor>
           </div>
           <div className="pl-5 mt-20 bg-neutral-200 px-4 py-6 rounded-md">
             <div className="font-semibold text-md">
