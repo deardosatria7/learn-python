@@ -48,7 +48,7 @@ const latihan = () => {
 
         <h3 className="pt-4 flex flex-col">
           <Link href={"../"}>Back to home</Link>
-          <Link href={"/latihan/latihan1"} className="text-blue-600">
+          <Link href={"/latihan/2"} className="text-blue-600">
             Selanjutnya
           </Link>
         </h3>
