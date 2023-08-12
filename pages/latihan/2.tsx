@@ -18,8 +18,9 @@ const page2 = () => {
         </p>
         <p className="pt-3 pl-1">
           Di dalam Python, kita dapat menyimpan sebuah <b>nilai</b> dalam sebuah{" "}
-          <b>variabel.</b> Mari kita coba buat variabel bernama "harga" diikuti
-          dengan "=" dan "250".
+          <b>variabel.</b> Mari kita coba buat variabel bernama
+          &ldquo;harga&rdquo; diikuti dengan &ldquo;=&rdquo; dan
+          &ldquo;250&rdquo;.
         </p>
         <div>
           <Editor>
