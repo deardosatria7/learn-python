@@ -15,7 +15,7 @@ const latihan = () => {
         <p className="pt-3 pl-1">
           Python merupakan salah satu bahasa pemrograman yang terkenal di zaman
           sekarang. Bahasa pemrograman python dapat digunakan oleh pemula maupun
-          ahli dalam otomasi tugas, pembuatan game, analisis data,{" "}
+          ahli dalam otomasi tugas, pembuatan game, analisis data,
           <i>machine learning</i>, dan masih banyak lagi.
         </p>
         <p className="pt-3 pl-1">
@@ -28,14 +28,17 @@ const latihan = () => {
           menggunakan Python untuk melakukan penghitungan harga secara otomatis.
           Coba kalian jalankan kode dibawah ini!
         </p>
+        <Link
+          href={"../playground"}
+          className="text-sm italic pl-1 underline text-blue-500"
+        >
+          Bagaimana cara menjalankan kode?
+        </Link>
         <div>
           <Editor>
             <div
               dangerouslySetInnerHTML={{
                 __html: `
-              <py-config>
-              terminal = false
-              </py-config>
               <py-repl output="replOutput">
               harga = 250
               setengah_harga = harga / 2

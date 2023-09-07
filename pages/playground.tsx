@@ -27,9 +27,6 @@ const playground = () => {
               <div
                 dangerouslySetInnerHTML={{
                   __html: `
-              <py-config>
-              terminal = false
-              </py-config>
               <py-repl output="replOutput">
               print ("Ayo belajar python!")
               </py-repl>`,
