@@ -11,7 +11,7 @@ const page2 = () => {
         </div>
       </Header>
       <section className="p-4">
-        <h1 className="text-2xl font-semibold">Variabel Python</h1>
+        <h1 className="text-2xl font-semibold">Pendahuluan</h1>
         <p className="pt-3 pl-1">
           Bagus! Kalian telah mencoba menjalankan program python pertama kalian.
           Sekarang mari kita coba untuk <i>ngoding.</i>

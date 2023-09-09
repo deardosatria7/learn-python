@@ -2,7 +2,7 @@ import Header from "@/sections/Header";
 import Editor from "@/components/Editor";
 import Link from "next/link";
 
-const page3 = () => {
+const page4 = () => {
   return (
     <>
       <Header>
@@ -11,15 +11,19 @@ const page3 = () => {
         </div>
       </Header>
       <section className="p-4">
-        <h1 className="text-2xl font-semibold">Pendahuluan</h1>
+        <h1 className="text-2xl font-semibold">Variabel Python</h1>
         <p className="pt-3 pl-1">
-          Label &ldquo;harga&rdquo; tadi disebut dengan variabel. Kita dapat
-          menyimpan data dalam bentuk variabel untuk kemudian dapat digunakan
-          ulang dalam operasi lainnya.
+          Disini kita akan melihat jenis data apa saja yang bisa disimpan dalam
+          sebuah variabel Python.
         </p>
         <p className="pt-3 pl-1">
-          Coba masukkan variabel &ldquo;harga&rdquo; pada operasi penghitungan
-          &ldquo;setengah_harga&rdquo; di bawah ini.
+          Kita sudah melihat contoh data yang berupa angka <i>(integer)</i>.
+          Kali ini kita akan mencoba untuk menyimpan data yang berupa{" "}
+          <i>String</i> atau teks.
+        </p>
+        <p className="pt-3 pl-1">
+          Coba kalian simpan nama merek &ldquo;Pepsi&rdquo; dalam variabel
+          &ldquo;minuman&rdquo; di bawah ini.
         </p>
         <Editor>
           <div
@@ -29,18 +33,17 @@ const page3 = () => {
               terminal = false
               </py-config>
               <py-repl output="replOutput">
-              harga = 250
-              setengah_harga =  / 2
+              minuman = ""
               </py-repl>`,
             }}
           />
         </Editor>
         <h3 className="pt-4 flex flex-col">
           <Link href={"../"}>Back to home</Link>
-          <Link href={"/latihan/4"} className="text-blue-600">
+          <Link href={"/latihan/5"} className="text-blue-600">
             Selanjutnya
           </Link>
-          <Link href={"/latihan/2"} className="text-blue-600">
+          <Link href={"/latihan/3"} className="text-blue-600">
             Sebelumnya
           </Link>
         </h3>
@@ -49,4 +52,4 @@ const page3 = () => {
   );
 };
 
-export default page3;
+export default page4;
