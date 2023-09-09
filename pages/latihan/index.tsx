@@ -42,7 +42,7 @@ const latihan = () => {
               <py-repl output="replOutput">
               harga = 250
               setengah_harga = harga / 2
-              print ("Harga akhir:", setengah_harga)
+              print (setengah_harga)
               </py-repl>`,
               }}
             />
