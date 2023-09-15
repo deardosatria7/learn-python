@@ -40,7 +40,7 @@ const page2 = () => {
         </div>
 
         <div className="flex">
-          <h3 className="flex flex-col gap-2 pt-4">
+          <h3 className="flex gap-2 pt-4">
             <Link
               href={"/latihan"}
               className="text-white bg-red-500 hover:bg-red-400 px-4 py-2 rounded-md"
