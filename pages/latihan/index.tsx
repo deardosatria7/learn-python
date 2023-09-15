@@ -35,7 +35,7 @@ const latihan = () => {
           Bagaimana cara menjalankan kode?
         </Link>
         <div>
-          <Editor>
+          {/* <Editor>
             <div
               dangerouslySetInnerHTML={{
                 __html: `
@@ -46,15 +46,24 @@ const latihan = () => {
               </py-repl>`,
               }}
             />
-          </Editor>
+          </Editor> */}
         </div>
-
-        <h3 className="pt-4 flex flex-col">
-          <Link href={"../"}>Back to home</Link>
-          <Link href={"/latihan/2"} className="text-blue-600">
-            Selanjutnya
-          </Link>
-        </h3>
+        <div className="flex">
+          <h3 className="flex gap-2 pt-4">
+            <Link
+              href={"../"}
+              className="text-white bg-neutral-600 hover:bg-neutral-500 px-4 py-2 rounded-md"
+            >
+              Back to home
+            </Link>
+            <Link
+              href={"/latihan/2"}
+              className="text-white bg-blue-600 hover:bg-blue-500 px-4 py-2 rounded-md"
+            >
+              Selanjutnya
+            </Link>
+          </h3>
+        </div>
       </section>
     </>
   );
