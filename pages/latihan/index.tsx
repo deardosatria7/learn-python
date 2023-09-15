@@ -7,7 +7,9 @@ const latihan = () => {
     <>
       <Header>
         <div>
-          <h4 className="text-lg text-white">Belajar-Python</h4>
+          <Link href={"/"}>
+            <h4 className="text-lg text-white">Belajar-Python</h4>
+          </Link>
         </div>
       </Header>
       <section className="p-4">
@@ -35,7 +37,7 @@ const latihan = () => {
           Bagaimana cara menjalankan kode?
         </Link>
         <div>
-          {/* <Editor>
+          <Editor>
             <div
               dangerouslySetInnerHTML={{
                 __html: `
@@ -46,7 +48,7 @@ const latihan = () => {
               </py-repl>`,
               }}
             />
-          </Editor> */}
+          </Editor>
         </div>
         <div className="flex">
           <h3 className="flex gap-2 pt-4">

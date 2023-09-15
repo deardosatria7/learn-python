@@ -7,7 +7,9 @@ const page2 = () => {
     <>
       <Header>
         <div>
-          <h4 className="text-lg text-white">Belajar-Python</h4>
+          <Link href={"/"}>
+            <h4 className="text-lg text-white">Belajar-Python</h4>
+          </Link>
         </div>
       </Header>
       <section className="p-4">
@@ -39,12 +41,6 @@ const page2 = () => {
 
         <div className="flex">
           <h3 className="flex flex-col gap-2 pt-4">
-            <Link
-              href={"../"}
-              className="text-white bg-neutral-600 hover:bg-neutral-500 px-4 py-2 rounded-md"
-            >
-              Back to home
-            </Link>
             <Link
               href={"/latihan"}
               className="text-white bg-red-500 hover:bg-red-400 px-4 py-2 rounded-md"

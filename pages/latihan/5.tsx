@@ -7,7 +7,9 @@ const page5 = () => {
     <>
       <Header>
         <div>
-          <h4 className="text-lg text-white">Belajar-Python</h4>
+          <Link href={"/"}>
+            <h4 className="text-lg text-white">Belajar-Python</h4>
+          </Link>
         </div>
       </Header>
       <section className="p-4">
@@ -44,15 +46,22 @@ const page5 = () => {
             }}
           />
         </Editor>
-        <h3 className="pt-4 flex flex-col">
-          <Link href={"../"}>Back to home</Link>
-          <Link href={"/latihan/6"} className="text-blue-600">
-            Selanjutnya
-          </Link>
-          <Link href={"/latihan/4"} className="text-blue-600">
-            Sebelumnya
-          </Link>
-        </h3>
+        <div className="flex">
+          <h3 className="flex flex-col gap-2 pt-4">
+            <Link
+              href={"/latihan/4"}
+              className="text-white bg-red-500 hover:bg-red-400 px-4 py-2 rounded-md"
+            >
+              Sebelumnya
+            </Link>
+            <Link
+              href={"/latihan/6"}
+              className="text-white bg-blue-600 hover:bg-blue-500 px-4 py-2 rounded-md"
+            >
+              Selanjutnya
+            </Link>
+          </h3>
+        </div>
       </section>
     </>
   );
