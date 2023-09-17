@@ -2,7 +2,7 @@ import Header from "@/sections/Header";
 import Editor from "@/components/Editor";
 import Link from "next/link";
 
-const page3 = () => {
+const pageVariabel = () => {
   return (
     <>
       <Header>
@@ -13,15 +13,19 @@ const page3 = () => {
         </div>
       </Header>
       <section className="p-4">
-        <h1 className="text-2xl font-semibold">Pendahuluan</h1>
+        <h1 className="text-2xl font-semibold">Variabel Python</h1>
         <p className="pt-3 pl-1">
-          Label &ldquo;harga&rdquo; tadi disebut dengan variabel. Kita dapat
-          menyimpan data dalam bentuk variabel untuk kemudian dapat digunakan
-          ulang dalam operasi lainnya.
+          Disini kita akan melihat jenis data apa saja yang bisa disimpan dalam
+          sebuah variabel Python.
         </p>
         <p className="pt-3 pl-1">
-          Coba masukkan variabel &ldquo;harga&rdquo; pada operasi penghitungan
-          &ldquo;setengah_harga&rdquo; di bawah ini.
+          Pada bagian pendahuluan tadi kita sudah melihat contoh data yang
+          berupa angka <i>(integer)</i>. Kali ini kita akan mencoba untuk
+          menyimpan data yang berupa <i>String</i> atau teks.
+        </p>
+        <p className="pt-3 pl-1">
+          Coba kalian simpan nama merek &ldquo;Pepsi&rdquo; dalam variabel
+          &ldquo;minuman&rdquo; di bawah ini.
         </p>
         <Editor>
           <div
@@ -31,8 +35,7 @@ const page3 = () => {
               terminal = false
               </py-config>
               <py-repl output="replOutput">
-              harga = 250
-              setengah_harga =  / 2
+              minuman = ""
               </py-repl>`,
             }}
           />
@@ -40,13 +43,13 @@ const page3 = () => {
         <div className="flex">
           <h3 className="flex gap-2 pt-4">
             <Link
-              href={"/latihan/2"}
+              href={"/latihan/pendahuluan_2"}
               className="text-white bg-red-500 hover:bg-red-400 px-4 py-2 rounded-md"
             >
               Sebelumnya
             </Link>
             <Link
-              href={"/latihan/4"}
+              href={"/latihan/variabel_2"}
               className="text-white bg-blue-600 hover:bg-blue-500 px-4 py-2 rounded-md"
             >
               Selanjutnya
@@ -58,4 +61,4 @@ const page3 = () => {
   );
 };
 
-export default page3;
+export default pageVariabel;

@@ -59,7 +59,7 @@ const latihan = () => {
               Back to home
             </Link>
             <Link
-              href={"/latihan/2"}
+              href={"/latihan/pendahuluan_1"}
               className="text-white bg-blue-600 hover:bg-blue-500 px-4 py-2 rounded-md"
             >
               Selanjutnya

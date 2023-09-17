@@ -2,7 +2,7 @@ import Header from "@/sections/Header";
 import Editor from "@/components/Editor";
 import Link from "next/link";
 
-const page6 = () => {
+const pagePendahuluan = () => {
   return (
     <>
       <Header>
@@ -13,43 +13,42 @@ const page6 = () => {
         </div>
       </Header>
       <section className="p-4">
-        <h1 className="text-2xl font-semibold">Variabel Python</h1>
+        <h1 className="text-2xl font-semibold">Pendahuluan</h1>
         <p className="pt-3 pl-1">
-          Selanjutnya adalah tipe data <i>Boolean</i>.
+          Bagus! Kalian telah mencoba menjalankan program python pertama kalian.
+          Sekarang mari kita coba untuk <i>ngoding.</i>
         </p>
         <p className="pt-3 pl-1">
-          Berbeda dengan <i>Integer</i> dan <i>String</i>, tipe data{" "}
-          <i>Boolean</i> hanya dapat menyimpan dua nilai yaitu
-          &ldquo;True&rdquo; dan &ldquo;False&rdquo;. Tipe data ini sering
-          digunakan dalam perbandingan dua atau lebih variabel.
+          Di dalam Python, kita dapat menyimpan sebuah <b>nilai</b> dalam sebuah{" "}
+          <b>variabel.</b> Mari kita coba buat variabel bernama
+          &ldquo;harga&rdquo; diikuti dengan &ldquo;=&rdquo; dan
+          &ldquo;250&rdquo;.
         </p>
-        <div className="pt-3 pl-1">
-          Coba kalian isi nilai dari variabel <i>Boolean</i> dibawah ini:
-        </div>
-        <Editor>
-          <div
-            dangerouslySetInnerHTML={{
-              __html: `
+        <div>
+          <Editor>
+            <div
+              dangerouslySetInnerHTML={{
+                __html: `
               <py-config>
               terminal = false
               </py-config>
               <py-repl output="replOutput">
-              benar = True
-              salah = 
               </py-repl>`,
-            }}
-          />
-        </Editor>
+              }}
+            />
+          </Editor>
+        </div>
+
         <div className="flex">
           <h3 className="flex gap-2 pt-4">
             <Link
-              href={"/latihan/5"}
+              href={"/latihan"}
               className="text-white bg-red-500 hover:bg-red-400 px-4 py-2 rounded-md"
             >
               Sebelumnya
             </Link>
             <Link
-              href={"/latihan/7"}
+              href={"/latihan/pendahuluan_2"}
               className="text-white bg-blue-600 hover:bg-blue-500 px-4 py-2 rounded-md"
             >
               Selanjutnya
@@ -61,4 +60,4 @@ const page6 = () => {
   );
 };
 
-export default page6;
+export default pagePendahuluan;

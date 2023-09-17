@@ -2,7 +2,7 @@ import Header from "@/sections/Header";
 import Editor from "@/components/Editor";
 import Link from "next/link";
 
-const page4 = () => {
+const pageVariabel3 = () => {
   return (
     <>
       <Header>
@@ -15,18 +15,17 @@ const page4 = () => {
       <section className="p-4">
         <h1 className="text-2xl font-semibold">Variabel Python</h1>
         <p className="pt-3 pl-1">
-          Disini kita akan melihat jenis data apa saja yang bisa disimpan dalam
-          sebuah variabel Python.
+          Selanjutnya adalah tipe data <i>Boolean</i>.
         </p>
         <p className="pt-3 pl-1">
-          Pada bagian pendahuluan tadi kita sudah melihat contoh data yang
-          berupa angka <i>(integer)</i>. Kali ini kita akan mencoba untuk
-          menyimpan data yang berupa <i>String</i> atau teks.
+          Berbeda dengan <i>Integer</i> dan <i>String</i>, tipe data{" "}
+          <i>Boolean</i> hanya dapat menyimpan dua nilai yaitu
+          &ldquo;True&rdquo; dan &ldquo;False&rdquo;. Tipe data ini sering
+          digunakan dalam perbandingan dua atau lebih variabel.
         </p>
-        <p className="pt-3 pl-1">
-          Coba kalian simpan nama merek &ldquo;Pepsi&rdquo; dalam variabel
-          &ldquo;minuman&rdquo; di bawah ini.
-        </p>
+        <div className="pt-3 pl-1">
+          Coba kalian isi nilai dari variabel <i>Boolean</i> dibawah ini:
+        </div>
         <Editor>
           <div
             dangerouslySetInnerHTML={{
@@ -35,7 +34,8 @@ const page4 = () => {
               terminal = false
               </py-config>
               <py-repl output="replOutput">
-              minuman = ""
+              benar = True
+              salah = 
               </py-repl>`,
             }}
           />
@@ -43,13 +43,13 @@ const page4 = () => {
         <div className="flex">
           <h3 className="flex gap-2 pt-4">
             <Link
-              href={"/latihan/3"}
+              href={"/latihan/variabel_2"}
               className="text-white bg-red-500 hover:bg-red-400 px-4 py-2 rounded-md"
             >
               Sebelumnya
             </Link>
             <Link
-              href={"/latihan/5"}
+              href={"/latihan/variabel_4"}
               className="text-white bg-blue-600 hover:bg-blue-500 px-4 py-2 rounded-md"
             >
               Selanjutnya
@@ -61,4 +61,4 @@ const page4 = () => {
   );
 };
 
-export default page4;
+export default pageVariabel3;

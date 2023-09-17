@@ -2,7 +2,7 @@ import Header from "@/sections/Header";
 import Editor from "@/components/Editor";
 import Link from "next/link";
 
-const page5 = () => {
+const pageVariabel2 = () => {
   return (
     <>
       <Header>
@@ -49,13 +49,13 @@ const page5 = () => {
         <div className="flex">
           <h3 className="flex gap-2 pt-4">
             <Link
-              href={"/latihan/4"}
+              href={"/latihan/variabel_1"}
               className="text-white bg-red-500 hover:bg-red-400 px-4 py-2 rounded-md"
             >
               Sebelumnya
             </Link>
             <Link
-              href={"/latihan/6"}
+              href={"/latihan/variabel_3"}
               className="text-white bg-blue-600 hover:bg-blue-500 px-4 py-2 rounded-md"
             >
               Selanjutnya
@@ -67,4 +67,4 @@ const page5 = () => {
   );
 };
 
-export default page5;
+export default pageVariabel2;
