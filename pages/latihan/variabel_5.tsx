@@ -2,7 +2,7 @@ import Header from "@/sections/Header";
 import Editor from "@/components/Editor";
 import Link from "next/link";
 
-const pageVariabel = () => {
+const pageVariabel5 = () => {
   return (
     <>
       <Header>
@@ -14,21 +14,27 @@ const pageVariabel = () => {
       </Header>
       <section className="p-4">
         <h1 className="text-2xl font-semibold">Variabel Python</h1>
+        <p className="pt-3 pl-1">Tipe data dalam python.</p>
         <p className="pt-3 pl-1">
-          Disini kita akan melihat jenis data apa saja yang bisa disimpan dalam
-          sebuah variabel Python.
+          Sejauh ini kita telah mempelajari 4 tipe data dalam python. Yaitu ada:
         </p>
-        <p className="pt-3 pl-1">
-          Pada bagian pendahuluan tadi kita sudah melihat contoh data yang
-          berupa angka bulat <i>(integer)</i>. Selain angka bulat, python juga
-          memiliki tipe data <i>float</i> yaitu tipe data angka desimal. Kali
-          ini kita akan mencoba untuk menyimpan data yang berupa <i>float</i>
-          /angka desimal dan <i>string</i> atau teks.
-        </p>
-        <p className="pt-3 pl-1">
-          Coba kalian simpan nama merek &ldquo;Pepsi&rdquo; dalam variabel
-          &ldquo;minuman&rdquo; di bawah ini.
-        </p>
+        <div className="pt-3 pl-1">
+          <li>
+            <i>Integer</i> yang berupa angka bulat.
+          </li>
+          <li>
+            <i>Float</i> yang berupa angka desimal.
+          </li>
+          <li>
+            <i>String</i> yang berupa teks.
+          </li>
+          <li>
+            <i>Boolean</i> yang bernilai True atau False.
+          </li>
+        </div>
+        <div className="pt-3 pl-1">
+          Coba kalian isi variabel di bawah ini sesuai kreativitas kalian!
+        </div>
         <Editor>
           <div
             dangerouslySetInnerHTML={{
@@ -37,9 +43,10 @@ const pageVariabel = () => {
               terminal = false
               </py-config>
               <py-repl output="replOutput">
-              harga = 250
-              liter = 2.5
-              minuman = ""
+              string_merek = ""
+              integer_harga = 
+              float_jumlah = 
+              boolean_statusTersedia = 
               </py-repl>`,
             }}
           />
@@ -47,13 +54,13 @@ const pageVariabel = () => {
         <div className="flex">
           <h3 className="flex gap-2 pt-4">
             <Link
-              href={"/latihan/pendahuluan_2"}
+              href={"/latihan/variabel_4"}
               className="text-white bg-red-500 hover:bg-red-400 px-4 py-2 rounded-md"
             >
               Sebelumnya
             </Link>
             <Link
-              href={"/latihan/variabel_2"}
+              href={"/latihan/variabel_6"}
               className="text-white bg-blue-600 hover:bg-blue-500 px-4 py-2 rounded-md"
             >
               Selanjutnya
@@ -65,4 +72,4 @@ const pageVariabel = () => {
   );
 };
 
-export default pageVariabel;
+export default pageVariabel5;

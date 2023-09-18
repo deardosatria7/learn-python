@@ -26,10 +26,13 @@ const pageVariabel2 = () => {
         <div className="pt-3 pl-1">
           Kita sudah mempelajari dua bentuk tipe data, yaitu:
           <li>
-            <i>Integer</i> yang berbentuk angka
+            <i>Integer</i> yang berupa angka bulat.
           </li>
           <li>
-            <i>String</i> yang berbentuk teks
+            <i>Float</i> yang berupa angka desimal.
+          </li>
+          <li>
+            <i>String</i> yang berbentuk teks.
           </li>
         </div>
         <Editor>
@@ -41,6 +44,7 @@ const pageVariabel2 = () => {
               </py-config>
               <py-repl output="replOutput">
               harga = 250
+              liter = 2.5
               minuman = "Pepsi"
               </py-repl>`,
             }}
