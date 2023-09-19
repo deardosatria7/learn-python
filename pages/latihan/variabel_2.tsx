@@ -20,11 +20,11 @@ const pageVariabel2 = () => {
         </p>
         <p className="pt-3 pl-1">
           Tipe data <i>String</i> ditandai dengan adanya tanda petik dua
-          (&ldquo;&rdquo;). Data yang berbentuk <i>String</i> akan dikenali
+          (&ldquo; &rdquo;). Data yang berbentuk <i>String</i> akan dikenali
           dalam bentuk teks oleh Python.
         </p>
         <div className="pt-3 pl-1">
-          Kita sudah mempelajari dua bentuk tipe data, yaitu:
+          Kita sudah mempelajari tiga bentuk tipe data, yaitu:
           <li>
             <i>Integer</i> yang berupa angka bulat.
           </li>

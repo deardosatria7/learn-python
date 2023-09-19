@@ -15,14 +15,14 @@ const pageVariabel = () => {
       <section className="p-4">
         <h1 className="text-2xl font-semibold">Variabel Python</h1>
         <p className="pt-3 pl-1">
-          Disini kita akan melihat jenis data apa saja yang bisa disimpan dalam
-          sebuah variabel Python.
+          Latihan kali ini kita akan melihat jenis data apa saja yang bisa
+          disimpan dalam sebuah variabel Python.
         </p>
         <p className="pt-3 pl-1">
           Pada bagian pendahuluan tadi kita sudah melihat contoh data yang
           berupa angka bulat <i>(integer)</i>. Selain angka bulat, python juga
-          memiliki tipe data <i>float</i> yaitu tipe data angka desimal. Kali
-          ini kita akan mencoba untuk menyimpan data yang berupa <i>float</i>
+          memiliki tipe data <i>float</i> yaitu tipe data angka desimal. Kita
+          akan mencoba untuk menyimpan data yang berupa <i>float</i>
           /angka desimal dan <i>string</i> atau teks.
         </p>
         <p className="pt-3 pl-1">

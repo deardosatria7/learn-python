@@ -34,6 +34,11 @@ const pageVariabel5 = () => {
         </div>
         <div className="pt-3 pl-1">
           Coba kalian isi variabel di bawah ini sesuai kreativitas kalian!
+          <br />
+          <span className="italic text-blue-600">
+            Output hanya akan keluar ketika telah diisi seluruh variabel
+            dibawah.
+          </span>
         </div>
         <Editor>
           <div
@@ -43,10 +48,18 @@ const pageVariabel5 = () => {
               terminal = false
               </py-config>
               <py-repl output="replOutput">
-              string_merek = ""
+              string_namaProduk = ""
               integer_harga = 
               float_jumlah = 
               boolean_statusTersedia = 
+
+              # jangan edit kode dibawah ini
+              harga_format = "{:,}".format(integer_harga)
+              print ("Berikut adalah keterangan dari produk diatas")
+              print ("Merek: " + string_namaProduk)
+              print ("Harga: Rp", harga_format)
+              print ("Jumlah: ", float_jumlah)
+              print ("Status tersedia: ", boolean_statusTersedia)
               </py-repl>`,
             }}
           />
