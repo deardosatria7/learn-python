@@ -2,7 +2,7 @@ import Header from "@/sections/Header";
 import Editor from "@/components/Editor";
 import Link from "next/link";
 
-const pageVariabel5 = () => {
+const pageOperator = () => {
   return (
     <>
       <Header>
@@ -13,10 +13,10 @@ const pageVariabel5 = () => {
         </div>
       </Header>
       <section className="p-4">
-        <h1 className="text-2xl font-semibold">Variabel Python</h1>
-        <p className="pt-3 pl-1">Tipe data dalam python.</p>
+        <h1 className="text-2xl font-semibold">Operator Python</h1>
+        <p className="pt-3 pl-1">Operator dasar dalam python.</p>
         <p className="pt-3 pl-1">
-          Sejauh ini kita telah mempelajari 4 tipe data dalam python. Yaitu ada:
+          Selamat! Kalian telah mempelajari tipe-tipe variabel dalam python.
         </p>
         <div className="pt-3 pl-1">
           <li>
@@ -53,7 +53,7 @@ const pageVariabel5 = () => {
               float_jumlah = 
               boolean_statusTersedia = 
 
-              #JANGAN EDIT KODE DI BAWAH INI 
+              # jangan edit kode dibawah ini
               harga_format = "{:,}".format(integer_harga)
               print ("Berikut adalah keterangan dari produk diatas")
               print ("Merek: " + string_namaProduk)
@@ -85,4 +85,4 @@ const pageVariabel5 = () => {
   );
 };
 
-export default pageVariabel5;
+export default pageOperator;
