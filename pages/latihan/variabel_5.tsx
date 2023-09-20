@@ -73,7 +73,7 @@ const pageVariabel5 = () => {
               Sebelumnya
             </Link>
             <Link
-              href={"/latihan/variabel_6"}
+              href={"/latihan/operator_1"}
               className="text-white bg-blue-600 hover:bg-blue-500 px-4 py-2 rounded-md"
             >
               Selanjutnya
