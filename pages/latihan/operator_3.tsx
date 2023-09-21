@@ -15,24 +15,18 @@ const pageOperator3 = () => {
       <section className="p-4">
         <h1 className="text-2xl font-semibold">Operator Python</h1>
         <p className="pt-3 pl-1">
-          Selain operator aritmatika, juga terdapat{" "}
-          <b>Operator Perbandingan.</b>
+          Mari kita pahami lebih dalam lagi mengenai operator dalam python.
         </p>
         <p className="pt-3 pl-1">
-          <b>Operator perbandingan</b> adalah operator dalam python yang
-          berfungsi dalam membandingkan dua buah nilai/variabel. Contohnya
-          adalah sebagai berikut:
+          Dibawah ini terdapat kode yang menggunakan prinsip operator dalam
+          python. Terdapat beberapa operator aritmatika dan perbandingan di
+          dalamnya. Coba kalian <b>ganti dengan operator yang benar</b> agar
+          kode dibawah menghasilkan hasil True di setiap barisnya!
         </p>
         <div className="pt-3 pl-1">
-          <li>Lebih besar (&gt;)</li>
-          <li>Lebih kecil (&lt;)</li>
-          <li>Lebih besar sama dengan (&gt;=)</li>
-          <li>Lebih kecil sama dengan (&lt;=)</li>
-          <li>Sama dengan (==)</li>
-          <li>Tidak sama dengan (!=)</li>
-        </div>
-        <div className="pt-3 pl-1">
-          Coba kalian jalankan kode di bawah ini dan perhatikan hasilnya!
+          <span className="text-blue-500 italic">
+            Output hanya akan keluar apabila seluruh baris kode telah terisi.
+          </span>
         </div>
         <Editor>
           <div
@@ -42,16 +36,11 @@ const pageOperator3 = () => {
               terminal = false
               </py-config>
               <py-repl output="replOutput">
-              a = 10
-              b = 20
-              c = 30
-
-              print (a > b)
-              print (b < c)
-              print (c >= a)
-              print (a <= b)
-              print (b == c-10)
-              print (c != a)
+              print (12 - 9 == 3)
+              print (2 * 6 == 64)
+              print (27 + 3 == 9)
+              print (23 < 15)
+              print (45 == 44)
               </py-repl>`,
             }}
           />
