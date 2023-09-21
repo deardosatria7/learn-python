@@ -33,6 +33,7 @@ const pagePendahuluan2 = () => {
               <py-repl output="replOutput">
               harga = 250
               setengah_harga =  / 2
+              
               print ("Harga setelah diskon 50% jadi Rp", setengah_harga)
               </py-repl>`,
             }}
