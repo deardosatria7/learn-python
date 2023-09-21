@@ -17,7 +17,7 @@ const latihan = () => {
         <p className="pt-3 pl-1">
           Python merupakan salah satu bahasa pemrograman yang terkenal di zaman
           sekarang. Bahasa pemrograman python dapat digunakan oleh pemula maupun
-          ahli dalam otomasi tugas, pembuatan game, analisis data,
+          ahli dalam otomasi tugas, pembuatan game, analisis data,{" "}
           <i>machine learning</i>, dan masih banyak lagi.
         </p>
         <p className="pt-3 pl-1">

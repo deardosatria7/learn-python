@@ -2,7 +2,7 @@ import Header from "@/sections/Header";
 import Editor from "@/components/Editor";
 import Link from "next/link";
 
-const pagePendahuluan2 = () => {
+const pageOperator3 = () => {
   return (
     <>
       <Header>
@@ -13,16 +13,27 @@ const pagePendahuluan2 = () => {
         </div>
       </Header>
       <section className="p-4">
-        <h1 className="text-2xl font-semibold">Pendahuluan</h1>
+        <h1 className="text-2xl font-semibold">Operator Python</h1>
         <p className="pt-3 pl-1">
-          Label &ldquo;harga&rdquo; tadi disebut dengan variabel. Kita dapat
-          menyimpan data dalam bentuk variabel untuk kemudian dapat digunakan
-          ulang dalam operasi lainnya.
+          Selain operator aritmatika, juga terdapat{" "}
+          <b>Operator Perbandingan.</b>
         </p>
         <p className="pt-3 pl-1">
-          Coba masukkan variabel &ldquo;harga&rdquo; pada operasi penghitungan
-          &ldquo;setengah_harga&rdquo; di bawah ini dan jalankan kodenya!
+          <b>Operator perbandingan</b> adalah operator dalam python yang
+          berfungsi dalam membandingkan dua buah nilai/variabel. Contohnya
+          adalah sebagai berikut:
         </p>
+        <div className="pt-3 pl-1">
+          <li>Lebih besar (&gt;)</li>
+          <li>Lebih kecil (&lt;)</li>
+          <li>Lebih besar sama dengan (&gt;=)</li>
+          <li>Lebih kecil sama dengan (&lt;=)</li>
+          <li>Sama dengan (==)</li>
+          <li>Tidak sama dengan (!=)</li>
+        </div>
+        <div className="pt-3 pl-1">
+          Coba kalian jalankan kode di bawah ini dan perhatikan hasilnya!
+        </div>
         <Editor>
           <div
             dangerouslySetInnerHTML={{
@@ -31,9 +42,16 @@ const pagePendahuluan2 = () => {
               terminal = false
               </py-config>
               <py-repl output="replOutput">
-              harga = 250
-              setengah_harga =  / 2
-              print ("Harga setelah diskon 50% jadi Rp", setengah_harga)
+              a = 10
+              b = 20
+              c = 30
+
+              print (a > b)
+              print (b < c)
+              print (c >= a)
+              print (a <= b)
+              print (b == c-10)
+              print (c != a)
               </py-repl>`,
             }}
           />
@@ -41,13 +59,13 @@ const pagePendahuluan2 = () => {
         <div className="flex">
           <h3 className="flex gap-2 pt-4">
             <Link
-              href={"/latihan/pendahuluan_1"}
+              href={"/latihan/operator_2"}
               className="text-white bg-red-500 hover:bg-red-400 px-4 py-2 rounded-md"
             >
               Sebelumnya
             </Link>
             <Link
-              href={"/latihan/variabel_1"}
+              href={"/latihan/operator_4"}
               className="text-white bg-blue-600 hover:bg-blue-500 px-4 py-2 rounded-md"
             >
               Selanjutnya
@@ -59,4 +77,4 @@ const pagePendahuluan2 = () => {
   );
 };
 
-export default pagePendahuluan2;
+export default pageOperator3;
