@@ -1,4 +1,7 @@
+import {useEffect, useState} from "react";
+
 const Header = ({children}: any) => {
+  let [isOpen, setIsOpen] = useState(false);
   return (
     <>
       <nav className="p-4 bg-neutral-600">

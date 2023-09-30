@@ -1,0 +1,11 @@
+Beberapa masukan revisi dari Pak Nurcahya:
+1. Error compiler tidak sesuai output (✅ asal internet jangan jelek-jelek banget)
+2. Navigasi bawah enaknya sticky
+3. Alert benar/salah
+4. Code snippet (untuk perintah python lainnya)
+5. Fokus halaman ke teks, jangan langsung munculin keyboard
+6. wrap pakai <p> untuk pesan error
+7. Diberi quiz random per sub-bab
+
+Validasi ahli bisa dari teman yang sudah kerja di pemrograman python, atau dosen ahli (langsung nembung).
+Ini juga bisa langsung nembung ke guru pamong di SMKN 2 Surakarta, kalau mau penelitian disana.

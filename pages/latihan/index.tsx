@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Header from "@/sections/Header";
 import Editor from "@/components/Editor";
+import Footer from "@/sections/Footer";
 
 const latihan = () => {
   return (
@@ -50,13 +51,16 @@ const latihan = () => {
             />
           </Editor>
         </div>
-        <div className="flex">
-          <h3 className="flex gap-2 pt-4">
+      </section>
+
+      <Footer>
+        <div>
+          <h3 className="flex gap-2">
             <Link
               href={"../"}
               className="text-white bg-neutral-600 hover:bg-neutral-500 px-4 py-2 rounded-md"
             >
-              Back to home
+              Kembali
             </Link>
             <Link
               href={"/latihan/pendahuluan_1"}
@@ -66,7 +70,7 @@ const latihan = () => {
             </Link>
           </h3>
         </div>
-      </section>
+      </Footer>
     </>
   );
 };

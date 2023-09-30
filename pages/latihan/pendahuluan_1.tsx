@@ -1,6 +1,7 @@
 import Header from "@/sections/Header";
 import Editor from "@/components/Editor";
 import Link from "next/link";
+import Footer from "@/sections/Footer";
 
 const pagePendahuluan = () => {
   return (
@@ -38,9 +39,11 @@ const pagePendahuluan = () => {
             />
           </Editor>
         </div>
+      </section>
 
-        <div className="flex">
-          <h3 className="flex gap-2 pt-4">
+      <Footer>
+        <div>
+          <h3 className="flex gap-2">
             <Link
               href={"/latihan"}
               className="text-white bg-red-500 hover:bg-red-400 px-4 py-2 rounded-md"
@@ -55,7 +58,7 @@ const pagePendahuluan = () => {
             </Link>
           </h3>
         </div>
-      </section>
+      </Footer>
     </>
   );
 };

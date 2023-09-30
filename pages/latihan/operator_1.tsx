@@ -1,6 +1,7 @@
 import Header from "@/sections/Header";
 import Editor from "@/components/Editor";
 import Link from "next/link";
+import Footer from "@/sections/Footer";
 
 const pageOperator = () => {
   return (
@@ -54,8 +55,11 @@ const pageOperator = () => {
             }}
           />
         </Editor>
-        <div className="flex">
-          <h3 className="flex gap-2 pt-4">
+      </section>
+
+      <Footer>
+        <div>
+          <h3 className="flex gap-2">
             <Link
               href={"/latihan/variabel_5"}
               className="text-white bg-red-500 hover:bg-red-400 px-4 py-2 rounded-md"
@@ -70,7 +74,7 @@ const pageOperator = () => {
             </Link>
           </h3>
         </div>
-      </section>
+      </Footer>
     </>
   );
 };
