@@ -17,7 +17,7 @@ const Editor = ({children}: any) => {
             <span className="font-semibold text-lg">Output:</span>
           </div>
           <div
-            className="pb-11"
+            className="pb-11 md:pb-2"
             dangerouslySetInnerHTML={{
               __html: `<py-terminal></py-terminal>`,
             }}

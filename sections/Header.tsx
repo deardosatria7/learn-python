@@ -5,7 +5,7 @@ const Header = ({children}: any) => {
   return (
     <>
       <nav className="p-4 bg-neutral-600">
-        <div className="flex justify-between">
+        <div>
           <div>{children}</div>
           <div>
             <ul className="flex justify-center gap-2">
