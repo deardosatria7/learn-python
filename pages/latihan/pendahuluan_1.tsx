@@ -51,7 +51,7 @@ const pagePendahuluan = () => {
               Sebelumnya
             </Link>
             <Link
-              href={"/latihan/pendahuluan_2"}
+              href={"/latihan/pendahuluan_2/#title"}
               className="text-white bg-blue-600 hover:bg-blue-500 px-4 py-2 rounded-md"
             >
               Selanjutnya
