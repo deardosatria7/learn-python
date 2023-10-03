@@ -12,7 +12,7 @@ const pagePendahuluan2 = () => {
             <h4 className="text-lg text-white">Belajar-Python</h4>
           </Link>
           <div className="invisible md:visible pl-4 grid content-center">
-            <Link href={"../navigation"}>
+            <Link href={"../list_materi"}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 x="0px"
@@ -54,8 +54,15 @@ const pagePendahuluan2 = () => {
           ulang dalam operasi lainnya.
         </p>
         <p className="pt-3 pl-1">
-          Coba masukkan variabel &ldquo;harga&rdquo; pada operasi penghitungan
-          &ldquo;setengah_harga&rdquo; di bawah ini dan jalankan kodenya!
+          Coba masukkan variabel <b>harga</b> pada operasi penghitungan{" "}
+          <b>setengah_harga</b> di bawah ini dan jalankan kodenya!
+        </p>
+        <p className="pt-3 pl-1 text-sm italic">
+          Catatan: <br />
+          Perintah <code className="px-1 rounded-md bg-neutral-200">
+            print
+          </code>{" "}
+          digunakan untuk menampilkan teks ke terminal output.
         </p>
         <Editor>
           <div
@@ -94,7 +101,7 @@ const pagePendahuluan2 = () => {
             </h3>
           </div>
           <div className="visible md:invisible pl-4 grid content-center">
-            <Link href={"../navigation"}>
+            <Link href={"../list_materi"}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 x="0px"

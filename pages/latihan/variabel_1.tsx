@@ -12,7 +12,7 @@ const pageVariabel = () => {
             <h4 className="text-lg text-white">Belajar-Python</h4>
           </Link>
           <div className="invisible md:visible pl-4 grid content-center">
-            <Link href={"../navigation"}>
+            <Link href={"../list_materi"}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 x="0px"
@@ -58,8 +58,8 @@ const pageVariabel = () => {
           /angka desimal dan <i>string</i> atau teks.
         </p>
         <p className="pt-3 pl-1">
-          Coba kalian simpan nama merek &ldquo;Pepsi&rdquo; dalam variabel
-          &ldquo;minuman&rdquo; di bawah ini.
+          Coba kalian simpan nama merek &ldquo;Pepsi&rdquo; dalam variabel{" "}
+          <b>minuman</b> di bawah ini.
         </p>
         <Editor>
           <div
@@ -69,8 +69,13 @@ const pageVariabel = () => {
               terminal = false
               </py-config>
               <py-repl output="replOutput">
+              #Tipe variabel integer
               harga = 250
-              liter = 2.5
+
+              #Tipe variabel float
+              liter = 2.5 
+
+              #Tipe data string
               minuman = ""
               </py-repl>`,
             }}
@@ -97,7 +102,7 @@ const pageVariabel = () => {
             </h3>
           </div>
           <div className="visible md:invisible pl-4 grid content-center">
-            <Link href={"../navigation"}>
+            <Link href={"../list_materi"}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 x="0px"

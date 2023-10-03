@@ -12,7 +12,7 @@ const pageVariabel2 = () => {
             <h4 className="text-lg text-white">Belajar-Python</h4>
           </Link>
           <div className="invisible md:visible pl-4 grid content-center">
-            <Link href={"../navigation"}>
+            <Link href={"../list_materi"}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 x="0px"
@@ -47,8 +47,7 @@ const pageVariabel2 = () => {
       <section className="p-4">
         <h1 className="text-2xl font-semibold">Variabel Python</h1>
         <p className="pt-3 pl-1">
-          Jenis data berikut adalah contoh tipe data <i>String</i> dan{" "}
-          <i>Integer</i>.
+          Jenis data berikut adalah contoh tipe data <i>String</i>.
         </p>
         <p className="pt-3 pl-1">
           Tipe data <i>String</i> ditandai dengan adanya tanda petik dua
@@ -75,9 +74,14 @@ const pageVariabel2 = () => {
               terminal = false
               </py-config>
               <py-repl output="replOutput">
-              harga = 250
-              liter = 2.5
-              minuman = "Pepsi"
+              #Tipe variabel integer
+              harga = 250 
+
+              #Tipe variabel float
+              liter = 2.5 
+
+              #Tipe variabel String
+              minuman = "Pepsi" 
               </py-repl>`,
             }}
           />
@@ -103,7 +107,7 @@ const pageVariabel2 = () => {
             </h3>
           </div>
           <div className="visible md:invisible pl-4 grid content-center">
-            <Link href={"../navigation"}>
+            <Link href={"../list_materi"}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 x="0px"

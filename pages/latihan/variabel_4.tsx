@@ -12,7 +12,7 @@ const pageVariabel4 = () => {
             <h4 className="text-lg text-white">Belajar-Python</h4>
           </Link>
           <div className="invisible md:visible pl-4 grid content-center">
-            <Link href={"../navigation"}>
+            <Link href={"../list_materi"}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 x="0px"
@@ -95,7 +95,7 @@ const pageVariabel4 = () => {
             </h3>
           </div>
           <div className="visible md:invisible pl-4 grid content-center">
-            <Link href={"../navigation"}>
+            <Link href={"../list_materi"}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 x="0px"
