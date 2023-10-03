@@ -45,9 +45,7 @@ const pagePendahuluan2 = () => {
         </div>
       </Header>
       <section className="p-4">
-        <h1 className="text-2xl font-semibold" id="title">
-          Pendahuluan
-        </h1>
+        <h1 className="text-2xl font-semibold">Pendahuluan</h1>
         <p className="pt-3 pl-1">
           Label &ldquo;harga&rdquo; tadi disebut dengan variabel. Kita dapat
           menyimpan data dalam bentuk variabel untuk kemudian dapat digunakan
@@ -59,9 +57,7 @@ const pagePendahuluan2 = () => {
         </p>
         <p className="pt-3 pl-1 text-sm">
           Catatan: <br />
-          Perintah <code className="px-1 rounded-md bg-neutral-200">
-            print
-          </code>{" "}
+          <code className="px-1 rounded-md bg-neutral-200">print</code>{" "}
           digunakan untuk menampilkan teks ke terminal output.
         </p>
         <Editor>
