@@ -57,7 +57,7 @@ const pagePendahuluan2 = () => {
           Coba masukkan variabel <b>harga</b> pada operasi penghitungan{" "}
           <b>setengah_harga</b> di bawah ini dan jalankan kodenya!
         </p>
-        <p className="pt-3 pl-1 text-sm italic">
+        <p className="pt-3 pl-1 text-sm">
           Catatan: <br />
           Perintah <code className="px-1 rounded-md bg-neutral-200">
             print
