@@ -67,6 +67,8 @@ const pageVariabel4 = () => {
               <py-repl output="replOutput">
               nomor_1 = 50
               nomor_2 = "50"
+
+              #Membandingkan kedua variabel diatas
               variabel_perbandingan = (nomor_1 == nomor_2)
 
               print (variabel_perbandingan)
