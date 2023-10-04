@@ -1,7 +1,10 @@
 import Header from "@/sections/Header";
 import Link from "next/link";
+import Footer from "@/sections/Footer";
+import {useRouter} from "next/router";
 
 const list_materi = () => {
+  const router = useRouter();
   return (
     <>
       <Header>
@@ -54,6 +57,20 @@ const list_materi = () => {
           </div>
         </div>
       </main>
+      <Footer>
+        <div className="flex flex-row">
+          <div>
+            <h3 className="flex gap-2">
+              <button
+                onClick={() => router.back()}
+                className="text-white bg-neutral-500 hover:bg-neutral-400 px-4 py-2 rounded-md"
+              >
+                Kembali
+              </button>
+            </h3>
+          </div>
+        </div>
+      </Footer>
     </>
   );
 };
