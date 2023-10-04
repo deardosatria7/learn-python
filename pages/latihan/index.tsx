@@ -72,7 +72,7 @@ const Latihan = () => {
         <div>
           <Editor>
             <div
-              tabIndex={3}
+              tabIndex={-1}
               dangerouslySetInnerHTML={{
                 __html: `
               <py-repl>
@@ -120,11 +120,7 @@ const Latihan = () => {
           </div>
         </div>
       </Footer>
-      <div className="invisible">
-        <form action="">
-          <input type="number" autoFocus tabIndex={-1} />
-        </form>
-      </div>
+      <div className="invisible" role={"button"} tabIndex={0}></div>
     </>
   );
 };
