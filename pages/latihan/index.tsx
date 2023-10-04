@@ -69,7 +69,7 @@ const Latihan = () => {
         >
           Bagaimana cara menjalankan kode?
         </Link>
-        <div>
+        <div tabIndex={-1}>
           <Editor>
             <div
               tabIndex={-1}
