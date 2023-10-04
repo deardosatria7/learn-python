@@ -47,7 +47,7 @@ const Latihan = () => {
         </div>
       </Header>
       <section className="p-4">
-        <h1 className="text-2xl font-semibold" ref={mainRef} tabIndex="-1">
+        <h1 className="text-2xl font-semibold" ref={mainRef} tabIndex={-1}>
           Pengenalan Python
         </h1>
         <p className="pt-3 pl-1">
