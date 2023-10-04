@@ -46,9 +46,6 @@ const Latihan = () => {
       </Header>
       <section className="p-4">
         <h1 className="text-2xl font-semibold">Pengenalan Python</h1>
-        <div hidden>
-          <input type="text" autoFocus />
-        </div>
         <p className="pt-3 pl-1">
           Python merupakan salah satu bahasa pemrograman yang terkenal di zaman
           sekarang. Bahasa pemrograman python dapat digunakan oleh pemula maupun
@@ -121,6 +118,9 @@ const Latihan = () => {
           </div>
         </div>
       </Footer>
+      <div className="invisible">
+        <input type="number" autoFocus tabIndex={-1} />
+      </div>
     </>
   );
 };
