@@ -4,7 +4,7 @@ import Footer from "@/sections/Footer";
 import {useRouter} from "next/router";
 
 const list_materi = () => {
-  const router = useRouter();
+  const Router = useRouter();
   return (
     <>
       <Header>
@@ -62,7 +62,7 @@ const list_materi = () => {
           <div>
             <h3 className="flex gap-2">
               <button
-                onClick={() => router.back()}
+                onClick={() => Router.back()}
                 className="text-white bg-neutral-500 hover:bg-neutral-400 px-4 py-2 rounded-md"
               >
                 Kembali
