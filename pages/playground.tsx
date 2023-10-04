@@ -4,8 +4,10 @@ import Image from "next/image";
 import tutor2 from "../public/tutorial1.png";
 import tutor1 from "../public/tutorial2.png";
 import Header from "@/sections/Header";
+import {useRouter} from "next/router";
 
-const playground = () => {
+const Playground = () => {
+  const router = useRouter();
   return (
     <>
       <Header>
@@ -16,11 +18,9 @@ const playground = () => {
       <main>
         <div className="pl-5 pt-5">
           <div>
-            <Link href={"/"}>
-              <div>
-                <span className=" px-2 py-2 text-sm underline">Kembali</span>
-              </div>
-            </Link>
+            <button onClick={() => router.back()}>
+              <span className=" px-2 py-2 text-sm underline">Kembali</span>
+            </button>
           </div>
           <div>
             <Editor>
@@ -74,4 +74,4 @@ const playground = () => {
   );
 };
 
-export default playground;
+export default Playground;
