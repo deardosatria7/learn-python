@@ -77,6 +77,7 @@ const Latihan = () => {
         <div>
           <Editor>
             <div
+              tabIndex={3}
               dangerouslySetInnerHTML={{
                 __html: `
               <py-repl>
@@ -125,7 +126,9 @@ const Latihan = () => {
         </div>
       </Footer>
       <div className="invisible">
-        <input type="number" autoFocus tabIndex={-1} ref={inputReference} />
+        <form action="">
+          <input type="number" autoFocus tabIndex={-1} ref={inputReference} />
+        </form>
       </div>
     </>
   );
