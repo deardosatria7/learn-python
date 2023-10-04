@@ -63,16 +63,19 @@ const Latihan = () => {
           menggunakan Python untuk melakukan penghitungan harga secara otomatis.
           Coba kalian jalankan kode dibawah ini!
         </p>
+        <div className="invisible" tabIndex={-1}>
+          <input type="text" autoFocus tabIndex={-1} />
+        </div>
         <Link
           href={"../playground"}
           className="text-sm italic pl-1 underline text-blue-500"
         >
           Bagaimana cara menjalankan kode?
         </Link>
-        <div tabIndex={-1}>
+        <div tabIndex={0}>
           <Editor>
             <div
-              tabIndex={-1}
+              tabIndex={0}
               dangerouslySetInnerHTML={{
                 __html: `
               <py-repl>
@@ -120,7 +123,6 @@ const Latihan = () => {
           </div>
         </div>
       </Footer>
-      <div className="invisible" role={"button"} tabIndex={0}></div>
     </>
   );
 };
