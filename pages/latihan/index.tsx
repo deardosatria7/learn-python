@@ -2,8 +2,14 @@ import Link from "next/link";
 import Header from "@/sections/Header";
 import Editor from "@/components/Editor";
 import Footer from "@/sections/Footer";
+import {useRef, useEffect} from "react";
 
 const Latihan = () => {
+  const inputReference = useRef(null);
+
+  useEffect(() => {
+    inputReference.current.focus();
+  }, []);
   return (
     <>
       <Header>
@@ -119,7 +125,7 @@ const Latihan = () => {
         </div>
       </Footer>
       <div className="invisible">
-        <input type="number" autoFocus tabIndex={-1} />
+        <input type="number" autoFocus tabIndex={-1} ref={inputReference} />
       </div>
     </>
   );
