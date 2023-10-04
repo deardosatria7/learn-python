@@ -5,11 +5,6 @@ import Footer from "@/sections/Footer";
 import {useRef, useEffect} from "react";
 
 const Latihan = () => {
-  const inputReference = useRef(null);
-
-  useEffect(() => {
-    inputReference.current.focus();
-  }, []);
   return (
     <>
       <Header>
@@ -127,7 +122,7 @@ const Latihan = () => {
       </Footer>
       <div className="invisible">
         <form action="">
-          <input type="number" autoFocus tabIndex={-1} ref={inputReference} />
+          <input type="number" autoFocus tabIndex={-1} />
         </form>
       </div>
     </>
