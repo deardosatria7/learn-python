@@ -19,7 +19,9 @@ const Playground = () => {
         <div className="pl-5 pt-5">
           <div>
             <button onClick={() => router.back()}>
-              <span className=" px-2 py-2 text-sm underline">Kembali</span>
+              <div className="rounded-md text-white bg-neutral-400 px-2 py-2 text-sm">
+                Kembali
+              </div>
             </button>
           </div>
           <div>
