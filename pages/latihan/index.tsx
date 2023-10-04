@@ -2,8 +2,10 @@ import Link from "next/link";
 import Header from "@/sections/Header";
 import Editor from "@/components/Editor";
 import Footer from "@/sections/Footer";
+import {useRef} from "react";
 
-const latihan = () => {
+const Latihan = () => {
+  const mainRef = useRef(null);
   return (
     <>
       <Header>
@@ -45,7 +47,9 @@ const latihan = () => {
         </div>
       </Header>
       <section className="p-4">
-        <h1 className="text-2xl font-semibold">Pengenalan Python</h1>
+        <h1 className="text-2xl font-semibold" ref={mainRef} tabIndex="-1">
+          Pengenalan Python
+        </h1>
         <p className="pt-3 pl-1">
           Python merupakan salah satu bahasa pemrograman yang terkenal di zaman
           sekarang. Bahasa pemrograman python dapat digunakan oleh pemula maupun
@@ -122,4 +126,4 @@ const latihan = () => {
   );
 };
 
-export default latihan;
+export default Latihan;
