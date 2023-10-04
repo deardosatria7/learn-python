@@ -73,7 +73,7 @@ const latihan = () => {
             <div
               dangerouslySetInnerHTML={{
                 __html: `
-              <py-repl output="replOutput">
+              <py-repl>
               harga = 250
               setengah_harga = harga / 2
               print (setengah_harga)

@@ -73,9 +73,6 @@ const pageOperator = () => {
             dangerouslySetInnerHTML={{
               __html: `
               <py-config>
-              plugins = [
-                "https://pyscript.net/latest/plugins/python/py_tutor.py"
-              ] 
               </py-config>
               <py-repl id="my-repl" auto-generate="true">
               print (10 + 3)
