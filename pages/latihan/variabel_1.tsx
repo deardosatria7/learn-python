@@ -10,7 +10,7 @@ function checkAnswers() {
     .value;
 
   //checking
-  if (minuman == "pepsi") {
+  if (minuman == "pepsi" || "Pepsi") {
     alert("Benar!!");
   } else {
     alert("Oops, coba lagi!");
