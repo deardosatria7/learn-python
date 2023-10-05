@@ -5,10 +5,16 @@ import Footer from "@/sections/Footer";
 import {useRef, useEffect} from "react";
 
 const Latihan = () => {
+  const inputRef = useRef(null);
+
+  useEffect(() => {
+    // Using optional chaining operator
+    console.log(inputRef.current);
+  }, []);
   return (
     <>
       <Header>
-        <div className="flex flex-row justify-between">
+        <div className="flex flex-row justify-between" ref={inputRef}>
           <Link href={"/"}>
             <h4 className="text-lg text-white">Belajar-Python</h4>
           </Link>
@@ -63,9 +69,6 @@ const Latihan = () => {
           menggunakan Python untuk melakukan penghitungan harga secara otomatis.
           Coba kalian jalankan kode dibawah ini!
         </p>
-        <div className="invisible" tabIndex={-1}>
-          <input type="text" autoFocus tabIndex={-1} />
-        </div>
         <Link
           href={"../playground"}
           className="text-sm italic pl-1 underline text-blue-500"
