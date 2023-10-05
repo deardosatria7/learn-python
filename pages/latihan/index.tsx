@@ -77,7 +77,7 @@ const Latihan = () => {
               <py-config>
               
               </py-config>
-              <py-repl>
+              <py-repl output="replOutput">
               harga = 250
               setengah_harga = harga / 2
               print (setengah_harga)

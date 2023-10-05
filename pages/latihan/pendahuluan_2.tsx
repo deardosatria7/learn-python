@@ -67,7 +67,7 @@ const pagePendahuluan2 = () => {
               <py-config>
               terminal = false
               </py-config>
-              <py-repl>
+              <py-repl output="replOutput">
               harga = 250
 
               #Masukkan variabel harga di bagian bawah ini

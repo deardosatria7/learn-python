@@ -64,7 +64,7 @@ const pageVariabel4 = () => {
               <py-config>
               terminal = false
               </py-config>
-              <py-repl>
+              <py-repl output="replOutput">
               nomor_1 = 50
               nomor_2 = "50"
 

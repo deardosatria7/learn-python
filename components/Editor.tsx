@@ -22,6 +22,12 @@ const Editor = ({children}: any) => {
               __html: `<py-terminal></py-terminal>`,
             }}
           />
+          <div>
+            <div className="font-light text-sm pt-4 hidden">
+              Output tambahan:
+            </div>
+            <div className="border-4 rounded-md hidden" id="replOutput"></div>
+          </div>
         </div>
       </div>
     </>

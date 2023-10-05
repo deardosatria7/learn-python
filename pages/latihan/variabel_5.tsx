@@ -80,7 +80,7 @@ const pageVariabel5 = () => {
               <py-config>
               terminal = false
               </py-config>
-              <py-repl>
+              <py-repl output="replOutput">
               string_namaProduk = ""
               integer_harga = 
               float_jumlah = 

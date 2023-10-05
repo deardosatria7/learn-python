@@ -65,7 +65,7 @@ const pageVariabel3 = () => {
               <py-config>
               terminal = false
               </py-config>
-              <py-repl>
+              <py-repl output="replOutput">
               #Tipe variabel boolean
               benar = True 
               salah = 
