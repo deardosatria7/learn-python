@@ -69,6 +69,8 @@ const pagePendahuluan2 = () => {
               </py-config>
               <py-repl output="replOutput">
               harga = 250
+
+              #Masukkan variabel harga di bagian bawah ini
               setengah_harga =  / 2
               
               print ("Harga setelah diskon 50% jadi Rp", setengah_harga)

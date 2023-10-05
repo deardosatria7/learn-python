@@ -75,7 +75,7 @@ const pagePendahuluan = () => {
           &ldquo;harga&rdquo; diikuti dengan &ldquo;=&rdquo; dan
           &ldquo;250&rdquo;.
         </p>
-        <div className="mt-4 gap-2 bg-neutral-200 p-4">
+        <div className="mt-4 gap-2 bg-neutral-200 p-4 rounded-md">
           <div className="flex flex-row gap-2">
             <code>
               <input type="text" id="variabel" className="w-20" />
@@ -87,9 +87,9 @@ const pagePendahuluan = () => {
               <input type="text" id="harga" className="w-20" />
             </code>
           </div>
-          <div className="pt-2">
+          <div className="pt-3">
             <button
-              className="px-2 py-1 bg-white rounded-md border-2 border-black"
+              className="px-2 bg-white rounded-md border-2 border-black"
               onClick={checkAnswers}
             >
               Submit
