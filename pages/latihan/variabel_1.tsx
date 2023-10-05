@@ -93,11 +93,11 @@ const pageVariabel = () => {
                 value={"="}
               />
             </code>
-            <span className="text-lg font-bold">"</span>
+            <span className="text-lg font-bold">&ldquo;</span>
             <code>
               <input type="text" id="minuman" className="w-12" />
             </code>
-            <span className="text-lg font-bold">"</span>
+            <span className="text-lg font-bold">&rdquo;</span>
           </div>
           <div className="pt-3">
             <button
