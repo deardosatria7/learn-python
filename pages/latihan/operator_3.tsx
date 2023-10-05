@@ -67,7 +67,7 @@ const pageOperator3 = () => {
               <py-config>
               terminal = false
               </py-config>
-              <py-repl output="replOutput">
+              <py-repl>
               print (12 - 9 == 3)
               print (2 * 6 == 64)
               print (27 + 3 == 9)

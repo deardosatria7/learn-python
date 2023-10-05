@@ -74,7 +74,7 @@ const pageOperator = () => {
               __html: `
               <py-config>
               </py-config>
-              <py-repl id="my-repl" auto-generate="true">
+              <py-repl>
               print (10 + 3)
               print (10 - 3)
               print (10 * 3)
