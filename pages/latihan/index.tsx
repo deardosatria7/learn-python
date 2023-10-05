@@ -2,19 +2,12 @@ import Link from "next/link";
 import Header from "@/sections/Header";
 import Editor from "@/components/Editor";
 import Footer from "@/sections/Footer";
-import {useRef, useEffect} from "react";
 
 const Latihan = () => {
-  const inputRef = useRef(null);
-
-  useEffect(() => {
-    // Using optional chaining operator
-    console.log(inputRef.current);
-  }, []);
   return (
     <>
       <Header>
-        <div className="flex flex-row justify-between" ref={inputRef}>
+        <div className="flex flex-row justify-between">
           <Link href={"/"}>
             <h4 className="text-lg text-white">Belajar-Python</h4>
           </Link>
@@ -85,7 +78,9 @@ const Latihan = () => {
               
               </py-config>
               <py-repl>
-             
+              harga = 250
+              setengah_harga = harga / 2
+              print (setengah_harga)
               </py-repl>`,
               }}
             />

@@ -3,6 +3,25 @@ import Editor from "@/components/Editor";
 import Link from "next/link";
 import Footer from "@/sections/Footer";
 
+//function to check answers
+function checkAnswers() {
+  //first box answer
+  const variabel = (document.getElementById("variabel") as HTMLInputElement)
+    .value;
+  //second box answer
+  const operator = (document.getElementById("operator") as HTMLInputElement)
+    .value;
+  //third box answer
+  const harga = (document.getElementById("harga") as HTMLInputElement).value;
+
+  //checking
+  if (variabel == "harga" && operator == "=" && harga == "250") {
+    alert("Benar!!");
+  } else {
+    alert("Oops, coba lagi!");
+  }
+}
+
 const pagePendahuluan = () => {
   return (
     <>
@@ -56,19 +75,26 @@ const pagePendahuluan = () => {
           &ldquo;harga&rdquo; diikuti dengan &ldquo;=&rdquo; dan
           &ldquo;250&rdquo;.
         </p>
-        <div>
-          <Editor>
-            <div
-              dangerouslySetInnerHTML={{
-                __html: `
-              <py-config>
-              terminal = false
-              </py-config>
-              <py-repl output="replOutput">
-              </py-repl>`,
-              }}
-            />
-          </Editor>
+        <div className="mt-4 gap-2 bg-neutral-200 p-4">
+          <div className="flex flex-row gap-2">
+            <code>
+              <input type="text" id="variabel" className="w-20" />
+            </code>
+            <code>
+              <input type="text" id="operator" className="w-6" />
+            </code>
+            <code>
+              <input type="text" id="harga" className="w-20" />
+            </code>
+          </div>
+          <div className="pt-2">
+            <button
+              className="px-2 py-1 bg-white rounded-md border-2 border-black"
+              onClick={checkAnswers}
+            >
+              Submit
+            </button>
+          </div>
         </div>
       </section>
 
