@@ -81,7 +81,7 @@ const pageVariabel2 = () => {
               liter = 2.5 
 
               #Tipe variabel String
-              minuman = "Pepsi" 
+              minuman = "pepsi" 
               </py-repl>`,
             }}
           />

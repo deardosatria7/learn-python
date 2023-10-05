@@ -3,6 +3,20 @@ import Editor from "@/components/Editor";
 import Link from "next/link";
 import Footer from "@/sections/Footer";
 
+//function to check answers
+function checkAnswers() {
+  //check answer box
+  const minuman = (document.getElementById("minuman") as HTMLInputElement)
+    .value;
+
+  //checking
+  if (minuman == "pepsi") {
+    alert("Benar!!");
+  } else {
+    alert("Oops, coba lagi!");
+  }
+}
+
 const pageVariabel = () => {
   return (
     <>
@@ -58,10 +72,43 @@ const pageVariabel = () => {
           /angka desimal dan <i>string</i> atau teks.
         </p>
         <p className="pt-3 pl-1">
-          Coba kalian simpan nama merek &ldquo;Pepsi&rdquo; dalam variabel{" "}
+          Coba kalian simpan nama merek &ldquo;pepsi&rdquo; dalam variabel{" "}
           <b>minuman</b> di bawah ini.
         </p>
-        <Editor>
+        <div className="mt-4 gap-2 bg-neutral-200 p-4 rounded-md">
+          <div className="flex flex-row">
+            <code>
+              <input
+                type="text"
+                id="variabel"
+                className="w-20 mr-2"
+                value={"minuman"}
+              />
+            </code>
+            <code>
+              <input
+                type="text"
+                id="operator"
+                className="w-6 mr-2"
+                value={"="}
+              />
+            </code>
+            <span className="text-lg font-bold">"</span>
+            <code>
+              <input type="text" id="minuman" className="w-12" />
+            </code>
+            <span className="text-lg font-bold">"</span>
+          </div>
+          <div className="pt-3">
+            <button
+              className="px-2 bg-white rounded-md border-2 border-black"
+              onClick={checkAnswers}
+            >
+              Submit
+            </button>
+          </div>
+        </div>
+        {/* <Editor>
           <div
             dangerouslySetInnerHTML={{
               __html: `
@@ -80,7 +127,7 @@ const pageVariabel = () => {
               </py-repl>`,
             }}
           />
-        </Editor>
+        </Editor> */}
       </section>
 
       <Footer>
