@@ -73,7 +73,7 @@ const pageOperator2 = () => {
               <py-config>
               terminal = false
               </py-config>
-              <py-repl>
+              <py-repl output="replOutput">
               a = 10
               b = 20
               c = 30
