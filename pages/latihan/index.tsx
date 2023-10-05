@@ -79,11 +79,8 @@ const Latihan = () => {
               dangerouslySetInnerHTML={{
                 __html: `
               <py-config>
-              packages = [
-                "bokeh",
-                "numpy"
-              ]
-              files = ["/config/utils.py", "/config/antigravity.py"]</py-config>
+              
+              </py-config>
               <py-repl>
               harga = 250
               setengah_harga = harga / 2
