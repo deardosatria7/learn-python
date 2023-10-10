@@ -5,13 +5,21 @@ import Footer from "@/sections/Footer";
 
 //function to check answers
 function checkAnswers() {
-  //check answer box
+  //answer form
   const minuman = (document.getElementById("minuman") as HTMLInputElement)
     .value;
 
-  //checking
+  //show btn_selanjutnya when answer is correct
+  function showDiv() {
+    (
+      document.getElementById("btn_selanjutnya") as HTMLInputElement
+    ).style.visibility = "visible";
+  }
+
+  //checking answer
   if (minuman == "pepsi" || minuman == "Pepsi") {
     alert("Benar!!");
+    showDiv();
   } else {
     alert("Oops, coba lagi!");
   }
@@ -142,7 +150,8 @@ const pageVariabel = () => {
               </Link>
               <Link
                 href={"/latihan/variabel_2"}
-                className="text-white bg-blue-600 hover:bg-blue-500 px-4 py-2 rounded-md"
+                className="text-white bg-blue-600 hover:bg-blue-500 px-4 py-2 rounded-md invisible"
+                id="btn_selanjutnya"
               >
                 Selanjutnya
               </Link>
