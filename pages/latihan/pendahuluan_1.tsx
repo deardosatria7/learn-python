@@ -14,9 +14,17 @@ function checkAnswers() {
   //third box answer
   const harga = (document.getElementById("harga") as HTMLInputElement).value;
 
+  //show btn_selanjutnya when answer is correct
+  function showDiv() {
+    (
+      document.getElementById("btn_selanjutnya") as HTMLInputElement
+    ).style.visibility = "visible";
+  }
+
   //checking
   if (variabel == "harga" && operator == "=" && harga == "250") {
     alert("Benar!!");
+    showDiv();
   } else {
     alert("Oops, coba lagi!");
   }
@@ -30,7 +38,7 @@ const pagePendahuluan = () => {
           <Link href={"/"}>
             <h4 className="text-lg text-white">Belajar-Python</h4>
           </Link>
-          <div className="invisible md:visible pl-4 grid content-center">
+          <div className="pl-4 grid content-center">
             <Link href={"../list_materi"}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -110,25 +118,12 @@ const pagePendahuluan = () => {
               </Link>
               <Link
                 href={"/latihan/pendahuluan_2"}
-                className="text-white bg-blue-600 hover:bg-blue-500 px-4 py-2 rounded-md"
+                className="text-white bg-blue-600 hover:bg-blue-500 px-4 py-2 rounded-md invisible"
+                id="btn_selanjutnya"
               >
                 Selanjutnya
               </Link>
             </h3>
-          </div>
-          <div className="visible md:invisible pl-4 grid content-center">
-            <Link href={"../list_materi"}>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                x="0px"
-                y="0px"
-                width="30"
-                height="30"
-                viewBox="0 0 30 30"
-              >
-                <path d="M 3 7 A 1.0001 1.0001 0 1 0 3 9 L 27 9 A 1.0001 1.0001 0 1 0 27 7 L 3 7 z M 3 14 A 1.0001 1.0001 0 1 0 3 16 L 27 16 A 1.0001 1.0001 0 1 0 27 14 L 3 14 z M 3 21 A 1.0001 1.0001 0 1 0 3 23 L 27 23 A 1.0001 1.0001 0 1 0 27 21 L 3 21 z"></path>
-              </svg>
-            </Link>
           </div>
         </div>
       </Footer>
