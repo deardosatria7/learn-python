@@ -3,6 +3,26 @@ import Editor from "@/components/Editor";
 import Link from "next/link";
 import Footer from "@/sections/Footer";
 
+//function to check answers
+function checkAnswers() {
+  //third box answer
+  const harga = (document.getElementById("harga") as HTMLInputElement).value;
+
+  //show btn_selanjutnya when answer is correct
+  function showDiv() {
+    (
+      document.getElementById("btn_selanjutnya") as HTMLInputElement
+    ).style.visibility = "visible";
+  }
+
+  //checking
+  if (harga == "harga") {
+    alert("Benar!!");
+    showDiv();
+  } else {
+    alert("Oops, coba lagi!");
+  }
+}
 const pagePendahuluan2 = () => {
   return (
     <>
@@ -60,6 +80,35 @@ const pagePendahuluan2 = () => {
           <code className="px-1 rounded-md bg-neutral-200">print</code>{" "}
           digunakan untuk menampilkan teks ke terminal output.
         </p>
+        <div className="mt-4 gap-2 bg-neutral-200 p-4 rounded-md">
+          <div className="flex flex-row gap-2">
+            <code>
+              <input
+                type="text"
+                id="variabel"
+                className="w-32"
+                value={"setengah_harga"}
+              />
+            </code>
+            <code>
+              <input type="text" id="operator" className="w-6" value={"="} />
+            </code>
+            <code>
+              <input type="text" id="harga" className="w-20" autoFocus />
+            </code>
+            <div className="pl-3">
+              <span> / 2</span>
+            </div>
+          </div>
+          <div className="pt-3">
+            <button
+              className="px-2 bg-white rounded-md border-2 border-black"
+              onClick={checkAnswers}
+            >
+              Submit
+            </button>
+          </div>
+        </div>
         <Editor>
           <div
             dangerouslySetInnerHTML={{
@@ -71,7 +120,7 @@ const pagePendahuluan2 = () => {
               harga = 250
 
               #Masukkan variabel harga di bagian bawah ini
-              setengah_harga =  / 2
+              setengah_harga = harga / 2
               
               print ("Harga setelah diskon 50% jadi Rp", setengah_harga)
               </py-repl>`,
@@ -92,7 +141,8 @@ const pagePendahuluan2 = () => {
               </Link>
               <Link
                 href={"/latihan/variabel_1"}
-                className="text-white bg-blue-600 hover:bg-blue-500 px-4 py-2 rounded-md"
+                className="text-white bg-blue-600 hover:bg-blue-500 px-4 py-2 rounded-md invisible"
+                id="btn_selanjutnya"
               >
                 Selanjutnya
               </Link>
