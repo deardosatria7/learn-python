@@ -54,6 +54,11 @@ const List_materi = () => {
                 </li>
               </span>
             </div>
+            <div>
+              <span className="text-blue-900">
+                <Link href={"../quiz"}>Quiz</Link>
+              </span>
+            </div>
           </div>
         </div>
       </main>
