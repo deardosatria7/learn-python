@@ -2,6 +2,9 @@ import Header from "@/sections/Header";
 import Editor from "@/components/Editor";
 import Link from "next/link";
 import Footer from "@/sections/Footer";
+import {useState} from "react";
+
+const [showSelanjutnya, setShowSelanjutnya] = useState(false);
 
 //function to check answers
 function checkAnswers() {
@@ -18,8 +21,8 @@ function checkAnswers() {
 
   //checking answer
   if (minuman == "pepsi" || minuman == "Pepsi") {
+    setShowSelanjutnya(true);
     alert("Benar!!");
-    showDiv();
   } else {
     alert("Oops, coba lagi!");
   }
@@ -148,13 +151,15 @@ const pageVariabel = () => {
               >
                 Sebelumnya
               </Link>
-              <Link
-                href={"/latihan/variabel_2"}
-                className="text-white bg-blue-600 hover:bg-blue-500 px-4 py-2 rounded-md invisible"
-                id="btn_selanjutnya"
-              >
-                Selanjutnya
-              </Link>
+              {showSelanjutnya && (
+                <Link
+                  href={"/latihan/variabel_2"}
+                  className="text-white bg-blue-600 hover:bg-blue-500 px-4 py-2 rounded-md"
+                  id="btn_selanjutnya"
+                >
+                  Selanjutnya
+                </Link>
+              )}
             </h3>
           </div>
         </div>
