@@ -4,31 +4,24 @@ import Link from "next/link";
 import Footer from "@/sections/Footer";
 import {useState} from "react";
 
-const [showSelanjutnya, setShowSelanjutnya] = useState(false);
+export default function PageVariabel() {
+  const [showSelanjutnya, setShowSelanjutnya] = useState(false);
 
-//function to check answers
-function checkAnswers() {
-  //answer form
-  const minuman = (document.getElementById("minuman") as HTMLInputElement)
-    .value;
+  //function to check answers
+  function checkAnswers() {
+    //answer form
+    const minuman = (document.getElementById("minuman") as HTMLInputElement)
+      .value;
 
-  //show btn_selanjutnya when answer is correct
-  function showDiv() {
-    (
-      document.getElementById("btn_selanjutnya") as HTMLInputElement
-    ).style.visibility = "visible";
+    //checking answer
+    if (minuman == "pepsi" || minuman == "Pepsi") {
+      //show btn_selanjutnya when answer is correct
+      setShowSelanjutnya(true);
+      alert("Benar!!");
+    } else {
+      alert("Oops, coba lagi!");
+    }
   }
-
-  //checking answer
-  if (minuman == "pepsi" || minuman == "Pepsi") {
-    setShowSelanjutnya(true);
-    alert("Benar!!");
-  } else {
-    alert("Oops, coba lagi!");
-  }
-}
-
-const pageVariabel = () => {
   return (
     <>
       <Header>
@@ -166,6 +159,4 @@ const pageVariabel = () => {
       </Footer>
     </>
   );
-};
-
-export default pageVariabel;
+}
