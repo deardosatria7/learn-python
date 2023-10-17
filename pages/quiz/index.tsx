@@ -1,7 +1,9 @@
 import Header from "@/sections/Header";
 import Link from "next/link";
-import Footer from "@/sections/Footer";
+import {RandomPageButton} from "@/components/RandomPage";
 import {useRouter} from "next/router";
+
+const pagesVariabel = ["/variabel/page1", "/variabel/page2", "/variabel/page3"];
 
 const Quiz = () => {
   const router = useRouter();
@@ -56,6 +58,7 @@ const Quiz = () => {
               >
                 Kembali
               </button>
+              <RandomPageButton pages={pagesVariabel} />
             </h3>
           </div>
         </div>
