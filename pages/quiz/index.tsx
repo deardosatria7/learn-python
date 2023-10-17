@@ -4,15 +4,15 @@ import {RandomPageButton} from "@/components/RandomPage";
 import {useRouter} from "next/router";
 
 const pagesQuizVariabel = [
-  "/quiz/variabel/page1",
-  "/quiz/variabel/page2",
-  "/quiz/variabel/page3",
+  "/quiz/variabel/1",
+  "/quiz/variabel/2",
+  "/quiz/variabel/3",
 ];
 
 const pagesQuizOperator = [
-  "/quiz/operator/page1",
-  "/quiz/operator/page2",
-  "/quiz/operator/page3",
+  "/quiz/operator/1",
+  "/quiz/operator/2",
+  "/quiz/operator/3",
 ];
 
 const Quiz = () => {
