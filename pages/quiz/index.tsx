@@ -3,7 +3,17 @@ import Link from "next/link";
 import {RandomPageButton} from "@/components/RandomPage";
 import {useRouter} from "next/router";
 
-const pagesVariabel = ["/variabel/page1", "/variabel/page2", "/variabel/page3"];
+const pagesQuizVariabel = [
+  "/quiz/variabel/page1",
+  "/quiz/variabel/page2",
+  "/quiz/variabel/page3",
+];
+
+const pagesQuizOperator = [
+  "/quiz/operator/page1",
+  "/quiz/operator/page2",
+  "/quiz/operator/page3",
+];
 
 const Quiz = () => {
   const router = useRouter();
@@ -49,20 +59,35 @@ const Quiz = () => {
       </Header>
       <main>
         <div className="p-4">
-          <p>Coming soon, halaman quiz.</p>
-          <div className="pt-4">
-            <h3 className="">
-              <button
-                onClick={() => router.back()}
-                className="text-white bg-neutral-500 hover:bg-neutral-400 px-4 py-2 rounded-md"
-              >
-                Kembali
-              </button>
-              <RandomPageButton pages={pagesVariabel} />
-            </h3>
+          <div className="text-2xl font-semibold">Daftar Quiz:</div>
+          <div className="px-4 pt-3 grid grid-cols-1 gap-2">
+            <div>
+              <span className="text-blue-900">
+                <li className="pl-2">
+                  <RandomPageButton pages={pagesQuizVariabel}>
+                    Quiz variabel
+                  </RandomPageButton>
+                </li>
+                <li className="pl-2">
+                  <RandomPageButton pages={pagesQuizOperator}>
+                    Quiz operator
+                  </RandomPageButton>
+                </li>
+              </span>
+            </div>
           </div>
         </div>
       </main>
+      <div className="flex flex-row p-4">
+        <div className="">
+          <button
+            onClick={() => router.back()}
+            className="text-white bg-neutral-500 hover:bg-neutral-400 px-4 py-2 rounded-md"
+          >
+            Kembali
+          </button>
+        </div>
+      </div>
     </>
   );
 };
