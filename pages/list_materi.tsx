@@ -17,6 +17,9 @@ const List_materi = () => {
           <div className="text-2xl font-semibold">List Materi:</div>
           <div className="px-4 pt-3 grid grid-cols-1 gap-2">
             <div className="text-blue-900">
+              <Link href={"../"}>Home</Link>
+            </div>
+            <div className="text-blue-900">
               <Link href={"../latihan/pendahuluan_1"}>Pendahuluan</Link>
             </div>
             <div>
