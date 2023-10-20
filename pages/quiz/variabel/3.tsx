@@ -11,7 +11,7 @@ const pagesVariabel = [
   "/quiz/variabel/3",
 ];
 
-export default function PageQuizVariabel2() {
+export default function PageQuizVariabel1() {
   const [showSelanjutnya, setShowSelanjutnya] = useState(false);
   const router = useRouter();
 
@@ -22,7 +22,7 @@ export default function PageQuizVariabel2() {
       .value;
 
     //checking answer
-    if (jawaban == "string" || jawaban == "String") {
+    if (jawaban == "print") {
       //show btn_selanjutnya when answer is correct
       setShowSelanjutnya(true);
       alert("Benar!!");
@@ -77,13 +77,18 @@ export default function PageQuizVariabel2() {
         </p>
         <div className="mt-4 gap-2 bg-neutral-200 p-4 rounded-md">
           <div className="flex flex-col">
-            <code className="bg-white rounded-md p-1">
-              minuman = &ldquo;Coca-cola&rdquo;
+            <code className="flex flex-row">
+              <div className="bg-white rounded-md p-1">
+                <input type="text" id="jawaban" className="w-20 mr-2" />
+              </div>
+              <div className="bg-white rounded-md ml-2 p-1">
+                (&ldquo;Python itu mudah!&rdquo;)
+              </div>
             </code>
-            <p className="mt-4">Data diatas termasuk dalam tipe data:</p>
-            <code className="mt-2">
-              <input type="text" id="jawaban" className="w-20 mr-2" />
-            </code>
+            <p className="mt-4">
+              Ketikkan perintah yang sesuai untuk menampilkan teks tersebut pada
+              output!
+            </p>
           </div>
           <div className="pt-3">
             <button

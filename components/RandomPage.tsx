@@ -1,24 +1,29 @@
+import {useState} from "react";
 import {useRouter} from "next/router";
 
 interface RandomPageButtonProps {
-  pages: string[]; // Define the prop to accept the list of pages
+  pages: string[];
   children?: React.ReactNode;
 }
 
 export function RandomPageButton({pages, children}: RandomPageButtonProps) {
-  //use router
   const router = useRouter();
-
-  //get current path
   const currentPath = router.pathname;
 
-  //generate random page
+  const [visitedPages, setVisitedPages] = useState<string[]>([]);
+
   const getRandomPage = () => {
-    let randomPath;
-    do {
-      const randomIndex = Math.floor(Math.random() * pages.length);
-      randomPath = pages[randomIndex];
-    } while (randomPath === currentPath);
+    const availablePages = pages.filter((page) => !visitedPages.includes(page));
+
+    if (availablePages.length === 0) {
+      alert("You have visited all available pages.");
+      return;
+    }
+
+    const randomIndex = Math.floor(Math.random() * availablePages.length);
+    const randomPath = availablePages[randomIndex];
+
+    setVisitedPages((prevVisitedPages) => [...prevVisitedPages, randomPath]);
     router.push(randomPath);
   };
 

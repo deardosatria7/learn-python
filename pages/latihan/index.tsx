@@ -47,20 +47,14 @@ const Latihan = () => {
       <section className="p-4">
         <h1 className="text-2xl font-semibold">Pengenalan Python</h1>
         <p className="pt-3 pl-1">
-          Python merupakan salah satu bahasa pemrograman yang terkenal di zaman
+          Python merupakan salah satu bahasa pemrograman yang populer di zaman
           sekarang. Bahasa pemrograman python dapat digunakan oleh pemula maupun
           ahli dalam otomasi tugas, pembuatan game, analisis data,{" "}
           <i>machine learning</i>, dan masih banyak lagi.
         </p>
         <p className="pt-3 pl-1">
           Selain itu, bahasa pemrograman python mudah untuk dipahami. Mari kita
-          lihat contoh <i>studi kasus</i> berikut ini:
-        </p>
-        <p className="pt-3 pl-1 text-blue-900 font font-semibold">
-          Kalian adalah seorang pegawai di toko elektronik. Pada hari ini, toko
-          kalian menyediakan promo diskon setengah harga. Kalian dapat
-          menggunakan Python untuk melakukan penghitungan harga secara otomatis.
-          Coba kalian jalankan kode dibawah ini!
+          coba jalankan kode python di bawah ini.
         </p>
         <Link
           href={"../playground"}
@@ -68,10 +62,9 @@ const Latihan = () => {
         >
           Bagaimana cara menjalankan kode?
         </Link>
-        <div tabIndex={0}>
+        <div>
           <Editor>
             <div
-              tabIndex={0}
               dangerouslySetInnerHTML={{
                 __html: `
               <py-config>

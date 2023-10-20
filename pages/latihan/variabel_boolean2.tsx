@@ -83,13 +83,13 @@ const pageVariabel4 = () => {
           <div>
             <h3 className="flex gap-2">
               <Link
-                href={"/latihan/variabel_3"}
+                href={"/latihan/variabel_boolean"}
                 className="text-white bg-red-500 hover:bg-red-400 px-4 py-2 rounded-md"
               >
                 Sebelumnya
               </Link>
               <Link
-                href={"/latihan/variabel_5"}
+                href={"/latihan/variabel_akhir"}
                 className="text-white bg-blue-600 hover:bg-blue-500 px-4 py-2 rounded-md"
               >
                 Selanjutnya

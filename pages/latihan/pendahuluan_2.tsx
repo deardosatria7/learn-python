@@ -67,9 +67,9 @@ const pagePendahuluan2 = () => {
       <section className="p-4">
         <h1 className="text-2xl font-semibold">Pendahuluan</h1>
         <p className="pt-3 pl-1">
-          Label &ldquo;harga&rdquo; tadi disebut dengan variabel. Kita dapat
-          menyimpan data dalam bentuk variabel untuk kemudian dapat digunakan
-          ulang dalam operasi lainnya.
+          &ldquo;harga&rdquo; yang telah kalian buat tadi disebut dengan
+          variabel. Kita dapat menyimpan data dalam bentuk variabel untuk
+          kemudian dapat digunakan ulang dalam operasi lainnya.
         </p>
         <p className="pt-3 pl-1">
           Coba masukkan variabel <b>harga</b> pada operasi penghitungan{" "}
@@ -140,7 +140,7 @@ const pagePendahuluan2 = () => {
                 Sebelumnya
               </Link>
               <Link
-                href={"/latihan/variabel_1"}
+                href={"/latihan/variabel_string"}
                 className="text-white bg-blue-600 hover:bg-blue-500 px-4 py-2 rounded-md invisible"
                 id="btn_selanjutnya"
               >

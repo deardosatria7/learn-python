@@ -47,17 +47,14 @@ const pageVariabel3 = () => {
       <section className="p-4">
         <h1 className="text-2xl font-semibold">Variabel Python</h1>
         <p className="pt-3 pl-1">
-          Selanjutnya adalah tipe data <i>Boolean</i>.
+          Selanjutnya adalah tipe data <i>boolean</i>.
         </p>
         <p className="pt-3 pl-1">
-          Berbeda dengan <i>Integer</i> dan <i>String</i>, tipe data{" "}
-          <i>Boolean</i> hanya dapat menyimpan dua nilai yaitu
+          Berbeda dengan <i>integer</i> maupun <i>string</i>, tipe data{" "}
+          <i>boolean</i> hanya dapat menyimpan dua nilai yaitu
           &ldquo;True&rdquo; dan &ldquo;False&rdquo;. Tipe data ini sering
           digunakan dalam perbandingan dua atau lebih variabel.
         </p>
-        <div className="pt-3 pl-1">
-          Coba kalian isi nilai dari variabel <i>Boolean</i> dibawah ini:
-        </div>
         <Editor>
           <div
             dangerouslySetInnerHTML={{
@@ -66,9 +63,11 @@ const pageVariabel3 = () => {
               terminal = false
               </py-config>
               <py-repl output="replOutput">
-              #Tipe variabel boolean
+              #Tipe variabel boolean (bool)
               benar = True 
-              salah = 
+              salah = False
+
+              print (type(benar))
               </py-repl>`,
             }}
           />
@@ -80,13 +79,13 @@ const pageVariabel3 = () => {
           <div>
             <h3 className="flex gap-2">
               <Link
-                href={"/latihan/variabel_2"}
+                href={"/latihan/variabel_float"}
                 className="text-white bg-red-500 hover:bg-red-400 px-4 py-2 rounded-md"
               >
                 Sebelumnya
               </Link>
               <Link
-                href={"/latihan/variabel_4"}
+                href={"/latihan/variabel_boolean2"}
                 className="text-white bg-blue-600 hover:bg-blue-500 px-4 py-2 rounded-md"
               >
                 Selanjutnya

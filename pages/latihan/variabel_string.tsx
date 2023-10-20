@@ -2,8 +2,26 @@ import Header from "@/sections/Header";
 import Editor from "@/components/Editor";
 import Link from "next/link";
 import Footer from "@/sections/Footer";
+import {useState} from "react";
 
-const pageVariabel2 = () => {
+export default function PageVariabel() {
+  const [showSelanjutnya, setShowSelanjutnya] = useState(false);
+
+  //function to check answers
+  function checkAnswers() {
+    //answer form
+    const minuman = (document.getElementById("minuman") as HTMLInputElement)
+      .value;
+
+    //checking answer
+    if (minuman == "pepsi" || minuman == "Pepsi") {
+      //show btn_selanjutnya when answer is correct
+      setShowSelanjutnya(true);
+      alert("Benar!!");
+    } else {
+      alert("Oops, coba lagi!");
+    }
+  }
   return (
     <>
       <Header>
@@ -47,45 +65,52 @@ const pageVariabel2 = () => {
       <section className="p-4">
         <h1 className="text-2xl font-semibold">Variabel Python</h1>
         <p className="pt-3 pl-1">
-          Jenis data berikut adalah contoh tipe data <i>String</i>.
+          Kali ini kita akan melihat jenis data apa saja yang bisa disimpan
+          dalam sebuah variabel Python.
         </p>
         <p className="pt-3 pl-1">
-          Tipe data <i>String</i> ditandai dengan adanya tanda petik dua
-          (&ldquo; &rdquo;). Data yang berbentuk <i>String</i> akan dikenali
-          dalam bentuk teks oleh Python.
+          Pada bagian pendahuluan tadi kita sudah melihat contoh tipe data{" "}
+          <i>integer</i> yang berupa angka bulat, dan tipe data <i>string</i>{" "}
+          yang berupa teks. Kita akan mencoba untuk menyimpan data yang berupa{" "}
+          <i>string</i> atau teks.
         </p>
-        <div className="pt-3 pl-1">
-          Kita sudah mempelajari tiga bentuk tipe data, yaitu:
-          <li>
-            <i>Integer</i> yang berupa angka bulat.
-          </li>
-          <li>
-            <i>Float</i> yang berupa angka desimal.
-          </li>
-          <li>
-            <i>String</i> yang berbentuk teks.
-          </li>
+        <p className="pt-3 pl-1">
+          Coba kalian simpan nama merek &ldquo;pepsi&rdquo; dalam variabel{" "}
+          <b>minuman</b> di bawah ini.
+        </p>
+        <div className="mt-4 gap-2 bg-neutral-200 p-4 rounded-md">
+          <div className="flex flex-row">
+            <code>
+              <input
+                type="text"
+                id="variabel"
+                className="w-20 mr-2"
+                value={"minuman"}
+              />
+            </code>
+            <code>
+              <input
+                type="text"
+                id="operator"
+                className="w-6 mr-2"
+                value={"="}
+              />
+            </code>
+            <span className="text-lg font-bold">&ldquo;</span>
+            <code>
+              <input type="text" id="minuman" className="w-12" />
+            </code>
+            <span className="text-lg font-bold">&rdquo;</span>
+          </div>
+          <div className="pt-3">
+            <button
+              className="px-2 bg-white rounded-md border-2 border-black"
+              onClick={checkAnswers}
+            >
+              Submit
+            </button>
+          </div>
         </div>
-        <Editor>
-          <div
-            dangerouslySetInnerHTML={{
-              __html: `
-              <py-config>
-              terminal = false
-              </py-config>
-              <py-repl output="replOutput">
-              #Tipe variabel integer
-              harga = 250 
-
-              #Tipe variabel float
-              liter = 2.5 
-
-              #Tipe variabel String
-              minuman = "pepsi" 
-              </py-repl>`,
-            }}
-          />
-        </Editor>
       </section>
 
       <Footer>
@@ -93,23 +118,24 @@ const pageVariabel2 = () => {
           <div>
             <h3 className="flex gap-2">
               <Link
-                href={"/latihan/variabel_1"}
+                href={"/latihan/pendahuluan_2"}
                 className="text-white bg-red-500 hover:bg-red-400 px-4 py-2 rounded-md"
               >
                 Sebelumnya
               </Link>
-              <Link
-                href={"/latihan/variabel_3"}
-                className="text-white bg-blue-600 hover:bg-blue-500 px-4 py-2 rounded-md"
-              >
-                Selanjutnya
-              </Link>
+              {showSelanjutnya && (
+                <Link
+                  href={"/latihan/variabel_float"}
+                  className="text-white bg-blue-600 hover:bg-blue-500 px-4 py-2 rounded-md"
+                  id="btn_selanjutnya"
+                >
+                  Selanjutnya
+                </Link>
+              )}
             </h3>
           </div>
         </div>
       </Footer>
     </>
   );
-};
-
-export default pageVariabel2;
+}

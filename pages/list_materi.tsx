@@ -23,16 +23,22 @@ const List_materi = () => {
               Variabel
               <span className="text-blue-900">
                 <li className="pl-2">
-                  <Link href={"../latihan/variabel_1"}>Variabel integer</Link>
+                  <Link href={"../latihan/variabel_string"}>
+                    Variabel string
+                  </Link>
                 </li>
                 <li className="pl-2">
-                  <Link href={"../latihan/variabel_1"}>Variabel float</Link>
+                  <Link href={"../latihan/pendahuluan_1"}>
+                    Variabel integer
+                  </Link>
                 </li>
                 <li className="pl-2">
-                  <Link href={"../latihan/variabel_2"}>Variabel string</Link>
+                  <Link href={"../latihan/variabel_float"}>Variabel float</Link>
                 </li>
                 <li className="pl-2">
-                  <Link href={"../latihan/variabel_3"}>Variabel boolean</Link>
+                  <Link href={"../latihan/variabel_boolean"}>
+                    Variabel boolean
+                  </Link>
                 </li>
               </span>
             </div>

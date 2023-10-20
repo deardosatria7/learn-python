@@ -3,7 +3,7 @@ import Editor from "@/components/Editor";
 import Link from "next/link";
 import Footer from "@/sections/Footer";
 
-const pageVariabel5 = () => {
+const pageVariabel2 = () => {
   return (
     <>
       <Header>
@@ -46,33 +46,26 @@ const pageVariabel5 = () => {
       </Header>
       <section className="p-4">
         <h1 className="text-2xl font-semibold">Variabel Python</h1>
-        <p className="pt-3 pl-1">Tipe data dalam python.</p>
-        <p className="pt-3 pl-1">
-          Sejauh ini kita telah mempelajari 4 tipe data dalam python. Yaitu ada:
-        </p>
         <div className="pt-3 pl-1">
+          Kita sudah mempelajari dua bentuk tipe data, yaitu:
           <li>
             <i>Integer</i> yang berupa angka bulat.
           </li>
           <li>
-            <i>Float</i> yang berupa angka desimal.
-          </li>
-          <li>
-            <i>String</i> yang berupa teks.
-          </li>
-          <li>
-            <i>Boolean</i> yang bernilai True atau False.
+            <i>String</i> yang berbentuk teks.
           </li>
         </div>
-        <div className="pt-3 pl-1">
-          Coba kalian isi variabel di bawah ini sesuai kreativitas kalian!
-          <br />
-          <span className="italic text-blue-600">
-            Output hanya akan keluar ketika telah diisi seluruh variabel
-            dibawah.
-          </span>
-        </div>
-
+        <p className="pt-3 pl-1">
+          Selain tipe data integer, python juga memiliki tipe data <i>float</i>{" "}
+          yang menyimpan nilai bilangan desimal (Contoh: 0.8, 1.5, dsb)
+        </p>
+        <p className="pt-3 pl-1 text-sm">
+          Catatan: <br />
+          <code className="px-1 rounded-md bg-neutral-200">
+            print(type())
+          </code>{" "}
+          digunakan untuk menampilkan tipe data variabel.
+        </p>
         <Editor>
           <div
             dangerouslySetInnerHTML={{
@@ -81,18 +74,16 @@ const pageVariabel5 = () => {
               terminal = false
               </py-config>
               <py-repl output="replOutput">
-              string_namaProduk = ""
-              integer_harga = 
-              float_jumlah = 
-              boolean_statusTersedia = 
+              #Tipe variabel integer
+              harga = 250 
 
-              #JANGAN EDIT KODE DI BAWAH INI 
-              harga_format = "{:,}".format(integer_harga)
-              print ("Berikut adalah keterangan dari produk diatas")
-              print ("Merek: " + string_namaProduk)
-              print ("Harga: Rp", harga_format)
-              print ("Jumlah: ", float_jumlah)
-              print ("Status tersedia: ", boolean_statusTersedia)
+              #Tipe variabel String
+              minuman = "pepsi" 
+
+              #Tipe variabel float
+              liter = 2.5 
+
+              print (type(liter))
               </py-repl>`,
             }}
           />
@@ -104,13 +95,13 @@ const pageVariabel5 = () => {
           <div>
             <h3 className="flex gap-2">
               <Link
-                href={"/latihan/variabel_4"}
+                href={"/latihan/variabel_string"}
                 className="text-white bg-red-500 hover:bg-red-400 px-4 py-2 rounded-md"
               >
                 Sebelumnya
               </Link>
               <Link
-                href={"/latihan/operator_1"}
+                href={"/latihan/variabel_boolean"}
                 className="text-white bg-blue-600 hover:bg-blue-500 px-4 py-2 rounded-md"
               >
                 Selanjutnya
@@ -123,4 +114,4 @@ const pageVariabel5 = () => {
   );
 };
 
-export default pageVariabel5;
+export default pageVariabel2;

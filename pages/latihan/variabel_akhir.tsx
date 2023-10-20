@@ -2,26 +2,8 @@ import Header from "@/sections/Header";
 import Editor from "@/components/Editor";
 import Link from "next/link";
 import Footer from "@/sections/Footer";
-import {useState} from "react";
 
-export default function PageVariabel() {
-  const [showSelanjutnya, setShowSelanjutnya] = useState(false);
-
-  //function to check answers
-  function checkAnswers() {
-    //answer form
-    const minuman = (document.getElementById("minuman") as HTMLInputElement)
-      .value;
-
-    //checking answer
-    if (minuman == "pepsi" || minuman == "Pepsi") {
-      //show btn_selanjutnya when answer is correct
-      setShowSelanjutnya(true);
-      alert("Benar!!");
-    } else {
-      alert("Oops, coba lagi!");
-    }
-  }
+const pageVariabel5 = () => {
   return (
     <>
       <Header>
@@ -64,55 +46,34 @@ export default function PageVariabel() {
       </Header>
       <section className="p-4">
         <h1 className="text-2xl font-semibold">Variabel Python</h1>
+        <p className="pt-3 pl-1">Tipe data dalam python.</p>
         <p className="pt-3 pl-1">
-          Latihan kali ini kita akan melihat jenis data apa saja yang bisa
-          disimpan dalam sebuah variabel Python.
+          Sejauh ini kita telah mempelajari 4 tipe data dalam python. Yaitu ada:
         </p>
-        <p className="pt-3 pl-1">
-          Pada bagian pendahuluan tadi kita sudah melihat contoh data yang
-          berupa angka bulat <i>(integer)</i>. Selain angka bulat, python juga
-          memiliki tipe data <i>float</i> yaitu tipe data angka desimal. Kita
-          akan mencoba untuk menyimpan data yang berupa <i>float</i>
-          /angka desimal dan <i>string</i> atau teks.
-        </p>
-        <p className="pt-3 pl-1">
-          Coba kalian simpan nama merek &ldquo;pepsi&rdquo; dalam variabel{" "}
-          <b>minuman</b> di bawah ini.
-        </p>
-        <div className="mt-4 gap-2 bg-neutral-200 p-4 rounded-md">
-          <div className="flex flex-row">
-            <code>
-              <input
-                type="text"
-                id="variabel"
-                className="w-20 mr-2"
-                value={"minuman"}
-              />
-            </code>
-            <code>
-              <input
-                type="text"
-                id="operator"
-                className="w-6 mr-2"
-                value={"="}
-              />
-            </code>
-            <span className="text-lg font-bold">&ldquo;</span>
-            <code>
-              <input type="text" id="minuman" className="w-12" />
-            </code>
-            <span className="text-lg font-bold">&rdquo;</span>
-          </div>
-          <div className="pt-3">
-            <button
-              className="px-2 bg-white rounded-md border-2 border-black"
-              onClick={checkAnswers}
-            >
-              Submit
-            </button>
-          </div>
+        <div className="pt-3 pl-1">
+          <li>
+            <i>Integer</i> yang berupa angka bulat.
+          </li>
+          <li>
+            <i>Float</i> yang berupa angka desimal.
+          </li>
+          <li>
+            <i>String</i> yang berupa teks.
+          </li>
+          <li>
+            <i>Boolean</i> yang bernilai True atau False.
+          </li>
         </div>
-        {/* <Editor>
+        <div className="pt-3 pl-1">
+          Coba kalian isi variabel di bawah ini sesuai kreativitas kalian!
+          <br />
+          <span className="italic text-blue-600">
+            Output hanya akan keluar ketika seluruh variabel dibawah telah
+            terisi.
+          </span>
+        </div>
+
+        <Editor>
           <div
             dangerouslySetInnerHTML={{
               __html: `
@@ -120,18 +81,22 @@ export default function PageVariabel() {
               terminal = false
               </py-config>
               <py-repl output="replOutput">
-              #Tipe variabel integer
-              harga = 250
+              string_namaProduk = ""
+              integer_harga = 
+              float_jumlah = 
+              boolean_statusTersedia = 
 
-              #Tipe variabel float
-              liter = 2.5 
-
-              #Tipe data string
-              minuman = ""
+              #JANGAN EDIT KODE DI BAWAH INI 
+              harga_format = "{:,}".format(integer_harga)
+              print ("Berikut adalah keterangan dari produk diatas")
+              print ("Merek: " + string_namaProduk)
+              print ("Harga: Rp", harga_format)
+              print ("Jumlah: ", float_jumlah)
+              print ("Status tersedia: ", boolean_statusTersedia)
               </py-repl>`,
             }}
           />
-        </Editor> */}
+        </Editor>
       </section>
 
       <Footer>
@@ -139,24 +104,23 @@ export default function PageVariabel() {
           <div>
             <h3 className="flex gap-2">
               <Link
-                href={"/latihan/pendahuluan_2"}
+                href={"/latihan/variabel_boolean2"}
                 className="text-white bg-red-500 hover:bg-red-400 px-4 py-2 rounded-md"
               >
                 Sebelumnya
               </Link>
-              {showSelanjutnya && (
-                <Link
-                  href={"/latihan/variabel_2"}
-                  className="text-white bg-blue-600 hover:bg-blue-500 px-4 py-2 rounded-md"
-                  id="btn_selanjutnya"
-                >
-                  Selanjutnya
-                </Link>
-              )}
+              <Link
+                href={"/latihan/operator_1"}
+                className="text-white bg-blue-600 hover:bg-blue-500 px-4 py-2 rounded-md"
+              >
+                Selanjutnya
+              </Link>
             </h3>
           </div>
         </div>
       </Footer>
     </>
   );
-}
+};
+
+export default pageVariabel5;

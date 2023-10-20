@@ -22,7 +22,7 @@ export default function PageQuizVariabel1() {
       .value;
 
     //checking answer
-    if (jawaban == "string" || jawaban == "String") {
+    if (jawaban == "integer" || jawaban == "Integer") {
       //show btn_selanjutnya when answer is correct
       setShowSelanjutnya(true);
       alert("Benar!!");
@@ -38,7 +38,7 @@ export default function PageQuizVariabel1() {
             <h4 className="text-lg text-white">Belajar-Python</h4>
           </Link>
           <div className="pl-4 grid content-center">
-            <Link href={"../list_materi"}>
+            <Link href={"../../list_materi"}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 x="0px"
@@ -77,9 +77,7 @@ export default function PageQuizVariabel1() {
         </p>
         <div className="mt-4 gap-2 bg-neutral-200 p-4 rounded-md">
           <div className="flex flex-col">
-            <code className="bg-white rounded-md p-1">
-              minuman = &ldquo;Coca-cola&rdquo;
-            </code>
+            <code className="bg-white rounded-md p-1">harga = 10000</code>
             <p className="mt-4">Data diatas termasuk dalam tipe data:</p>
             <code className="mt-2">
               <input type="text" id="jawaban" className="w-20 mr-2" />
@@ -87,7 +85,7 @@ export default function PageQuizVariabel1() {
           </div>
           <div className="pt-3">
             <button
-              className="px-3 py-1 bg-green-500 text-white rounded-md border-black"
+              className="px-3 py-1 bg-red-600 text-white rounded-md border-black"
               onClick={checkAnswers}
             >
               Submit
