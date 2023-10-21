@@ -49,17 +49,19 @@ const List_materi = () => {
               Operator
               <span className="text-blue-900">
                 <li className="pl-2">
-                  <Link href={"../latihan/operator_1"}>
+                  <Link href={"../latihan/operator_aritmatika"}>
                     Operator aritmatika
                   </Link>
                 </li>
                 <li className="pl-2">
-                  <Link href={"../latihan/operator_2"}>
+                  <Link href={"../latihan/operator_perbandingan"}>
                     Operator perbandingan
                   </Link>
                 </li>
                 <li className="pl-2">
-                  <Link href={"../latihan/operator_4"}>Operator logika</Link>
+                  <Link href={"../latihan/operator_logika"}>
+                    Operator logika
+                  </Link>
                 </li>
               </span>
             </div>

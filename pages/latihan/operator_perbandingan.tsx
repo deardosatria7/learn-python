@@ -3,7 +3,7 @@ import Editor from "@/components/Editor";
 import Link from "next/link";
 import Footer from "@/sections/Footer";
 
-const pageOperator = () => {
+const pageOperator2 = () => {
   return (
     <>
       <Header>
@@ -47,40 +47,43 @@ const pageOperator = () => {
       <section className="p-4">
         <h1 className="text-2xl font-semibold">Operator Python</h1>
         <p className="pt-3 pl-1">
-          Selamat! Kalian telah mempelajari tipe-tipe variabel dalam python.
+          Selain operator aritmatika, juga terdapat{" "}
+          <b>Operator Perbandingan.</b>
         </p>
         <p className="pt-3 pl-1">
-          Selanjutnya adalah materi mengenai operator dalam python. Di dalam
-          python, ada beberapa operator yang dapat dimasukkan kedalam kode.
-          Contohnya adalah <b>Operator Aritmatika</b>. Beberapa operator
-          aritmatika termasuk penjumlahan, pengurangan, perkalian, pembagian,
-          dan perpangkatan.
+          <b>Operator perbandingan</b> adalah operator dalam python yang
+          berfungsi dalam membandingkan dua buah nilai/variabel. Contohnya
+          adalah sebagai berikut:
         </p>
         <div className="pt-3 pl-1">
-          <li>Penjumlahan (+)</li>
-          <li>Pengurangan (-)</li>
-          <li>Perkalian (*)</li>
-          <li>Pembagian (/)</li>
-          <li>Perpangkatan (**)</li>
-          <li>Pembagian hasil bulat (//)</li>
+          <li>Lebih besar (&gt;)</li>
+          <li>Lebih kecil (&lt;)</li>
+          <li>Lebih besar sama dengan (&gt;=)</li>
+          <li>Lebih kecil sama dengan (&lt;=)</li>
+          <li>Sama dengan (==)</li>
+          <li>Tidak sama dengan (!=)</li>
         </div>
         <div className="pt-3 pl-1">
-          Coba kalian jalankan kode di bawah ini dan perhatikan mengapa hasilnya
-          seperti itu!
+          Coba kalian jalankan kode di bawah ini dan perhatikan hasilnya!
         </div>
         <Editor>
           <div
             dangerouslySetInnerHTML={{
               __html: `
               <py-config>
+              terminal = false
               </py-config>
               <py-repl output="replOutput">
-              print (10 + 3)
-              print (10 - 3)
-              print (10 * 3)
-              print (10 / 3)
-              print (10 ** 3)
-              print (10 // 3)
+              a = 10
+              b = 20
+              c = 30
+
+              print (a > b)
+              print (b < c)
+              print (c >= a)
+              print (a <= b)
+              print (b == c-10)
+              print (c != a)
               </py-repl>`,
             }}
           />
@@ -92,13 +95,13 @@ const pageOperator = () => {
           <div>
             <h3 className="flex gap-2">
               <Link
-                href={"/latihan/variabel_5"}
+                href={"/latihan/operator_aritmatika"}
                 className="text-white bg-red-500 hover:bg-red-400 px-4 py-2 rounded-md"
               >
                 Sebelumnya
               </Link>
               <Link
-                href={"/latihan/operator_2"}
+                href={"/latihan/operator_perbandingan2"}
                 className="text-white bg-blue-600 hover:bg-blue-500 px-4 py-2 rounded-md"
               >
                 Selanjutnya
@@ -111,4 +114,4 @@ const pageOperator = () => {
   );
 };
 
-export default pageOperator;
+export default pageOperator2;

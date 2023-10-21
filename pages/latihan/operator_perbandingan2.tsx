@@ -84,13 +84,13 @@ const pageOperator3 = () => {
           <div>
             <h3 className="flex gap-2">
               <Link
-                href={"/latihan/operator_2"}
+                href={"/latihan/operator_perbandingan"}
                 className="text-white bg-red-500 hover:bg-red-400 px-4 py-2 rounded-md"
               >
                 Sebelumnya
               </Link>
               <Link
-                href={"/latihan/operator_4"}
+                href={"/latihan/operator_logika"}
                 className="text-white bg-blue-600 hover:bg-blue-500 px-4 py-2 rounded-md"
               >
                 Selanjutnya

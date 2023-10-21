@@ -51,10 +51,9 @@ const pageOperator4 = () => {
         </p>
         <p className="pt-3 pl-1">
           Operator logika dalam python terdiri dari <b>AND</b>, <b>OR</b>, dan{" "}
-          <b>NOT</b>. Operator logika digunakan dalam{" "}
-          <b>membandingkan dua/lebih pernyataan</b> dan menghasilkan nilai yang
-          berbentuk boolean. Berikut adalah rincian dari ketiga operator logika
-          tersebut:
+          <b>NOT</b>. Operator logika digunakan dalam membandingkan dua/lebih
+          pernyataan dan menghasilkan nilai yang berbentuk boolean. Berikut
+          adalah rincian dari ketiga operator logika tersebut:
         </p>
         <div className="pt-3 pl-1">
           <b>AND</b>: Bernilai <i>True</i> apabila pernyataan 1 dan 2 benar.
@@ -90,7 +89,7 @@ const pageOperator4 = () => {
           <div>
             <h3 className="flex gap-2">
               <Link
-                href={"/latihan/operator_3"}
+                href={"/latihan/operator_perbandingan2"}
                 className="text-white bg-red-500 hover:bg-red-400 px-4 py-2 rounded-md"
               >
                 Sebelumnya
