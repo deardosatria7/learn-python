@@ -110,7 +110,7 @@ const pageVariabel5 = () => {
                 Sebelumnya
               </Link>
               <Link
-                href={"/latihan/operator_1"}
+                href={"/latihan/operator_aritmatika"}
                 className="text-white bg-blue-600 hover:bg-blue-500 px-4 py-2 rounded-md"
               >
                 Selanjutnya
