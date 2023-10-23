@@ -69,19 +69,6 @@ const pageOperator4 = () => {
             selanjutnya.
           </span>
         </div>
-        <Editor>
-          <div
-            dangerouslySetInnerHTML={{
-              __html: `
-              <py-config>
-              terminal = false
-              </py-config>
-              <py-repl output="replOutput">
-              
-              </py-repl>`,
-            }}
-          />
-        </Editor>
       </section>
 
       <Footer>
