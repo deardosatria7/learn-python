@@ -107,14 +107,13 @@ export default function PageQuizVariabel2() {
                 Sebelumnya
               </button>
               {showSelanjutnya && (
-                <div
+                <Link
+                  href={"../variabel/3"}
                   className="text-white bg-blue-600 hover:bg-blue-500 px-4 py-2 rounded-md"
                   id="btn_selanjutnya"
                 >
-                  <RandomPageButton pages={pagesVariabel}>
-                    Selanjutnya
-                  </RandomPageButton>
-                </div>
+                  Selanjutnya
+                </Link>
               )}
             </div>
           </div>
