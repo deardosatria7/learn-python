@@ -63,6 +63,11 @@ const List_materi = () => {
                     Operator logika
                   </Link>
                 </li>
+                <li className="pl-2">
+                  <Link href={"../latihan/operator_membership"}>
+                    Operator membership
+                  </Link>
+                </li>
               </span>
             </div>
             <div>

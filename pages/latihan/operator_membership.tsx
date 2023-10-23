@@ -3,7 +3,7 @@ import Editor from "@/components/Editor";
 import Link from "next/link";
 import Footer from "@/sections/Footer";
 
-const pageOperator4 = () => {
+const pageOperator5 = () => {
   return (
     <>
       <Header>
@@ -47,23 +47,25 @@ const pageOperator4 = () => {
       <section className="p-4">
         <h1 className="text-2xl font-semibold">Operator Python</h1>
         <p className="pt-3 pl-1">
-          Selanjutnya adalah <b>Operator Logika</b>.
+          Berikutnya kita akan belajar <b>Operator Membership</b>.
         </p>
         <p className="pt-3 pl-1">
-          Operator logika dalam python terdiri dari <b>AND</b>, <b>OR</b>, dan{" "}
-          <b>NOT</b>. Operator logika digunakan dalam membandingkan dua/lebih
-          pernyataan dan menghasilkan nilai yang berbentuk boolean. Berikut
-          adalah rincian dari ketiga operator logika tersebut:
+          Seperti namanya, operator ini berfungsi dalam melakukan pengecekan
+          terhadap keanggotaan dalam sebuah kumpulan data. Operator ini terdiri
+          dari:
         </p>
         <div className="pt-3 pl-1">
-          <b>AND</b>: Bernilai <i>True</i> apabila pernyataan 1 dan 2 benar.
-          Bernilai False apabila salah satunya bernilai False. <br />
-          <b>OR</b>: Bernilai <i>True</i> apabila salah satu pernyataan yang
-          disajikan benar. Bernilai False apabila keduanya salah. <br />
-          <b>NOT</b>: Akan membalikkan apapun nilai dari pernyataan yang
-          disajikan.
+          <b>in</b>: Bernilai <i>True</i> apabila data yang dicek berada dalam
+          kumpulan data.
+          <br />
+          <b>not in</b>: Bernilai <i>True</i> apabila data yang diperiksa tidak
+          ada dalam kumpulan data.
+          <br />
         </div>
-        <div className="pt-3 pl-1">Coba jalankan kode di bawah ini!</div>
+        <div className="pt-3 pl-1">
+          Jalankan kode dibawah ini agar lebih memahami konsep operator
+          membership.
+        </div>
         <Editor>
           <div
             dangerouslySetInnerHTML={{
@@ -72,10 +74,10 @@ const pageOperator4 = () => {
               terminal = false
               </py-config>
               <py-repl output="replOutput">
-              x = 5
+              buah = ["apel", "anggur"]
 
-              print (x > 3 and x < 10)
-              #menghasilkan hasil true karena x lebih besar dari 3 dan lebih kecil dari 10
+              print ("apel" in buah)
+              print ("pisang" not in buah)
               </py-repl>`,
             }}
           />
@@ -87,13 +89,13 @@ const pageOperator4 = () => {
           <div>
             <h3 className="flex gap-2">
               <Link
-                href={"/latihan/operator_perbandingan2"}
+                href={"/latihan/operator_logika"}
                 className="text-white bg-red-500 hover:bg-red-400 px-4 py-2 rounded-md"
               >
                 Sebelumnya
               </Link>
               <Link
-                href={"/latihan/operator_membership"}
+                href={"/latihan/operator_bitwise"}
                 className="text-white bg-blue-600 hover:bg-blue-500 px-4 py-2 rounded-md"
               >
                 Selanjutnya
@@ -106,4 +108,4 @@ const pageOperator4 = () => {
   );
 };
 
-export default pageOperator4;
+export default pageOperator5;
