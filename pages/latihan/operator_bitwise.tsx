@@ -3,7 +3,7 @@ import Editor from "@/components/Editor";
 import Link from "next/link";
 import Footer from "@/sections/Footer";
 
-const pageOperator5 = () => {
+const pageOperator6 = () => {
   return (
     <>
       <Header>
@@ -146,4 +146,4 @@ const pageOperator5 = () => {
   );
 };
 
-export default pageOperator5;
+export default pageOperator6;
