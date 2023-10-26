@@ -86,7 +86,7 @@ const pythonList5 = () => {
               kedalam list lainnya. Perhatikan contoh di bawah ini.
             </div>
             <div className="mt-3 bg-neutral-200 p-2 rounded-md">
-              <code>buah = [pepaya&#34;, &#34;apel&#34;]</code>
+              <code>buah = [&#34;pepaya&#34;, &#34;apel&#34;]</code>
               <br />
               <code>sayur = [&#34;wortel&#34;, &#34;sawi&#34;]</code>
               <br />
