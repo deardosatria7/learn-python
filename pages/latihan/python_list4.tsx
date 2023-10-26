@@ -55,17 +55,21 @@ const pythonList4 = () => {
             <tbody>
               <tr className="flex justify-start content-start gap-1 p-2 bg-neutral-100">
                 <td className="pr-7">
-                  <code className="px-2 py-1 rounded-md bg-neutral-200">
-                    append()
-                  </code>
+                  <Link href={"/latihan/python_list_tambahData#metode_append"}>
+                    <code className="px-2 py-1 rounded-md bg-neutral-200">
+                      append()
+                    </code>
+                  </Link>
                 </td>
                 <td>Menambahkan data baru kedalam list.</td>
               </tr>
               <tr className="flex justify-start content-start gap-1 p-2">
                 <td className="pr-7">
-                  <code className="px-2 py-1 rounded-md bg-neutral-200">
-                    insert()
-                  </code>
+                  <Link href={"/latihan/python_list_tambahData#metode_insert"}>
+                    <code className="px-2 py-1 rounded-md bg-neutral-200">
+                      insert()
+                    </code>
+                  </Link>
                 </td>
                 <td>
                   Menambahkan data baru kedalam list dalam posisi tertentu.
@@ -73,9 +77,11 @@ const pythonList4 = () => {
               </tr>
               <tr className="flex justify-start content-start gap-1 p-2 bg-neutral-100">
                 <td className="pr-7">
-                  <code className="px-2 py-1 rounded-md bg-neutral-200">
-                    extend()
-                  </code>
+                  <Link href={"/latihan/python_list_tambahData#metode_extend"}>
+                    <code className="px-2 py-1 rounded-md bg-neutral-200">
+                      extend()
+                    </code>
+                  </Link>
                 </td>
                 <td>Menggabungkan dua buah list.</td>
               </tr>
@@ -163,7 +169,7 @@ const pythonList4 = () => {
                 Sebelumnya
               </Link>
               <Link
-                href={"/latihan/python_list5"}
+                href={"/latihan/python_list_tambahData"}
                 className="text-white bg-blue-600 hover:bg-blue-500 px-4 py-2 rounded-md"
               >
                 Selanjutnya
