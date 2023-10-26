@@ -96,13 +96,14 @@ const pythonList5 = () => {
             </div>
           </div>
         </div>
-        <hr className="my-12 h-0.5 border-t-0 bg-neutral-200 opacity-100" />
+        <hr
+          className="my-12 h-0.5 border-t-0 bg-neutral-200 opacity-100"
+          id="metode_insert"
+        />
 
         {/* Metode insert() */}
         <div className="flex flex-col pl-1">
-          <div className="text-lg font-medium" id="metode_insert">
-            Metode insert( )
-          </div>
+          <div className="text-lg font-medium">Metode insert( )</div>
           <div className="pt-1">
             Metode insert( ) digunakan untuk menambahkan data tertentu ke posisi
             tertentu dalam sebuah list.
@@ -125,13 +126,14 @@ const pythonList5 = () => {
             </div>
           </div>
         </div>
-        <hr className="my-12 h-0.5 border-t-0 bg-neutral-200 opacity-100" />
+        <hr
+          className="my-12 h-0.5 border-t-0 bg-neutral-200 opacity-100"
+          id="metode_extend"
+        />
 
         {/* Metode extend() */}
         <div className="flex flex-col pl-1">
-          <div className="text-lg font-medium" id="metode_extend">
-            Metode extend( )
-          </div>
+          <div className="text-lg font-medium">Metode extend( )</div>
           <div className="pt-1">
             Metode extend( ) digunakan untuk menambahkan seluruh data dari
             sebuah list ke list lainnya.

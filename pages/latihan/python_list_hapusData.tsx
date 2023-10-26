@@ -81,13 +81,14 @@ const pythonList6 = () => {
             </div>
           </div>
         </div>
-        <hr className="my-12 h-0.5 border-t-0 bg-neutral-200 opacity-100" />
+        <hr
+          className="my-12 h-0.5 border-t-0 bg-neutral-200 opacity-100"
+          id="metode_pop"
+        />
 
         {/* Metode pop() */}
         <div className="flex flex-col pl-1">
-          <div className="text-lg font-medium" id="metode_pop">
-            Metode pop( )
-          </div>
+          <div className="text-lg font-medium">Metode pop( )</div>
           <div className="pt-1">
             Metode pop( ) digunakan untuk menghapus data pada posisi tertentu
             dalam sebuah list.
@@ -112,13 +113,14 @@ const pythonList6 = () => {
             </div>
           </div>
         </div>
-        <hr className="my-12 h-0.5 border-t-0 bg-neutral-200 opacity-100" />
+        <hr
+          className="my-12 h-0.5 border-t-0 bg-neutral-200 opacity-100"
+          id="metode_clear"
+        />
 
         {/* Metode clear() */}
         <div className="flex flex-col pl-1">
-          <div className="text-lg font-medium" id="metode_clear">
-            Metode clear( )
-          </div>
+          <div className="text-lg font-medium">Metode clear( )</div>
           <div className="pt-1">
             Metode clear( ) digunakan untuk menghapus seluruh isi data dalam
             sebuah list.
@@ -163,7 +165,7 @@ const pythonList6 = () => {
                 Sebelumnya
               </Link>
               <Link
-                href={"/latihan/python_listX"}
+                href={"/latihan/python_list_misc"}
                 className="text-white bg-blue-600 hover:bg-blue-500 px-4 py-2 rounded-md"
               >
                 Selanjutnya
