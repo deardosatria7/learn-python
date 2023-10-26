@@ -87,25 +87,31 @@ const pythonList4 = () => {
               </tr>
               <tr className="flex justify-start content-start gap-1 p-2">
                 <td className="pr-7">
-                  <code className="px-2 py-1 rounded-md bg-neutral-200">
-                    remove()
-                  </code>
+                  <Link href={"/latihan/python_list_hapusData#metode_remove"}>
+                    <code className="px-2 py-1 rounded-md bg-neutral-200">
+                      remove()
+                    </code>
+                  </Link>
                 </td>
                 <td>Menghapus data tertentu dalam list.</td>
               </tr>
               <tr className="flex justify-start content-start gap-1 p-2 bg-neutral-100">
                 <td className="pr-14">
-                  <code className="px-2 py-1 rounded-md bg-neutral-200">
-                    pop()
-                  </code>
+                  <Link href={"/latihan/python_list_hapusData#metode_pop"}>
+                    <code className="px-2 py-1 rounded-md bg-neutral-200">
+                      pop()
+                    </code>
+                  </Link>
                 </td>
                 <td>Menghapus data pada urutan tertentu dalam list.</td>
               </tr>
               <tr className="flex justify-start content-start gap-1 p-2">
                 <td className="pr-10">
-                  <code className="px-2 py-1 rounded-md bg-neutral-200">
-                    clear()
-                  </code>
+                  <Link href={"/latihan/python_list_hapusData#metode_clear"}>
+                    <code className="px-2 py-1 rounded-md bg-neutral-200">
+                      clear()
+                    </code>
+                  </Link>
                 </td>
                 <td>Menghapus semua data dalam list.</td>
               </tr>

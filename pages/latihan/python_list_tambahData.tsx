@@ -96,9 +96,10 @@ const pythonList5 = () => {
             </div>
           </div>
         </div>
+        <hr className="my-12 h-0.5 border-t-0 bg-neutral-200 opacity-100" />
 
         {/* Metode insert() */}
-        <div className="flex flex-col pl-1 pt-6">
+        <div className="flex flex-col pl-1">
           <div className="text-lg font-medium" id="metode_insert">
             Metode insert( )
           </div>
@@ -124,9 +125,10 @@ const pythonList5 = () => {
             </div>
           </div>
         </div>
+        <hr className="my-12 h-0.5 border-t-0 bg-neutral-200 opacity-100" />
 
         {/* Metode extend() */}
-        <div className="flex flex-col pl-1 pt-6">
+        <div className="flex flex-col pl-1">
           <div className="text-lg font-medium" id="metode_extend">
             Metode extend( )
           </div>

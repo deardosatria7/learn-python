@@ -81,9 +81,10 @@ const pythonList6 = () => {
             </div>
           </div>
         </div>
+        <hr className="my-12 h-0.5 border-t-0 bg-neutral-200 opacity-100" />
 
         {/* Metode pop() */}
-        <div className="flex flex-col pl-1 pt-6">
+        <div className="flex flex-col pl-1">
           <div className="text-lg font-medium" id="metode_pop">
             Metode pop( )
           </div>
@@ -111,9 +112,10 @@ const pythonList6 = () => {
             </div>
           </div>
         </div>
+        <hr className="my-12 h-0.5 border-t-0 bg-neutral-200 opacity-100" />
 
         {/* Metode clear() */}
-        <div className="flex flex-col pl-1 pt-6">
+        <div className="flex flex-col pl-1">
           <div className="text-lg font-medium" id="metode_clear">
             Metode clear( )
           </div>
