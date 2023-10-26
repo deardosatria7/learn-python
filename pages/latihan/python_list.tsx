@@ -52,9 +52,9 @@ const pythonList = () => {
         </p>
         <code className="ml-1 px-2 py-1 rounded-md bg-neutral-200">
           mobil &#61; &#91;
-          <span className="text-orange-700">&ldquo;Ferrari&rdquo;</span>,{" "}
-          <span className="text-orange-700">&ldquo;Ford&rdquo;</span>,{" "}
-          <span className="text-orange-700">&ldquo;BMW&rdquo;</span>&#93;
+          <span className="text-orange-700">&#34;Ferrari&#34;</span>,{" "}
+          <span className="text-orange-700">&#34;Ford&#34;</span>,{" "}
+          <span className="text-orange-700">&#34;BMW&#34;</span>&#93;
         </code>
         <p className="py-2 pl-1 pt-6">
           Di dalam list, tipe data yang disimpan dapat berbeda satu sama lain.
@@ -62,7 +62,7 @@ const pythonList = () => {
         </p>
         <code className="ml-1 px-2 py-1 rounded-md bg-neutral-200">
           list1 &#61; &#91;
-          <span className="text-orange-700">&ldquo;Budi&rdquo;</span>,{" "}
+          <span className="text-orange-700">&#34;Budi&#34;</span>,{" "}
           <span className="text-red-600">23</span>,{" "}
           <span className="text-blue-700">True</span>&#93;
         </code>
@@ -72,7 +72,7 @@ const pythonList = () => {
         </p>
         <code className="ml-1 px-2 py-1 rounded-md bg-neutral-200">
           list2 &#61; &#91;
-          <span className="text-orange-700">&ldquo;BMW&rdquo;</span>,{" "}
+          <span className="text-orange-700">&#34;BMW&#34;</span>,{" "}
           <span className="text-red-600">10</span>,{" "}
           <span className="text-blue-700">True</span>,{" "}
           <span className="text-red-600">10</span>&#93;

@@ -71,9 +71,9 @@ const pythonList5 = () => {
         <div className="pt-6">
           <div className="flex flex-col">
             <div className="bg-neutral-200 p-2 rounded-md">
-              <code>buah = [&ldquo;pepaya&rdquo;, &ldquo;apel&rdquo;]</code>
+              <code>buah = [&#34;pepaya&#34;, &#34;apel&#34;]</code>
               <br />
-              <code>buah.append(&ldquo;jeruk&rdquo;)</code>
+              <code>buah.append(&#34;jeruk&#34;)</code>
               <br />
               <code>print(buah)</code>
             </div>
@@ -86,9 +86,9 @@ const pythonList5 = () => {
               kedalam list lainnya. Perhatikan contoh di bawah ini.
             </div>
             <div className="mt-3 bg-neutral-200 p-2 rounded-md">
-              <code>buah = [&ldquo;pepaya&rdquo;, &ldquo;apel&rdquo;]</code>
+              <code>buah = [pepaya&#34;, &#34;apel&#34;]</code>
               <br />
-              <code>sayur = [&ldquo;wortel&rdquo;, &ldquo;sawi&rdquo;]</code>
+              <code>sayur = [&#34;wortel&#34;, &#34;sawi&#34;]</code>
               <br />
               <code>buah.append(sayur)</code>
               <br />
@@ -116,9 +116,9 @@ const pythonList5 = () => {
         <div className="pt-6">
           <div className="flex flex-col">
             <div className="bg-neutral-200 p-2 rounded-md">
-              <code>buah = [&ldquo;pepaya&rdquo;, &ldquo;apel&rdquo;]</code>
+              <code>buah = [&#34;pepaya&#34;, &#34;apel&#34;]</code>
               <br />
-              <code>buah.insert(1, &ldquo;jeruk&rdquo;)</code>
+              <code>buah.insert(1, &#34;jeruk&#34;)</code>
               <br />
               <code>print(buah)</code>
             </div>
@@ -144,9 +144,9 @@ const pythonList5 = () => {
         <div className="pt-6">
           <div className="flex flex-col">
             <div className="bg-neutral-200 p-2 rounded-md">
-              <code>buah = [&ldquo;pepaya&rdquo;, &ldquo;apel&rdquo;]</code>
+              <code>buah = [&#34;pepaya&#34;, &#34;apel&#34;]</code>
               <br />
-              <code>sayur = [&ldquo;timun&rdquo;, &ldquo;lobak&rdquo;]</code>
+              <code>sayur = [&#34;timun&#34;, &#34;lobak&#34;]</code>
               <br />
               <code>buah.extend(sayur)</code>
               <br />
