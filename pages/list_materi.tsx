@@ -72,6 +72,11 @@ const List_materi = () => {
             </div>
             <div>
               <span className="text-blue-900">
+                <Link href={"../latihan/python_list"}>Pyhton list</Link>
+              </span>
+            </div>
+            <div>
+              <span className="text-blue-900">
                 <Link href={"../quiz"}>Quiz</Link>
               </span>
             </div>

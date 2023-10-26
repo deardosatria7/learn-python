@@ -52,30 +52,44 @@ const pythonList3 = () => {
           Contohnya:
         </div>
         <div className="flex flex-col py-2 pl-1">
-          <div>
-            <code className="px-2 py-1 rounded-md bg-neutral-200">
-              print(<span className="text-orange-700">list1</span>&#91;
-              <span className="text-blue-600">2:5</span>&#93;)
-            </code>{" "}
-          </div>
-          <div>
-            menampilkan list dari urutan ke-2 hingga urutan <i>sebelum</i> ke-5.
+          <div className="flex flex-col md:flex-row">
+            <div>
+              <code className="px-2 py-1 rounded-md bg-neutral-200">
+                print(<span className="text-orange-700">list1</span>&#91;
+                <span className="text-blue-600">2:5</span>&#93;)
+              </code>{" "}
+            </div>
+            <div className="md:pl-4">
+              menampilkan list dari urutan ke-2 hingga urutan <i>sebelum</i>{" "}
+              ke-5.
+            </div>
           </div>
           <div className="pt-6">
-            <code className="px-2 py-1 rounded-md bg-neutral-200">
-              print(<span className="text-orange-700">list1</span>&#91;
-              <span className="text-blue-600">1:</span>&#93;)
-            </code>{" "}
+            <div className="flex flex-col md:flex-row">
+              <div>
+                <code className="px-2 py-1 rounded-md bg-neutral-200">
+                  print(<span className="text-orange-700">list1</span>&#91;
+                  <span className="text-blue-600">1:</span>&#93;)
+                </code>{" "}
+              </div>
+              <div className="md:pl-4">
+                menampilkan list dari urutan ke-1 hingga urutan terakhir.
+              </div>
+            </div>
           </div>
-          <div>menampilkan list dari urutan ke-1 hingga urutan terakhir.</div>
           <div className="pt-6">
-            <code className="px-2 py-1 rounded-md bg-neutral-200">
-              print(<span className="text-orange-700">list1</span>&#91;
-              <span className="text-blue-600">:4</span>&#93;)
-            </code>{" "}
-          </div>
-          <div>
-            menampilkan list dari urutan ke-0 hingga <i>sebelum</i> urutan ke-4.
+            <div className="flex flex-col md:flex-row">
+              <div>
+                <code className="px-2 py-1 rounded-md bg-neutral-200">
+                  print(<span className="text-orange-700">list1</span>&#91;
+                  <span className="text-blue-600">:4</span>&#93;)
+                </code>{" "}
+              </div>
+              <div className="md:pl-4">
+                menampilkan list dari urutan ke-0 hingga <i>sebelum</i> urutan
+                ke-4.
+              </div>
+            </div>
           </div>
         </div>
         <div className="py-2 pl-1">

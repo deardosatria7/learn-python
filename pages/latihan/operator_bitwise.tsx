@@ -133,7 +133,7 @@ const pageOperator6 = () => {
                 Sebelumnya
               </Link>
               <Link
-                href={"/latihan/operator_bitwise"}
+                href={"/latihan/variabel_multidata"}
                 className="text-white bg-blue-600 hover:bg-blue-500 px-4 py-2 rounded-md"
               >
                 Selanjutnya
