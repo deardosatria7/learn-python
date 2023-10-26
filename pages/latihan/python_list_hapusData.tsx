@@ -3,7 +3,7 @@ import Header from "@/sections/Header";
 import Editor from "@/components/Editor";
 import Footer from "@/sections/Footer";
 
-const pythonList5 = () => {
+const pythonList6 = () => {
   return (
     <>
       <Header>
@@ -47,23 +47,23 @@ const pythonList5 = () => {
       <section className="p-4">
         <div className="text-2xl font-semibold">Python List</div>
         <div className="py-3 pl-1">
-          Pada bagian ini kita akan membahas beberapa metode untuk menambahkan
-          data kedalam sebuah list:
+          Selanjutnya kita akan membahas beberapa metode untuk menghapus data
+          dari sebuah list:
         </div>
 
-        {/* Metode append() */}
+        {/* Metode remove() */}
         <div className="flex flex-col pl-1">
-          <div className="text-lg font-medium" id="metode_append">
-            Metode append( )
+          <div className="text-lg font-medium" id="metode_remove">
+            Metode remove( )
           </div>
           <div className="pt-1">
-            Metode append( ) digunakan untuk menambahkan data ke bagian paling
-            belakang sebuah list.
+            Metode remove( ) digunakan untuk menghapus data tertentu dalam
+            sebuah list.
           </div>
           <div className="pt-3">
-            Metode append( ) dapat digunakan dengan mengetikkan{" "}
+            Metode remove( ) dapat digunakan dengan mengetikkan{" "}
             <code className="px-2 py-1 rounded-md bg-neutral-200">
-              <i>namaList.</i>append(
+              <i>namaList.</i>remove(
               <i>data</i>)
             </code>{" "}
           </div>
@@ -71,86 +71,73 @@ const pythonList5 = () => {
         <div className="pt-6">
           <div className="flex flex-col">
             <div className="bg-neutral-200 p-2 rounded-md">
-              <code>buah = [&#34;pepaya&#34;, &#34;apel&#34;]</code>
+              <code>
+                mobil = [&#34;Fiat&#34;, &#34;BMW&#34;, &#34;Toyota&#34;]
+              </code>
               <br />
-              <code>buah.append(&#34;jeruk&#34;)</code>
+              <code>mobil.remove(&#34;BMW&#34;)</code>
               <br />
-              <code>print(buah)</code>
-            </div>
-          </div>
-        </div>
-        <div className="pt-6">
-          <div className="flex flex-col">
-            <div>
-              Selain itu, append( ) dapat digunakan untuk menambahkan list
-              kedalam list lainnya. Perhatikan contoh di bawah ini.
-            </div>
-            <div className="mt-3 bg-neutral-200 p-2 rounded-md">
-              <code>buah = [pepaya&#34;, &#34;apel&#34;]</code>
-              <br />
-              <code>sayur = [&#34;wortel&#34;, &#34;sawi&#34;]</code>
-              <br />
-              <code>buah.append(sayur)</code>
-              <br />
-              <code>print(buah)</code>
+              <code>print(mobil)</code>
             </div>
           </div>
         </div>
 
-        {/* Metode insert() */}
+        {/* Metode pop() */}
         <div className="flex flex-col pl-1 pt-6">
-          <div className="text-lg font-medium" id="metode_insert">
-            Metode insert( )
+          <div className="text-lg font-medium" id="metode_pop">
+            Metode pop( )
           </div>
           <div className="pt-1">
-            Metode insert( ) digunakan untuk menambahkan data tertentu ke posisi
-            tertentu dalam sebuah list.
+            Metode pop( ) digunakan untuk menghapus data pada posisi tertentu
+            dalam sebuah list.
           </div>
           <div className="pt-3">
-            Metode insert( ) dapat digunakan dengan mengetikkan{" "}
+            Metode pop( ) dapat digunakan dengan mengetikkan{" "}
             <code className="px-2 py-1 rounded-md bg-neutral-200">
-              <i>namaList.</i>insert(<i>posisi</i>, <i>data</i>)
+              <i>namaList.</i>pop(<i>posisi</i>)
             </code>{" "}
           </div>
         </div>
         <div className="pt-6">
           <div className="flex flex-col">
             <div className="bg-neutral-200 p-2 rounded-md">
-              <code>buah = [&#34;pepaya&#34;, &#34;apel&#34;]</code>
+              <code>
+                mobil = [&#34;Fiat&#34;, &#34;BMW&#34;, &#34;Toyota&#34;]
+              </code>
               <br />
-              <code>buah.insert(1, &#34;jeruk&#34;)</code>
+              <code>mobil.pop(1)</code>
               <br />
-              <code>print(buah)</code>
+              <code>print(mobil)</code>
             </div>
           </div>
         </div>
 
-        {/* Metode extend() */}
+        {/* Metode clear() */}
         <div className="flex flex-col pl-1 pt-6">
-          <div className="text-lg font-medium" id="metode_extend">
-            Metode extend( )
+          <div className="text-lg font-medium" id="metode_clear">
+            Metode clear( )
           </div>
           <div className="pt-1">
-            Metode extend( ) digunakan untuk menambahkan seluruh data dari
-            sebuah list ke list lainnya.
+            Metode clear( ) digunakan untuk menghapus seluruh isi data dalam
+            sebuah list.
           </div>
           <div className="pt-3">
-            Metode extend( ) dapat digunakan dengan mengetikkan{" "}
+            Metode clear( ) dapat digunakan dengan mengetikkan{" "}
             <code className="px-2 py-1 rounded-md bg-neutral-200">
-              <i>list_1.</i>extend(<i>list_2</i>)
+              <i>namaList.</i>clear()
             </code>{" "}
           </div>
         </div>
         <div className="pt-6">
           <div className="flex flex-col">
             <div className="bg-neutral-200 p-2 rounded-md">
-              <code>buah = [&#34;pepaya&#34;, &#34;apel&#34;]</code>
+              <code>
+                mobil = [&#34;Fiat&#34;, &#34;BMW&#34;, &#34;Toyota&#34;]
+              </code>
               <br />
-              <code>sayur = [&#34;timun&#34;, &#34;lobak&#34;]</code>
+              <code>mobil.clear()</code>
               <br />
-              <code>buah.extend(sayur)</code>
-              <br />
-              <code>print(buah)</code>
+              <code>print(mobil)</code>
             </div>
           </div>
           <div className="pt-5 pb-20">
@@ -168,13 +155,13 @@ const pythonList5 = () => {
           <div>
             <h3 className="flex gap-2">
               <Link
-                href={"/latihan/python_list4"}
+                href={"/latihan/python_list_tambahData"}
                 className="text-white bg-red-500 hover:bg-red-400 px-4 py-2 rounded-md"
               >
                 Sebelumnya
               </Link>
               <Link
-                href={"/latihan/python_list_hapusData"}
+                href={"/latihan/python_listX"}
                 className="text-white bg-blue-600 hover:bg-blue-500 px-4 py-2 rounded-md"
               >
                 Selanjutnya
@@ -187,4 +174,4 @@ const pythonList5 = () => {
   );
 };
 
-export default pythonList5;
+export default pythonList6;
