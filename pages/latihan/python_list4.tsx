@@ -117,41 +117,51 @@ const pythonList4 = () => {
               </tr>
               <tr className="flex justify-start content-start gap-1 p-2 bg-neutral-100">
                 <td className="pr-12">
-                  <code className="px-2 py-1 rounded-md bg-neutral-200">
-                    copy()
-                  </code>
+                  <Link href={"/latihan/python_list_misc#metode_copy"}>
+                    <code className="px-2 py-1 rounded-md bg-neutral-200">
+                      copy()
+                    </code>
+                  </Link>
                 </td>
                 <td>Menyalin data dalam list.</td>
               </tr>
               <tr className="flex justify-start content-start gap-1 p-2">
                 <td className="pr-10">
-                  <code className="px-2 py-1 rounded-md bg-neutral-200">
-                    count()
-                  </code>
+                  <Link href={"/latihan/python_list_misc#metode_count"}>
+                    <code className="px-2 py-1 rounded-md bg-neutral-200">
+                      count()
+                    </code>
+                  </Link>
                 </td>
                 <td>Menghitung jumlah data tertentu dalam sebuah list.</td>
               </tr>
               <tr className="flex justify-start content-start gap-1 p-2 bg-neutral-100">
                 <td className="pr-10">
-                  <code className="px-2 py-1 rounded-md bg-neutral-200">
-                    index()
-                  </code>
+                  <Link href={"/latihan/python_list_misc#metode_index"}>
+                    <code className="px-2 py-1 rounded-md bg-neutral-200">
+                      index()
+                    </code>
+                  </Link>
                 </td>
                 <td>Mengambil posisi data tertentu dalam sebuah list.</td>
               </tr>
               <tr className="flex justify-start content-start gap-1 p-2">
                 <td className="pr-6">
-                  <code className="px-2 py-1 rounded-md bg-neutral-200">
-                    reverse()
-                  </code>
+                  <Link href={"/latihan/python_list_misc#metode_reverse"}>
+                    <code className="px-2 py-1 rounded-md bg-neutral-200">
+                      reverse()
+                    </code>
+                  </Link>
                 </td>
                 <td>Membalikkan posisi data dalam list (awal-akhir).</td>
               </tr>
               <tr className="flex justify-start content-start gap-1 p-2 bg-neutral-100">
                 <td className="pr-12">
-                  <code className="px-2 py-1 rounded-md bg-neutral-200">
-                    sort()
-                  </code>
+                  <Link href={"/latihan/python_list_misc#metode_sort"}>
+                    <code className="px-2 py-1 rounded-md bg-neutral-200">
+                      sort()
+                    </code>
+                  </Link>
                 </td>
                 <td>Mengurutkan data dalam sebuah list.</td>
               </tr>
