@@ -258,10 +258,10 @@ const PythonList6 = () => {
                 onClick={() => router.back()}
                 className="text-white bg-red-500 hover:bg-red-400 px-4 py-2 rounded-md"
               >
-                Sebelumnya
+                Kembali
               </button>
               <Link
-                href={"/latihan/python_listX"}
+                href={"/latihan/python_tuples"}
                 className="text-white bg-blue-600 hover:bg-blue-500 px-4 py-2 rounded-md"
               >
                 Selanjutnya
