@@ -4,7 +4,7 @@ import Editor from "@/components/Editor";
 import Footer from "@/sections/Footer";
 import {useRouter} from "next/router";
 
-const pythonList6 = () => {
+const PythonList6 = () => {
   const router = useRouter();
   return (
     <>
@@ -180,4 +180,4 @@ const pythonList6 = () => {
   );
 };
 
-export default pythonList6;
+export default PythonList6;

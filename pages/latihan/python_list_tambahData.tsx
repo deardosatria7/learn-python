@@ -3,7 +3,7 @@ import Header from "@/sections/Header";
 import Footer from "@/sections/Footer";
 import {useRouter} from "next/router";
 
-const pythonList5 = () => {
+const PythonList5 = () => {
   const router = useRouter();
   return (
     <>
@@ -192,4 +192,4 @@ const pythonList5 = () => {
   );
 };
 
-export default pythonList5;
+export default PythonList5;

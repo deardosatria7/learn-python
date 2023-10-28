@@ -3,7 +3,7 @@ import Header from "@/sections/Header";
 import {useRouter} from "next/router";
 import Footer from "@/sections/Footer";
 
-const pythonTuples = () => {
+const PythonTuples = () => {
   const router = useRouter();
   return (
     <>
@@ -99,4 +99,4 @@ const pythonTuples = () => {
   );
 };
 
-export default pythonTuples;
+export default PythonTuples;

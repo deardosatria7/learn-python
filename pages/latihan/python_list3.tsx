@@ -3,7 +3,7 @@ import Header from "@/sections/Header";
 import Editor from "@/components/Editor";
 import Footer from "@/sections/Footer";
 
-const pythonList3 = () => {
+const PythonList3 = () => {
   return (
     <>
       <Header>
@@ -144,4 +144,4 @@ const pythonList3 = () => {
   );
 };
 
-export default pythonList3;
+export default PythonList3;

@@ -4,7 +4,7 @@ import Editor from "@/components/Editor";
 import Footer from "@/sections/Footer";
 import {useRouter} from "next/router";
 
-const pythonList = () => {
+const PythonList = () => {
   const router = useRouter();
   return (
     <>
@@ -105,4 +105,4 @@ const pythonList = () => {
   );
 };
 
-export default pythonList;
+export default PythonList;
