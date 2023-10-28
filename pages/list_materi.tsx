@@ -72,7 +72,25 @@ const List_materi = () => {
             </div>
             <div>
               <span className="text-blue-900">
-                <Link href={"../latihan/python_list"}>Pyhton list</Link>
+                <Link href={"../latihan/variabel_multidata"}>
+                  Python Arrays
+                </Link>
+              </span>
+              <span className="text-blue-900">
+                <li className="pl-2">
+                  <Link href={"../latihan/python_list"}>Python list</Link>
+                </li>
+                <li className="pl-2">
+                  <Link href={"../latihan/python_tuples"}>Python tuple</Link>
+                </li>
+                <li className="pl-2">
+                  <Link href={"../latihan/python_dictionary"}>
+                    Python dictionary
+                  </Link>
+                </li>
+                <li className="pl-2">
+                  <Link href={"../latihan/python_set"}>Python set</Link>
+                </li>
               </span>
             </div>
             <div>

@@ -1,9 +1,10 @@
-import Header from "@/sections/Header";
-import Editor from "@/components/Editor";
 import Link from "next/link";
+import Header from "@/sections/Header";
+import {useRouter} from "next/router";
 import Footer from "@/sections/Footer";
 
-const pageVariabelMulti = () => {
+const pythonTuples = () => {
+  const router = useRouter();
   return (
     <>
       <Header>
@@ -45,47 +46,47 @@ const pageVariabelMulti = () => {
         </div>
       </Header>
       <section className="p-4">
-        <h1 className="text-2xl font-semibold">Variabel Lanjutan</h1>
-        <div className="pt-3 pl-1">
-          Setelah mempelajari operator, kita akan mempelajari variabel python
-          lanjutan yang dapat menyimpan lebih dari satu nilai/data.
-        </div>
-        <div className="pt-3 pl-1">
-          Di dalam python sendiri, ada 4 jenis variabel yaitu:
-        </div>
-        <div className="pt-3 pl-1 text-blue-800">
-          <li className="pl-2">
-            <Link href={"../latihan/python_list"}>List</Link>
-          </li>
-          <li className="pl-2">
-            <Link href={"../latihan/python_tuples"}>Tuple</Link>
-          </li>
-          <li className="pl-2">
-            <Link href={"../latihan/python_set"}>Set</Link>
-          </li>
-          <li className="pl-2">
-            <Link href={"../latihan/python_dictionary"}>Dictionary</Link>
-          </li>
-        </div>
-        <div className="pt-3 pl-1">
-          Keempat variabel tersebut sama-sama dapat menyimpan banyak nilai,
-          namun memiliki ciri yang berbeda-beda. Untuk lebih lanjut, kita akan
-          mulai mempelajari List pada bagian selanjutnya.
-        </div>
+        <h1 className="text-2xl font-semibold">Python Tuple</h1>
+        <p className="py-3 pl-1">
+          <b>Tuple</b> digunakan untuk menyimpan berbagai nilai/data dalam satu
+          variabel. Tuple ditandai dengan <b>tanda kurung &#40; &#41;.</b>
+        </p>
+        <code className="ml-1 px-2 py-1 rounded-md bg-neutral-200">
+          tuple1 &#61; &#40;
+          <span className="text-orange-700">&#34;apel&#34;</span>,{" "}
+          <span className="text-orange-700">&#34;jeruk&#34;</span>,{" "}
+          <span className="text-orange-700">&#34;pisang&#34;</span>&#41;
+        </code>
+        <p className="py-2 pl-1 pt-6">
+          Di dalam tuple, tipe data yang disimpan dapat berbeda satu sama lain,
+          mengizinkan dua nilai yang sama, dan disimpan secara berurutan.
+        </p>
+        <code className="ml-1 px-2 py-1 rounded-md bg-neutral-200">
+          tuple2 &#61; &#40;
+          <span className="text-orange-700">&#34;apel&#34;</span>,{" "}
+          <span className="text-red-600">200</span>,{" "}
+          <span className="text-blue-700">True</span>,{" "}
+          <span className="text-orange-700">&#34;apel&#34;</span>&#41;
+        </code>
+        <p className="py-2 pl-1 pt-6">
+          Perbedaan tuple dengan tipe data list yang telah kita pelajari
+          sebelumnya adalah data yang tersimpan dalam tuple{" "}
+          <b>tidak dapat diubah.</b>
+        </p>
       </section>
 
       <Footer>
         <div className="flex flex-row">
           <div>
             <h3 className="flex gap-2">
-              <Link
-                href={"/latihan/operator_bitwise"}
+              <button
+                onClick={() => router.back()}
                 className="text-white bg-red-500 hover:bg-red-400 px-4 py-2 rounded-md"
               >
-                Sebelumnya
-              </Link>
+                Kembali
+              </button>
               <Link
-                href={"/latihan/python_list"}
+                href={"/latihan/python_tuples2"}
                 className="text-white bg-blue-600 hover:bg-blue-500 px-4 py-2 rounded-md"
               >
                 Selanjutnya
@@ -98,4 +99,4 @@ const pageVariabelMulti = () => {
   );
 };
 
-export default pageVariabelMulti;
+export default pythonTuples;

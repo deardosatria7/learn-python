@@ -2,8 +2,10 @@ import Link from "next/link";
 import Header from "@/sections/Header";
 import Editor from "@/components/Editor";
 import Footer from "@/sections/Footer";
+import {useRouter} from "next/router";
 
 const pythonList6 = () => {
+  const router = useRouter();
   return (
     <>
       <Header>
@@ -252,12 +254,12 @@ const pythonList6 = () => {
         <div className="flex flex-row">
           <div>
             <h3 className="flex gap-2">
-              <Link
-                href={"/latihan/python_list_tambahData"}
+              <button
+                onClick={() => router.back()}
                 className="text-white bg-red-500 hover:bg-red-400 px-4 py-2 rounded-md"
               >
                 Sebelumnya
-              </Link>
+              </button>
               <Link
                 href={"/latihan/python_listX"}
                 className="text-white bg-blue-600 hover:bg-blue-500 px-4 py-2 rounded-md"

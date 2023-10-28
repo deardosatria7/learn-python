@@ -8,7 +8,7 @@ const Editor = ({children}: any) => {
           rel="stylesheet"
           href="https://pyscript.net/latest/pyscript.css"
         />
-        <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+        <script src="https://pyscript.net/latest/pyscript.js"></script>
       </Head>
       <div>
         <div className="pt-5 pr-5 pl-5 pb-3">{children}</div>
