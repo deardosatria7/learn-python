@@ -3,7 +3,7 @@ import Header from "@/sections/Header";
 import {useRouter} from "next/router";
 import Footer from "@/sections/Footer";
 
-const PythonTuples2 = () => {
+const PythonTuples3 = () => {
   const router = useRouter();
   return (
     <>
@@ -73,21 +73,6 @@ const PythonTuples2 = () => {
           <br />
           <code>x &#61; list&#40;tuple1&#41;</code>
         </div>
-        <p className="py-2 pl-1 pt-4">
-          Kalian juga bisa mengecek panjang sebuah tuple dengan mengetikkan{" "}
-          <code className="px-1 rounded-sm bg-neutral-200">len()</code> seperti
-          contoh di bawah ini.
-        </p>
-        <div className="bg-neutral-200 p-2 rounded-md">
-          <code>print&#40;len&#40;tuple1&#41;&#41;</code>
-        </div>
-        <p className="py-2 pl-1 pt-4">
-          Dan kalian juga bisa mengakses data pada urutan tertentu panjang
-          sebuah tuple seperti contoh di bawah ini.
-        </p>
-        <div className="bg-neutral-200 p-2 rounded-md mb-20">
-          <code>print&#40;tuple1&#91;0&#93;&#41;</code>
-        </div>
       </section>
 
       <Footer>
@@ -114,4 +99,4 @@ const PythonTuples2 = () => {
   );
 };
 
-export default PythonTuples2;
+export default PythonTuples3;
