@@ -3,7 +3,7 @@ import Header from "@/sections/Header";
 import {useRouter} from "next/router";
 import Footer from "@/sections/Footer";
 
-const PythonTuples3 = () => {
+const PythonTuples4 = () => {
   const router = useRouter();
   return (
     <>
@@ -47,33 +47,38 @@ const PythonTuples3 = () => {
       </Header>
       <section className="p-4">
         <h1 className="text-2xl font-semibold">Python Tuple</h1>
-        <div className="font-semibold pl-1 pt-5 text-lg">Update data tuple</div>
+        <div className="font-semibold pl-1 pt-5 text-lg">
+          Metode dalam tuple
+        </div>
         <p className="pt-2 pb-3 pl-1">
-          Tuple mendukung operasi/metode <b>&#40;&#43;&#41;</b>. Hal ini berarti
-          anda dapat menambahkan tuple ke tuple lainnya. Perhatikan contoh di
-          bawah ini.
+          Karena tuple tidak mendukung perubahan data, maka metode yang dapat
+          digunakan pada tuple lebih sedikit dibandingkan dengan tipe list.
         </p>
-        <div className="bg-neutral-200 p-2 rounded-md">
-          <code>
-            tuple1 &#61; &#40;
-            <span className="text-orange-700">&#34;apel&#34;</span>,{" "}
-            <span className="text-orange-700">&#34;jeruk&#34;</span>,{" "}
-            <span className="text-orange-700">&#34;pisang&#34;</span>&#41;
-          </code>
-          <br />
-          <code>
-            tuple2 &#61; &#40;
-            <span className="text-orange-700">&#34;tomat&#34;</span>,{" "}
-            <span className="text-orange-700">&#34;timun&#34;</span>,{" "}
-            <span className="text-orange-700">&#34;wortel&#34;</span>&#41;
-          </code>
-          <br />
-          <br />
-          <code>tuple3 &#61; tuple1 &#43; tuple2</code>
-          <br />
-          <code>
-            <span className="text-violet-800">print</span>&#40;tuple3&#41;
-          </code>
+        <div className="flex flex-col py-2 pl-1">
+          <table className="table-auto border-2">
+            <tbody>
+              <tr className="flex justify-start content-start gap-1 p-2 bg-neutral-100">
+                <td className="pr-7">
+                  <Link href={"/latihan/python_tuples4#metode_count"}>
+                    <code className="px-2 py-1 rounded-md bg-neutral-200">
+                      count()
+                    </code>
+                  </Link>
+                </td>
+                <td>Menghitung jumlah suatu data dalam satu tuple.</td>
+              </tr>
+            </tbody>
+            <tr className="flex justify-start content-start gap-1 p-2">
+              <td className="pr-7">
+                <Link href={"/latihan/python_tuples4#metode_index"}>
+                  <code className="px-2 py-1 rounded-md bg-neutral-200">
+                    index()
+                  </code>
+                </Link>
+              </td>
+              <td>Mengambil urutan/posisi data tertentu dalam tuple.</td>
+            </tr>
+          </table>
         </div>
         <p className="py-2 pl-1 pt-4">
           Atau kalian juga bisa mengubahnya menjadi sebuah list, mengupdate
@@ -109,6 +114,81 @@ const PythonTuples3 = () => {
             <span className="text-violet-800">print</span>&#40;tuple1&#41;
           </code>
         </div>
+        <div className="pl-1 pt-5">
+          Uji coba beberapa kode diatas dengan salin ke dalam{" "}
+          <Link href={"../uji_kode"} className="underline text-blue-500">
+            terminal
+          </Link>{" "}
+          ini.
+        </div>
+        <hr
+          className="my-8 h-0.5 border-t-0 bg-neutral-200 opacity-100"
+          id="metode_count"
+        />
+
+        {/* Metode count() */}
+        <div className="flex flex-col pl-1">
+          <div className="text-lg font-medium">Metode count( )</div>
+          <div className="pt-1">
+            Metode count( ) digunakan untuk menghitung jumlah kemunculan data
+            tertentu dalam sebuah tuple.
+          </div>
+          <div className="pt-3">
+            Metode count( ) dapat digunakan dengan mengetikkan{" "}
+            <code className="px-2 py-1 rounded-md bg-neutral-200">
+              <i>namaTuple.</i>count(<i>data</i>)
+            </code>{" "}
+          </div>
+        </div>
+        <div className="pt-6">
+          <div className="flex flex-col">
+            <div className="bg-neutral-200 p-2 rounded-md">
+              <code>tuple1 = (1, 4, 3, 4, 1, 9, 4, 6)</code>
+              <br />
+              <code>x = tuple.count(4)</code>
+              <br />
+              <code>
+                <span className="text-violet-800">print</span>(x)
+              </code>
+            </div>
+          </div>
+        </div>
+        <hr
+          className="my-12 h-0.5 border-t-0 bg-neutral-200 opacity-100"
+          id="metode_index"
+        />
+
+        {/* Metode index() */}
+        <div className="flex flex-col pl-1">
+          <div className="text-lg font-medium">Metode index( )</div>
+          <div className="pt-1">
+            Metode index( ) digunakan untuk mengambil posisi dari data tertentu
+            dalam sebuah tuple.
+          </div>
+          <div className="pt-3">
+            Metode index( ) dapat digunakan dengan mengetikkan{" "}
+            <code className="px-2 py-1 rounded-md bg-neutral-200">
+              <i>namaTuple.</i>index(<i>data</i>)
+            </code>{" "}
+          </div>
+          <div className="pt-6">
+            <div className="flex flex-col">
+              <div className="bg-neutral-200 p-2 rounded-md">
+                <code>tuple1 = (1, 4, 3, 4, 1, 9, 4, 6)</code>
+                <br />
+                <code>x = tuple1.index(4)</code>
+                <br />
+                <code>
+                  <span className="text-violet-800">print</span>(x)
+                </code>
+              </div>
+              <div className="pt-4">
+                Apabila terdapat lebih dari satu data yang sama, maka index()
+                akan mengembalikan posisi data yang pertama kali muncul.
+              </div>
+            </div>
+          </div>
+        </div>
         <div className="pl-1 pt-5 pb-20">
           Uji coba beberapa kode diatas dengan salin ke dalam{" "}
           <Link href={"../uji_kode"} className="underline text-blue-500">
@@ -123,13 +203,13 @@ const PythonTuples3 = () => {
           <div>
             <h3 className="flex gap-2">
               <Link
-                href={"/latihan/python_tuples2"}
+                href={"/latihan/python_tuples3"}
                 className="text-white bg-red-500 hover:bg-red-400 px-4 py-2 rounded-md"
               >
                 Sebelumnya
               </Link>
               <Link
-                href={"/latihan/python_tuples4"}
+                href={"/latihan/python_tuples5"}
                 className="text-white bg-blue-600 hover:bg-blue-500 px-4 py-2 rounded-md"
               >
                 Selanjutnya
@@ -142,4 +222,4 @@ const PythonTuples3 = () => {
   );
 };
 
-export default PythonTuples3;
+export default PythonTuples4;
