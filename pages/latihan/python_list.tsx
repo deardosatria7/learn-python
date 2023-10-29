@@ -60,15 +60,6 @@ const PythonList = () => {
         </code>
         <p className="py-2 pl-1 pt-6">
           Di dalam list, tipe data yang disimpan dapat berbeda satu sama lain.
-          Seperti contoh di bawah ini.
-        </p>
-        <code className="ml-1 px-2 py-1 rounded-md bg-neutral-200">
-          list1 &#61; &#91;
-          <span className="text-orange-700">&#34;Budi&#34;</span>,{" "}
-          <span className="text-red-600">23</span>,{" "}
-          <span className="text-blue-700">True</span>&#93;
-        </code>
-        <p className="py-2 pl-1 pt-6">
           Selain itu, list juga mengizinkan untuk ada dua data yang bernilai
           sama dalam sebuah list.
         </p>
@@ -79,6 +70,26 @@ const PythonList = () => {
           <span className="text-blue-700">True</span>,{" "}
           <span className="text-red-600">10</span>&#93;
         </code>
+        <p className="py-2 pl-1 pt-6">
+          Berikut adalah karakteristik dari list dalam python:
+        </p>
+        <div className="pl-3">
+          <ul className="pl-4">
+            <li className="list-item list-decimal">
+              List membolehkan update data (menambahkan, menghapus, dan
+              mengedit) dalam sebuah list.
+            </li>
+            <li className="list-item list-decimal pt-1">
+              Data dalam list memiliki urutan yang diawali dari nol.
+            </li>
+            <li className="list-item list-decimal pt-1">
+              Sebuah list dapat menyimpan berbagai tipe data.
+            </li>
+            <li className="list-item list-decimal pt-1">
+              Boleh ada duplikat data dalam sebuah list.
+            </li>
+          </ul>
+        </div>
       </section>
 
       <Footer>

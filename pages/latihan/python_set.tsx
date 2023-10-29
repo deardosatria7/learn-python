@@ -3,7 +3,7 @@ import Header from "@/sections/Header";
 import {useRouter} from "next/router";
 import Footer from "@/sections/Footer";
 
-const PythonTuples = () => {
+const PythonSet = () => {
   const router = useRouter();
   return (
     <>
@@ -46,16 +46,19 @@ const PythonTuples = () => {
         </div>
       </Header>
       <section className="p-4">
-        <h1 className="text-2xl font-semibold">Python Tuple</h1>
+        <h1 className="text-2xl font-semibold">Python Set</h1>
         <p className="py-3 pl-1">
-          <b>Tuple</b> digunakan untuk menyimpan berbagai nilai/data dalam satu
-          variabel. Tuple ditandai dengan <b>tanda kurung &#40; &#41;.</b>
+          <b>Set</b> digunakan untuk menyimpan berbagai nilai/data dalam satu
+          variabel, seperti halnya dengan list dan tuple. Set ditandai dengan{" "}
+          <b>
+            tanda <i>curly bracket</i> &#123; &#125;.
+          </b>
         </p>
         <code className="ml-1 px-2 py-1 rounded-md bg-neutral-200">
-          tuple1 &#61; &#40;
-          <span className="text-orange-700">&#34;apel&#34;</span>,{" "}
-          <span className="text-orange-700">&#34;jeruk&#34;</span>,{" "}
-          <span className="text-orange-700">&#34;pisang&#34;</span>&#41;
+          set1 &#61; &#123;
+          <span className="text-orange-700">&#34;asus&#34;</span>,{" "}
+          <span className="text-orange-700">&#34;lenovo&#34;</span>,{" "}
+          <span className="text-orange-700">&#34;hp&#34;</span>&#125;
         </code>
         <p className="py-2 pl-1 pt-6">
           Di dalam tuple, tipe data yang disimpan dapat berbeda satu sama lain,
@@ -73,25 +76,6 @@ const PythonTuples = () => {
           sebelumnya adalah data yang tersimpan dalam tuple{" "}
           <b>tidak dapat diubah.</b>
         </p>
-        <p className="pt-3 pl-1">
-          Berikut adalah karakteristik dari tuple dalam python:
-        </p>
-        <div className="pl-3 pt-2">
-          <ul className="pl-4">
-            <li className="list-item list-decimal">
-              Data dalam tuple tidak dapat diubah.
-            </li>
-            <li className="list-item list-decimal pt-1">
-              Data dalam list memiliki urutan yang diawali dari nol.
-            </li>
-            <li className="list-item list-decimal pt-1">
-              Sebuah tuple dapat menyimpan berbagai macam tipe data.
-            </li>
-            <li className="list-item list-decimal pt-1">
-              Boleh ada duplikat data dalam sebuah tuple.
-            </li>
-          </ul>
-        </div>
       </section>
 
       <Footer>
@@ -118,4 +102,4 @@ const PythonTuples = () => {
   );
 };
 
-export default PythonTuples;
+export default PythonSet;

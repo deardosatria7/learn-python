@@ -80,47 +80,6 @@ const PythonTuples4 = () => {
             </tr>
           </table>
         </div>
-        <p className="py-2 pl-1 pt-4">
-          Atau kalian juga bisa mengubahnya menjadi sebuah list, mengupdate
-          data, dan mengubahnya menjadi tuple kembali seperti contoh di bawah
-          ini.
-        </p>
-        <div className="bg-neutral-200 p-2 rounded-md">
-          <code>
-            tuple1 &#61; &#40;
-            <span className="text-orange-700">&#34;apel&#34;</span>,{" "}
-            <span className="text-orange-700">&#34;jeruk&#34;</span>,{" "}
-            <span className="text-orange-700">&#34;pisang&#34;</span>&#41;
-          </code>
-          <br />
-          <code>
-            x &#61; <span className="text-violet-800">list</span>
-            &#40;tuple1&#41;
-          </code>
-          <br />
-          <code>
-            x.append&#40;
-            <span className="text-orange-700">&#34;salak&#34;</span>&#41;
-          </code>
-          <br />
-          <code>
-            {" "}
-            tuple1 &#61; <span className="text-violet-800">tuple</span>
-            &#40;x&#41;
-            <br />
-          </code>
-          <br />
-          <code>
-            <span className="text-violet-800">print</span>&#40;tuple1&#41;
-          </code>
-        </div>
-        <div className="pl-1 pt-5">
-          Uji coba beberapa kode diatas dengan salin ke dalam{" "}
-          <Link href={"../uji_kode"} className="underline text-blue-500">
-            terminal
-          </Link>{" "}
-          ini.
-        </div>
         <hr
           className="my-8 h-0.5 border-t-0 bg-neutral-200 opacity-100"
           id="metode_count"
@@ -209,7 +168,7 @@ const PythonTuples4 = () => {
                 Sebelumnya
               </Link>
               <Link
-                href={"/latihan/python_tuples5"}
+                href={"/latihan/python_set"}
                 className="text-white bg-blue-600 hover:bg-blue-500 px-4 py-2 rounded-md"
               >
                 Selanjutnya
