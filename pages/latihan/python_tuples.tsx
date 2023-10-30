@@ -76,7 +76,7 @@ const PythonTuples = () => {
         <p className="pt-3 pl-1">
           Berikut adalah karakteristik dari tuple dalam python:
         </p>
-        <div className="pl-3 pt-2">
+        <div className="pl-3 pt-2 pb-20">
           <ul className="pl-4">
             <li className="list-item list-decimal">
               Data dalam tuple tidak dapat diubah.

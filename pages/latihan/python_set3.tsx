@@ -3,7 +3,7 @@ import Header from "@/sections/Header";
 import {useRouter} from "next/router";
 import Footer from "@/sections/Footer";
 
-const PythonSet = () => {
+const PythonSet3 = () => {
   const router = useRouter();
   return (
     <>
@@ -47,25 +47,16 @@ const PythonSet = () => {
       </Header>
       <section className="p-4">
         <h1 className="text-2xl font-semibold">Python Set</h1>
-        <p className="py-3 pl-1">
-          Set digunakan untuk menyimpan berbagai nilai/data dalam satu variabel,
-          seperti halnya dengan list dan tuple. Set ditandai dengan{" "}
-          <b>
-            tanda <i>curly bracket</i> &#123; &#125;.
-          </b>
-        </p>
-        <div>
-          <code className="ml-1 px-2 py-1 rounded-md bg-neutral-200">
-            set1 &#61; &#123;
-            <span className="text-orange-700">&#34;asus&#34;</span>,{" "}
-            <span className="text-orange-700">&#34;lenovo&#34;</span>,{" "}
-            <span className="text-orange-700">&#34;hp&#34;</span>&#125;
-          </code>
+        <div className="text-lg font-semibold pt-3 pl-1">
+          Mengupdate data dalam set
         </div>
-        <p className="py-2 pl-1 pt-6">
-          Di dalam set, tipe data yang disimpan dapat berbeda satu sama lain
-          (pada kondisi tertentu), tidak mengizinkan dua nilai yang sama, dan
-          tidak berurutan.
+        <p className="pt-3 pl-1">
+          Data dalam set tidak bisa diakses seperti halnya list dan tuple. Hal
+          ini dikarenakan data dalam set tidak memiliki urutan.
+        </p>
+        <p className="pt-3 pl-1">
+          Bagaimanapun, kalian dapat mengakses data dalam set dengan menggunakan
+          pengulangan <b>for</b> seperti dibawah ini.
         </p>
         <div className="pt-3 text-sm sm:text-md">
           <div className="flex flex-col">
@@ -74,41 +65,29 @@ const PythonSet = () => {
                 set1 &#61; &#123;
                 <span className="text-orange-700">&#34;asus&#34;</span>,{" "}
                 <span className="text-orange-700">&#34;lenovo&#34;</span>,{" "}
-                <span className="text-orange-700">&#34;hp&#34;</span>,{" "}
-                <span className="text-orange-700">&#34;asus&#34;</span>&#125;
+                <span className="text-orange-700">&#34;hp&#34;</span>&#125;
               </code>
               <br />
-              <br />
-              <code>print(set1)</code>
               <br />
               <code>
-                <span className="text-orange-700">
-                  &#35;data asus hanya akan dimunculkan sekali
-                </span>
+                <span className="text-red-700">for</span> x{" "}
+                <span className="text-red-700">in</span> set1:
               </code>
+              <br />
+              &nbsp;<span className="text-violet-800">print</span> (x)
             </div>
           </div>
         </div>
-        <p className="pt-6 pl-1">
-          Berikut adalah karakteristik dari set dalam python:
+        <p className="py-2 pl-1 pt-6">
+          Kode diatas akan menampilkan seluruh data dalam set tersebut. Kita
+          akan mempelajari pengulangan <b>for()</b> pada bagian selanjutnya.
         </p>
-        <div className="pl-3 pt-2 pb-20">
-          <ul className="pl-4">
-            <li className="list-item list-decimal">
-              Data dalam set tidak dapat diganti, namun bisa ditambah dan
-              dihapus.
-            </li>
-            <li className="list-item list-decimal pt-1">
-              Data di dalam set tidak memiliki urutan.
-            </li>
-            <li className="list-item list-decimal pt-1">
-              Sebuah set dapat menyimpan berbagai macam tipe data (pada kondisi
-              tertentu).
-            </li>
-            <li className="list-item list-decimal pt-1">
-              Tidak boleh ada duplikat data dalam sebuah set.
-            </li>
-          </ul>
+        <div className="pl-1 pt-3 pb-20">
+          Uji coba kode diatas dengan salin ke dalam{" "}
+          <Link href={"../uji_kode"} className="underline text-blue-500">
+            terminal
+          </Link>{" "}
+          ini.
         </div>
       </section>
 
@@ -116,14 +95,14 @@ const PythonSet = () => {
         <div className="flex flex-row">
           <div>
             <h3 className="flex gap-2">
-              <button
-                onClick={() => router.back()}
+              <Link
+                href={"/latihan/python_set"}
                 className="text-white bg-red-500 hover:bg-red-400 px-4 py-2 rounded-md"
               >
-                Kembali
-              </button>
+                Sebelumnya
+              </Link>
               <Link
-                href={"/latihan/python_set2"}
+                href={"/latihan/python_set3"}
                 className="text-white bg-blue-600 hover:bg-blue-500 px-4 py-2 rounded-md"
               >
                 Selanjutnya
@@ -136,4 +115,4 @@ const PythonSet = () => {
   );
 };
 
-export default PythonSet;
+export default PythonSet3;
