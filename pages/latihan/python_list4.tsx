@@ -55,7 +55,7 @@ const PythonList4 = () => {
             <tbody>
               <tr className="flex justify-start content-start gap-1 p-2 bg-neutral-100">
                 <td className="pr-7">
-                  <Link href={"/latihan/python_list_tambahData#metode_append"}>
+                  <Link href={"/latihan/python_list/append"}>
                     <code className="px-2 py-1 rounded-md bg-neutral-200">
                       append()
                     </code>
@@ -65,7 +65,7 @@ const PythonList4 = () => {
               </tr>
               <tr className="flex justify-start content-start gap-1 p-2">
                 <td className="pr-7">
-                  <Link href={"/latihan/python_list_tambahData#metode_insert"}>
+                  <Link href={"/latihan/python_list/insert"}>
                     <code className="px-2 py-1 rounded-md bg-neutral-200">
                       insert()
                     </code>
@@ -77,7 +77,7 @@ const PythonList4 = () => {
               </tr>
               <tr className="flex justify-start content-start gap-1 p-2 bg-neutral-100">
                 <td className="pr-7">
-                  <Link href={"/latihan/python_list_tambahData#metode_extend"}>
+                  <Link href={"/latihan/python_list/extend"}>
                     <code className="px-2 py-1 rounded-md bg-neutral-200">
                       extend()
                     </code>
@@ -87,7 +87,7 @@ const PythonList4 = () => {
               </tr>
               <tr className="flex justify-start content-start gap-1 p-2">
                 <td className="pr-7">
-                  <Link href={"/latihan/python_list_hapusData#metode_remove"}>
+                  <Link href={"/latihan/python_list/remove"}>
                     <code className="px-2 py-1 rounded-md bg-neutral-200">
                       remove()
                     </code>
@@ -97,7 +97,7 @@ const PythonList4 = () => {
               </tr>
               <tr className="flex justify-start content-start gap-1 p-2 bg-neutral-100">
                 <td className="pr-14">
-                  <Link href={"/latihan/python_list_hapusData#metode_pop"}>
+                  <Link href={"/latihan/python_list/pop"}>
                     <code className="px-2 py-1 rounded-md bg-neutral-200">
                       pop()
                     </code>
@@ -107,7 +107,7 @@ const PythonList4 = () => {
               </tr>
               <tr className="flex justify-start content-start gap-1 p-2">
                 <td className="pr-10">
-                  <Link href={"/latihan/python_list_hapusData#metode_clear"}>
+                  <Link href={"/latihan/python_list/clear"}>
                     <code className="px-2 py-1 rounded-md bg-neutral-200">
                       clear()
                     </code>
@@ -117,7 +117,7 @@ const PythonList4 = () => {
               </tr>
               <tr className="flex justify-start content-start gap-1 p-2 bg-neutral-100">
                 <td className="pr-12">
-                  <Link href={"/latihan/python_list_misc#metode_copy"}>
+                  <Link href={"/latihan/python_list/copy"}>
                     <code className="px-2 py-1 rounded-md bg-neutral-200">
                       copy()
                     </code>
@@ -127,7 +127,7 @@ const PythonList4 = () => {
               </tr>
               <tr className="flex justify-start content-start gap-1 p-2">
                 <td className="pr-10">
-                  <Link href={"/latihan/python_list_misc#metode_count"}>
+                  <Link href={"/latihan/python_list/count"}>
                     <code className="px-2 py-1 rounded-md bg-neutral-200">
                       count()
                     </code>
@@ -137,7 +137,7 @@ const PythonList4 = () => {
               </tr>
               <tr className="flex justify-start content-start gap-1 p-2 bg-neutral-100">
                 <td className="pr-10">
-                  <Link href={"/latihan/python_list_misc#metode_index"}>
+                  <Link href={"/latihan/python_list/index"}>
                     <code className="px-2 py-1 rounded-md bg-neutral-200">
                       index()
                     </code>
@@ -147,7 +147,7 @@ const PythonList4 = () => {
               </tr>
               <tr className="flex justify-start content-start gap-1 p-2">
                 <td className="pr-6">
-                  <Link href={"/latihan/python_list_misc#metode_reverse"}>
+                  <Link href={"/latihan/python_list/reverse"}>
                     <code className="px-2 py-1 rounded-md bg-neutral-200">
                       reverse()
                     </code>
@@ -157,7 +157,7 @@ const PythonList4 = () => {
               </tr>
               <tr className="flex justify-start content-start gap-1 p-2 bg-neutral-100">
                 <td className="pr-12">
-                  <Link href={"/latihan/python_list_misc#metode_sort"}>
+                  <Link href={"/latihan/python_list/sort"}>
                     <code className="px-2 py-1 rounded-md bg-neutral-200">
                       sort()
                     </code>
