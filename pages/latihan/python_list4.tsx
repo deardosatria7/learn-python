@@ -137,7 +137,7 @@ const PythonList4 = () => {
               </tr>
               <tr className="flex justify-start content-start gap-1 p-2 bg-neutral-100">
                 <td className="pr-10">
-                  <Link href={"/latihan/python_list/index"}>
+                  <Link href={"/latihan/python_list/indexlist"}>
                     <code className="px-2 py-1 rounded-md bg-neutral-200">
                       index()
                     </code>
@@ -185,7 +185,7 @@ const PythonList4 = () => {
                 Sebelumnya
               </Link>
               <Link
-                href={"/latihan/python_list_tambahData"}
+                href={"/latihan/python_tuples"}
                 className="text-white bg-blue-600 hover:bg-blue-500 px-4 py-2 rounded-md"
               >
                 Selanjutnya
