@@ -3,7 +3,7 @@ import Header from "@/sections/Header";
 import {useRouter} from "next/router";
 import Footer from "@/sections/Footer";
 
-const PythonSet3 = () => {
+const PythonSet4 = () => {
   const router = useRouter();
   return (
     <>
@@ -51,19 +51,13 @@ const PythonSet3 = () => {
           Mengupdate data dalam set
         </div>
         <p className="pt-3 pl-1">
-          Setelah kita membuat sebuah set, kita tidak dapat mengganti data
-          tertentu dalam set tersebut. Namun, kita masih bisa <b>menambahkan</b>{" "}
-          dan <b>menghapus data.</b>
+          Untuk menghapus data tertentu dalam sebuah set, kita dapat menggunakan
+          metode <b>discard()</b> dan <b>remove()</b>.
         </p>
         <p className="pt-3 pl-1">
-          Ada dua cara untuk menambahkan data pada sebuah set. Yaitu metode{" "}
-          <b>add()</b> dan <b>update()</b>. Berikut adalah penjelasannya:
-        </p>
-        <p className="pt-3 pl-1">
-          Metode <code className="bg-neutral-200 px-1 rounded-md">add()</code>{" "}
-          berfungsi untuk menambahkan data baru kedalam sebuah set. Berikut
-          adalah contoh penggunaan{" "}
-          <code className="bg-neutral-200 px-1 rounded-md">add()</code>.
+          Kedua metode tersebut memiliki fungsi yang mirip. Namun metode{" "}
+          <code className="bg-neutral-200 py-1 rounded-md">remove()</code> akan
+          menampilkan error apabila data tersebut tidak ada dalam set.
         </p>
         <div className="pt-3 text-sm sm:text-md">
           <div className="flex flex-col">
@@ -72,12 +66,40 @@ const PythonSet3 = () => {
                 set1 &#61; &#123;
                 <span className="text-orange-700">&#34;asus&#34;</span>,{" "}
                 <span className="text-orange-700">&#34;lenovo&#34;</span>,{" "}
-                <span className="text-orange-700">&#34;hp&#34;</span>&#125;
+                <span className="text-orange-700">&#34;dell&#34;</span>,{" "}
+                <span className="text-orange-700">&#34;hp&#34;</span>
+                &#125;
               </code>
               <br />
               <br />
               <code>
-                set1.add(<span className="text-orange-700">"dell"</span>)
+                set1.remove(<span className="text-orange-700">"dell"</span>)
+              </code>
+              <br />
+              <span className="text-violet-800">print</span> (set1)
+            </div>
+          </div>
+        </div>
+        <p className="pt-6 pl-1">
+          Sedangkan metode{" "}
+          <code className="bg-neutral-200 px-1 rounded-md">discard()</code>{" "}
+          tidak akan menampilkan error ketika data tersebut tidak ada dalam set.
+        </p>
+        <div className="pt-3 text-sm sm:text-md">
+          <div className="flex flex-col">
+            <div className="bg-neutral-200 p-2 rounded-md">
+              <code>
+                set1 &#61; &#123;
+                <span className="text-orange-700">&#34;asus&#34;</span>,{" "}
+                <span className="text-orange-700">&#34;lenovo&#34;</span>,{" "}
+                <span className="text-orange-700">&#34;dell&#34;</span>,{" "}
+                <span className="text-orange-700">&#34;hp&#34;</span>
+                &#125;
+              </code>
+              <br />
+              <br />
+              <code>
+                set1.discard(<span className="text-orange-700">"dell"</span>)
               </code>
               <br />
               <span className="text-violet-800">print</span> (set1)
@@ -85,13 +107,12 @@ const PythonSet3 = () => {
           </div>
         </div>
         <p className="py-2 pl-1 pt-6">
-          Kemudian terdapat juga metode{" "}
-          <code className="bg-neutral-200 px-1 rounded-md">update()</code>.
-          Metode update berfungsi menggabungkan dua buah set, atau juga bisa
-          digunakan untuk menambahkan variabel lainnya seperti (list, tuple,
-          dict, dll)
+          Kemudian terdapat juga metode <b>pop()</b>, <b>clear()</b>, dan{" "}
+          <b>del</b>. Metode{" "}
+          <code className="bg-neutral-200 px-1 rounded-sm">pop()</code>{" "}
+          berfungsi menghapus sebuah data random dalam set tersebut.
         </p>
-        <div className="pt-3 text-sm sm:text-md">
+        <div className="text-sm sm:text-md">
           <div className="flex flex-col">
             <div className="bg-neutral-200 p-2 rounded-md">
               <code>
@@ -101,21 +122,59 @@ const PythonSet3 = () => {
                 <span className="text-orange-700">&#34;hp&#34;</span>&#125;
               </code>
               <br />
-              <code>
-                set2 &#61; &#123;
-                <span className="text-orange-700">&#34;dell&#34;</span>,{" "}
-                <span className="text-orange-700">&#34;acer&#34;</span>&#125;
-              </code>
               <br />
-              <br />
-              <code>set1.update(set2)</code>
+              <code>set1.pop()</code>
               <br />
               <span className="text-violet-800">print</span> (set1)
             </div>
           </div>
         </div>
-        <div className="pl-1 pt-3 pb-20">
-          Uji coba kode diatas dengan salin ke dalam{" "}
+        <p className="py-2 pl-1 pt-10">
+          Metode <code className="bg-neutral-200 px-1 rounded-sm">clear()</code>{" "}
+          berfungsi menghapus seluruh data dalam set tersebut.
+        </p>
+        <div className="text-sm sm:text-md">
+          <div className="flex flex-col">
+            <div className="bg-neutral-200 p-2 rounded-md">
+              <code>
+                set1 &#61; &#123;
+                <span className="text-orange-700">&#34;asus&#34;</span>,{" "}
+                <span className="text-orange-700">&#34;lenovo&#34;</span>,{" "}
+                <span className="text-orange-700">&#34;hp&#34;</span>&#125;
+              </code>
+              <br />
+              <br />
+              <code>set1.clear()</code>
+              <br />
+              <span className="text-violet-800">print</span> (set1)
+            </div>
+          </div>
+        </div>
+        <p className="py-2 pl-1 pt-10">
+          Metode <code className="bg-neutral-200 px-1 rounded-sm">del</code>{" "}
+          berfungsi dalam menghapus sebuah set.
+        </p>
+        <div className="text-sm sm:text-md">
+          <div className="flex flex-col">
+            <div className="bg-neutral-200 p-2 rounded-md">
+              <code>
+                set1 &#61; &#123;
+                <span className="text-orange-700">&#34;asus&#34;</span>,{" "}
+                <span className="text-orange-700">&#34;lenovo&#34;</span>,{" "}
+                <span className="text-orange-700">&#34;hp&#34;</span>&#125;
+              </code>
+              <br />
+              <br />
+              <code>del set1</code>
+              <br />
+              <code>
+                <span className="text-violet-800">print</span> (set1)
+              </code>
+            </div>
+          </div>
+        </div>
+        <div className="pl-1 pt-10 pb-20">
+          Uji coba beberapa kode diatas dengan salin ke dalam{" "}
           <Link href={"../uji_kode"} className="underline text-blue-500">
             terminal
           </Link>{" "}
@@ -128,13 +187,13 @@ const PythonSet3 = () => {
           <div>
             <h3 className="flex gap-2">
               <Link
-                href={"/latihan/python_set2"}
+                href={"/latihan/python_set3"}
                 className="text-white bg-red-500 hover:bg-red-400 px-4 py-2 rounded-md"
               >
                 Sebelumnya
               </Link>
               <Link
-                href={"/latihan/python_set4"}
+                href={"/latihan/python_set5"}
                 className="text-white bg-blue-600 hover:bg-blue-500 px-4 py-2 rounded-md"
               >
                 Selanjutnya
@@ -147,4 +206,4 @@ const PythonSet3 = () => {
   );
 };
 
-export default PythonSet3;
+export default PythonSet4;

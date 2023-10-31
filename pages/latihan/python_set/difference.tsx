@@ -3,7 +3,7 @@ import Header from "@/sections/Header";
 import {useRouter} from "next/router";
 import Footer from "@/sections/Footer";
 
-const PythonSet3 = () => {
+const SetDifference = () => {
   const router = useRouter();
   return (
     <>
@@ -48,75 +48,50 @@ const PythonSet3 = () => {
       <section className="p-4">
         <h1 className="text-2xl font-semibold">Python Set</h1>
         <div className="text-lg font-semibold pt-3 pl-1">
-          Mengupdate data dalam set
+          Metode <code>difference()</code>
         </div>
         <p className="pt-3 pl-1">
-          Setelah kita membuat sebuah set, kita tidak dapat mengganti data
-          tertentu dalam set tersebut. Namun, kita masih bisa <b>menambahkan</b>{" "}
-          dan <b>menghapus data.</b>
-        </p>
-        <p className="pt-3 pl-1">
-          Ada dua cara untuk menambahkan data pada sebuah set. Yaitu metode{" "}
-          <b>add()</b> dan <b>update()</b>. Berikut adalah penjelasannya:
-        </p>
-        <p className="pt-3 pl-1">
-          Metode <code className="bg-neutral-200 px-1 rounded-md">add()</code>{" "}
-          berfungsi untuk menambahkan data baru kedalam sebuah set. Berikut
-          adalah contoh penggunaan{" "}
-          <code className="bg-neutral-200 px-1 rounded-md">add()</code>.
+          Metode{" "}
+          <code className="bg-neutral-200 py-1 rounded-md">difference()</code>{" "}
+          digunakan untuk menciptakan set baru yang berisikan data yang ada pada
+          set pertama, Namun tidak pada set kedua (mengeliminasi data yang sama
+          pada kedua set).
         </p>
         <div className="pt-3 text-sm sm:text-md">
           <div className="flex flex-col">
             <div className="bg-neutral-200 p-2 rounded-md">
               <code>
                 set1 &#61; &#123;
-                <span className="text-orange-700">&#34;asus&#34;</span>,{" "}
+                <span className="text-orange-700">&#34;apple&#34;</span>,{" "}
                 <span className="text-orange-700">&#34;lenovo&#34;</span>,{" "}
-                <span className="text-orange-700">&#34;hp&#34;</span>&#125;
-              </code>
-              <br />
-              <br />
-              <code>
-                set1.add(<span className="text-orange-700">"dell"</span>)
-              </code>
-              <br />
-              <span className="text-violet-800">print</span> (set1)
-            </div>
-          </div>
-        </div>
-        <p className="py-2 pl-1 pt-6">
-          Kemudian terdapat juga metode{" "}
-          <code className="bg-neutral-200 px-1 rounded-md">update()</code>.
-          Metode update berfungsi menggabungkan dua buah set, atau juga bisa
-          digunakan untuk menambahkan variabel lainnya seperti (list, tuple,
-          dict, dll)
-        </p>
-        <div className="pt-3 text-sm sm:text-md">
-          <div className="flex flex-col">
-            <div className="bg-neutral-200 p-2 rounded-md">
-              <code>
-                set1 &#61; &#123;
-                <span className="text-orange-700">&#34;asus&#34;</span>,{" "}
-                <span className="text-orange-700">&#34;lenovo&#34;</span>,{" "}
-                <span className="text-orange-700">&#34;hp&#34;</span>&#125;
+                <span className="text-orange-700">&#34;dell&#34;</span>
+                &#125;
               </code>
               <br />
               <code>
                 set2 &#61; &#123;
-                <span className="text-orange-700">&#34;dell&#34;</span>,{" "}
-                <span className="text-orange-700">&#34;acer&#34;</span>&#125;
+                <span className="text-orange-700">&#34;apple&#34;</span>,{" "}
+                <span className="text-orange-700">&#34;jeruk&#34;</span>,{" "}
+                <span className="text-orange-700">&#34;mangga&#34;</span>
+                &#125;
               </code>
               <br />
               <br />
-              <code>set1.update(set2)</code>
+              <code>x = set1.difference(set2)</code>
               <br />
-              <span className="text-violet-800">print</span> (set1)
+              <code>
+                <span className="text-violet-800">print</span> (x)
+              </code>
             </div>
           </div>
         </div>
-        <div className="pl-1 pt-3 pb-20">
+        {/* <p className="pt-6 pl-1">
+          Hal ini akan membentuk variabel x yang berbentuk set dan memiliki
+          nilai yang sama dengan set asalnya.
+        </p> */}
+        <div className="pl-1 pt-5 pb-20">
           Uji coba kode diatas dengan salin ke dalam{" "}
-          <Link href={"../uji_kode"} className="underline text-blue-500">
+          <Link href={"../../uji_kode"} className="underline text-blue-500">
             terminal
           </Link>{" "}
           ini.
@@ -127,18 +102,12 @@ const PythonSet3 = () => {
         <div className="flex flex-row">
           <div>
             <h3 className="flex gap-2">
-              <Link
-                href={"/latihan/python_set2"}
+              <button
+                onClick={() => router.back()}
                 className="text-white bg-red-500 hover:bg-red-400 px-4 py-2 rounded-md"
               >
-                Sebelumnya
-              </Link>
-              <Link
-                href={"/latihan/python_set4"}
-                className="text-white bg-blue-600 hover:bg-blue-500 px-4 py-2 rounded-md"
-              >
-                Selanjutnya
-              </Link>
+                Kembali
+              </button>
             </h3>
           </div>
         </div>
@@ -147,4 +116,4 @@ const PythonSet3 = () => {
   );
 };
 
-export default PythonSet3;
+export default SetDifference;
