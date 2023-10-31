@@ -77,7 +77,8 @@ const PythonSet3 = () => {
               <br />
               <br />
               <code>
-                set1.add(<span className="text-orange-700">"dell"</span>)
+                set1.add(<span className="text-orange-700">&#34;dell&#34;</span>
+                )
               </code>
               <br />
               <span className="text-violet-800">print</span> (set1)

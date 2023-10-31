@@ -73,10 +73,13 @@ const PythonSet4 = () => {
               <br />
               <br />
               <code>
-                set1.remove(<span className="text-orange-700">"dell"</span>)
+                set1.remove(
+                <span className="text-orange-700">&#34;dell&#34;</span>)
               </code>
               <br />
-              <span className="text-violet-800">print</span> (set1)
+              <code>
+                <span className="text-violet-800">print</span> (set1)
+              </code>
             </div>
           </div>
         </div>
@@ -99,10 +102,13 @@ const PythonSet4 = () => {
               <br />
               <br />
               <code>
-                set1.discard(<span className="text-orange-700">"dell"</span>)
+                set1.discard(
+                <span className="text-orange-700">&#34;dell&#34;</span>)
               </code>
               <br />
-              <span className="text-violet-800">print</span> (set1)
+              <code>
+                <span className="text-violet-800">print</span> (set1)
+              </code>
             </div>
           </div>
         </div>
@@ -125,7 +131,9 @@ const PythonSet4 = () => {
               <br />
               <code>set1.pop()</code>
               <br />
-              <span className="text-violet-800">print</span> (set1)
+              <code>
+                <span className="text-violet-800">print</span> (set1)
+              </code>
             </div>
           </div>
         </div>
@@ -146,7 +154,9 @@ const PythonSet4 = () => {
               <br />
               <code>set1.clear()</code>
               <br />
-              <span className="text-violet-800">print</span> (set1)
+              <code>
+                <span className="text-violet-800">print</span> (set1)
+              </code>
             </div>
           </div>
         </div>
