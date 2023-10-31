@@ -110,7 +110,7 @@ const PythonSet5 = () => {
               </tr>
               <tr className="flex justify-start content-start gap-1 p-2">
                 <td className="pr-[95px]">
-                  <Link href={"/latihan/python_list_hapusData#metode_remove"}>
+                  <Link href={"/latihan/python_set/difference_update"}>
                     <code className="px-2 py-1 rounded-md bg-neutral-200">
                       difference_update()
                     </code>
@@ -122,7 +122,7 @@ const PythonSet5 = () => {
               </tr>
               <tr className="flex justify-start content-start gap-1 p-2 bg-neutral-100">
                 <td className="pr-[140px]">
-                  <Link href={"/latihan/python_list_hapusData#metode_pop"}>
+                  <Link href={"/latihan/python_set/intersection"}>
                     <code className="px-2 py-1 rounded-md bg-neutral-200">
                       intersection()
                     </code>
@@ -135,7 +135,7 @@ const PythonSet5 = () => {
               </tr>
               <tr className="flex justify-start content-start gap-1 p-2">
                 <td className="pr-[78px]">
-                  <Link href={"/latihan/python_list_hapusData#metode_clear"}>
+                  <Link href={"/latihan/python_set/intersection_update"}>
                     <code className="px-2 py-1 rounded-md bg-neutral-200">
                       intersection_update()
                     </code>
@@ -147,7 +147,7 @@ const PythonSet5 = () => {
               </tr>
               <tr className="flex justify-start content-start gap-1 p-2">
                 <td className="pr-[156px]">
-                  <Link href={"/latihan/python_list_misc#metode_count"}>
+                  <Link href={"/latihan/python_set/isdisjoint"}>
                     <code className="px-2 py-1 rounded-md bg-neutral-200">
                       isdisjoint()
                     </code>
@@ -160,7 +160,7 @@ const PythonSet5 = () => {
               </tr>
               <tr className="flex justify-start content-start gap-1 p-2 bg-neutral-100">
                 <td className="pr-[174px]">
-                  <Link href={"/latihan/python_list_misc#metode_index"}>
+                  <Link href={"/latihan/python_set/issubset"}>
                     <code className="px-2 py-1 rounded-md bg-neutral-200">
                       issubset()
                     </code>
@@ -173,7 +173,7 @@ const PythonSet5 = () => {
               </tr>
               <tr className="flex justify-start content-start gap-1 p-2">
                 <td className="pr-[148px]">
-                  <Link href={"/latihan/python_list_misc#metode_reverse"}>
+                  <Link href={"/latihan/python_set/issuperset"}>
                     <code className="px-2 py-1 rounded-md bg-neutral-200">
                       issupperset()
                     </code>
@@ -186,7 +186,7 @@ const PythonSet5 = () => {
               </tr>
               <tr className="flex justify-start content-start gap-1 p-2 bg-neutral-100">
                 <td className="pr-[201px]">
-                  <Link href={"/latihan/python_list_misc#metode_sort"}>
+                  <Link href={"/latihan/python_set/union"}>
                     <code className="px-2 py-1 rounded-md bg-neutral-200">
                       union()
                     </code>
@@ -208,7 +208,7 @@ const PythonSet5 = () => {
           <div>
             <h3 className="flex gap-2">
               <Link
-                href={"/latihan/python_set3"}
+                href={"/latihan/python_set4"}
                 className="text-white bg-red-500 hover:bg-red-400 px-4 py-2 rounded-md"
               >
                 Sebelumnya

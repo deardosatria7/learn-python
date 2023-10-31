@@ -3,7 +3,7 @@ import Header from "@/sections/Header";
 import {useRouter} from "next/router";
 import Footer from "@/sections/Footer";
 
-const SetDifferenceUpdate = () => {
+const SetIsSuperSet = () => {
   const router = useRouter();
   return (
     <>
@@ -48,40 +48,42 @@ const SetDifferenceUpdate = () => {
       <section className="p-4">
         <h1 className="text-2xl font-semibold">Python Set</h1>
         <div className="text-lg font-semibold pt-3 pl-1">
-          Metode <code>difference_update()</code>
+          Metode <code>issuperset()</code>
         </div>
         <p className="pt-3 pl-1">
           Metode{" "}
-          <code className="bg-neutral-200 py-1 rounded-md">
-            difference_update()
-          </code>{" "}
-          digunakan untuk mengupdate set dengan cara menghapus data yang ada
-          pada dua buah set.
+          <code className="bg-neutral-200 py-1 rounded-md">issuperset()</code>{" "}
+          digunakan untuk mengecek data dari kedua set yang berbeda. Apabila set
+          yang akan dicek memiliki nilai yang terdapat pada set asalnya, maka
+          akan bernilai True.
         </p>
         <div className="pt-3 text-sm sm:text-md">
           <div className="flex flex-col">
             <div className="bg-neutral-200 p-2 rounded-md">
               <code>
                 set1 &#61; &#123;
-                <span className="text-orange-700">&#34;apple&#34;</span>,{" "}
-                <span className="text-orange-700">&#34;lenovo&#34;</span>,{" "}
-                <span className="text-orange-700">&#34;dell&#34;</span>
+                <span className="text-orange-700">&#34;a&#34;</span>,{" "}
+                <span className="text-orange-700">&#34;b&#34;</span>,{" "}
+                <span className="text-orange-700">&#34;c&#34;</span>,{" "}
+                <span className="text-orange-700">&#34;d&#34;</span>,{" "}
+                <span className="text-orange-700">&#34;e&#34;</span>,{" "}
+                <span className="text-orange-700">&#34;f&#34;</span>
                 &#125;
               </code>
               <br />
               <code>
                 set2 &#61; &#123;
-                <span className="text-orange-700">&#34;apple&#34;</span>,{" "}
-                <span className="text-orange-700">&#34;jeruk&#34;</span>,{" "}
-                <span className="text-orange-700">&#34;mangga&#34;</span>
+                <span className="text-orange-700">&#34;c&#34;</span>,{" "}
+                <span className="text-orange-700">&#34;b&#34;</span>,{" "}
+                <span className="text-orange-700">&#34;a&#34;</span>
                 &#125;
               </code>
               <br />
               <br />
-              <code>set1.difference_update(set2)</code>
+              <code>x = set1.issuperset(set2)</code>
               <br />
               <code>
-                <span className="text-violet-800">print</span> (set1)
+                <span className="text-violet-800">print</span> (x)
               </code>
             </div>
           </div>
@@ -117,4 +119,4 @@ const SetDifferenceUpdate = () => {
   );
 };
 
-export default SetDifferenceUpdate;
+export default SetIsSuperSet;

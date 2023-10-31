@@ -3,7 +3,7 @@ import Header from "@/sections/Header";
 import {useRouter} from "next/router";
 import Footer from "@/sections/Footer";
 
-const SetDifferenceUpdate = () => {
+const SetUnion = () => {
   const router = useRouter();
   return (
     <>
@@ -48,40 +48,36 @@ const SetDifferenceUpdate = () => {
       <section className="p-4">
         <h1 className="text-2xl font-semibold">Python Set</h1>
         <div className="text-lg font-semibold pt-3 pl-1">
-          Metode <code>difference_update()</code>
+          Metode <code>union()</code>
         </div>
         <p className="pt-3 pl-1">
-          Metode{" "}
-          <code className="bg-neutral-200 py-1 rounded-md">
-            difference_update()
-          </code>{" "}
-          digunakan untuk mengupdate set dengan cara menghapus data yang ada
-          pada dua buah set.
+          Metode <code className="bg-neutral-200 py-1 rounded-md">union()</code>{" "}
+          digunakan untuk membuat set baru dengan data gabungan dari dua set
+          lainnya.
         </p>
         <div className="pt-3 text-sm sm:text-md">
           <div className="flex flex-col">
             <div className="bg-neutral-200 p-2 rounded-md">
               <code>
                 set1 &#61; &#123;
-                <span className="text-orange-700">&#34;apple&#34;</span>,{" "}
-                <span className="text-orange-700">&#34;lenovo&#34;</span>,{" "}
-                <span className="text-orange-700">&#34;dell&#34;</span>
+                <span className="text-orange-700">&#34;acer&#34;</span>,{" "}
+                <span className="text-orange-700">&#34;benq&#34;</span>,{" "}
+                <span className="text-orange-700">&#34;c&#34;</span>,{" "}
+                <span className="text-orange-700">&#34;lenovo&#34;</span>
                 &#125;
               </code>
               <br />
               <code>
                 set2 &#61; &#123;
-                <span className="text-orange-700">&#34;apple&#34;</span>,{" "}
-                <span className="text-orange-700">&#34;jeruk&#34;</span>,{" "}
-                <span className="text-orange-700">&#34;mangga&#34;</span>
-                &#125;
+                <span className="text-orange-700">&#34;msi&#34;</span>,{" "}
+                <span className="text-orange-700">&#34;asus&#34;</span>&#125;
               </code>
               <br />
               <br />
-              <code>set1.difference_update(set2)</code>
+              <code>x = set1.union(set2)</code>
               <br />
               <code>
-                <span className="text-violet-800">print</span> (set1)
+                <span className="text-violet-800">print</span> (x)
               </code>
             </div>
           </div>
@@ -117,4 +113,4 @@ const SetDifferenceUpdate = () => {
   );
 };
 
-export default SetDifferenceUpdate;
+export default SetUnion;

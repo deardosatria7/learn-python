@@ -3,7 +3,7 @@ import Header from "@/sections/Header";
 import {useRouter} from "next/router";
 import Footer from "@/sections/Footer";
 
-const SetDifferenceUpdate = () => {
+const SetIntersectionUpdate = () => {
   const router = useRouter();
   return (
     <>
@@ -48,15 +48,15 @@ const SetDifferenceUpdate = () => {
       <section className="p-4">
         <h1 className="text-2xl font-semibold">Python Set</h1>
         <div className="text-lg font-semibold pt-3 pl-1">
-          Metode <code>difference_update()</code>
+          Metode <code>intersection_update()</code>
         </div>
         <p className="pt-3 pl-1">
           Metode{" "}
           <code className="bg-neutral-200 py-1 rounded-md">
-            difference_update()
+            intersection_update()
           </code>{" "}
-          digunakan untuk mengupdate set dengan cara menghapus data yang ada
-          pada dua buah set.
+          digunakan untuk mengupdate set agar berisikan data yang sama dari dua
+          set yang berbeda.
         </p>
         <div className="pt-3 text-sm sm:text-md">
           <div className="flex flex-col">
@@ -78,7 +78,7 @@ const SetDifferenceUpdate = () => {
               </code>
               <br />
               <br />
-              <code>set1.difference_update(set2)</code>
+              <code>set1.intersection_update(set2)</code>
               <br />
               <code>
                 <span className="text-violet-800">print</span> (set1)
@@ -117,4 +117,4 @@ const SetDifferenceUpdate = () => {
   );
 };
 
-export default SetDifferenceUpdate;
+export default SetIntersectionUpdate;

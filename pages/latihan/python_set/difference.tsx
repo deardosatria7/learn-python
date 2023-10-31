@@ -54,7 +54,7 @@ const SetDifference = () => {
           Metode{" "}
           <code className="bg-neutral-200 py-1 rounded-md">difference()</code>{" "}
           digunakan untuk menciptakan set baru yang berisikan data yang ada pada
-          set pertama, Namun tidak pada set kedua (mengeliminasi data yang sama
+          set pertama, namun tidak pada set kedua (mengeliminasi data yang sama
           pada kedua set).
         </p>
         <div className="pt-3 text-sm sm:text-md">
