@@ -3,7 +3,7 @@ import Header from "@/sections/Header";
 import {useRouter} from "next/router";
 import Footer from "@/sections/Footer";
 
-const ListSort = () => {
+const PythonDictionarySetDefault = () => {
   const router = useRouter();
   return (
     <>
@@ -46,67 +46,84 @@ const ListSort = () => {
         </div>
       </Header>
       <section className="p-4">
-        <h1 className="text-2xl font-semibold">Python List</h1>
+        <h1 className="text-2xl font-semibold">Python Dictionary</h1>
         <div className="text-lg font-semibold pt-3 pl-1">
-          Metode <code>sort()</code>
+          Metode <code>setdefault()</code>
         </div>
-        <div className="flex flex-col pl-1">
-          <div className="pt-3">
-            Metode sort( ) digunakan untuk memberikan aturan sortir data di
-            dalam sebuah list (dengan default kecil-besar).
-          </div>
-          <div className="pt-3">
-            Terdapat dua parameter yang dapat digunakan dalam sort(), yaitu
-            reverse dan key. Reverse berfungsi untuk membalik urutan menjadi
-            besar-kecil. Key berfungsi untuk mendefinisikan aturan sortir
-            tersendiri.
-          </div>
-          <div className="pt-3">
-            Metode reverse( ) dapat digunakan dengan format{" "}
-            <code className="px-2 py-1 rounded-md bg-neutral-200 text-sm sm:text-md">
-              <i>namaList.</i>sort(<i>parameter</i>)
-            </code>{" "}
-          </div>
-        </div>
-        <div className="pt-6">
+        <p className="py-3 pl-1">
+          Metode{" "}
+          <code className="bg-neutral-200 px-1 rounded-sm">setdefault()</code>{" "}
+          mengembalikan value dari sebuah key spesifik. Berikut adalah
+          contohnya.
+        </p>
+        <div className="pt-2 text-sm sm:text-md">
           <div className="flex flex-col">
             <div className="bg-neutral-200 p-2 rounded-md">
               <code>
-                buah = [&#34;apel&#34;, &#34;pisang&#34;, &#34;jeruk&#34;]
+                dict1 &#61; &#123; <br />
+                &nbsp;<span className="text-orange-700">&#34;merk&#34;</span>
+                &#58; <span className="text-orange-700">&#34;asus&#34;</span>,
+                <br />
+                &nbsp;<span className="text-orange-700">&#34;model&#34;</span>
+                &#58; <span className="text-orange-700">&#34;ROG&#34;</span>,
+                <br />
+                &nbsp;<span className="text-orange-700">&#34;cpu&#34;</span>
+                &#58; <span className="text-orange-700">&#34;intel&#34;</span>,
+                <br />
+                &#125;
               </code>
-              <br />
-              <code>buah.sort(reverse=True)</code>
-              <br />
-              <code>print(buah)</code>
-            </div>
-            <div className="pt-1 italic">
-              Contoh sort() dengan parameter reverse.
-            </div>
-          </div>
-        </div>
-        <div className="pt-6">
-          <div className="flex flex-col">
-            <div className="bg-neutral-200 p-2 rounded-md">
-              <code>def mySort(e):</code>
-              <br />
-              &nbsp;
-              <code>return len(e)</code>
               <br />
               <br />
               <code>
-                buah = [&#34;apel&#34;, &#34;pisang&#34;, &#34;jeruk&#34;]
+                x &#61; dict1.setdefault&#40;
+                <span className="text-orange-700">&#34;merk&#34;</span>,{" "}
+                <span className="text-orange-700">&#34;acer&#34;</span>
+                &#41;
               </code>
               <br />
-              <code>buah.sort(key=mySort)</code>
-              <br />
-              <code>print(buah)</code>
-            </div>
-            <div className="pt-1 italic">
-              Contoh sort() dengan parameter key berdasarkan panjang huruf.
+              <code>
+                <span className="text-violet-800">print</span>(x)
+              </code>
             </div>
           </div>
         </div>
-        <div className="pt-5 pb-20">
+        <p className="py-3 pl-1">
+          Kode diatas akan mengembalikan nilai <i>asus</i> ke dalam variabel x.
+          Namun semisal key tersebut tidak ada dalam dictionary, maka akan
+          dibuat key baru dengan value yang telah ditetapkan.
+        </p>
+        <div className="pt-2 text-sm sm:text-md">
+          <div className="flex flex-col">
+            <div className="bg-neutral-200 p-2 rounded-md">
+              <code>
+                dict1 &#61; &#123; <br />
+                &nbsp;<span className="text-orange-700">&#34;merk&#34;</span>
+                &#58; <span className="text-orange-700">&#34;asus&#34;</span>,
+                <br />
+                &nbsp;<span className="text-orange-700">&#34;model&#34;</span>
+                &#58; <span className="text-orange-700">&#34;ROG&#34;</span>,
+                <br />
+                &nbsp;<span className="text-orange-700">&#34;cpu&#34;</span>
+                &#58; <span className="text-orange-700">&#34;intel&#34;</span>,
+                <br />
+                &#125;
+              </code>
+              <br />
+              <br />
+              <code>
+                x &#61; dict1.setdefault&#40;
+                <span className="text-orange-700">&#34;warna&#34;</span>,{" "}
+                <span className="text-orange-700">&#34;hitam&#34;</span>
+                &#41;
+              </code>
+              <br />
+              <code>
+                <span className="text-violet-800">print</span>(x)
+              </code>
+            </div>
+          </div>
+        </div>
+        <div className="pl-1 pt-3 pb-20">
           Uji coba kode diatas dengan salin ke dalam{" "}
           <Link href={"../../uji_kode"} className="underline text-blue-500">
             terminal
@@ -117,15 +134,13 @@ const ListSort = () => {
 
       <Footer>
         <div className="flex flex-row">
-          <div>
-            <h3 className="flex gap-2">
-              <button
-                onClick={() => router.back()}
-                className="text-white bg-red-500 hover:bg-red-400 px-4 py-2 rounded-md"
-              >
-                Kembali
-              </button>
-            </h3>
+          <div className="flex gap-2">
+            <button
+              onClick={() => router.back()}
+              className="text-white bg-red-500 hover:bg-red-400 px-4 py-2 rounded-md"
+            >
+              Kembali
+            </button>
           </div>
         </div>
       </Footer>
@@ -133,4 +148,4 @@ const ListSort = () => {
   );
 };
 
-export default ListSort;
+export default PythonDictionarySetDefault;

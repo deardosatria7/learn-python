@@ -13,7 +13,7 @@ const ListIndex = () => {
             <h4 className="text-lg text-white">Belajar-Python</h4>
           </Link>
           <div className="pl-4 grid content-center">
-            <Link href={"../list_materi"}>
+            <Link href={"../../list_materi"}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 x="0px"

@@ -3,7 +3,7 @@ import Header from "@/sections/Header";
 import {useRouter} from "next/router";
 import Footer from "@/sections/Footer";
 
-const SetSD = () => {
+const PythonDictionaryFromKeys = () => {
   const router = useRouter();
   return (
     <>
@@ -46,53 +46,38 @@ const SetSD = () => {
         </div>
       </Header>
       <section className="p-4">
-        <h1 className="text-2xl font-semibold">Python Set</h1>
+        <h1 className="text-2xl font-semibold">Python Dictionary</h1>
         <div className="text-lg font-semibold pt-3 pl-1">
-          Metode <code>symmetric_difference()</code>
+          Metode <code>fromkeys()</code>
         </div>
-        <p className="pt-3 pl-1">
+        <p className="py-3 pl-1">
           Metode{" "}
-          <code className="bg-neutral-200 py-1 rounded-md">
-            symmetric_difference()
-          </code>{" "}
-          digunakan untuk menciptakan set baru yang berisikan data yang tidak
-          terdapat pada kedua buah set, dan memasukkan data lainnya. Mirip
-          dengan <code>symmetric_difference_update()</code>, namun membuat
-          variabel baru.
+          <code className="bg-neutral-200 px-1 rounded-sm">fromkeys()</code>{" "}
+          mengembalikan dictionary dengan key dan value yang telah dibuat.
+          Berikut adalah contohnya.
         </p>
-        <div className="pt-3 text-sm sm:text-md">
+        <div className="pt-2 text-sm sm:text-md">
           <div className="flex flex-col">
             <div className="bg-neutral-200 p-2 rounded-md">
               <code>
-                set1 &#61; &#123;
-                <span className="text-orange-700">&#34;apple&#34;</span>,{" "}
-                <span className="text-orange-700">&#34;lenovo&#34;</span>,{" "}
-                <span className="text-orange-700">&#34;dell&#34;</span>
-                &#125;
+                x &#61; &#40;
+                <span className="text-orange-700">&#39;key1&#39;</span>,{" "}
+                <span className="text-orange-700">&#39;key2&#39;</span>,{" "}
+                <span className="text-orange-700">&#39;key3&#39;</span>
+                &#41;
               </code>
+              <br />y &#61; <span className="text-red-700">0</span>
+              <br />
+              <br />
+              <code>dictBaru &#61; dict.fromkeys&#40;x, y&#41;</code>
               <br />
               <code>
-                set2 &#61; &#123;
-                <span className="text-orange-700">&#34;apple&#34;</span>,{" "}
-                <span className="text-orange-700">&#34;jeruk&#34;</span>,{" "}
-                <span className="text-orange-700">&#34;mangga&#34;</span>
-                &#125;
-              </code>
-              <br />
-              <br />
-              <code>x = set1.symmetric_difference(set2)</code>
-              <br />
-              <code>
-                <span className="text-violet-800">print</span> (x)
+                <span className="text-violet-800">print</span>(dictBaru)
               </code>
             </div>
           </div>
         </div>
-        {/* <p className="pt-6 pl-1">
-          Hal ini akan membentuk variabel x yang berbentuk set dan memiliki
-          nilai yang sama dengan set asalnya.
-        </p> */}
-        <div className="pl-1 pt-5 pb-20">
+        <div className="pl-1 pt-3 pb-20">
           Uji coba kode diatas dengan salin ke dalam{" "}
           <Link href={"../../uji_kode"} className="underline text-blue-500">
             terminal
@@ -103,15 +88,13 @@ const SetSD = () => {
 
       <Footer>
         <div className="flex flex-row">
-          <div>
-            <h3 className="flex gap-2">
-              <button
-                onClick={() => router.back()}
-                className="text-white bg-red-500 hover:bg-red-400 px-4 py-2 rounded-md"
-              >
-                Kembali
-              </button>
-            </h3>
+          <div className="flex gap-2">
+            <button
+              onClick={() => router.back()}
+              className="text-white bg-red-500 hover:bg-red-400 px-4 py-2 rounded-md"
+            >
+              Kembali
+            </button>
           </div>
         </div>
       </Footer>
@@ -119,4 +102,4 @@ const SetSD = () => {
   );
 };
 
-export default SetSD;
+export default PythonDictionaryFromKeys;

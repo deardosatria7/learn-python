@@ -3,7 +3,7 @@ import Header from "@/sections/Header";
 import {useRouter} from "next/router";
 import Footer from "@/sections/Footer";
 
-const PythonDictionary2 = () => {
+const PythonDictionary3 = () => {
   return (
     <>
       <Header>
@@ -47,11 +47,11 @@ const PythonDictionary2 = () => {
       <section className="p-4">
         <h1 className="text-2xl font-semibold">Python Dictionary</h1>
         <div className="text-lg font-semibold pt-3 pl-1">
-          Mengakses data dalam dictionary
+          Mengupdate data dalam dictionary
         </div>
         <p className="py-3 pl-1">
-          Untuk mengakses data dalam dictionary, kalian dapat memanggil data
-          tersebut berdasarkan <i>key</i>-nya.
+          Kalian dapat mengupdate data dalam dictionary dengan menggunakan cara
+          seperti dibawah ini.
         </p>
         <div className="pt-3 text-sm sm:text-md">
           <div className="flex flex-col">
@@ -73,12 +73,13 @@ const PythonDictionary2 = () => {
               <br />
               <br />
               <code>
-                x = (dict1&#91;
-                <span className="text-orange-700">&#34;nama&#34;</span>&#93;)
+                dict1&#91;
+                <span className="text-orange-700">&#34;nama&#34;</span>&#93;
+                &#61; <span className="text-orange-700">&#34;Afton&#34;</span>
               </code>
               <br />
               <code>
-                <span className="text-violet-800">print</span>(x)
+                <span className="text-violet-800">print</span>(dict1)
               </code>
             </div>
           </div>
@@ -86,31 +87,12 @@ const PythonDictionary2 = () => {
         <p className="py-2 pl-1 pt-6">
           Atau kalian juga bisa menggunakan metode{" "}
           <code className="px-1 rounded-sm bg-neutral-200 font-bold">
-            get()
+            update()
           </code>
-          .
+          , yaitu metode yang mengharuskan kalian untuk menginputkan nilai key
+          dan value-nya. Perhatikan contoh di bawah ini.
         </p>
-        <div className="pt-2 text-sm sm:text-md">
-          <div className="flex flex-col">
-            <div className="bg-neutral-200 p-2 rounded-md">
-              <code>
-                x = dict1.<span className="text-violet-800">get</span>&#91;
-                <span className="text-orange-700">&#34;nama&#34;</span>&#93;
-              </code>
-            </div>
-          </div>
-        </div>
-        <div className="pt-10 font-semibold pl-1">
-          Mengambil nilai <i>keys</i>
-        </div>
-        <p className="py-2 pl-1 pt-4">
-          Untuk mengambil seluruh nilai <i>keys</i> dari sebuah dictionary,
-          kalian dapat menggunakan perintah{" "}
-          <code className="px-1 rounded-sm bg-neutral-200">keys()</code>. Hal
-          ini akan mengembalikan nilai seluruh key pada dictionary dalam bentuk{" "}
-          <b>list.</b>
-        </p>
-        <div className="pt-1 text-sm sm:text-md">
+        <div className="pt-3 text-sm sm:text-md">
           <div className="flex flex-col">
             <div className="bg-neutral-200 p-2 rounded-md">
               <code>
@@ -129,97 +111,17 @@ const PythonDictionary2 = () => {
               </code>
               <br />
               <br />
-              <code>x = dict1.keys()</code>
-              <br />
               <code>
-                <span className="text-violet-800">print</span>(x)
-              </code>
-            </div>
-          </div>
-        </div>
-        <div className="pl-1 pt-3">
-          Uji coba kode diatas dengan salin ke dalam{" "}
-          <Link href={"../uji_kode"} className="underline text-blue-500">
-            terminal
-          </Link>{" "}
-          ini.
-        </div>
-        <div className="pt-10 font-semibold pl-1">
-          Mengambil nilai <i>values</i>
-        </div>
-        <p className="py-2 pl-1 pt-4">
-          Kalian dapat menggunakan metode{" "}
-          <code className="px-1 rounded-sm bg-neutral-200">values()</code>
-          untuk mengambil seluruh nilai <i>value</i> dari sebuah dictionary. Hal
-          ini akan mengembalikan nilai seluruh value pada dictionary dalam
-          bentuk list.
-        </p>
-        <div className="pt-1 text-sm sm:text-md">
-          <div className="flex flex-col">
-            <div className="bg-neutral-200 p-2 rounded-md">
-              <code>
-                dict1 &#61; &#123; <br />
-                &nbsp;<span className="text-orange-700">&#34;nama&#34;</span>
-                &#58; <span className="text-orange-700">&#34;Jeffry&#34;</span>,
-                <br />
-                &nbsp;<span className="text-orange-700">&#34;umur&#34;</span>
-                &#58; <span className="text-red-700">24</span>,
-                <br />
-                &nbsp;
-                <span className="text-orange-700">&#34;jenis kelamin&#34;</span>
-                &#58; <span className="text-red-700">&#34;laki-laki&#34;</span>
-                <br />
-                &#125;
+                dict1.<span className="text-violet-800">update</span>&#91;&#123;
+                <span className="text-orange-700">
+                  &#34;nama&#34;
+                </span>&#58;{" "}
+                <span className="text-orange-700">&#34;Afton&#34;</span>
+                &#125;&#93;
               </code>
               <br />
-              <br />
-              <code>x = dict1.values()</code>
-              <br />
               <code>
-                <span className="text-violet-800">print</span>(x)
-              </code>
-            </div>
-          </div>
-        </div>
-        <div className="pl-1 pt-3">
-          Uji coba kode diatas dengan salin ke dalam{" "}
-          <Link href={"../uji_kode"} className="underline text-blue-500">
-            terminal
-          </Link>{" "}
-          ini.
-        </div>
-
-        <div className="pt-10 font-semibold pl-1">Mengambil nilai keduanya</div>
-        <p className="py-2 pl-1 pt-4">
-          Kalian dapat menggunakan metode{" "}
-          <code className="px-1 rounded-sm bg-neutral-200">items()</code>
-          untuk mengambil seluruh nilai <i>key</i> dan <i>value</i> dari sebuah
-          dictionary. Hal ini akan mengembalikan nilai tersebut pada dictionary
-          dalam bentuk <b>tuple didalam list</b>.
-        </p>
-        <div className="pt-1 text-sm sm:text-md">
-          <div className="flex flex-col">
-            <div className="bg-neutral-200 p-2 rounded-md">
-              <code>
-                dict1 &#61; &#123; <br />
-                &nbsp;<span className="text-orange-700">&#34;nama&#34;</span>
-                &#58; <span className="text-orange-700">&#34;Jeffry&#34;</span>,
-                <br />
-                &nbsp;<span className="text-orange-700">&#34;umur&#34;</span>
-                &#58; <span className="text-red-700">24</span>,
-                <br />
-                &nbsp;
-                <span className="text-orange-700">&#34;jenis kelamin&#34;</span>
-                &#58; <span className="text-red-700">&#34;laki-laki&#34;</span>
-                <br />
-                &#125;
-              </code>
-              <br />
-              <br />
-              <code>x = dict1.items()</code>
-              <br />
-              <code>
-                <span className="text-violet-800">print</span>(x)
+                <span className="text-violet-800">print</span>(dict1)
               </code>
             </div>
           </div>
@@ -237,13 +139,13 @@ const PythonDictionary2 = () => {
         <div className="flex flex-row">
           <div className="flex gap-2">
             <Link
-              href={"/latihan/python_dictionary"}
+              href={"/latihan/python_dictionary2"}
               className="text-white bg-red-500 hover:bg-red-400 px-4 py-2 rounded-md"
             >
               Sebelumnya
             </Link>
             <Link
-              href={"/latihan/python_dictionary3"}
+              href={"/latihan/python_dictionary4"}
               className="text-white bg-blue-600 hover:bg-blue-500 px-4 py-2 rounded-md"
             >
               Selanjutnya
@@ -255,4 +157,4 @@ const PythonDictionary2 = () => {
   );
 };
 
-export default PythonDictionary2;
+export default PythonDictionary3;
