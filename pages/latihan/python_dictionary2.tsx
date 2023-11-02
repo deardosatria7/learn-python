@@ -1,9 +1,10 @@
 import Link from "next/link";
 import Header from "@/sections/Header";
-import Editor from "@/components/Editor";
+import {useRouter} from "next/router";
 import Footer from "@/sections/Footer";
 
-const PythonList2 = () => {
+const PythonDictionary2 = () => {
+  const router = useRouter();
   return (
     <>
       <Header>
@@ -45,50 +46,54 @@ const PythonList2 = () => {
         </div>
       </Header>
       <section className="p-4">
-        <h1 className="text-2xl font-semibold">Python List</h1>
-        <div className="py-3 pl-1">
-          Data yang diinputkan kedalam list mempunyai urutan, yang bermula dari
-          nol. Data/nilai baru yang ditambahkan kedalam sebuah list akan
-          dimasukkan ke bagian paling belakang (kanan) list tersebut.
-        </div>
-        <div className="py-2 pl-1">
-          Untuk mendapatkan jumlah anggota dari sebuah list dapat dijalankan
-          perintah{" "}
-          <code className="px-2 py-1 rounded-md bg-neutral-200">len()</code>
-        </div>
-        <div className="py-2 pl-1">
-          Data dalam sebuah list juga dapat dipanggil secara individu dengan
-          merujuk pada urutan data tersebut di dalam list.
-        </div>
-        <div className="text-sm sm:text-md">
+        <h1 className="text-2xl font-semibold">Python Dictionary</h1>
+        <p className="py-3 pl-1">
+          <b>Dictionary</b> digunakan untuk menyimpan data dalam bentuk pasangan{" "}
+          <i>key</i> dan <i>value</i>. Perhatikan contoh dibawah ini.
+        </p>
+        <div className="pt-3 text-sm sm:text-md">
           <div className="flex flex-col">
             <div className="bg-neutral-200 p-2 rounded-md">
               <code>
-                list1 &#61; &#91;
-                <span className="text-orange-700">&#34;baju&#34;</span>,{" "}
-                <span className="text-orange-700">&#34;celana&#34;</span>,{" "}
-                <span className="text-orange-700">&#34;topi&#34;</span>&#93;
+                dict1 &#61; &#123; <br />
+                &nbsp;<span className="text-orange-700">&#34;nama&#34;</span>
+                &#58; <span className="text-orange-700">&#34;Jeffry&#34;</span>,
+                <br />
+                &nbsp;<span className="text-orange-700">&#34;umur&#34;</span>
+                &#58; <span className="text-red-700">24</span>,
+                <br />
+                &nbsp;
+                <span className="text-orange-700">&#34;jenis kelamin&#34;</span>
+                &#58; <span className="text-red-700">&#34;laki-laki&#34;</span>
+                <br />
+                &#125;
               </code>
               <br />
               <br />
-              <code className="text-orange-700">
-                #memanggil data urutan ke-nol dalam list
-              </code>
-              <br />
-              <code>
-                <span className="text-violet-800">print</span>(list1&#91;0&#93;)
-              </code>
-              <br />
-              <br />
-              <code className="text-orange-700">
-                #menampilkan jumlah data dalam list
-              </code>
-              <br />
-              <code>
-                <span className="text-violet-800">print</span>(len(list1))
-              </code>
+              <code>print(dict1)</code>
             </div>
           </div>
+        </div>
+        <p className="py-2 pl-1 pt-6">
+          Dictionary memiliki karakteristik seperti berikut ini:
+        </p>
+        <div className="pl-3">
+          <ul className="pl-4">
+            <li className="list-item list-decimal">
+              Dictionary mengizinkan update data (menambahkan, menghapus, dan
+              mengedit).
+            </li>
+            <li className="list-item list-decimal pt-1">
+              Data dalam dictionary berurutan.
+            </li>
+            <li className="list-item list-decimal pt-1">
+              Sebuah dictionary dapat menyimpan berbagai macam tipe data, dalam
+              bentuk berpasangan antara <i>key</i> dan <i>value</i>.
+            </li>
+            <li className="list-item list-decimal pt-1">
+              Dictionary tidak mengizinkan ada duplikat data.
+            </li>
+          </ul>
         </div>
         <div className="pl-1 pt-3 pb-20">
           Uji coba kode diatas dengan salin ke dalam{" "}
@@ -103,14 +108,14 @@ const PythonList2 = () => {
         <div className="flex flex-row">
           <div>
             <h3 className="flex gap-2">
-              <Link
-                href={"/latihan/python_list"}
+              <button
+                onClick={() => router.back()}
                 className="text-white bg-red-500 hover:bg-red-400 px-4 py-2 rounded-md"
               >
-                Sebelumnya
-              </Link>
+                Kembali
+              </button>
               <Link
-                href={"/latihan/python_list3"}
+                href={"/latihan/python_dictionary2"}
                 className="text-white bg-blue-600 hover:bg-blue-500 px-4 py-2 rounded-md"
               >
                 Selanjutnya
@@ -123,4 +128,4 @@ const PythonList2 = () => {
   );
 };
 
-export default PythonList2;
+export default PythonDictionary2;

@@ -96,28 +96,43 @@ const PythonList3 = () => {
           Perhatikan contoh dibawah ini agar lebih paham. Ingat bahwa{" "}
           <b>urutan list berawal dari nomor 0.</b>
         </div>
-        <Editor>
-          <div
-            dangerouslySetInnerHTML={{
-              __html: `
-              <py-config>
-              terminal = false
-              </py-config>
-              <py-repl output="replOutput">
-              list1 = ["baju", "celana", "topi", "dasi", "tas"]
-
-              #memanggil data list urutan ke-2 hingga ke-5 pada list1
-              print(list1[2:5])
-
-              #memanggil data list urutan ke-1 hingga terakhir pada list1
-              print(list1[1:])
-
-              #memanggil data list urutan dari awal hingga sebelum urutan ke-4
-              print(list1[:4])
-              </py-repl>`,
-            }}
-          />
-        </Editor>
+        <div className="text-sm sm:text-md">
+          <div className="flex flex-col">
+            <div className="bg-neutral-200 p-2 rounded-md">
+              <code>
+                list1 &#61; &#91;
+                <span className="text-orange-700">&#34;baju&#34;</span>,{" "}
+                <span className="text-orange-700">&#34;jas&#34;</span>,{" "}
+                <span className="text-orange-700">&#34;celana&#34;</span>,{" "}
+                <span className="text-orange-700">&#34;dasi&#34;</span>,{" "}
+                <span className="text-orange-700">&#34;topi&#34;</span>&#93;
+              </code>
+              <br />
+              <br />
+              <code>
+                print(<span className="text-orange-700">list1</span>&#91;
+                <span className="text-blue-600">2:5</span>&#93;)
+              </code>
+              <br />
+              <code>
+                print(<span className="text-orange-700">list1</span>&#91;
+                <span className="text-blue-600">1:</span>&#93;)
+              </code>
+              <br />
+              <code>
+                print(<span className="text-orange-700">list1</span>&#91;
+                <span className="text-blue-600">:4</span>&#93;)
+              </code>
+            </div>
+          </div>
+        </div>
+        <div className="pl-1 pt-3 pb-20">
+          Uji coba kode diatas dengan salin ke dalam{" "}
+          <Link href={"../uji_kode"} className="underline text-blue-500">
+            terminal
+          </Link>{" "}
+          ini.
+        </div>
       </section>
 
       <Footer>

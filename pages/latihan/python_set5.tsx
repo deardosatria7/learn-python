@@ -214,7 +214,7 @@ const PythonSet5 = () => {
                 Sebelumnya
               </Link>
               <Link
-                href={"/latihan/python_set5"}
+                href={"/latihan/python_dictionary"}
                 className="text-white bg-blue-600 hover:bg-blue-500 px-4 py-2 rounded-md"
               >
                 Selanjutnya
