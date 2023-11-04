@@ -84,16 +84,21 @@ const List_materi = () => {
                   <Link href={"../latihan/python_tuples"}>Python tuple</Link>
                 </li>
                 <li className="pl-2">
+                  <Link href={"../latihan/python_set"}>Python set</Link>
+                </li>
+                <li className="pl-2">
                   <Link href={"../latihan/python_dictionary"}>
                     Python dictionary
                   </Link>
                 </li>
-                <li className="pl-2">
-                  <Link href={"../latihan/python_set"}>Python set</Link>
-                </li>
               </span>
             </div>
-            <div>
+            <div className="text-blue-900">
+              <Link href={"../latihan/python_conditions_if"}>
+                Python if - elif - else
+              </Link>
+            </div>
+            <div className="pb-20">
               <span className="text-blue-900">
                 <Link href={"../quiz"}>Quiz</Link>
               </span>
