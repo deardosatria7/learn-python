@@ -1,9 +1,7 @@
 import Link from "next/link";
-import Image from "next/image";
 import Header from "@/sections/Header";
 import {useRouter} from "next/router";
 import Footer from "@/sections/Footer";
-import diagram_if from "@/public/diagram-if.jpg";
 
 const PythonIf2 = () => {
   const router = useRouter();

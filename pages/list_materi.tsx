@@ -94,9 +94,13 @@ const List_materi = () => {
               </span>
             </div>
             <div className="text-blue-900">
-              <Link href={"../latihan/python_conditions_if"}>
-                Python if - elif - else
-              </Link>
+              <Link href={"../latihan/python_conditions_if"}>Python if</Link>
+            </div>
+            <div className="text-blue-900">
+              <Link href={"../latihan/python_while"}>Python while</Link>
+            </div>
+            <div className="text-blue-900">
+              <Link href={"../latihan/python_for"}>Python for</Link>
             </div>
             <div className="pb-20">
               <span className="text-blue-900">
