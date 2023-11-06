@@ -64,14 +64,16 @@ const Quiz = () => {
             <div>
               <span className="text-blue-900">
                 <li className="pl-2">
-                  <RandomPageButton pages={pagesQuizVariabel}>
+                  <Link href={"/quiz/variabel/1"}>Quiz variabel</Link>
+                  {/* <RandomPageButton pages={pagesQuizVariabel}>
                     Quiz variabel
-                  </RandomPageButton>
+                  </RandomPageButton> */}
                 </li>
                 <li className="pl-2">
-                  <RandomPageButton pages={pagesQuizOperator}>
+                  <Link href={"/quiz/operator/1"}>Quiz operator</Link>
+                  {/* <RandomPageButton pages={pagesQuizOperator}>
                     Quiz operator
-                  </RandomPageButton>
+                  </RandomPageButton> */}
                 </li>
               </span>
             </div>

@@ -108,13 +108,13 @@ const PythonDictionary6 = () => {
         <div className="flex flex-row">
           <div className="flex gap-2">
             <Link
-              href={"/latihan/python_dictionary3"}
+              href={"/latihan/python_dictionary5"}
               className="text-white bg-red-500 hover:bg-red-400 px-4 py-2 rounded-md"
             >
               Sebelumnya
             </Link>
             <Link
-              href={"/latihan/python_dictionary5"}
+              href={"/latihan/python_conditions_if"}
               className="text-white bg-blue-600 hover:bg-blue-500 px-4 py-2 rounded-md"
             >
               Selanjutnya

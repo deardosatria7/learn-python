@@ -45,10 +45,11 @@ const pageVariabelMulti = () => {
         </div>
       </Header>
       <section className="p-4">
-        <h1 className="text-2xl font-semibold">Variabel Lanjutan</h1>
+        <h1 className="text-2xl font-semibold">Python Arrays</h1>
         <div className="pt-3 pl-1">
           Setelah mempelajari operator, kita akan mempelajari variabel python
-          lanjutan yang dapat menyimpan lebih dari satu nilai/data.
+          arrays. Python arrays adalah variabel yang dapat menyimpan lebih dari
+          satu nilai/data.
         </div>
         <div className="pt-3 pl-1">
           Di dalam python sendiri, ada 4 jenis variabel yaitu:
@@ -69,8 +70,8 @@ const pageVariabelMulti = () => {
         </div>
         <div className="pt-3 pl-1">
           Keempat variabel tersebut sama-sama dapat menyimpan banyak nilai,
-          namun memiliki ciri yang berbeda-beda. Untuk lebih lanjut, kita akan
-          mulai mempelajari List pada bagian selanjutnya.
+          namun memiliki ciri/karakteristik yang berbeda-beda. Untuk lebih
+          lanjut, kita akan mulai mempelajari List pada bagian selanjutnya.
         </div>
       </section>
 

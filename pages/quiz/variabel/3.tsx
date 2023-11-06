@@ -11,7 +11,7 @@ const pagesVariabel = [
   "/quiz/variabel/3",
 ];
 
-export default function PageQuizVariabel1() {
+export default function PageQuizVariabel3() {
   const [showSelanjutnya, setShowSelanjutnya] = useState(false);
   const router = useRouter();
 
@@ -81,8 +81,8 @@ export default function PageQuizVariabel1() {
               <div className="bg-white rounded-md p-1">
                 <input type="text" id="jawaban" className="w-20 mr-2" />
               </div>
-              <div className="bg-white rounded-md ml-2 p-1">
-                (&ldquo;Python itu mudah!&rdquo;)
+              <div className="flex justify-center items-center">
+                (&#34;Python itu mudah!&#34;)
               </div>
             </code>
             <p className="mt-4">
@@ -90,7 +90,7 @@ export default function PageQuizVariabel1() {
               output!
             </p>
           </div>
-          <div className="pt-3">
+          <div className="mt-10">
             <button
               className="px-3 py-1 bg-red-600 text-white rounded-md border-black"
               onClick={checkAnswers}
@@ -113,7 +113,7 @@ export default function PageQuizVariabel1() {
               </button>
               {showSelanjutnya && (
                 <Link
-                  href={"../"}
+                  href={"../variabel/4"}
                   className="text-white bg-blue-600 hover:bg-blue-500 px-4 py-2 rounded-md"
                   id="btn_selanjutnya"
                 >

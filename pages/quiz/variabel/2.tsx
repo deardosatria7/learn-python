@@ -77,15 +77,13 @@ export default function PageQuizVariabel2() {
         </p>
         <div className="mt-4 gap-2 bg-neutral-200 p-4 rounded-md">
           <div className="flex flex-col">
-            <code className="bg-white rounded-md p-1">
-              minuman = &ldquo;Coca-cola&rdquo;
-            </code>
-            <p className="mt-4">Data diatas termasuk dalam tipe data:</p>
+            <code>minuman = &ldquo;Coca-cola&rdquo;</code>
+            <p className="mt-8">Data diatas termasuk dalam tipe data:</p>
             <code className="mt-2">
               <input type="text" id="jawaban" className="w-20 mr-2" />
             </code>
           </div>
-          <div className="pt-3">
+          <div className="mt-10">
             <button
               className="px-3 py-1 bg-red-600 text-white rounded-md border-black"
               onClick={checkAnswers}

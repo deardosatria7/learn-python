@@ -68,6 +68,11 @@ const List_materi = () => {
                     Operator membership
                   </Link>
                 </li>
+                <li className="pl-2">
+                  <Link href={"../latihan/operator_bitwise"}>
+                    Operator bitwise
+                  </Link>
+                </li>
               </span>
             </div>
             <div>

@@ -5,13 +5,7 @@ import Footer from "@/sections/Footer";
 import {useState} from "react";
 import {Router, useRouter} from "next/router";
 
-const pagesVariabel = [
-  "/quiz/variabel/1",
-  "/quiz/variabel/2",
-  "/quiz/variabel/3",
-];
-
-export default function PageQuizVariabel1() {
+export default function PageQuizVariabel4() {
   const [showSelanjutnya, setShowSelanjutnya] = useState(false);
   const router = useRouter();
 
@@ -22,12 +16,7 @@ export default function PageQuizVariabel1() {
       .value;
 
     //checking answer
-    if (
-      jawaban == "integer" ||
-      jawaban == "Integer" ||
-      jawaban == "int" ||
-      jawaban == "Int"
-    ) {
+    if (jawaban == "float" || jawaban == "Float") {
       //show btn_selanjutnya when answer is correct
       setShowSelanjutnya(true);
       alert("Benar!!");
@@ -82,11 +71,16 @@ export default function PageQuizVariabel1() {
         </p>
         <div className="mt-4 gap-2 bg-neutral-200 p-4 rounded-md">
           <div className="flex flex-col">
-            <code>harga = 10000</code>
-            <p className="mt-8">Data diatas termasuk dalam tipe data:</p>
-            <code className="mt-2">
-              <input type="text" id="jawaban" className="w-20 mr-2" />
-            </code>
+            <div className="">
+              <code>x &#61; 2.9998</code>
+              <br />
+              <code>print(type(x))</code>
+            </div>
+            <p className="mt-6">
+              Kode diatas akan menampilkan tipe data dari x. Tipe data apakah
+              itu?
+            </p>
+            <input type="text" id="jawaban" className="w-20 mt-5" />
           </div>
           <div className="mt-10">
             <button
@@ -111,7 +105,7 @@ export default function PageQuizVariabel1() {
               </button>
               {showSelanjutnya && (
                 <Link
-                  href={"../variabel/2"}
+                  href={"../variabel/5"}
                   className="text-white bg-blue-600 hover:bg-blue-500 px-4 py-2 rounded-md"
                   id="btn_selanjutnya"
                 >
