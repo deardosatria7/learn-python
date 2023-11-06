@@ -14,13 +14,9 @@ export default function PageQuizVariabel6() {
     //answer form
     const jawaban_x = (document.getElementById("jawaban_x") as HTMLInputElement)
       .value;
-    const input_z1 = (document.getElementById("input_z1") as HTMLInputElement)
-      .value;
-    const input_z2 = (document.getElementById("input_z2") as HTMLInputElement)
-      .value;
 
     //checking answer
-    if (jawaban_x == "5" && input_z1 == "x" && input_z2 == "y") {
+    if (jawaban_x == "True" || jawaban_x == "False") {
       //show btn_selanjutnya when answer is correct
       setShowSelanjutnya(true);
       alert("Benar!!");
@@ -77,25 +73,10 @@ export default function PageQuizVariabel6() {
           <div className="flex flex-col">
             <div className="">
               <code>
-                x &#61; <input type="text" id="jawaban_x" className="w-6" />
+                x &#61; <input type="text" id="jawaban_x" className="w-12" />
               </code>
-              <br />
-              <code>y &#61; 10</code>
-              <br />
-              <code>
-                z &#61; <input type="text" id="input_z1" className="w-6" />{" "}
-                &#43; <input type="text" id="input_z2" className="w-6" />
-              </code>
-              <br />
-              <code>print(z)</code>
             </div>
-            <p className="mt-6">
-              Lengkapi kode diatas agar{" "}
-              <code className="bg-neutral-300 px-1 text-red-600">x</code>
-              bernilai 5, dan{" "}
-              <code className="bg-neutral-300 px-1 text-red-600">z</code>{" "}
-              bernilai x&#43;y.
-            </p>
+            <p className="mt-6">Isilah variabel x dengan tipe data boolean.</p>
           </div>
           <div className="mt-10">
             <button
@@ -120,7 +101,7 @@ export default function PageQuizVariabel6() {
               </button>
               {showSelanjutnya && (
                 <Link
-                  href={"../variabel/8"}
+                  href={"../"}
                   className="text-white bg-blue-600 hover:bg-blue-500 px-4 py-2 rounded-md"
                   id="btn_selanjutnya"
                 >

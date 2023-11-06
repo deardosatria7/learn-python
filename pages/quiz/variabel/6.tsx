@@ -91,7 +91,7 @@ export default function PageQuizVariabel6() {
             </div>
             <p className="mt-6">
               Lengkapi kode diatas agar{" "}
-              <code className="bg-neutral-300 px-1 text-red-600">x</code>
+              <code className="bg-neutral-300 px-1 text-red-600">x</code>{" "}
               bernilai 5, dan{" "}
               <code className="bg-neutral-300 px-1 text-red-600">z</code>{" "}
               bernilai x&#43;y.
