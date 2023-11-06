@@ -11,7 +11,7 @@ const pagesVariabel = [
   "/quiz/variabel/3",
 ];
 
-export default function PageQuizVariabel1() {
+export default function PageQuizOperator2() {
   const [showSelanjutnya, setShowSelanjutnya] = useState(false);
   const router = useRouter();
 
@@ -22,12 +22,7 @@ export default function PageQuizVariabel1() {
       .value;
 
     //checking answer
-    if (
-      jawaban == "integer" ||
-      jawaban == "Integer" ||
-      jawaban == "int" ||
-      jawaban == "Int"
-    ) {
+    if (jawaban == "and") {
       //show btn_selanjutnya when answer is correct
       setShowSelanjutnya(true);
       alert("Benar!!");
@@ -76,17 +71,22 @@ export default function PageQuizVariabel1() {
         </div>
       </Header>
       <section className="p-4">
-        <h1 className="text-2xl font-semibold">Quiz Variabel</h1>
+        <h1 className="text-2xl font-semibold">Quiz Operator</h1>
         <p className="pt-3 pl-1">
           Isi form jawaban di bawah ini dengan jawaban yang benar!
         </p>
         <div className="mt-4 gap-2 bg-neutral-200 p-4 rounded-md">
           <div className="flex flex-col">
-            <code>harga = 10000</code>
-            <p className="mt-8">Data diatas termasuk dalam tipe data:</p>
-            <code className="mt-2">
-              <input type="text" id="jawaban" className="w-20 mr-2" />
+            <code>i = 5</code>
+            <code>
+              if (i&#60;10 <input type="text" id="jawaban" className="w-8" />{" "}
+              i&#62;0)&#58;
             </code>
+            <code>&nbsp;print("i positif kurang dari 10")</code>
+            <p className="mt-5">
+              Lengkapi kondisi if diatas dengan operator logika dimana kedua
+              pernyataan harus bernilai benar.
+            </p>
           </div>
           <div className="mt-10">
             <button
@@ -111,7 +111,7 @@ export default function PageQuizVariabel1() {
               </button>
               {showSelanjutnya && (
                 <Link
-                  href={"../variabel/2"}
+                  href={"../operator/2"}
                   className="text-white bg-blue-600 hover:bg-blue-500 px-4 py-2 rounded-md"
                   id="btn_selanjutnya"
                 >

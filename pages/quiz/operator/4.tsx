@@ -5,18 +5,24 @@ import Footer from "@/sections/Footer";
 import {useState} from "react";
 import {Router, useRouter} from "next/router";
 
-export default function PageQuizVariabel6() {
+const pagesVariabel = [
+  "/quiz/variabel/1",
+  "/quiz/variabel/2",
+  "/quiz/variabel/3",
+];
+
+export default function PageQuizOperator4() {
   const [showSelanjutnya, setShowSelanjutnya] = useState(false);
   const router = useRouter();
 
   //function to check answers
   function checkAnswers() {
     //answer form
-    const jawaban_x = (document.getElementById("jawaban_x") as HTMLInputElement)
+    const jawaban = (document.getElementById("jawaban") as HTMLInputElement)
       .value;
 
     //checking answer
-    if (jawaban_x == "True" || jawaban_x == "False") {
+    if (jawaban == "in") {
       //show btn_selanjutnya when answer is correct
       setShowSelanjutnya(true);
       alert("Benar!!");
@@ -65,18 +71,26 @@ export default function PageQuizVariabel6() {
         </div>
       </Header>
       <section className="p-4">
-        <h1 className="text-2xl font-semibold">Quiz</h1>
+        <h1 className="text-2xl font-semibold">Quiz Operator</h1>
         <p className="pt-3 pl-1">
           Isi form jawaban di bawah ini dengan jawaban yang benar!
         </p>
         <div className="mt-4 gap-2 bg-neutral-200 p-4 rounded-md">
           <div className="flex flex-col">
-            <div className="">
-              <code>
-                x &#61; <input type="text" id="jawaban_x" className="w-12" />
-              </code>
-            </div>
-            <p className="mt-6">Isilah variabel x dengan tipe data boolean.</p>
+            <code className="text-sm sm:text-md">
+              buah &#61; &#91;&#34;apel&#34;, &#34;anggur&#34;&#93;
+            </code>
+            <code className="text-sm sm:text-md">
+              if &#34;apel&#34;{" "}
+              <input type="text" className="w-8" id="jawaban" /> buah&#58;
+            </code>
+            <code className="text-sm sm:text-md">
+              &nbsp;print(&#34;Ya, apel termasuk dalam buah&#34;)
+            </code>
+            <p className="mt-5">
+              Ketikkan operator membership yang sesuai untuk mengecek apakah
+              apel terdapat dalam list buah.
+            </p>
           </div>
           <div className="mt-10">
             <button
@@ -101,7 +115,7 @@ export default function PageQuizVariabel6() {
               </button>
               {showSelanjutnya && (
                 <Link
-                  href={"../"}
+                  href={"../operator/5"}
                   className="text-white bg-blue-600 hover:bg-blue-500 px-4 py-2 rounded-md"
                   id="btn_selanjutnya"
                 >

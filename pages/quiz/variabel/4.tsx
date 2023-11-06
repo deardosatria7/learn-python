@@ -65,7 +65,7 @@ export default function PageQuizVariabel4() {
         </div>
       </Header>
       <section className="p-4">
-        <h1 className="text-2xl font-semibold">Quiz</h1>
+        <h1 className="text-2xl font-semibold">Quiz Variabel</h1>
         <p className="pt-3 pl-1">
           Isi form jawaban di bawah ini dengan jawaban yang benar!
         </p>

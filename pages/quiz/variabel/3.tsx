@@ -5,12 +5,6 @@ import Footer from "@/sections/Footer";
 import {useState} from "react";
 import {Router, useRouter} from "next/router";
 
-const pagesVariabel = [
-  "/quiz/variabel/1",
-  "/quiz/variabel/2",
-  "/quiz/variabel/3",
-];
-
 export default function PageQuizVariabel3() {
   const [showSelanjutnya, setShowSelanjutnya] = useState(false);
   const router = useRouter();
@@ -18,11 +12,11 @@ export default function PageQuizVariabel3() {
   //function to check answers
   function checkAnswers() {
     //answer form
-    const jawaban = (document.getElementById("jawaban") as HTMLInputElement)
+    const jawaban_x = (document.getElementById("jawaban_x") as HTMLInputElement)
       .value;
 
     //checking answer
-    if (jawaban == "print") {
+    if (jawaban_x == "True" || jawaban_x == "False") {
       //show btn_selanjutnya when answer is correct
       setShowSelanjutnya(true);
       alert("Benar!!");
@@ -71,24 +65,18 @@ export default function PageQuizVariabel3() {
         </div>
       </Header>
       <section className="p-4">
-        <h1 className="text-2xl font-semibold">Quiz</h1>
+        <h1 className="text-2xl font-semibold">Quiz Variabel</h1>
         <p className="pt-3 pl-1">
           Isi form jawaban di bawah ini dengan jawaban yang benar!
         </p>
         <div className="mt-4 gap-2 bg-neutral-200 p-4 rounded-md">
           <div className="flex flex-col">
-            <code className="flex flex-row">
-              <div className="bg-white rounded-md p-1">
-                <input type="text" id="jawaban" className="w-20 mr-2" />
-              </div>
-              <div className="flex justify-center items-center">
-                (&#34;Python itu mudah!&#34;)
-              </div>
-            </code>
-            <p className="mt-4">
-              Ketikkan perintah yang sesuai untuk menampilkan teks tersebut pada
-              output!
-            </p>
+            <div className="">
+              <code>
+                x &#61; <input type="text" id="jawaban_x" className="w-12" />
+              </code>
+            </div>
+            <p className="mt-6">Isilah variabel x dengan tipe data boolean.</p>
           </div>
           <div className="mt-10">
             <button
@@ -113,7 +101,7 @@ export default function PageQuizVariabel3() {
               </button>
               {showSelanjutnya && (
                 <Link
-                  href={"../variabel/4"}
+                  href={"../"}
                   className="text-white bg-blue-600 hover:bg-blue-500 px-4 py-2 rounded-md"
                   id="btn_selanjutnya"
                 >

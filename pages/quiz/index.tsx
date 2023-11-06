@@ -63,18 +63,56 @@ const Quiz = () => {
           <div className="px-4 pt-3 grid grid-cols-1 gap-2">
             <div>
               <span className="text-blue-900">
-                <li className="pl-2">
+                <div className="pl-2">
                   <Link href={"/quiz/variabel/1"}>Quiz variabel</Link>
-                  {/* <RandomPageButton pages={pagesQuizVariabel}>
-                    Quiz variabel
-                  </RandomPageButton> */}
-                </li>
-                <li className="pl-2">
+                  <div className="ml-4">
+                    <li>
+                      <Link href={"/quiz/variabel/1"}>Quiz 1</Link>
+                    </li>
+                    <li>
+                      <Link href={"/quiz/variabel/2"}>Quiz 2</Link>
+                    </li>
+                    <li>
+                      <Link href={"/quiz/variabel/3"}>Quiz 3</Link>
+                    </li>
+                    <li>
+                      <Link href={"/quiz/variabel/4"}>Quiz 4</Link>
+                    </li>
+                    <li>
+                      <Link href={"/quiz/variabel/5"}>Quiz 5</Link>
+                    </li>
+                    <li>
+                      <Link href={"/quiz/variabel/6"}>Quiz 6</Link>
+                    </li>
+                  </div>
+                </div>
+
+                <div className="pl-2 mt-3">
                   <Link href={"/quiz/operator/1"}>Quiz operator</Link>
+                  <div className="ml-4">
+                    <li>
+                      <Link href={"/quiz/operator/1"}>Quiz 1</Link>
+                    </li>
+                    <li>
+                      <Link href={"/quiz/operator/2"}>Quiz 2</Link>
+                    </li>
+                    <li>
+                      <Link href={"/quiz/operator/3"}>Quiz 3</Link>
+                    </li>
+                    <li>
+                      <Link href={"/quiz/operator/4"}>Quiz 4</Link>
+                    </li>
+                    <li>
+                      <Link href={"/quiz/operator/5"}>Quiz 5</Link>
+                    </li>
+                    <li>
+                      <Link href={"/quiz/operator/6"}>Quiz 6</Link>
+                    </li>
+                  </div>
                   {/* <RandomPageButton pages={pagesQuizOperator}>
                     Quiz operator
                   </RandomPageButton> */}
-                </li>
+                </div>
               </span>
             </div>
           </div>
