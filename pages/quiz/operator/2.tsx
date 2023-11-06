@@ -82,7 +82,7 @@ export default function PageQuizOperator2() {
               if (i&#60;10 <input type="text" id="jawaban" className="w-8" />{" "}
               i&#62;0)&#58;
             </code>
-            <code>&nbsp;print("i positif kurang dari 10")</code>
+            <code>&nbsp;print(&#34;i positif kurang dari 10&#34;)</code>
             <p className="mt-5">
               Lengkapi kondisi if diatas dengan operator logika dimana kedua
               pernyataan harus bernilai benar.
