@@ -22,7 +22,7 @@ export default function PageQuizTuples1() {
       .value;
 
     //checking answer
-    if (jawaban1 == 'mobil.append("mercedes")') {
+    if (jawaban1 == "buah[0]") {
       //show btn_selanjutnya when answer is correct
       setShowSelanjutnya(true);
       alert("Benar!!");
@@ -74,24 +74,27 @@ export default function PageQuizTuples1() {
         </div>
       </Header>
       <section className="p-4">
-        <h1 className="text-2xl font-semibold">Quiz List</h1>
+        <h1 className="text-2xl font-semibold">Quiz Tuple</h1>
         <p className="pt-3 pl-1">
           Isi form jawaban di bawah ini dengan jawaban yang benar!
         </p>
         <div className="mt-4 gap-2 bg-neutral-200 p-4 rounded-md">
           <div className="flex flex-col">
-            <code>
-              mobil = [<span className="text-orange-700">&#34;Fiat&#34;</span>,{" "}
-              <span className="text-orange-700">&#34;BMW&#34;</span>,{" "}
-              <span className="text-orange-700">&#34;Toyota&#34;</span>]
+            <code className="text-sm sm:text-md">
+              buah = &#40;
+              <span className="text-orange-700">&#34;apel&#34;</span>,{" "}
+              <span className="text-orange-700">&#34;anggur&#34;</span>,{" "}
+              <span className="text-orange-700">&#34;leci&#34;</span>&#41;
             </code>
             <div className="mt-3">
               <code>
-                <input type="text" id="jawaban1" className="w-52" />
+                print &#40;
+                <input type="text" id="jawaban1" className="w-20" />
+                &#41;
               </code>
             </div>
             <p className="mt-5">
-              Tambahkan data &#34;mercedes&#34; dalam list diatas.
+              Ketikkan perintah untuk mengambil data pertama dalam tuple diatas.
             </p>
           </div>
           <div className="mt-10">
@@ -118,7 +121,7 @@ export default function PageQuizTuples1() {
               </button>
               {showSelanjutnya && (
                 <Link
-                  href={"../list/4"}
+                  href={"../tuples/2"}
                   className="text-white bg-blue-600 hover:bg-blue-500 px-4 py-2 rounded-md"
                   id="btn_selanjutnya"
                 >

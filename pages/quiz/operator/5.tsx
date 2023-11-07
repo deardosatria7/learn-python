@@ -22,7 +22,7 @@ export default function PageQuizOperator5() {
       .value;
 
     //checking answer
-    if (jawaban == "in") {
+    if (jawaban == "or") {
       //show btn_selanjutnya when answer is correct
       setShowSelanjutnya(true);
       alert("Benar!!");
@@ -112,7 +112,7 @@ export default function PageQuizOperator5() {
               </button>
               {showSelanjutnya && (
                 <Link
-                  href={"../operator/5"}
+                  href={"../"}
                   className="text-white bg-blue-600 hover:bg-blue-500 px-4 py-2 rounded-md"
                   id="btn_selanjutnya"
                 >

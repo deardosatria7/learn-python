@@ -101,7 +101,7 @@ export default function PageQuizVariabel3() {
               </button>
               {showSelanjutnya && (
                 <Link
-                  href={"../"}
+                  href={"../variabel/4"}
                   className="text-white bg-blue-600 hover:bg-blue-500 px-4 py-2 rounded-md"
                   id="btn_selanjutnya"
                 >

@@ -111,7 +111,7 @@ export default function PageQuizOperator2() {
               </button>
               {showSelanjutnya && (
                 <Link
-                  href={"../operator/2"}
+                  href={"../operator/3"}
                   className="text-white bg-blue-600 hover:bg-blue-500 px-4 py-2 rounded-md"
                   id="btn_selanjutnya"
                 >

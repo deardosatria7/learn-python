@@ -5,22 +5,24 @@ import Footer from "@/sections/Footer";
 import {useState} from "react";
 import {Router, useRouter} from "next/router";
 
-export default function PageQuizVariabel5() {
+const pagesVariabel = [
+  "/quiz/variabel/1",
+  "/quiz/variabel/2",
+  "/quiz/variabel/3",
+];
+
+export default function PageQuizTuples5() {
   const [showSelanjutnya, setShowSelanjutnya] = useState(false);
   const router = useRouter();
 
   //function to check answers
   function checkAnswers() {
     //answer form
-    const jawaban_x = (document.getElementById("jawaban_x") as HTMLInputElement)
-      .value;
-    const input_z1 = (document.getElementById("input_z1") as HTMLInputElement)
-      .value;
-    const input_z2 = (document.getElementById("input_z2") as HTMLInputElement)
+    const jawaban1 = (document.getElementById("jawaban1") as HTMLInputElement)
       .value;
 
     //checking answer
-    if (jawaban_x == "5" && input_z1 == "x" && input_z2 == "y") {
+    if (jawaban1 == 'count("a")') {
       //show btn_selanjutnya when answer is correct
       setShowSelanjutnya(true);
       alert("Benar!!");
@@ -28,6 +30,9 @@ export default function PageQuizVariabel5() {
       alert("Oops, coba lagi!");
     }
   }
+
+  //function to show answer
+
   return (
     <>
       <Header>
@@ -69,38 +74,38 @@ export default function PageQuizVariabel5() {
         </div>
       </Header>
       <section className="p-4">
-        <h1 className="text-2xl font-semibold">Quiz Variabel</h1>
+        <h1 className="text-2xl font-semibold">Quiz Tuple</h1>
         <p className="pt-3 pl-1">
           Isi form jawaban di bawah ini dengan jawaban yang benar!
         </p>
         <div className="mt-4 gap-2 bg-neutral-200 p-4 rounded-md">
           <div className="flex flex-col">
-            <div className="">
-              <code>
-                x &#61; <input type="text" id="jawaban_x" className="w-6" />
-              </code>
-              <br />
-              <code>y &#61; 10</code>
-              <br />
-              <code>
-                z &#61; <input type="text" id="input_z1" className="w-6" />{" "}
-                &#43; <input type="text" id="input_z2" className="w-6" />
-              </code>
-              <br />
-              <code>print(z)</code>
-            </div>
-            <p className="mt-6">
-              Lengkapi kode diatas agar{" "}
-              <code className="bg-neutral-300 px-1 text-red-600">x</code>{" "}
-              bernilai 5, dan{" "}
-              <code className="bg-neutral-300 px-1 text-red-600">z</code>{" "}
-              bernilai x&#43;y.
+            <code className="text-sm sm:text-md">
+              huruf = &#40;
+              <span className="text-orange-700">&#34;a&#34;</span>,{" "}
+              <span className="text-orange-700">&#34;d&#34;</span>,{" "}
+              <span className="text-orange-700">&#34;c&#34;</span>,{" "}
+              <span className="text-orange-700">&#34;b&#34;</span>,{" "}
+              <span className="text-orange-700">&#34;a&#34;</span>&#41;
+            </code>
+            <code className="mt-3 text-sm sm:text-md">
+              x = huruf.
+              <input type="text" id="jawaban1" className="w-20" />{" "}
+            </code>
+
+            <p className="mt-10">
+              Lengkapi kode diatas agar x bernilai jumlah data{" "}
+              <code className="bg-neutral-300 px-1 text-orange-700">
+                &#34;a&#34;
+              </code>{" "}
+              dalam tuple tersebut.
             </p>
           </div>
           <div className="mt-10">
             <button
               className="px-3 py-1 bg-red-600 text-white rounded-md border-black"
               onClick={checkAnswers}
+              id="submit_button"
             >
               Submit
             </button>

@@ -122,7 +122,7 @@ export default function PageQuizList5() {
               </button>
               {showSelanjutnya && (
                 <Link
-                  href={"../list/6"}
+                  href={"../"}
                   className="text-white bg-blue-600 hover:bg-blue-500 px-4 py-2 rounded-md"
                   id="btn_selanjutnya"
                 >

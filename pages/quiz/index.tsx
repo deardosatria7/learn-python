@@ -128,6 +128,27 @@ const Quiz = () => {
                     </li>
                   </div>
                 </div>
+
+                <div className="pl-2 mt-3">
+                  <Link href={"/quiz/tuples/1"}>Quiz tuple</Link>
+                  <div className="ml-4">
+                    <li>
+                      <Link href={"/quiz/tuples/1"}>Quiz 1</Link>
+                    </li>
+                    <li>
+                      <Link href={"/quiz/tuples/2"}>Quiz 2</Link>
+                    </li>
+                    <li>
+                      <Link href={"/quiz/tuples/3"}>Quiz 3</Link>
+                    </li>
+                    <li>
+                      <Link href={"/quiz/tuples/4"}>Quiz 4</Link>
+                    </li>
+                    <li>
+                      <Link href={"/quiz/tuples/5"}>Quiz 5</Link>
+                    </li>
+                  </div>
+                </div>
               </span>
             </div>
           </div>
