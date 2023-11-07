@@ -81,9 +81,6 @@ const Quiz = () => {
                     <li>
                       <Link href={"/quiz/variabel/5"}>Quiz 5</Link>
                     </li>
-                    <li>
-                      <Link href={"/quiz/variabel/6"}>Quiz 6</Link>
-                    </li>
                   </div>
                 </div>
 
@@ -105,13 +102,31 @@ const Quiz = () => {
                     <li>
                       <Link href={"/quiz/operator/5"}>Quiz 5</Link>
                     </li>
-                    <li>
-                      <Link href={"/quiz/operator/6"}>Quiz 6</Link>
-                    </li>
                   </div>
                   {/* <RandomPageButton pages={pagesQuizOperator}>
                     Quiz operator
                   </RandomPageButton> */}
+                </div>
+
+                <div className="pl-2 mt-3">
+                  <Link href={"/quiz/variabel/1"}>Quiz list</Link>
+                  <div className="ml-4">
+                    <li>
+                      <Link href={"/quiz/list/1"}>Quiz 1</Link>
+                    </li>
+                    <li>
+                      <Link href={"/quiz/list/2"}>Quiz 2</Link>
+                    </li>
+                    <li>
+                      <Link href={"/quiz/list/3"}>Quiz 3</Link>
+                    </li>
+                    <li>
+                      <Link href={"/quiz/list/4"}>Quiz 4</Link>
+                    </li>
+                    <li>
+                      <Link href={"/quiz/list/5"}>Quiz 5</Link>
+                    </li>
+                  </div>
                 </div>
               </span>
             </div>
