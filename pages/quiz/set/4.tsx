@@ -5,8 +5,7 @@ import Footer from "@/sections/Footer";
 import {useState} from "react";
 import {Router, useRouter} from "next/router";
 
-
-export default function PageQuizList2() {
+export default function PageQuizSet4() {
   const [showSelanjutnya, setShowSelanjutnya] = useState(false);
   const router = useRouter();
 
@@ -17,7 +16,7 @@ export default function PageQuizList2() {
       .value;
 
     //checking answer
-    if (jawaban1 == 'mobil.remove("BMW")') {
+    if (jawaban1 == "set1.union(set2)") {
       //show btn_selanjutnya when answer is correct
       setShowSelanjutnya(true);
       alert("Benar!!");
@@ -69,26 +68,32 @@ export default function PageQuizList2() {
         </div>
       </Header>
       <section className="p-4">
-        <h1 className="text-2xl font-semibold">Quiz List</h1>
+        <h1 className="text-2xl font-semibold">Quiz Set</h1>
         <p className="pt-3 pl-1">
           Isi form jawaban di bawah ini dengan jawaban yang benar!
         </p>
         <div className="mt-4 gap-2 bg-neutral-200 p-4 rounded-md">
           <div className="flex flex-col">
-            <code>
-              mobil = [<span className="text-orange-700">&#34;Fiat&#34;</span>,{" "}
-              <span className="text-orange-700">&#34;BMW&#34;</span>,{" "}
-              <span className="text-orange-700">&#34;Toyota&#34;</span>]
+            <code className="text-sm sm:text-md">
+              set1 = &#123;
+              <span className="text-orange-700">&#34;a&#34;</span>,{" "}
+              <span className="text-orange-700">&#34;b&#34;</span>,{" "}
+              <span className="text-orange-700">&#34;c&#34;</span>&#125;
             </code>
-            <div className="mt-3">
-              <code>
-                <input type="text" id="jawaban1" className="w-52" />
-              </code>
-            </div>
-            <p className="mt-5">
-              Coba hapus data BMW dalam list diatas dengan metode{" "}
-              <code className="px-1 rounded-sm bg-neutral-300 text-red-600">
-                remove()
+            <code className="text-sm sm:text-md">
+              set2 = &#123;
+              <span className="text-red-700">1</span>,{" "}
+              <span className="text-red-700">2</span>,{" "}
+              <span className="text-red-700">3</span>&#125;
+            </code>
+            <code className="mt-1 text-sm sm:text-md">
+              set3 = <input type="text" id="jawaban1" className="w-40" />{" "}
+            </code>
+
+            <p className="mt-10">
+              Buat set baru yang berisikan data set1 dan set2 dengan metode{" "}
+              <code className="text-sm sm:text-md px-1 bg-neutral-300 text-red-700">
+                union()
               </code>
               .
             </p>
@@ -117,7 +122,7 @@ export default function PageQuizList2() {
               </button>
               {showSelanjutnya && (
                 <Link
-                  href={"../list/3"}
+                  href={"../set/5"}
                   className="text-white bg-blue-600 hover:bg-blue-500 px-4 py-2 rounded-md"
                   id="btn_selanjutnya"
                 >

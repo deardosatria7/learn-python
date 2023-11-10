@@ -5,8 +5,7 @@ import Footer from "@/sections/Footer";
 import {useState} from "react";
 import {Router, useRouter} from "next/router";
 
-
-export default function PageQuizList2() {
+export default function PageQuizDict2() {
   const [showSelanjutnya, setShowSelanjutnya] = useState(false);
   const router = useRouter();
 
@@ -15,9 +14,11 @@ export default function PageQuizList2() {
     //answer form
     const jawaban1 = (document.getElementById("jawaban1") as HTMLInputElement)
       .value;
+    const jawaban2 = (document.getElementById("jawaban2") as HTMLInputElement)
+      .value;
 
     //checking answer
-    if (jawaban1 == 'mobil.remove("BMW")') {
+    if (jawaban1 == '"warna"' && jawaban2 == '"hitam"') {
       //show btn_selanjutnya when answer is correct
       setShowSelanjutnya(true);
       alert("Benar!!");
@@ -69,28 +70,35 @@ export default function PageQuizList2() {
         </div>
       </Header>
       <section className="p-4">
-        <h1 className="text-2xl font-semibold">Quiz List</h1>
+        <h1 className="text-2xl font-semibold">Quiz Dictionary</h1>
         <p className="pt-3 pl-1">
           Isi form jawaban di bawah ini dengan jawaban yang benar!
         </p>
         <div className="mt-4 gap-2 bg-neutral-200 p-4 rounded-md">
           <div className="flex flex-col">
-            <code>
-              mobil = [<span className="text-orange-700">&#34;Fiat&#34;</span>,{" "}
-              <span className="text-orange-700">&#34;BMW&#34;</span>,{" "}
-              <span className="text-orange-700">&#34;Toyota&#34;</span>]
+            <code className="text-sm sm:text-md">
+              mobil = &#123;
+              <br />
+              &nbsp;<span className="text-orange-700">
+                &#34;merk&#34;
+              </span>&#58;{" "}
+              <span className="text-orange-700">&#34;Toyota&#34;</span>
+              , <br />
+              &nbsp;<span className="text-orange-700">&#34;model&#34;</span>
+              &#58; <span className="text-orange-700">&#34;Avanza&#34;</span>
+              , <br />
+              &nbsp;<span className="text-orange-700">&#34;tahun&#34;</span>
+              &#58; <span className="text-orange-700">&#34;2020&#34;</span>
+              <br />
+              &#125;
             </code>
-            <div className="mt-3">
-              <code>
-                <input type="text" id="jawaban1" className="w-52" />
-              </code>
-            </div>
-            <p className="mt-5">
-              Coba hapus data BMW dalam list diatas dengan metode{" "}
-              <code className="px-1 rounded-sm bg-neutral-300 text-red-600">
-                remove()
-              </code>
-              .
+            <code className="text-sm sm:text-md mt-3">
+              mobil&#91;
+              <input type="text" id="jawaban1" className="w-14" />
+              &#93; = <input type="text" id="jawaban2" className="w-14" />
+            </code>
+            <p className="mt-10">
+              Tambahkan data warna hitam dalam dictionary tersebut.
             </p>
           </div>
           <div className="mt-10">
@@ -117,7 +125,7 @@ export default function PageQuizList2() {
               </button>
               {showSelanjutnya && (
                 <Link
-                  href={"../list/3"}
+                  href={"../dictionary/2"}
                   className="text-white bg-blue-600 hover:bg-blue-500 px-4 py-2 rounded-md"
                   id="btn_selanjutnya"
                 >

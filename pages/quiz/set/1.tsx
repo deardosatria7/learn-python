@@ -5,8 +5,7 @@ import Footer from "@/sections/Footer";
 import {useState} from "react";
 import {Router, useRouter} from "next/router";
 
-
-export default function PageQuizList2() {
+export default function PageQuizSet1() {
   const [showSelanjutnya, setShowSelanjutnya] = useState(false);
   const router = useRouter();
 
@@ -17,7 +16,7 @@ export default function PageQuizList2() {
       .value;
 
     //checking answer
-    if (jawaban1 == 'mobil.remove("BMW")') {
+    if (jawaban1 == 'merk.add("hp")') {
       //show btn_selanjutnya when answer is correct
       setShowSelanjutnya(true);
       alert("Benar!!");
@@ -69,26 +68,30 @@ export default function PageQuizList2() {
         </div>
       </Header>
       <section className="p-4">
-        <h1 className="text-2xl font-semibold">Quiz List</h1>
+        <h1 className="text-2xl font-semibold">Quiz Set</h1>
         <p className="pt-3 pl-1">
           Isi form jawaban di bawah ini dengan jawaban yang benar!
         </p>
         <div className="mt-4 gap-2 bg-neutral-200 p-4 rounded-md">
           <div className="flex flex-col">
-            <code>
-              mobil = [<span className="text-orange-700">&#34;Fiat&#34;</span>,{" "}
-              <span className="text-orange-700">&#34;BMW&#34;</span>,{" "}
-              <span className="text-orange-700">&#34;Toyota&#34;</span>]
+            <code className="text-sm sm:text-md">
+              merk = &#123;
+              <span className="text-orange-700">&#34;asus&#34;</span>,{" "}
+              <span className="text-orange-700">&#34;acer&#34;</span>,{" "}
+              <span className="text-orange-700">&#34;lenovo&#34;</span>&#125;
             </code>
-            <div className="mt-3">
-              <code>
-                <input type="text" id="jawaban1" className="w-52" />
-              </code>
-            </div>
-            <p className="mt-5">
-              Coba hapus data BMW dalam list diatas dengan metode{" "}
-              <code className="px-1 rounded-sm bg-neutral-300 text-red-600">
-                remove()
+            <code className="mt-1 text-sm sm:text-md">
+              <input type="text" id="jawaban1" className="w-36" />{" "}
+            </code>
+
+            <p className="mt-10">
+              Tambahkan data{" "}
+              <code className="text-sm sm:text-md px-1 bg-neutral-300 text-orange-700">
+                &#34;hp&#34;
+              </code>{" "}
+              pada set diatas dengan metode{" "}
+              <code className="text-sm sm:text-md px-1 bg-neutral-300 text-red-700">
+                add()
               </code>
               .
             </p>
@@ -117,7 +120,7 @@ export default function PageQuizList2() {
               </button>
               {showSelanjutnya && (
                 <Link
-                  href={"../list/3"}
+                  href={"../set/2"}
                   className="text-white bg-blue-600 hover:bg-blue-500 px-4 py-2 rounded-md"
                   id="btn_selanjutnya"
                 >

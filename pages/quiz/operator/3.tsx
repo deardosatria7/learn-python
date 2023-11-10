@@ -5,11 +5,6 @@ import Footer from "@/sections/Footer";
 import {useState} from "react";
 import {Router, useRouter} from "next/router";
 
-const pagesVariabel = [
-  "/quiz/variabel/1",
-  "/quiz/variabel/2",
-  "/quiz/variabel/3",
-];
 
 export default function PageQuizOperator3() {
   const [showSelanjutnya, setShowSelanjutnya] = useState(false);
