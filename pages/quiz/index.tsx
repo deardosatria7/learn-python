@@ -166,7 +166,37 @@ const Quiz = () => {
                       <Link href={"/quiz/if_else/4"}>Quiz 4</Link>
                     </li>
                     <li>
-                      <Link href={"/quiz/tuples/5"}>Quiz 5</Link>
+                      <Link href={"/quiz/if_else/5"}>Quiz 5</Link>
+                    </li>
+                  </div>
+                </div>
+
+                <div className="pl-2 mt-3">
+                  <Link href={"/quiz/while/1"}>Python while</Link>
+                  <div className="ml-4">
+                    <li>
+                      <Link href={"/quiz/while/1"}>Quiz 1</Link>
+                    </li>
+                    <li>
+                      <Link href={"/quiz/while/2"}>Quiz 2</Link>
+                    </li>
+                    <li>
+                      <Link href={"/quiz/while/3"}>Quiz 3</Link>
+                    </li>
+                  </div>
+                </div>
+
+                <div className="pl-2 mt-3">
+                  <Link href={"/quiz/for/1"}>Python while</Link>
+                  <div className="ml-4">
+                    <li>
+                      <Link href={"/quiz/for/1"}>Quiz 1</Link>
+                    </li>
+                    <li>
+                      <Link href={"/quiz/for/2"}>Quiz 2</Link>
+                    </li>
+                    <li>
+                      <Link href={"/quiz/for/3"}>Quiz 3</Link>
                     </li>
                   </div>
                 </div>
