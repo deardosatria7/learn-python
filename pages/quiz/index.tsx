@@ -64,7 +64,7 @@ const Quiz = () => {
             <div>
               <span className="text-blue-900">
                 <div className="pl-2">
-                  <Link href={"/quiz/variabel/1"}>Quiz variabel</Link>
+                  <Link href={"/quiz/variabel/1"}>Python variabel</Link>
                   <div className="ml-4">
                     <li>
                       <Link href={"/quiz/variabel/1"}>Quiz 1</Link>
@@ -85,7 +85,7 @@ const Quiz = () => {
                 </div>
 
                 <div className="pl-2 mt-3">
-                  <Link href={"/quiz/operator/1"}>Quiz operator</Link>
+                  <Link href={"/quiz/operator/1"}>Python operator</Link>
                   <div className="ml-4">
                     <li>
                       <Link href={"/quiz/operator/1"}>Quiz 1</Link>
@@ -109,7 +109,7 @@ const Quiz = () => {
                 </div>
 
                 <div className="pl-2 mt-3">
-                  <Link href={"/quiz/variabel/1"}>Quiz list</Link>
+                  <Link href={"/quiz/list/1"}>Python list</Link>
                   <div className="ml-4">
                     <li>
                       <Link href={"/quiz/list/1"}>Quiz 1</Link>
@@ -130,7 +130,7 @@ const Quiz = () => {
                 </div>
 
                 <div className="pl-2 mt-3">
-                  <Link href={"/quiz/tuples/1"}>Quiz tuple</Link>
+                  <Link href={"/quiz/tuples/1"}>Python tuple</Link>
                   <div className="ml-4">
                     <li>
                       <Link href={"/quiz/tuples/1"}>Quiz 1</Link>
@@ -143,6 +143,27 @@ const Quiz = () => {
                     </li>
                     <li>
                       <Link href={"/quiz/tuples/4"}>Quiz 4</Link>
+                    </li>
+                    <li>
+                      <Link href={"/quiz/tuples/5"}>Quiz 5</Link>
+                    </li>
+                  </div>
+                </div>
+
+                <div className="pl-2 mt-3">
+                  <Link href={"/quiz/if_else/1"}>Python if ... else</Link>
+                  <div className="ml-4">
+                    <li>
+                      <Link href={"/quiz/if_else/1"}>Quiz 1</Link>
+                    </li>
+                    <li>
+                      <Link href={"/quiz/if_else/2"}>Quiz 2</Link>
+                    </li>
+                    <li>
+                      <Link href={"/quiz/if_else/3"}>Quiz 3</Link>
+                    </li>
+                    <li>
+                      <Link href={"/quiz/if_else/4"}>Quiz 4</Link>
                     </li>
                     <li>
                       <Link href={"/quiz/tuples/5"}>Quiz 5</Link>
