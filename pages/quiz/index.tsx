@@ -187,7 +187,7 @@ const Quiz = () => {
                 </div>
 
                 <div className="pl-2 mt-3">
-                  <Link href={"/quiz/for/1"}>Python while</Link>
+                  <Link href={"/quiz/for/1"}>Python for</Link>
                   <div className="ml-4">
                     <li>
                       <Link href={"/quiz/for/1"}>Quiz 1</Link>
