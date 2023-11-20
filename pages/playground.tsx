@@ -16,7 +16,7 @@ const Playground = () => {
         </div>
       </Header>
       <main>
-        <div className="pl-5 pt-5">
+        <div className="px-5 pt-5">
           <div>
             <button onClick={() => router.back()}>
               <div className="rounded-md text-white bg-neutral-400 px-2 py-2 text-sm">
