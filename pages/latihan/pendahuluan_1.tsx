@@ -56,7 +56,7 @@ const pagePendahuluan = () => {
           <b>integer</b>.
         </p>
         <div className="ml-1 mt-4 px-2 py-1 pb-6 rounded-md bg-neutral-200">
-          <div className="pt-2">
+          <div className="pt-2 text-sm sm:text-md">
             <code>
               harga &#61; <span className="text-red-600">250</span>
               <br />
