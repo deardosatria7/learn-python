@@ -3,33 +3,6 @@ import Editor from "@/components/Editor";
 import Link from "next/link";
 import Footer from "@/sections/Footer";
 
-//function to check answers
-function checkAnswers() {
-  //first box answer
-  const variabel = (document.getElementById("variabel") as HTMLInputElement)
-    .value;
-  //second box answer
-  const operator = (document.getElementById("operator") as HTMLInputElement)
-    .value;
-  //third box answer
-  const harga = (document.getElementById("harga") as HTMLInputElement).value;
-
-  //show btn_selanjutnya when answer is correct
-  function showDiv() {
-    (
-      document.getElementById("btn_selanjutnya") as HTMLInputElement
-    ).style.visibility = "visible";
-  }
-
-  //checking
-  if (variabel == "harga" && operator == "=" && harga == "250") {
-    alert("Benar!!");
-    showDiv();
-  } else {
-    alert("Oops, coba lagi!");
-  }
-}
-
 const pagePendahuluan = () => {
   return (
     <>
@@ -75,33 +48,29 @@ const pagePendahuluan = () => {
         <h1 className="text-2xl font-semibold">Pendahuluan</h1>
         <p className="pt-3 pl-1">
           Bagus! Kalian telah mencoba menjalankan program python pertama kalian.
-          Sekarang mari kita coba untuk menulis kode python.
+          Sekarang mari kita coba untuk memahami kode python tersebut.
         </p>
         <p className="pt-3 pl-1">
-          Di dalam Python, kita dapat menyimpan sebuah <b>nilai</b> di dalam
-          sebuah <b>variabel.</b> Mari kita coba buat variabel bernama
-          &ldquo;harga&rdquo; diikuti dengan &ldquo;=&rdquo; dan
-          &ldquo;250&rdquo;.
+          Di dalam Python, kita dapat menyimpan sebuah nilai di dalam sebuah{" "}
+          <b>variabel.</b> Dibawah ini merupakan contoh variabel yang berbentuk{" "}
+          <b>integer</b>.
         </p>
-        <div className="mt-4 gap-2 bg-neutral-200 p-4 rounded-md">
-          <div className="flex flex-row gap-2">
+        <div className="ml-1 mt-4 px-2 py-1 pb-6 rounded-md bg-neutral-200">
+          <div className="pt-2">
             <code>
-              <input type="text" id="variabel" className="w-20" />
-            </code>
-            <code>
-              <input type="text" id="operator" className="w-6" />
-            </code>
-            <code>
-              <input type="text" id="harga" className="w-20" />
+              harga &#61; <span className="text-red-600">250</span>
+              <br />
+              <span className="text-violet-700">print</span>&#40;
+              <span className="text-violet-700">type</span>&#40;harga&#41;&#41;
             </code>
           </div>
-          <div className="pt-3">
-            <button
-              className="px-2 bg-white rounded-md border-2 border-black"
-              onClick={checkAnswers}
+          <div className="mt-6">
+            <a
+              className="px-2 py-2 bg-blue-600 text-white text-sm rounded-md hover:bg-blue-500"
+              href="../kode/pendahuluan1"
             >
-              Submit
-            </button>
+              Coba kode
+            </a>
           </div>
         </div>
       </section>
@@ -118,8 +87,7 @@ const pagePendahuluan = () => {
               </Link>
               <Link
                 href={"/latihan/pendahuluan_2"}
-                className="text-white bg-blue-600 hover:bg-blue-500 px-4 py-2 rounded-md invisible"
-                id="btn_selanjutnya"
+                className="text-white bg-blue-600 hover:bg-blue-500 px-4 py-2 rounded-md"
               >
                 Selanjutnya
               </Link>

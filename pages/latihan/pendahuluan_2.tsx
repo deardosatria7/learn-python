@@ -3,26 +3,6 @@ import Editor from "@/components/Editor";
 import Link from "next/link";
 import Footer from "@/sections/Footer";
 
-//function to check answers
-function checkAnswers() {
-  //third box answer
-  const harga = (document.getElementById("harga") as HTMLInputElement).value;
-
-  //show btn_selanjutnya when answer is correct
-  function showDiv() {
-    (
-      document.getElementById("btn_selanjutnya") as HTMLInputElement
-    ).style.visibility = "visible";
-  }
-
-  //checking
-  if (harga == "harga") {
-    alert("Benar!!");
-    showDiv();
-  } else {
-    alert("Oops, coba lagi!");
-  }
-}
 const pagePendahuluan2 = () => {
   return (
     <>
@@ -67,20 +47,45 @@ const pagePendahuluan2 = () => {
       <section className="p-4">
         <h1 className="text-2xl font-semibold">Pendahuluan</h1>
         <p className="pt-3 pl-1">
-          &ldquo;harga&rdquo; yang telah kalian buat tadi disebut dengan
-          variabel. Kita dapat menyimpan data dalam bentuk variabel untuk
-          kemudian dapat digunakan ulang dalam operasi lainnya.
+          Harga yang telah dibuat tadi disebut dengan variabel. Kita dapat
+          menyimpan data dalam bentuk variabel untuk kemudian dapat digunakan
+          ulang dalam operasi lainnya.
         </p>
         <p className="pt-3 pl-1">
-          Coba masukkan variabel <b>harga</b> pada operasi penghitungan{" "}
-          <b>setengah_harga</b> di bawah ini dan jalankan kodenya!
+          Seperti contoh dibawah ini, kita akan menghitung diskon 50&#37; dari
+          harga tersebut. Perhatikan contoh dibawah!
         </p>
+        <div className="ml-1 mt-4 px-2 py-1 pb-6 rounded-md bg-neutral-200">
+          <div className="pt-2">
+            <code>
+              harga &#61; <span className="text-red-600">250</span>
+              <br />
+              <br />
+              <span className="text-orange-600">
+                &#35;penghitungan diskon 50&#37;
+              </span>
+              <br />
+              harga_diskon = harga &#47; 2 <br />
+              <br />
+              <span className="text-violet-700">print</span>
+              &#40;harga_diskon&#41;
+            </code>
+          </div>
+          <div className="mt-6">
+            <a
+              className="px-2 py-2 bg-blue-600 text-white text-sm rounded-md hover:bg-blue-500"
+              href="../kode/pendahuluan2"
+            >
+              Coba kode
+            </a>
+          </div>
+        </div>
         <p className="pt-3 pl-1 text-sm">
           Catatan: <br />
           <code className="px-1 rounded-md bg-neutral-200">print</code>{" "}
           digunakan untuk menampilkan teks ke terminal output.
         </p>
-        <div className="mt-4 gap-2 bg-neutral-200 p-4 rounded-md">
+        {/* <div className="mt-4 gap-2 bg-neutral-200 p-4 rounded-md">
           <div className="flex flex-row gap-2">
             <code>
               <input
@@ -108,8 +113,8 @@ const pagePendahuluan2 = () => {
               Submit
             </button>
           </div>
-        </div>
-        <Editor>
+        </div> */}
+        {/* <Editor>
           <div
             dangerouslySetInnerHTML={{
               __html: `
@@ -126,7 +131,7 @@ const pagePendahuluan2 = () => {
               </py-repl>`,
             }}
           />
-        </Editor>
+        </Editor> */}
       </section>
 
       <Footer>
