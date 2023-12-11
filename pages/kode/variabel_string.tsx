@@ -1,6 +1,5 @@
 import Editor from "@/components/Editor";
 import Link from "next/link";
-import Image from "next/image";
 import Header from "@/sections/Header";
 import {useRouter} from "next/router";
 
@@ -27,12 +26,14 @@ const Uji_kode = () => {
               <div
                 dangerouslySetInnerHTML={{
                   __html: `
-              <py-repl output="replOutput">
-              harga = 250
-              print(type(harga)) 
-              
-              #output: integer(int)
-              </py-repl>`,
+                  <py-repl output="replOutput">
+                  minuman = "pepsi"
+    
+                  #Menampilkan tipe data variabel minuman
+                  print(type(minuman))
+
+                  #output: string
+                  </py-repl>`,
                 }}
               />
             </Editor>

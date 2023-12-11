@@ -73,6 +73,13 @@ const pagePendahuluan = () => {
             </a>
           </div>
         </div>
+        <p className="pt-3 pl-1 text-sm">
+          Catatan: <br />
+          <code className="px-1 rounded-md bg-neutral-200">
+            print(type())
+          </code>{" "}
+          digunakan untuk menampilkan jenis tipe data dari suatu variabel.
+        </p>
       </section>
 
       <Footer>

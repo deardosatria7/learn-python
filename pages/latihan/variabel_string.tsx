@@ -2,26 +2,8 @@ import Header from "@/sections/Header";
 import Editor from "@/components/Editor";
 import Link from "next/link";
 import Footer from "@/sections/Footer";
-import {useState} from "react";
 
-export default function PageVariabel() {
-  const [showSelanjutnya, setShowSelanjutnya] = useState(false);
-
-  //function to check answers
-  function checkAnswers() {
-    //answer form
-    const minuman = (document.getElementById("minuman") as HTMLInputElement)
-      .value;
-
-    //checking answer
-    if (minuman == "pepsi" || minuman == "Pepsi") {
-      //show btn_selanjutnya when answer is correct
-      setShowSelanjutnya(true);
-      alert("Benar!!");
-    } else {
-      alert("Oops, coba lagi!");
-    }
-  }
+const variabelString = () => {
   return (
     <>
       <Header>
@@ -69,46 +51,29 @@ export default function PageVariabel() {
           dalam sebuah variabel Python.
         </p>
         <p className="pt-3 pl-1">
-          Pada bagian pendahuluan tadi kita sudah melihat contoh tipe data{" "}
-          <i>integer</i> yang berupa angka bulat, dan tipe data <i>string</i>{" "}
-          yang berupa teks. Kita akan mencoba untuk menyimpan data yang berupa{" "}
-          <i>string</i> atau teks.
+          Pada bagian sebelumnya kita sudah melihat contoh tipe data integer
+          yang berupa angka bulat. Sekarang kita akan belajar tipe data string
+          yang berupa teks. Kita akan mencoba untuk menyimpan data yang berupa
+          string atau teks.
         </p>
-        <p className="pt-3 pl-1">
-          Coba kalian simpan nama merek &ldquo;pepsi&rdquo; dalam variabel{" "}
-          <b>minuman</b> di bawah ini.
-        </p>
-        <div className="mt-4 gap-2 bg-neutral-200 p-4 rounded-md">
-          <div className="flex flex-row">
+        <div className="ml-1 mt-4 px-2 py-1 pb-6 rounded-md bg-neutral-200">
+          <div className="pt-2 text-sm sm:text-md">
             <code>
-              <input
-                type="text"
-                id="variabel"
-                className="w-20 mr-2"
-                value={"minuman"}
-              />
+              minuman &#61;{" "}
+              <span className="text-orange-600">&#34;pepsi&#34;</span>
+              <br />
+              <span className="text-violet-700">print</span>&#40;
+              <span className="text-violet-700">type</span>
+              &#40;minuman&#41;&#41;
             </code>
-            <code>
-              <input
-                type="text"
-                id="operator"
-                className="w-6 mr-2"
-                value={"="}
-              />
-            </code>
-            <span className="text-lg font-bold">&ldquo;</span>
-            <code>
-              <input type="text" id="minuman" className="w-12" />
-            </code>
-            <span className="text-lg font-bold">&rdquo;</span>
           </div>
-          <div className="pt-3">
-            <button
-              className="px-2 bg-white rounded-md border-2 border-black"
-              onClick={checkAnswers}
+          <div className="mt-6">
+            <a
+              className="px-2 py-2 bg-blue-600 text-white text-sm rounded-md hover:bg-blue-500"
+              href="../kode/variabel_string"
             >
-              Submit
-            </button>
+              Coba kode
+            </a>
           </div>
         </div>
       </section>
@@ -123,19 +88,18 @@ export default function PageVariabel() {
               >
                 Sebelumnya
               </Link>
-              {showSelanjutnya && (
-                <Link
-                  href={"/latihan/variabel_float"}
-                  className="text-white bg-blue-600 hover:bg-blue-500 px-4 py-2 rounded-md"
-                  id="btn_selanjutnya"
-                >
-                  Selanjutnya
-                </Link>
-              )}
+              <Link
+                href={"/latihan/variabel_float"}
+                className="text-white bg-blue-600 hover:bg-blue-500 px-4 py-2 rounded-md"
+              >
+                Selanjutnya
+              </Link>
             </h3>
           </div>
         </div>
       </Footer>
     </>
   );
-}
+};
+
+export default variabelString;

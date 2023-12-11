@@ -1,6 +1,5 @@
 import Editor from "@/components/Editor";
 import Link from "next/link";
-import Image from "next/image";
 import Header from "@/sections/Header";
 import {useRouter} from "next/router";
 
