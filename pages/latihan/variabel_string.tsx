@@ -3,7 +3,7 @@ import Editor from "@/components/Editor";
 import Link from "next/link";
 import Footer from "@/sections/Footer";
 
-const code = 'minuman = "pepsi"\nprint(type(minuman)) #tipe data string/str';
+const code = 'minuman = "pepsi"\nprint(type(minuman)) #tipe data string/str\n';
 // Function definition
 function copyCode() {
   navigator.clipboard.writeText(code);

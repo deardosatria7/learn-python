@@ -3,6 +3,13 @@ import Editor from "@/components/Editor";
 import Link from "next/link";
 import Footer from "@/sections/Footer";
 
+const code =
+  'nomor_1 = "50"\nnomor_2 = 50\n\n#Cek kesamaan kedua variabel diatas\nbanding = (nomor_1 == nomor_2)\nprint(banding)';
+// Function copy code button
+function copyCode() {
+  navigator.clipboard.writeText(code);
+}
+
 const pageVariabel4 = () => {
   return (
     <>
@@ -57,25 +64,40 @@ const pageVariabel4 = () => {
         <div className="pt-3 pl-1">
           Coba kalian jalankan kode ini! Kenapa hasilnya demikian?
         </div>
-        <Editor>
-          <div
-            dangerouslySetInnerHTML={{
-              __html: `
-              <py-config>
-              terminal = false
-              </py-config>
-              <py-repl output="replOutput">
-              nomor_1 = 50
-              nomor_2 = "50"
-
-              #Membandingkan kedua variabel diatas
-              variabel_perbandingan = (nomor_1 == nomor_2)
-
-              print (variabel_perbandingan)
-              </py-repl>`,
-            }}
-          />
-        </Editor>
+        <div className="ml-1 mt-4 px-2 py-1 pb-6 rounded-md bg-neutral-200">
+          <div className="pt-2 text-sm sm:text-md">
+            <code>
+              nomor_1 = <span className="text-orange-600">&#34;50&#34;</span>
+              <br />
+              nomor_2 = <span className="text-red-700">50</span>
+              <br />
+              <br />
+              <span className="text-orange-600">
+                #Cek apakah variabel nomor_1 dan nomor_2 sama
+              </span>
+              <br />
+              banding = (nomor_1 == nomor_2)
+              <br />
+              <br />
+              <span className="text-violet-600">print</span>(banding)
+            </code>
+          </div>
+          <div className="mt-6">
+            <button
+              className="bg-blue-600 hover:bg-blue-500 rounded-md text-white px-2 py-1"
+              onClick={copyCode}
+            >
+              Salin kode
+            </button>
+          </div>
+        </div>
+        <p className="pt-3 pl-1">
+          Salin kode diatas dan coba jalankan pada{" "}
+          <Link href="../uji_kode" className="text-blue-700 underline">
+            terminal ini
+          </Link>
+          .
+        </p>
       </section>
 
       <Footer>

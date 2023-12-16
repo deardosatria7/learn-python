@@ -3,6 +3,13 @@ import Editor from "@/components/Editor";
 import Link from "next/link";
 import Footer from "@/sections/Footer";
 
+const code =
+  "#Tipe data boolean\nbenar = True\nsalah = False\nprint(type(benar))\n";
+// Function copy code button
+function copyCode() {
+  navigator.clipboard.writeText(code);
+}
+
 const pageVariabel3 = () => {
   return (
     <>
@@ -55,23 +62,35 @@ const pageVariabel3 = () => {
           &ldquo;True&rdquo; dan &ldquo;False&rdquo;. Tipe data ini sering
           digunakan dalam perbandingan dua atau lebih variabel.
         </p>
-        <Editor>
-          <div
-            dangerouslySetInnerHTML={{
-              __html: `
-              <py-config>
-              terminal = false
-              </py-config>
-              <py-repl output="replOutput">
-              #Tipe variabel boolean (bool)
-              benar = True 
-              salah = False
-
-              print (type(benar))
-              </py-repl>`,
-            }}
-          />
-        </Editor>
+        <div className="ml-1 mt-4 px-2 py-1 pb-6 rounded-md bg-neutral-200">
+          <div className="pt-2 text-sm sm:text-md">
+            <code>
+              <span className="text-orange-600">#Tipe data boolean</span>
+              <br />
+              benar = <span className="text-violet-700">True</span>
+              <br />
+              salah = <span className="text-violet-700">False</span>
+              <br />
+              <span className="text-violet-700">print</span>(
+              <span className="text-violet-700">type</span>(benar))
+            </code>
+          </div>
+          <div className="mt-6">
+            <button
+              className="bg-blue-600 hover:bg-blue-500 rounded-md text-white px-2 py-1"
+              onClick={copyCode}
+            >
+              Salin kode
+            </button>
+          </div>
+        </div>
+        <p className="pt-3 pl-1">
+          Salin kode diatas dan coba jalankan pada{" "}
+          <Link href="../uji_kode" className="text-blue-700 underline">
+            terminal ini
+          </Link>
+          .
+        </p>
       </section>
 
       <Footer>

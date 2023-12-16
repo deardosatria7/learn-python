@@ -3,7 +3,7 @@ import Editor from "@/components/Editor";
 import Link from "next/link";
 import Footer from "@/sections/Footer";
 
-const code = "harga = 250\nprint(type(harga)) #tipe data integer/int";
+const code = "harga = 250\nprint(type(harga)) #tipe data integer/int\n";
 // Function definition
 function copyCode() {
   navigator.clipboard.writeText(code);

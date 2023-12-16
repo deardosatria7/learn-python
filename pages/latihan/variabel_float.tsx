@@ -3,6 +3,12 @@ import Editor from "@/components/Editor";
 import Link from "next/link";
 import Footer from "@/sections/Footer";
 
+const code = "#Tipe data float\nliter = 1.5\nprint(type(liter))";
+// Function copy code button
+function copyCode() {
+  navigator.clipboard.writeText(code);
+}
+
 const pageVariabel2 = () => {
   return (
     <>
@@ -59,35 +65,43 @@ const pageVariabel2 = () => {
           Selain tipe data integer, python juga memiliki tipe data <i>float</i>{" "}
           yang menyimpan nilai bilangan desimal (Contoh: 0.8, 1.5, dsb)
         </p>
-        <p className="pt-3 pl-1 text-sm">
-          Catatan: <br />
-          <code className="px-1 rounded-md bg-neutral-200">
-            print(type())
-          </code>{" "}
-          digunakan untuk menampilkan tipe data variabel.
+        <div className="ml-1 mt-4 px-2 py-1 pb-6 rounded-md bg-neutral-200">
+          <div className="pt-2 text-sm sm:text-md">
+            <code>
+              <span className="text-orange-600">#Tipe data integer</span>
+              <br />
+              harga = <span className="text-red-700">250</span>
+              <br />
+              <br />
+              <span className="text-orange-600">#Tipe data string</span>
+              <br />
+              merk = &#34;pepsi&#34;
+              <br />
+              <br />
+              <span className="text-orange-600">#Tipe data float</span>
+              <br />
+              liter = 1.5
+              <br />
+              <span className="text-violet-700">print</span>(
+              <span className="text-violet-700">type</span>(liter))
+            </code>
+          </div>
+          <div className="mt-6">
+            <button
+              className="bg-blue-600 hover:bg-blue-500 rounded-md text-white px-2 py-1"
+              onClick={copyCode}
+            >
+              Salin kode
+            </button>
+          </div>
+        </div>
+        <p className="pt-3 pl-1">
+          Salin kode diatas dan coba jalankan pada{" "}
+          <Link href="../uji_kode" className="text-blue-700 underline">
+            terminal ini
+          </Link>
+          .
         </p>
-        <Editor>
-          <div
-            dangerouslySetInnerHTML={{
-              __html: `
-              <py-config>
-              terminal = false
-              </py-config>
-              <py-repl output="replOutput">
-              #Tipe variabel integer
-              harga = 250 
-
-              #Tipe variabel String
-              minuman = "pepsi" 
-
-              #Tipe variabel float
-              liter = 2.5 
-
-              print (type(liter))
-              </py-repl>`,
-            }}
-          />
-        </Editor>
       </section>
 
       <Footer>
