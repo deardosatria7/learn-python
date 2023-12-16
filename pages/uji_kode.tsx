@@ -24,6 +24,11 @@ const Uji_kode = () => {
               </div>
             </button>
           </div>
+          <div className="ml-5 mt-5">
+            <span className="text-neutral-500 italic">
+              Mungkin butuh beberapa detik untuk memuat.
+            </span>
+          </div>
           <div>
             <Editor>
               <div

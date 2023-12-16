@@ -3,6 +3,12 @@ import Editor from "@/components/Editor";
 import Link from "next/link";
 import Footer from "@/sections/Footer";
 
+const code =
+  "harga = 250\n\n#Penghitungan diskon 50%\nharga_diskon = harga / 2\n\nprint(harga_diskon)";
+// Function definition
+function copyCode() {
+  navigator.clipboard.writeText(code);
+}
 const pagePendahuluan2 = () => {
   return (
     <>
@@ -72,15 +78,22 @@ const pagePendahuluan2 = () => {
             </code>
           </div>
           <div className="mt-6">
-            <a
-              className="px-2 py-2 bg-blue-600 text-white text-sm rounded-md hover:bg-blue-500"
-              href="../kode/pendahuluan2"
+            <button
+              className="bg-blue-600 hover:bg-blue-500 rounded-md text-white px-2 py-1"
+              onClick={copyCode}
             >
-              Coba kode
-            </a>
+              Salin kode
+            </button>
           </div>
         </div>
-        <p className="pt-3 pl-1 text-sm">
+        <p className="pt-3 pl-1">
+          Salin kode diatas dan coba jalankan pada{" "}
+          <Link href="../uji_kode" className="text-blue-700 underline">
+            terminal ini
+          </Link>
+          .
+        </p>
+        <p className="mt-10 pl-1 text-sm">
           Catatan: <br />
           <code className="px-1 rounded-md bg-neutral-200">print</code>{" "}
           digunakan untuk menampilkan teks ke terminal output.

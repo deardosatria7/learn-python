@@ -3,6 +3,12 @@ import Editor from "@/components/Editor";
 import Link from "next/link";
 import Footer from "@/sections/Footer";
 
+const code = 'minuman = "pepsi"\nprint(type(minuman)) #tipe data string/str';
+// Function definition
+function copyCode() {
+  navigator.clipboard.writeText(code);
+}
+
 const variabelString = () => {
   return (
     <>
@@ -68,14 +74,21 @@ const variabelString = () => {
             </code>
           </div>
           <div className="mt-6">
-            <a
-              className="px-2 py-2 bg-blue-600 text-white text-sm rounded-md hover:bg-blue-500"
-              href="../kode/variabel_string"
+            <button
+              className="bg-blue-600 hover:bg-blue-500 rounded-md text-white px-2 py-1"
+              onClick={copyCode}
             >
-              Coba kode
-            </a>
+              Salin kode
+            </button>
           </div>
         </div>
+        <p className="pt-3 pl-1">
+          Salin kode diatas dan coba jalankan pada{" "}
+          <Link href="../uji_kode" className="text-blue-700 underline">
+            terminal ini
+          </Link>
+          .
+        </p>
       </section>
 
       <Footer>
