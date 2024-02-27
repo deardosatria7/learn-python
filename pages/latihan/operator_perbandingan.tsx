@@ -3,6 +3,12 @@ import Editor from "@/components/Editor";
 import Link from "next/link";
 import Footer from "@/sections/Footer";
 
+const code = "print(10 >= 13) \nprint(15 < 20)";
+// Function copy code button
+function copyCode() {
+  navigator.clipboard.writeText(code);
+}
+
 const pageOperator2 = () => {
   return (
     <>
@@ -63,31 +69,37 @@ const pageOperator2 = () => {
           <li>Sama dengan (==)</li>
           <li>Tidak sama dengan (!=)</li>
         </div>
-        <div className="pt-3 pl-1">
-          Coba kalian jalankan kode di bawah ini dan perhatikan hasilnya!
+        <div className="ml-1 mt-4 px-4 py-1 pb-6 rounded-md bg-neutral-200">
+          <div className="pt-2 text-sm sm:text-md">
+            <code>
+              <span className="text-orange-600">
+                #Contoh operator perbandingan python
+              </span>
+              <br />
+              <span className="text-violet-700">print</span>
+              &#40;10 &#62;&#61; 13&#41;
+              <br />
+              <span className="text-violet-700">print</span>
+              &#40;15 &#60; 20&#41;
+              <br />
+            </code>
+          </div>
+          <div className="mt-6">
+            <button
+              className="bg-blue-600 hover:bg-blue-500 rounded-md text-white px-2 py-1"
+              onClick={copyCode}
+            >
+              Salin kode
+            </button>
+          </div>
         </div>
-        <Editor>
-          <div
-            dangerouslySetInnerHTML={{
-              __html: `
-              <py-config>
-              terminal = false
-              </py-config>
-              <py-repl output="replOutput">
-              a = 10
-              b = 20
-              c = 30
-
-              print (a > b)
-              print (b < c)
-              print (c >= a)
-              print (a <= b)
-              print (b == c-10)
-              print (c != a)
-              </py-repl>`,
-            }}
-          />
-        </Editor>
+        <div className="pt-3 pl-1">
+          Jalankan kode diatas dalam{" "}
+          <Link href="../uji_kode" className="text-blue-700 underline">
+            terminal ini
+          </Link>
+          .
+        </div>
       </section>
 
       <Footer>

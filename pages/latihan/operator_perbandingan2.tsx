@@ -3,6 +3,13 @@ import Editor from "@/components/Editor";
 import Link from "next/link";
 import Footer from "@/sections/Footer";
 
+const code =
+  'def perkalian (a, b): \n return(a*b) \nprint (perkalian(8, 9)) \n\ndef bandingkan (a, b):\n if (a < b):\n  print(a, "lebih kecil dari", b)\n elif (a > b):\n  print(a, "lebih besar dari", b)\n else :\n  print(a, "sama dengan", b)\nbandingkan (12, 15)';
+// Function copy code button
+function copyCode() {
+  navigator.clipboard.writeText(code);
+}
+
 const pageOperator3 = () => {
   return (
     <>
@@ -50,33 +57,79 @@ const pageOperator3 = () => {
           Mari kita pahami lebih dalam lagi mengenai operator dalam python.
         </p>
         <p className="pt-3 pl-1">
-          Dibawah ini terdapat kode yang menggunakan prinsip operator dalam
-          python. Terdapat beberapa operator aritmatika dan perbandingan di
-          dalamnya. Coba kalian <b>ganti dengan operator yang benar</b> agar
-          kode dibawah menghasilkan hasil True di setiap barisnya!
+          Berikut ini adalah contoh penggunaan operator perbandingan dan
+          aritmatika dalam python. Perhatikan contoh kode berikut!
         </p>
+        <div className="ml-1 mt-4 px-4 py-1 pb-6 rounded-md bg-neutral-200">
+          <div className="pt-2 text-sm sm:text-md">
+            <code>
+              <span className="text-orange-600">
+                #Contoh kegunaan operator aritmatika python
+              </span>
+              <br />
+              <span className="text-violet-700">def</span> perkalian &#40;a,
+              b&#41;&#58;
+              <br />
+              &nbsp;<span className="text-violet-700">return</span>
+              &#40;a&#42;b&#41;
+              <br />
+              <br />
+              <span className="text-violet-700">print</span>
+              &#40;perkalian&#40;8, 9&#41;&#41;
+              <br />
+              <br />
+              <span className="text-orange-600">
+                #Contoh kegunaan operator perbandingan python
+              </span>
+              <br />
+              <span className="text-violet-700">def</span> bandingkan &#40;a,
+              b&#41;&#58;
+              <br />
+              &nbsp;<span className="text-violet-700">if</span> &#40;a &#60;
+              b&#41;&#58;
+              <br />
+              &nbsp;&nbsp;<span className="text-violet-700">print</span>
+              &#40;a,{" "}
+              <span className="text-orange-600">
+                &#34;lebih kecil dari&#34;
+              </span>
+              , b&#41;
+              <br />
+              &nbsp;<span className="text-violet-700">elif</span> &#40;a &#62;
+              b&#41;&#58;
+              <br />
+              &nbsp;&nbsp;<span className="text-violet-700">print</span>
+              &#40;a,{" "}
+              <span className="text-orange-600">
+                &#34;lebih besar dari&#34;
+              </span>
+              , b&#41;
+              <br />
+              &nbsp;<span className="text-violet-700">else</span>&#58;
+              <br />
+              &nbsp;&nbsp;<span className="text-violet-700">print</span>
+              &#40;a,{" "}
+              <span className="text-orange-600">&#34;sama dengan&#34;</span>
+              , b&#41;
+              <br />
+              <br />
+              bandingkan&#40;12, 15&#41;
+            </code>
+          </div>
+          <div className="mt-6">
+            <button
+              className="bg-blue-600 hover:bg-blue-500 rounded-md text-white px-2 py-1"
+              onClick={copyCode}
+            >
+              Salin kode
+            </button>
+          </div>
+        </div>
         <div className="pt-3 pl-1">
           <span className="text-blue-500 italic">
             Output hanya akan keluar apabila seluruh baris kode telah terisi.
           </span>
         </div>
-        <Editor>
-          <div
-            dangerouslySetInnerHTML={{
-              __html: `
-              <py-config>
-              terminal = false
-              </py-config>
-              <py-repl output="replOutput">
-              print (12 - 9 == 3)
-              print (2 * 6 == 64)
-              print (27 + 3 == 9)
-              print (23 < 15)
-              print (45 == 44)
-              </py-repl>`,
-            }}
-          />
-        </Editor>
       </section>
 
       <Footer>
