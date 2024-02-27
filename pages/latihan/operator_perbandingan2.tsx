@@ -54,7 +54,8 @@ const pageOperator3 = () => {
       <section className="p-4">
         <h1 className="text-2xl font-semibold">Operator Python</h1>
         <p className="pt-3 pl-1">
-          Mari kita pahami lebih dalam lagi mengenai operator dalam python.
+          Mari kita pahami lebih dalam lagi mengenai operator aritmatika dan
+          operator perbandingan yang telah dipelajari.
         </p>
         <p className="pt-3 pl-1">
           Berikut ini adalah contoh penggunaan operator perbandingan dan
@@ -126,9 +127,11 @@ const pageOperator3 = () => {
           </div>
         </div>
         <div className="pt-3 pl-1">
-          <span className="text-blue-500 italic">
-            Output hanya akan keluar apabila seluruh baris kode telah terisi.
-          </span>
+          Jalankan kode diatas dalam{" "}
+          <Link href="../uji_kode" className="text-blue-700 underline">
+            terminal ini
+          </Link>
+          .
         </div>
       </section>
 
