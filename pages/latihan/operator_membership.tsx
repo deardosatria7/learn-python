@@ -1,7 +1,13 @@
 import Header from "@/sections/Header";
-import Editor from "@/components/Editor";
 import Link from "next/link";
 import Footer from "@/sections/Footer";
+
+const code =
+  'keranjang = ["apel", "jeruk"] \n\nprint("apel" in keranjang) #True \nprint("jambu" in keranjang) #False';
+// Function copy code button
+function copyCode() {
+  navigator.clipboard.writeText(code);
+}
 
 const pageOperator5 = () => {
   return (
@@ -63,25 +69,48 @@ const pageOperator5 = () => {
           <br />
         </div>
         <div className="pt-3 pl-1">
-          Jalankan kode dibawah ini agar lebih memahami konsep operator
-          membership.
+          Coba jalankan kode dibawah ini dalam{" "}
+          <Link href="../uji_kode" className="text-blue-700 underline">
+            terminal
+          </Link>{" "}
+          agar lebih memahami konsep operator membership.
         </div>
-        <Editor>
-          <div
-            dangerouslySetInnerHTML={{
-              __html: `
-              <py-config>
-              terminal = false
-              </py-config>
-              <py-repl output="replOutput">
-              buah = ["apel", "anggur"]
-
-              print ("apel" in buah)
-              print ("pisang" not in buah)
-              </py-repl>`,
-            }}
-          />
-        </Editor>
+        <div className="ml-1 mt-4 px-4 py-1 pb-6 mb-24 rounded-md bg-neutral-200">
+          <div className="pt-2 text-sm sm:text-md">
+            <code>
+              <span className="text-orange-600">
+                #Contoh operator membership python
+              </span>
+              <br />
+              keranjang &#61; &#91;
+              <span className="text-orange-700">&#34;apel&#34;</span>,
+              <span className="text-orange-700">&#34;jeruk&#34;</span>
+              &#93;
+              <br />
+              <br />
+              <span className="text-violet-700">print</span>
+              &#40;
+              <span className="text-orange-700">&#34;apel&#34;</span>{" "}
+              <span className="text-violet-700">in</span> keranjang&#41; &nbsp;
+              <span className="text-orange-700">#True</span>
+              <br />
+              <span className="text-violet-700">print</span>
+              &#40;
+              <span className="text-orange-700">&#34;jambu&#34;</span>{" "}
+              <span className="text-violet-700">in</span> keranjang&#41; &nbsp;
+              <span className="text-orange-700">#False</span>
+              <br />
+            </code>
+          </div>
+          <div className="mt-6">
+            <button
+              className="bg-blue-600 hover:bg-blue-500 rounded-md text-white px-2 py-1"
+              onClick={copyCode}
+            >
+              Salin kode
+            </button>
+          </div>
+        </div>
       </section>
 
       <Footer>

@@ -3,6 +3,13 @@ import Editor from "@/components/Editor";
 import Link from "next/link";
 import Footer from "@/sections/Footer";
 
+const code =
+  "print(True and True) #True \nprint(True and False) #False \n\nprint(True or False) #True \n\nprint(not True) #False";
+// Function copy code button
+function copyCode() {
+  navigator.clipboard.writeText(code);
+}
+
 const pageOperator4 = () => {
   return (
     <>
@@ -63,23 +70,50 @@ const pageOperator4 = () => {
           <b>NOT</b>: Akan membalikkan apapun nilai dari pernyataan yang
           disajikan.
         </div>
-        <div className="pt-3 pl-1">Coba jalankan kode di bawah ini!</div>
-        <Editor>
-          <div
-            dangerouslySetInnerHTML={{
-              __html: `
-              <py-config>
-              terminal = false
-              </py-config>
-              <py-repl output="replOutput">
-              x = 5
-
-              print (x > 3 and x < 10)
-              #menghasilkan hasil true karena x lebih besar dari 3 dan lebih kecil dari 10
-              </py-repl>`,
-            }}
-          />
-        </Editor>
+        <div className="pt-3 pl-1">
+          {" "}
+          Perhatikan contoh kode berikut, coba jalankan di{" "}
+          <Link href="../uji_kode" className="text-blue-700 underline">
+            terminal ini.
+          </Link>
+        </div>
+        <div className="ml-1 mt-4 px-4 py-1 pb-6 mb-24 rounded-md bg-neutral-200">
+          <div className="pt-2 text-sm sm:text-md">
+            <code>
+              <span className="text-orange-600">
+                #Contoh operator logika python
+              </span>
+              <br />
+              <span className="text-violet-700">print</span>
+              &#40;<span className="text-violet-700">True and True</span>&#41;
+              &nbsp;&nbsp;
+              <span className="text-orange-700">#True</span>
+              <br />
+              <span className="text-violet-700">print</span>
+              &#40;<span className="text-violet-700">True and False</span>&#41;
+              &nbsp;<span className="text-orange-700">#False</span>
+              <br />
+              <br />
+              <span className="text-violet-700">print</span>
+              &#40;<span className="text-violet-700">True or False</span>&#41;
+              &nbsp;&nbsp;<span className="text-orange-700">#True</span>
+              <br />
+              <br />
+              <span className="text-violet-700">print</span>
+              &#40;<span className="text-violet-700">not True</span>&#41;
+              &nbsp;&nbsp;<span className="text-orange-700">#False</span>
+              <br />
+            </code>
+          </div>
+          <div className="mt-6">
+            <button
+              className="bg-blue-600 hover:bg-blue-500 rounded-md text-white px-2 py-1"
+              onClick={copyCode}
+            >
+              Salin kode
+            </button>
+          </div>
+        </div>
       </section>
 
       <Footer>

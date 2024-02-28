@@ -3,6 +3,12 @@ import Editor from "@/components/Editor";
 import Link from "next/link";
 import Footer from "@/sections/Footer";
 
+const code = "print(6 & 3) \nprint(6 | 3) \nprint(6 ^ 3)";
+// Function copy code button
+function copyCode() {
+  navigator.clipboard.writeText(code);
+}
+
 const pageOperator6 = () => {
   return (
     <>
@@ -82,44 +88,53 @@ const pageOperator6 = () => {
         <div className="pt-3 pl-1">
           Jalankan kode dibawah ini agar lebih memahami konsep operator bitwise.
         </div>
-        <Editor>
-          <div
-            dangerouslySetInnerHTML={{
-              __html: `
-              <py-config>
-              terminal = false
-              </py-config>
-              <py-repl output="replOutput">
-              print (6 & 3)
-              '''
-              6 = 0000000000000110
-              3 = 0000000000000011
-              --------------------
-              2 = 0000000000000010
-              ====================
-              '''
-
-              print (6 | 3)
-              '''
-              6 = 0000000000000110
-              3 = 0000000000000011
-              --------------------
-              7 = 0000000000000111
-              ====================
-              '''
-
-              print (6 ^ 3)
-              '''
-              6 = 0000000000000110
-              3 = 0000000000000011
-              --------------------
-              5 = 0000000000000101
-              ====================
-              '''
-              </py-repl>`,
-            }}
-          />
-        </Editor>
+        <div className="ml-1 mt-4 px-4 py-1 pb-6 mb-24 rounded-md bg-neutral-200">
+          <div className="pt-2 text-sm sm:text-md">
+            <code>
+              <span className="text-orange-600">
+                #Contoh operator bitwise python
+              </span>
+              <br />
+              <span className="text-violet-700">print</span>&#40;6 &#38; 3&#41;
+              <br />
+              &#39;&#39;&#39;
+              <br />
+              <span className="text-red-700">
+                6 &#61; 00000110
+                <br />3 &#61; 00000011
+                <br />
+                &#95;&#95;&#95;&#95;&#95;&#95;&#95;&#95;&#95;&#95;&#95;&#95;&#95;&#95;&#95;&#95;&#95;
+                <br />2 &#61; 00000010
+              </span>
+              <br />
+              &#39;&#39;&#39;
+              <br />
+              <br />
+              <span className="text-violet-700">print</span>&#40;6 &#124; 3&#41;
+              <br />
+              &#39;&#39;&#39;
+              <br />
+              <span className="text-red-700">
+                6 &#61; 00000110
+                <br />3 &#61; 00000011
+                <br />
+                &#95;&#95;&#95;&#95;&#95;&#95;&#95;&#95;&#95;&#95;&#95;&#95;&#95;&#95;&#95;&#95;&#95;
+                <br />7 &#61; 00000111
+              </span>
+              <br />
+              &#39;&#39;&#39;
+              <br />
+            </code>
+          </div>
+          <div className="mt-6">
+            <button
+              className="bg-blue-600 hover:bg-blue-500 rounded-md text-white px-2 py-1"
+              onClick={copyCode}
+            >
+              Salin kode
+            </button>
+          </div>
+        </div>
       </section>
 
       <Footer>
