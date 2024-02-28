@@ -84,7 +84,7 @@ const pageVariabel3 = () => {
             </button>
           </div>
         </div>
-        <p className="pt-3 pl-1">
+        <p className="pt-3 pl-1 mb-20">
           Salin kode diatas dan coba jalankan pada{" "}
           <Link href="../uji_kode" className="text-blue-700 underline">
             terminal ini

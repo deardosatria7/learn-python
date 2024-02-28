@@ -86,7 +86,7 @@ const pagePendahuluan = () => {
           </Link>
           .
         </p>
-        <p className="mt-10 pl-1 text-sm">
+        <p className="mt-4 pl-1 text-sm mb-20">
           Catatan: <br />
           <code className="px-1 rounded-md bg-neutral-200">
             print(type())
