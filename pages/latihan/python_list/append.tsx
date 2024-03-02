@@ -3,6 +3,13 @@ import Header from "@/sections/Header";
 import {useRouter} from "next/router";
 import Footer from "@/sections/Footer";
 
+const code =
+  'mobil = ["Fiat", "BMW", "Toyota"] \nmobil.append("Audi") \nprint(mobil)';
+// Function copy code button
+function copyCode() {
+  navigator.clipboard.writeText(code);
+}
+
 const ListAppend = () => {
   const router = useRouter();
   return (
@@ -57,7 +64,7 @@ const ListAppend = () => {
             tersebut.
           </div>
           <div className="pt-3">
-            Metode copy( ) dapat digunakan dengan format{" "}
+            Metode append( ) dapat digunakan dengan format{" "}
             <code className="px-2 py-1 rounded-md bg-neutral-200 text-sm sm:text-md">
               <i>namaList.</i>append(&#34;<i>data</i>&#34;)
             </code>{" "}
@@ -66,20 +73,31 @@ const ListAppend = () => {
         <div className="pt-6">
           <div className="flex flex-col">
             <div className="bg-neutral-200 p-2 rounded-md text-sm sm:text-md">
-              <code>
-                mobil = [<span className="text-orange-700">&#34;Fiat&#34;</span>
-                , <span className="text-orange-700">&#34;BMW&#34;</span>,{" "}
-                <span className="text-orange-700">&#34;Toyota&#34;</span>]
-              </code>
-              <br />
-              <code>
-                mobil.append(
-                <span className="text-orange-700">&#34;Audi&#34;</span>)
-              </code>
-              <br />
-              <code>
-                <span className="text-violet-800">print</span>(mobil)
-              </code>
+              <div>
+                <code>
+                  mobil = [
+                  <span className="text-orange-700">&#34;Fiat&#34;</span>,{" "}
+                  <span className="text-orange-700">&#34;BMW&#34;</span>,{" "}
+                  <span className="text-orange-700">&#34;Toyota&#34;</span>]
+                </code>
+                <br />
+                <code>
+                  mobil.append(
+                  <span className="text-orange-700">&#34;Audi&#34;</span>)
+                </code>
+                <br />
+                <code>
+                  <span className="text-violet-800">print</span>(mobil)
+                </code>
+              </div>
+              <div className="mt-6 mb-2">
+                <button
+                  className="bg-blue-600 hover:bg-blue-500 rounded-md text-white px-2 py-1"
+                  onClick={copyCode}
+                >
+                  Salin kode
+                </button>
+              </div>
             </div>
           </div>
         </div>

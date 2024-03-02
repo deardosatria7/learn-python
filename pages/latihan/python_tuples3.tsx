@@ -3,6 +3,19 @@ import Header from "@/sections/Header";
 import {useRouter} from "next/router";
 import Footer from "@/sections/Footer";
 
+const code1 =
+  'tuple1 = ("apel", "jeruk", "pisang") \ntuple2 = ("tomat", "timun", "wortel") \n\ntuple3 = tuple1 + tuple2 \nprint(tuple3)';
+const code2 =
+  'tuple1 = ("apel", "jeruk", "pisang") \nx = list(tuple1) \nx.append("salak") \ntuple1 = tuple(x) \n\nprint(tuple1)';
+
+// Function copy code button
+function copyCode1() {
+  navigator.clipboard.writeText(code1);
+}
+function copyCode2() {
+  navigator.clipboard.writeText(code2);
+}
+
 const PythonTuples3 = () => {
   const router = useRouter();
   return (
@@ -53,61 +66,81 @@ const PythonTuples3 = () => {
           anda dapat menambahkan tuple ke tuple lainnya. Perhatikan contoh di
           bawah ini.
         </p>
-        <div className="bg-neutral-200 p-2 rounded-md">
-          <code>
-            tuple1 &#61; &#40;
-            <span className="text-orange-700">&#34;apel&#34;</span>,{" "}
-            <span className="text-orange-700">&#34;jeruk&#34;</span>,{" "}
-            <span className="text-orange-700">&#34;pisang&#34;</span>&#41;
-          </code>
-          <br />
-          <code>
-            tuple2 &#61; &#40;
-            <span className="text-orange-700">&#34;tomat&#34;</span>,{" "}
-            <span className="text-orange-700">&#34;timun&#34;</span>,{" "}
-            <span className="text-orange-700">&#34;wortel&#34;</span>&#41;
-          </code>
-          <br />
-          <br />
-          <code>tuple3 &#61; tuple1 &#43; tuple2</code>
-          <br />
-          <code>
-            <span className="text-violet-800">print</span>&#40;tuple3&#41;
-          </code>
+        <div className="bg-neutral-200 p-2 rounded-md text-sm sm:text-base">
+          <div>
+            <code>
+              tuple1 &#61; &#40;
+              <span className="text-orange-700">&#34;apel&#34;</span>,{" "}
+              <span className="text-orange-700">&#34;jeruk&#34;</span>,{" "}
+              <span className="text-orange-700">&#34;pisang&#34;</span>&#41;
+            </code>
+            <br />
+            <code>
+              tuple2 &#61; &#40;
+              <span className="text-orange-700">&#34;tomat&#34;</span>,{" "}
+              <span className="text-orange-700">&#34;timun&#34;</span>,{" "}
+              <span className="text-orange-700">&#34;wortel&#34;</span>&#41;
+            </code>
+            <br />
+            <br />
+            <code>tuple3 &#61; tuple1 &#43; tuple2</code>
+            <br />
+            <code>
+              <span className="text-violet-800">print</span>&#40;tuple3&#41;
+            </code>
+          </div>
+          <div className="mt-6 mb-2">
+            <button
+              className="bg-blue-600 hover:bg-blue-500 rounded-md text-white px-2 py-1"
+              onClick={copyCode1}
+            >
+              Salin kode
+            </button>
+          </div>
         </div>
         <p className="py-2 pl-1 pt-4">
           Atau kalian juga bisa mengubahnya menjadi sebuah list, mengupdate
           data, dan mengubahnya menjadi tuple kembali seperti contoh di bawah
           ini.
         </p>
-        <div className="bg-neutral-200 p-2 rounded-md">
-          <code>
-            tuple1 &#61; &#40;
-            <span className="text-orange-700">&#34;apel&#34;</span>,{" "}
-            <span className="text-orange-700">&#34;jeruk&#34;</span>,{" "}
-            <span className="text-orange-700">&#34;pisang&#34;</span>&#41;
-          </code>
-          <br />
-          <code>
-            x &#61; <span className="text-violet-800">list</span>
-            &#40;tuple1&#41;
-          </code>
-          <br />
-          <code>
-            x.append&#40;
-            <span className="text-orange-700">&#34;salak&#34;</span>&#41;
-          </code>
-          <br />
-          <code>
-            {" "}
-            tuple1 &#61; <span className="text-violet-800">tuple</span>
-            &#40;x&#41;
+        <div className="bg-neutral-200 p-2 rounded-md text-sm sm:text-base">
+          <div>
+            <code>
+              tuple1 &#61; &#40;
+              <span className="text-orange-700">&#34;apel&#34;</span>,{" "}
+              <span className="text-orange-700">&#34;jeruk&#34;</span>,{" "}
+              <span className="text-orange-700">&#34;pisang&#34;</span>&#41;
+            </code>
             <br />
-          </code>
-          <br />
-          <code>
-            <span className="text-violet-800">print</span>&#40;tuple1&#41;
-          </code>
+            <code>
+              x &#61; <span className="text-violet-800">list</span>
+              &#40;tuple1&#41;
+            </code>
+            <br />
+            <code>
+              x.append&#40;
+              <span className="text-orange-700">&#34;salak&#34;</span>&#41;
+            </code>
+            <br />
+            <code>
+              {" "}
+              tuple1 &#61; <span className="text-violet-800">tuple</span>
+              &#40;x&#41;
+              <br />
+            </code>
+            <br />
+            <code>
+              <span className="text-violet-800">print</span>&#40;tuple1&#41;
+            </code>
+          </div>
+          <div className="mt-6 mb-2">
+            <button
+              className="bg-blue-600 hover:bg-blue-500 rounded-md text-white px-2 py-1"
+              onClick={copyCode2}
+            >
+              Salin kode
+            </button>
+          </div>
         </div>
         <div className="pl-1 pt-5 pb-20">
           Uji coba beberapa kode diatas dengan salin ke dalam{" "}

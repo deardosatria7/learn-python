@@ -3,6 +3,13 @@ import Header from "@/sections/Header";
 import Editor from "@/components/Editor";
 import Footer from "@/sections/Footer";
 
+const code =
+  'list1 = ["baju", "celana", "topi"] \nprint(list1[0]) \nprint(len(list1))';
+// Function copy code button
+function copyCode() {
+  navigator.clipboard.writeText(code);
+}
+
 const PythonList2 = () => {
   return (
     <>
@@ -63,30 +70,41 @@ const PythonList2 = () => {
         <div className="text-sm sm:text-md">
           <div className="flex flex-col">
             <div className="bg-neutral-200 p-2 rounded-md">
-              <code>
-                list1 &#61; &#91;
-                <span className="text-orange-700">&#34;baju&#34;</span>,{" "}
-                <span className="text-orange-700">&#34;celana&#34;</span>,{" "}
-                <span className="text-orange-700">&#34;topi&#34;</span>&#93;
-              </code>
-              <br />
-              <br />
-              <code className="text-orange-700">
-                #memanggil data urutan ke-nol dalam list
-              </code>
-              <br />
-              <code>
-                <span className="text-violet-800">print</span>(list1&#91;0&#93;)
-              </code>
-              <br />
-              <br />
-              <code className="text-orange-700">
-                #menampilkan jumlah data dalam list
-              </code>
-              <br />
-              <code>
-                <span className="text-violet-800">print</span>(len(list1))
-              </code>
+              <div>
+                <code>
+                  list1 &#61; &#91;
+                  <span className="text-orange-700">&#34;baju&#34;</span>,{" "}
+                  <span className="text-orange-700">&#34;celana&#34;</span>,{" "}
+                  <span className="text-orange-700">&#34;topi&#34;</span>&#93;
+                </code>
+                <br />
+                <br />
+                <code className="text-orange-700">
+                  #memanggil data urutan ke-nol dalam list
+                </code>
+                <br />
+                <code>
+                  <span className="text-violet-800">print</span>
+                  (list1&#91;0&#93;)
+                </code>
+                <br />
+                <br />
+                <code className="text-orange-700">
+                  #menampilkan jumlah data dalam list
+                </code>
+                <br />
+                <code>
+                  <span className="text-violet-800">print</span>(len(list1))
+                </code>
+              </div>
+              <div className="mt-6 mb-2">
+                <button
+                  className="bg-blue-600 hover:bg-blue-500 rounded-md text-white px-2 py-1"
+                  onClick={copyCode}
+                >
+                  Salin kode
+                </button>
+              </div>
             </div>
           </div>
         </div>

@@ -3,6 +3,13 @@ import Header from "@/sections/Header";
 import Editor from "@/components/Editor";
 import Footer from "@/sections/Footer";
 
+const code =
+  'list1 = ["baju", "jas", "celana", "dasi", "topi"] \n\nprint(list1[2:5])\nprint(list1[1:])\nprint(list1[:4])';
+// Function copy code button
+function copyCode() {
+  navigator.clipboard.writeText(code);
+}
+
 const PythonList3 = () => {
   return (
     <>
@@ -99,30 +106,40 @@ const PythonList3 = () => {
         <div className="text-sm sm:text-md">
           <div className="flex flex-col">
             <div className="bg-neutral-200 p-2 rounded-md">
-              <code>
-                list1 &#61; &#91;
-                <span className="text-orange-700">&#34;baju&#34;</span>,{" "}
-                <span className="text-orange-700">&#34;jas&#34;</span>,{" "}
-                <span className="text-orange-700">&#34;celana&#34;</span>,{" "}
-                <span className="text-orange-700">&#34;dasi&#34;</span>,{" "}
-                <span className="text-orange-700">&#34;topi&#34;</span>&#93;
-              </code>
-              <br />
-              <br />
-              <code>
-                print(<span className="text-orange-700">list1</span>&#91;
-                <span className="text-blue-600">2:5</span>&#93;)
-              </code>
-              <br />
-              <code>
-                print(<span className="text-orange-700">list1</span>&#91;
-                <span className="text-blue-600">1:</span>&#93;)
-              </code>
-              <br />
-              <code>
-                print(<span className="text-orange-700">list1</span>&#91;
-                <span className="text-blue-600">:4</span>&#93;)
-              </code>
+              <div>
+                <code>
+                  list1 &#61; &#91;
+                  <span className="text-orange-700">&#34;baju&#34;</span>,{" "}
+                  <span className="text-orange-700">&#34;jas&#34;</span>,{" "}
+                  <span className="text-orange-700">&#34;celana&#34;</span>,{" "}
+                  <span className="text-orange-700">&#34;dasi&#34;</span>,{" "}
+                  <span className="text-orange-700">&#34;topi&#34;</span>&#93;
+                </code>
+                <br />
+                <br />
+                <code>
+                  print(<span className="text-orange-700">list1</span>&#91;
+                  <span className="text-blue-600">2:5</span>&#93;)
+                </code>
+                <br />
+                <code>
+                  print(<span className="text-orange-700">list1</span>&#91;
+                  <span className="text-blue-600">1:</span>&#93;)
+                </code>
+                <br />
+                <code>
+                  print(<span className="text-orange-700">list1</span>&#91;
+                  <span className="text-blue-600">:4</span>&#93;)
+                </code>
+              </div>
+              <div className="mt-6 mb-2">
+                <button
+                  className="bg-blue-600 hover:bg-blue-500 rounded-md text-white px-2 py-1"
+                  onClick={copyCode}
+                >
+                  Salin kode
+                </button>
+              </div>
             </div>
           </div>
         </div>

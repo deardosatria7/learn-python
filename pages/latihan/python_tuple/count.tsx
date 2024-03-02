@@ -3,13 +3,15 @@ import Header from "@/sections/Header";
 import {useRouter} from "next/router";
 import Footer from "@/sections/Footer";
 
-const code = 'mobil = ["Fiat", "BMW", "Toyota"] \nmobil.clear() \nprint(mobil)';
+const code1 =
+  "tuple1 = (1, 4, 3, 4, 1, 9, 4, 6) \nx = tuple1.count(4) \nprint(x)";
+
 // Function copy code button
 function copyCode() {
-  navigator.clipboard.writeText(code);
+  navigator.clipboard.writeText(code1);
 }
 
-const ListClear = () => {
+const PythonTuplesCount = () => {
   const router = useRouter();
   return (
     <>
@@ -19,7 +21,7 @@ const ListClear = () => {
             <h4 className="text-lg text-white">Belajar-Python</h4>
           </Link>
           <div className="pl-4 grid content-center">
-            <Link href={"../../list_materi"}>
+            <Link href={"../list_materi"}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 x="0px"
@@ -52,37 +54,41 @@ const ListClear = () => {
         </div>
       </Header>
       <section className="p-4">
-        <h1 className="text-2xl font-semibold">Python List</h1>
-        <div className="text-lg font-semibold pt-3 pl-1">
-          Metode <code>clear()</code>
-        </div>
-        <div className="flex flex-col pl-1">
-          <div className="pt-3">
-            Metode clear( ) digunakan untuk menghapus data didalam list. Metode
-            clear akan menghapus seluruh data didalam list.
+        <h1 className="text-2xl font-semibold">Python Tuple</h1>
+
+        {/* Metode count() */}
+        <div className="flex flex-col pl-1 mt-3">
+          <div className="text-lg font-medium">Metode count( )</div>
+          <div className="pt-1">
+            Metode count( ) digunakan untuk menghitung jumlah kemunculan data
+            tertentu dalam sebuah tuple.
           </div>
           <div className="pt-3">
-            Metode clear( ) dapat digunakan dengan format{" "}
-            <code className="px-2 py-1 rounded-md bg-neutral-200 text-sm sm:text-md">
-              <i>namaList.</i>clear()
+            Metode count( ) dapat digunakan dengan mengetikkan{" "}
+            <code className="px-2 py-1 rounded-md bg-neutral-200">
+              <i>namaTuple.</i>count(<i>data</i>)
             </code>{" "}
           </div>
         </div>
         <div className="pt-6">
           <div className="flex flex-col">
-            <div className="bg-neutral-200 p-2 rounded-md text-sm sm:text-md">
+            <div className="bg-neutral-200 p-2 rounded-md">
               <div>
                 <code>
-                  mobil = [
-                  <span className="text-orange-700">&#34;Fiat&#34;</span>,{" "}
-                  <span className="text-orange-700">&#34;BMW&#34;</span>,{" "}
-                  <span className="text-orange-700">&#34;Toyota&#34;</span>]
+                  tuple1 = (<span className="text-red-600">1</span>,{" "}
+                  <span className="text-red-600">4</span>,{" "}
+                  <span className="text-red-600">3</span>,{" "}
+                  <span className="text-red-600">4</span>,{" "}
+                  <span className="text-red-600">1</span>,{" "}
+                  <span className="text-red-600">9</span>,{" "}
+                  <span className="text-red-600">4</span>,{" "}
+                  <span className="text-red-600">6</span>)
                 </code>
                 <br />
-                <code>mobil.clear()</code>
+                <code>x = tuple1.count(4)</code>
                 <br />
                 <code>
-                  <span className="text-violet-800">print</span>(mobil)
+                  <span className="text-violet-800">print</span>(x)
                 </code>
               </div>
               <div className="mt-6 mb-2">
@@ -98,7 +104,7 @@ const ListClear = () => {
         </div>
         <div className="pl-1 pt-5 pb-20">
           Uji coba kode diatas dengan salin ke dalam{" "}
-          <Link href={"../../uji_kode"} className="underline text-blue-500">
+          <Link href={"../uji_kode"} className="underline text-blue-500">
             terminal
           </Link>{" "}
           ini.
@@ -108,14 +114,12 @@ const ListClear = () => {
       <Footer>
         <div className="flex flex-row">
           <div>
-            <h3 className="flex gap-2">
-              <button
-                onClick={() => router.back()}
-                className="text-white bg-red-500 hover:bg-red-400 px-4 py-2 rounded-md"
-              >
-                Kembali
-              </button>
-            </h3>
+            <button
+              onClick={() => router.back()}
+              className="text-white bg-red-500 hover:bg-red-400 px-4 py-2 rounded-md"
+            >
+              Kembali
+            </button>
           </div>
         </div>
       </Footer>
@@ -123,4 +127,4 @@ const ListClear = () => {
   );
 };
 
-export default ListClear;
+export default PythonTuplesCount;

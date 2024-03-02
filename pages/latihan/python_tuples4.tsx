@@ -59,7 +59,7 @@ const PythonTuples4 = () => {
             <tbody>
               <tr className="flex justify-start content-start gap-1 p-2 bg-neutral-100">
                 <td className="pr-7">
-                  <Link href={"/latihan/python_tuples4#metode_count"}>
+                  <Link href={"/latihan/python_tuple/count"}>
                     <code className="px-2 py-1 rounded-md bg-neutral-200">
                       count()
                     </code>
@@ -70,7 +70,7 @@ const PythonTuples4 = () => {
             </tbody>
             <tr className="flex justify-start content-start gap-1 p-2">
               <td className="pr-7">
-                <Link href={"/latihan/python_tuples4#metode_index"}>
+                <Link href={"/latihan/python_tuple/index_tuple"}>
                   <code className="px-2 py-1 rounded-md bg-neutral-200">
                     index()
                   </code>
@@ -80,80 +80,10 @@ const PythonTuples4 = () => {
             </tr>
           </table>
         </div>
-        <hr
-          className="my-8 h-0.5 border-t-0 bg-neutral-200 opacity-100"
-          id="metode_count"
-        />
 
-        {/* Metode count() */}
-        <div className="flex flex-col pl-1">
-          <div className="text-lg font-medium">Metode count( )</div>
-          <div className="pt-1">
-            Metode count( ) digunakan untuk menghitung jumlah kemunculan data
-            tertentu dalam sebuah tuple.
-          </div>
-          <div className="pt-3">
-            Metode count( ) dapat digunakan dengan mengetikkan{" "}
-            <code className="px-2 py-1 rounded-md bg-neutral-200">
-              <i>namaTuple.</i>count(<i>data</i>)
-            </code>{" "}
-          </div>
-        </div>
-        <div className="pt-6">
-          <div className="flex flex-col">
-            <div className="bg-neutral-200 p-2 rounded-md">
-              <code>tuple1 = (1, 4, 3, 4, 1, 9, 4, 6)</code>
-              <br />
-              <code>x = tuple.count(4)</code>
-              <br />
-              <code>
-                <span className="text-violet-800">print</span>(x)
-              </code>
-            </div>
-          </div>
-        </div>
-        <hr
-          className="my-12 h-0.5 border-t-0 bg-neutral-200 opacity-100"
-          id="metode_index"
-        />
-
-        {/* Metode index() */}
-        <div className="flex flex-col pl-1">
-          <div className="text-lg font-medium">Metode index( )</div>
-          <div className="pt-1">
-            Metode index( ) digunakan untuk mengambil posisi dari data tertentu
-            dalam sebuah tuple.
-          </div>
-          <div className="pt-3">
-            Metode index( ) dapat digunakan dengan mengetikkan{" "}
-            <code className="px-2 py-1 rounded-md bg-neutral-200">
-              <i>namaTuple.</i>index(<i>data</i>)
-            </code>{" "}
-          </div>
-          <div className="pt-6">
-            <div className="flex flex-col">
-              <div className="bg-neutral-200 p-2 rounded-md">
-                <code>tuple1 = (1, 4, 3, 4, 1, 9, 4, 6)</code>
-                <br />
-                <code>x = tuple1.index(4)</code>
-                <br />
-                <code>
-                  <span className="text-violet-800">print</span>(x)
-                </code>
-              </div>
-              <div className="pt-4">
-                Apabila terdapat lebih dari satu data yang sama, maka index()
-                akan mengembalikan posisi data yang pertama kali muncul.
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="pl-1 pt-5 pb-20">
-          Uji coba beberapa kode diatas dengan salin ke dalam{" "}
-          <Link href={"../uji_kode"} className="underline text-blue-500">
-            terminal
-          </Link>{" "}
-          ini.
+        <div className="pl-1 mt-3 mb-20">
+          Kalian dapat meng-klik metode yang ingin kalian pelajari agar lebih
+          paham.
         </div>
       </section>
 

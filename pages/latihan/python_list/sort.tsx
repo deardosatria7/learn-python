@@ -3,6 +3,19 @@ import Header from "@/sections/Header";
 import {useRouter} from "next/router";
 import Footer from "@/sections/Footer";
 
+const code1 =
+  'mobil = ["Fiat", "BMW", "Toyota"] \nmobil.sort(reverse=True) \nprint(mobil)';
+const code2 =
+  'def mySort(e): \n return len(e) \n\nmobil = ["Fiat", "BMW", "Toyota"] \nmobil.sort(key=mySort) \nprint(mobil)';
+
+// Function copy code button
+function copyCode1() {
+  navigator.clipboard.writeText(code1);
+}
+function copyCode2() {
+  navigator.clipboard.writeText(code2);
+}
+
 const ListSort = () => {
   const router = useRouter();
   return (
@@ -70,14 +83,32 @@ const ListSort = () => {
         </div>
         <div className="pt-6">
           <div className="flex flex-col">
-            <div className="bg-neutral-200 p-2 rounded-md">
-              <code>
-                buah = [&#34;apel&#34;, &#34;pisang&#34;, &#34;jeruk&#34;]
-              </code>
-              <br />
-              <code>buah.sort(reverse=True)</code>
-              <br />
-              <code>print(buah)</code>
+            <div className="bg-neutral-200 p-2 rounded-md text-sm sm:text-base">
+              <div>
+                <code>
+                  mobil = &#91;
+                  <span className="text-orange-600">&#34;Fiat&#34;</span>,
+                  <span className="text-orange-600">&#34;BMW&#34;</span>,
+                  <span className="text-orange-600">&#34;Toyota&#34;</span>&#93;
+                </code>
+                <br />
+                <code>
+                  mobil.sort&#40;reverse=
+                  <span className="text-violet-700">True</span>&#41;
+                </code>
+                <br />
+                <code>
+                  <span className="text-violet-700">print</span>&#40;mobil&#41;
+                </code>
+              </div>
+              <div className="mt-6 mb-2">
+                <button
+                  className="bg-blue-600 hover:bg-blue-500 rounded-md text-white px-2 py-1"
+                  onClick={copyCode1}
+                >
+                  Salin kode
+                </button>
+              </div>
             </div>
             <div className="pt-1 italic">
               Contoh sort() dengan parameter reverse.
@@ -86,20 +117,40 @@ const ListSort = () => {
         </div>
         <div className="pt-6">
           <div className="flex flex-col">
-            <div className="bg-neutral-200 p-2 rounded-md">
-              <code>def mySort(e):</code>
-              <br />
-              &nbsp;
-              <code>return len(e)</code>
-              <br />
-              <br />
-              <code>
-                buah = [&#34;apel&#34;, &#34;pisang&#34;, &#34;jeruk&#34;]
-              </code>
-              <br />
-              <code>buah.sort(key=mySort)</code>
-              <br />
-              <code>print(buah)</code>
+            <div className="bg-neutral-200 p-2 rounded-md text-sm sm:text-base">
+              <div>
+                <code>
+                  <span className="text-violet-700">def</span>{" "}
+                  mySort&#40;e&#41;:
+                </code>
+                <br />
+                &nbsp;
+                <code>
+                  <span className="text-violet-700">return</span> len(e)
+                </code>
+                <br />
+                <br />
+                <code>
+                  mobil = &#91;
+                  <span className="text-orange-600">&#34;Fiat&#34;</span>,
+                  <span className="text-orange-600">&#34;BMW&#34;</span>,
+                  <span className="text-orange-600">&#34;Toyota&#34;</span>&#93;
+                </code>
+                <br />
+                <code>mobi.sort(key=mySort)</code>
+                <br />
+                <code>
+                  <span className="text-violet-700">print</span>(mobil)
+                </code>
+              </div>
+              <div className="mt-6 mb-2">
+                <button
+                  className="bg-blue-600 hover:bg-blue-500 rounded-md text-white px-2 py-1"
+                  onClick={copyCode2}
+                >
+                  Salin kode
+                </button>
+              </div>
             </div>
             <div className="pt-1 italic">
               Contoh sort() dengan parameter key berdasarkan panjang huruf.
