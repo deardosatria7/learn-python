@@ -3,6 +3,16 @@ import Header from "@/sections/Header";
 import {useRouter} from "next/router";
 import Footer from "@/sections/Footer";
 
+const code1 =
+  'set1 = {"asus", "lenovo", "hp"} \n\nset1.add("dell") \nprint(set1)';
+const code2 =
+  'set1 = {"asus", "lenovo", "hp"} \nset2 = {"dell", "acer"} \n\nset1.update(set2) \nprint(set1)';
+
+// Function copy code button
+function copyCode(code: string) {
+  navigator.clipboard.writeText(code);
+}
+
 const PythonSet3 = () => {
   const router = useRouter();
   return (
@@ -68,20 +78,32 @@ const PythonSet3 = () => {
         <div className="pt-3 text-sm sm:text-md">
           <div className="flex flex-col">
             <div className="bg-neutral-200 p-2 rounded-md">
-              <code>
-                set1 &#61; &#123;
-                <span className="text-orange-700">&#34;asus&#34;</span>,{" "}
-                <span className="text-orange-700">&#34;lenovo&#34;</span>,{" "}
-                <span className="text-orange-700">&#34;hp&#34;</span>&#125;
-              </code>
-              <br />
-              <br />
-              <code>
-                set1.add(<span className="text-orange-700">&#34;dell&#34;</span>
-                )
-              </code>
-              <br />
-              <span className="text-violet-800">print</span> (set1)
+              <div>
+                <code>
+                  set1 &#61; &#123;
+                  <span className="text-orange-700">&#34;asus&#34;</span>,{" "}
+                  <span className="text-orange-700">&#34;lenovo&#34;</span>,{" "}
+                  <span className="text-orange-700">&#34;hp&#34;</span>&#125;
+                </code>
+                <br />
+                <br />
+                <code>
+                  set1.add(
+                  <span className="text-orange-700">&#34;dell&#34;</span>)
+                </code>
+                <br />
+                <code>
+                  <span className="text-violet-800">print</span>(set1)
+                </code>
+              </div>
+              <div className="mt-6 mb-2">
+                <button
+                  className="bg-blue-600 hover:bg-blue-500 rounded-md text-white px-2 py-1"
+                  onClick={() => copyCode(code1)}
+                >
+                  Salin kode
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -95,23 +117,35 @@ const PythonSet3 = () => {
         <div className="pt-3 text-sm sm:text-md">
           <div className="flex flex-col">
             <div className="bg-neutral-200 p-2 rounded-md">
-              <code>
-                set1 &#61; &#123;
-                <span className="text-orange-700">&#34;asus&#34;</span>,{" "}
-                <span className="text-orange-700">&#34;lenovo&#34;</span>,{" "}
-                <span className="text-orange-700">&#34;hp&#34;</span>&#125;
-              </code>
-              <br />
-              <code>
-                set2 &#61; &#123;
-                <span className="text-orange-700">&#34;dell&#34;</span>,{" "}
-                <span className="text-orange-700">&#34;acer&#34;</span>&#125;
-              </code>
-              <br />
-              <br />
-              <code>set1.update(set2)</code>
-              <br />
-              <span className="text-violet-800">print</span> (set1)
+              <div>
+                <code>
+                  set1 &#61; &#123;
+                  <span className="text-orange-700">&#34;asus&#34;</span>,{" "}
+                  <span className="text-orange-700">&#34;lenovo&#34;</span>,{" "}
+                  <span className="text-orange-700">&#34;hp&#34;</span>&#125;
+                </code>
+                <br />
+                <code>
+                  set2 &#61; &#123;
+                  <span className="text-orange-700">&#34;dell&#34;</span>,{" "}
+                  <span className="text-orange-700">&#34;acer&#34;</span>&#125;
+                </code>
+                <br />
+                <br />
+                <code>set1.update(set2)</code>
+                <br />
+                <code>
+                  <span className="text-violet-800">print</span>(set1)
+                </code>
+              </div>
+              <div className="mt-6 mb-2">
+                <button
+                  className="bg-blue-600 hover:bg-blue-500 rounded-md text-white px-2 py-1"
+                  onClick={() => copyCode(code2)}
+                >
+                  Salin kode
+                </button>
+              </div>
             </div>
           </div>
         </div>

@@ -3,6 +3,20 @@ import Header from "@/sections/Header";
 import {useRouter} from "next/router";
 import Footer from "@/sections/Footer";
 
+const code1 =
+  'set1 = {"asus", "lenovo", "dell", "hp"} \n\nset1.remove("dell") \nprint(set1)';
+const code2 =
+  'set1 = {"asus", "lenovo", "dell", "hp"} \n\nset1.discard("dell") \nprint(set1)';
+const code3 =
+  'set1 = {"asus", "lenovo", "dell", "hp"} \n\nset1.pop() \nprint(set1)';
+const code4 = 'set1 = {"asus", "lenovo", "hp"} \n\nset1.clear() \nprint(set1)';
+const code5 = 'set1 = {"asus", "lenovo", "hp"} \n\ndel set1 \nprint(set1)';
+
+//function to copy the code above
+function copyCode(code: string) {
+  navigator.clipboard.writeText(code);
+}
+
 const PythonSet4 = () => {
   const router = useRouter();
   return (
@@ -48,7 +62,7 @@ const PythonSet4 = () => {
       <section className="p-4">
         <h1 className="text-2xl font-semibold">Python Set</h1>
         <div className="text-lg font-semibold pt-3 pl-1">
-          Mengupdate data dalam set
+          Menghapus data dalam set
         </div>
         <p className="pt-3 pl-1">
           Untuk menghapus data tertentu dalam sebuah set, kita dapat menggunakan
@@ -62,24 +76,34 @@ const PythonSet4 = () => {
         <div className="pt-3 text-sm sm:text-md">
           <div className="flex flex-col">
             <div className="bg-neutral-200 p-2 rounded-md">
-              <code>
-                set1 &#61; &#123;
-                <span className="text-orange-700">&#34;asus&#34;</span>,{" "}
-                <span className="text-orange-700">&#34;lenovo&#34;</span>,{" "}
-                <span className="text-orange-700">&#34;dell&#34;</span>,{" "}
-                <span className="text-orange-700">&#34;hp&#34;</span>
-                &#125;
-              </code>
-              <br />
-              <br />
-              <code>
-                set1.remove(
-                <span className="text-orange-700">&#34;dell&#34;</span>)
-              </code>
-              <br />
-              <code>
-                <span className="text-violet-800">print</span> (set1)
-              </code>
+              <div>
+                <code>
+                  set1 &#61; &#123;
+                  <span className="text-orange-700">&#34;asus&#34;</span>,{" "}
+                  <span className="text-orange-700">&#34;lenovo&#34;</span>,{" "}
+                  <span className="text-orange-700">&#34;dell&#34;</span>,{" "}
+                  <span className="text-orange-700">&#34;hp&#34;</span>
+                  &#125;
+                </code>
+                <br />
+                <br />
+                <code>
+                  set1.remove(
+                  <span className="text-orange-700">&#34;dell&#34;</span>)
+                </code>
+                <br />
+                <code>
+                  <span className="text-violet-800">print</span>(set1)
+                </code>
+              </div>
+              <div className="mt-6 mb-2">
+                <button
+                  className="bg-blue-600 hover:bg-blue-500 rounded-md text-white px-2 py-1"
+                  onClick={() => copyCode(code1)}
+                >
+                  Salin kode
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -91,24 +115,34 @@ const PythonSet4 = () => {
         <div className="pt-3 text-sm sm:text-md">
           <div className="flex flex-col">
             <div className="bg-neutral-200 p-2 rounded-md">
-              <code>
-                set1 &#61; &#123;
-                <span className="text-orange-700">&#34;asus&#34;</span>,{" "}
-                <span className="text-orange-700">&#34;lenovo&#34;</span>,{" "}
-                <span className="text-orange-700">&#34;dell&#34;</span>,{" "}
-                <span className="text-orange-700">&#34;hp&#34;</span>
-                &#125;
-              </code>
-              <br />
-              <br />
-              <code>
-                set1.discard(
-                <span className="text-orange-700">&#34;dell&#34;</span>)
-              </code>
-              <br />
-              <code>
-                <span className="text-violet-800">print</span> (set1)
-              </code>
+              <div>
+                <code>
+                  set1 &#61; &#123;
+                  <span className="text-orange-700">&#34;asus&#34;</span>,{" "}
+                  <span className="text-orange-700">&#34;lenovo&#34;</span>,{" "}
+                  <span className="text-orange-700">&#34;dell&#34;</span>,{" "}
+                  <span className="text-orange-700">&#34;hp&#34;</span>
+                  &#125;
+                </code>
+                <br />
+                <br />
+                <code>
+                  set1.discard(
+                  <span className="text-orange-700">&#34;dell&#34;</span>)
+                </code>
+                <br />
+                <code>
+                  <span className="text-violet-800">print</span>(set1)
+                </code>
+              </div>
+              <div className="mt-6 mb-2">
+                <button
+                  className="bg-blue-600 hover:bg-blue-500 rounded-md text-white px-2 py-1"
+                  onClick={() => copyCode(code2)}
+                >
+                  Salin kode
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -121,19 +155,29 @@ const PythonSet4 = () => {
         <div className="text-sm sm:text-md">
           <div className="flex flex-col">
             <div className="bg-neutral-200 p-2 rounded-md">
-              <code>
-                set1 &#61; &#123;
-                <span className="text-orange-700">&#34;asus&#34;</span>,{" "}
-                <span className="text-orange-700">&#34;lenovo&#34;</span>,{" "}
-                <span className="text-orange-700">&#34;hp&#34;</span>&#125;
-              </code>
-              <br />
-              <br />
-              <code>set1.pop()</code>
-              <br />
-              <code>
-                <span className="text-violet-800">print</span> (set1)
-              </code>
+              <div>
+                <code>
+                  set1 &#61; &#123;
+                  <span className="text-orange-700">&#34;asus&#34;</span>,{" "}
+                  <span className="text-orange-700">&#34;lenovo&#34;</span>,{" "}
+                  <span className="text-orange-700">&#34;hp&#34;</span>&#125;
+                </code>
+                <br />
+                <br />
+                <code>set1.pop()</code>
+                <br />
+                <code>
+                  <span className="text-violet-800">print</span>(set1)
+                </code>
+              </div>
+              <div className="mt-6 mb-2">
+                <button
+                  className="bg-blue-600 hover:bg-blue-500 rounded-md text-white px-2 py-1"
+                  onClick={() => copyCode(code3)}
+                >
+                  Salin kode
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -144,42 +188,62 @@ const PythonSet4 = () => {
         <div className="text-sm sm:text-md">
           <div className="flex flex-col">
             <div className="bg-neutral-200 p-2 rounded-md">
-              <code>
-                set1 &#61; &#123;
-                <span className="text-orange-700">&#34;asus&#34;</span>,{" "}
-                <span className="text-orange-700">&#34;lenovo&#34;</span>,{" "}
-                <span className="text-orange-700">&#34;hp&#34;</span>&#125;
-              </code>
-              <br />
-              <br />
-              <code>set1.clear()</code>
-              <br />
-              <code>
-                <span className="text-violet-800">print</span> (set1)
-              </code>
+              <div>
+                <code>
+                  set1 &#61; &#123;
+                  <span className="text-orange-700">&#34;asus&#34;</span>,{" "}
+                  <span className="text-orange-700">&#34;lenovo&#34;</span>,{" "}
+                  <span className="text-orange-700">&#34;hp&#34;</span>&#125;
+                </code>
+                <br />
+                <br />
+                <code>set1.clear()</code>
+                <br />
+                <code>
+                  <span className="text-violet-800">print</span>(set1)
+                </code>
+              </div>
+              <div className="mt-6 mb-2">
+                <button
+                  className="bg-blue-600 hover:bg-blue-500 rounded-md text-white px-2 py-1"
+                  onClick={() => copyCode(code4)}
+                >
+                  Salin kode
+                </button>
+              </div>
             </div>
           </div>
         </div>
         <p className="py-2 pl-1 pt-10">
           Metode <code className="bg-neutral-200 px-1 rounded-sm">del</code>{" "}
-          berfungsi dalam menghapus sebuah set.
+          berfungsi dalam menghapus sebuah variabel yang berupa set tersebut.
         </p>
         <div className="text-sm sm:text-md">
           <div className="flex flex-col">
             <div className="bg-neutral-200 p-2 rounded-md">
-              <code>
-                set1 &#61; &#123;
-                <span className="text-orange-700">&#34;asus&#34;</span>,{" "}
-                <span className="text-orange-700">&#34;lenovo&#34;</span>,{" "}
-                <span className="text-orange-700">&#34;hp&#34;</span>&#125;
-              </code>
-              <br />
-              <br />
-              <code>del set1</code>
-              <br />
-              <code>
-                <span className="text-violet-800">print</span> (set1)
-              </code>
+              <div>
+                <code>
+                  set1 &#61; &#123;
+                  <span className="text-orange-700">&#34;asus&#34;</span>,{" "}
+                  <span className="text-orange-700">&#34;lenovo&#34;</span>,{" "}
+                  <span className="text-orange-700">&#34;hp&#34;</span>&#125;
+                </code>
+                <br />
+                <br />
+                <code>del set1</code>
+                <br />
+                <code>
+                  <span className="text-violet-800">print</span> (set1)
+                </code>
+              </div>
+              <div className="mt-6 mb-2">
+                <button
+                  className="bg-blue-600 hover:bg-blue-500 rounded-md text-white px-2 py-1"
+                  onClick={() => copyCode(code5)}
+                >
+                  Salin kode
+                </button>
+              </div>
             </div>
           </div>
         </div>
