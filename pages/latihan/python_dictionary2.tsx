@@ -3,6 +3,20 @@ import Header from "@/sections/Header";
 import {useRouter} from "next/router";
 import Footer from "@/sections/Footer";
 
+const code1 =
+  'dict1 = { \n "nama": "Jeffry", \n "umur": 24, \n "jenis_kelamin": "laki-laki" \n} \n\nx = dict1["nama"] \nprint(x)';
+const code2 =
+  'dict1 = { \n "nama": "Jeffry", \n "umur": 24, \n "jenis_kelamin": "laki-laki" \n} \n\nx = dict1.keys() \nprint(x)';
+const code3 =
+  'dict1 = { \n "nama": "Jeffry", \n "umur": 24, \n "jenis_kelamin": "laki-laki" \n} \n\nx = dict1.values() \nprint(x)';
+const code4 =
+  'dict1 = { \n "nama": "Jeffry", \n "umur": 24, \n "jenis_kelamin": "laki-laki" \n} \n\nx = dict1.items() \nprint(x)';
+
+// Function copy code button
+function copyCode(code: string) {
+  navigator.clipboard.writeText(code);
+}
+
 const PythonDictionary2 = () => {
   return (
     <>
@@ -56,30 +70,44 @@ const PythonDictionary2 = () => {
         <div className="pt-3 text-sm sm:text-md">
           <div className="flex flex-col">
             <div className="bg-neutral-200 p-2 rounded-md">
-              <code>
-                dict1 &#61; &#123; <br />
-                &nbsp;<span className="text-orange-700">&#34;nama&#34;</span>
-                &#58; <span className="text-orange-700">&#34;Jeffry&#34;</span>,
+              <div>
+                <code>
+                  dict1 &#61; &#123; <br />
+                  &nbsp;<span className="text-orange-700">&#34;nama&#34;</span>
+                  &#58;{" "}
+                  <span className="text-orange-700">&#34;Jeffry&#34;</span>,
+                  <br />
+                  &nbsp;<span className="text-orange-700">&#34;umur&#34;</span>
+                  &#58; <span className="text-red-700">24</span>,
+                  <br />
+                  &nbsp;
+                  <span className="text-orange-700">
+                    &#34;jenis kelamin&#34;
+                  </span>
+                  &#58;{" "}
+                  <span className="text-orange-700">&#34;laki-laki&#34;</span>
+                  <br />
+                  &#125;
+                </code>
                 <br />
-                &nbsp;<span className="text-orange-700">&#34;umur&#34;</span>
-                &#58; <span className="text-red-700">24</span>,
                 <br />
-                &nbsp;
-                <span className="text-orange-700">&#34;jenis kelamin&#34;</span>
-                &#58; <span className="text-red-700">&#34;laki-laki&#34;</span>
+                <code>
+                  x = dict1&#91;
+                  <span className="text-orange-700">&#34;nama&#34;</span>&#93;
+                </code>
                 <br />
-                &#125;
-              </code>
-              <br />
-              <br />
-              <code>
-                x = (dict1&#91;
-                <span className="text-orange-700">&#34;nama&#34;</span>&#93;)
-              </code>
-              <br />
-              <code>
-                <span className="text-violet-800">print</span>(x)
-              </code>
+                <code>
+                  <span className="text-violet-800">print</span>(x)
+                </code>
+              </div>
+              <div className="mt-6 mb-2">
+                <button
+                  className="bg-blue-600 hover:bg-blue-500 rounded-md text-white px-2 py-1"
+                  onClick={() => copyCode(code1)}
+                >
+                  Salin kode
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -113,27 +141,41 @@ const PythonDictionary2 = () => {
         <div className="pt-1 text-sm sm:text-md">
           <div className="flex flex-col">
             <div className="bg-neutral-200 p-2 rounded-md">
-              <code>
-                dict1 &#61; &#123; <br />
-                &nbsp;<span className="text-orange-700">&#34;nama&#34;</span>
-                &#58; <span className="text-orange-700">&#34;Jeffry&#34;</span>,
+              <div>
+                <code>
+                  dict1 &#61; &#123; <br />
+                  &nbsp;<span className="text-orange-700">&#34;nama&#34;</span>
+                  &#58;{" "}
+                  <span className="text-orange-700">&#34;Jeffry&#34;</span>,
+                  <br />
+                  &nbsp;<span className="text-orange-700">&#34;umur&#34;</span>
+                  &#58; <span className="text-red-700">24</span>,
+                  <br />
+                  &nbsp;
+                  <span className="text-orange-700">
+                    &#34;jenis kelamin&#34;
+                  </span>
+                  &#58;{" "}
+                  <span className="text-orange-700">&#34;laki-laki&#34;</span>
+                  <br />
+                  &#125;
+                </code>
                 <br />
-                &nbsp;<span className="text-orange-700">&#34;umur&#34;</span>
-                &#58; <span className="text-red-700">24</span>,
                 <br />
-                &nbsp;
-                <span className="text-orange-700">&#34;jenis kelamin&#34;</span>
-                &#58; <span className="text-red-700">&#34;laki-laki&#34;</span>
+                <code>x = dict1.keys()</code>
                 <br />
-                &#125;
-              </code>
-              <br />
-              <br />
-              <code>x = dict1.keys()</code>
-              <br />
-              <code>
-                <span className="text-violet-800">print</span>(x)
-              </code>
+                <code>
+                  <span className="text-violet-800">print</span>(x)
+                </code>
+              </div>
+              <div className="mt-6 mb-2">
+                <button
+                  className="bg-blue-600 hover:bg-blue-500 rounded-md text-white px-2 py-1"
+                  onClick={() => copyCode(code2)}
+                >
+                  Salin kode
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -157,27 +199,41 @@ const PythonDictionary2 = () => {
         <div className="pt-1 text-sm sm:text-md">
           <div className="flex flex-col">
             <div className="bg-neutral-200 p-2 rounded-md">
-              <code>
-                dict1 &#61; &#123; <br />
-                &nbsp;<span className="text-orange-700">&#34;nama&#34;</span>
-                &#58; <span className="text-orange-700">&#34;Jeffry&#34;</span>,
+              <div>
+                <code>
+                  dict1 &#61; &#123; <br />
+                  &nbsp;<span className="text-orange-700">&#34;nama&#34;</span>
+                  &#58;{" "}
+                  <span className="text-orange-700">&#34;Jeffry&#34;</span>,
+                  <br />
+                  &nbsp;<span className="text-orange-700">&#34;umur&#34;</span>
+                  &#58; <span className="text-red-700">24</span>,
+                  <br />
+                  &nbsp;
+                  <span className="text-orange-700">
+                    &#34;jenis kelamin&#34;
+                  </span>
+                  &#58;{" "}
+                  <span className="text-orange-700">&#34;laki-laki&#34;</span>
+                  <br />
+                  &#125;
+                </code>
                 <br />
-                &nbsp;<span className="text-orange-700">&#34;umur&#34;</span>
-                &#58; <span className="text-red-700">24</span>,
                 <br />
-                &nbsp;
-                <span className="text-orange-700">&#34;jenis kelamin&#34;</span>
-                &#58; <span className="text-red-700">&#34;laki-laki&#34;</span>
+                <code>x = dict1.values()</code>
                 <br />
-                &#125;
-              </code>
-              <br />
-              <br />
-              <code>x = dict1.values()</code>
-              <br />
-              <code>
-                <span className="text-violet-800">print</span>(x)
-              </code>
+                <code>
+                  <span className="text-violet-800">print</span>(x)
+                </code>
+              </div>
+              <div className="mt-6 mb-2">
+                <button
+                  className="bg-blue-600 hover:bg-blue-500 rounded-md text-white px-2 py-1"
+                  onClick={() => copyCode(code3)}
+                >
+                  Salin kode
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -200,27 +256,41 @@ const PythonDictionary2 = () => {
         <div className="pt-1 text-sm sm:text-md">
           <div className="flex flex-col">
             <div className="bg-neutral-200 p-2 rounded-md">
-              <code>
-                dict1 &#61; &#123; <br />
-                &nbsp;<span className="text-orange-700">&#34;nama&#34;</span>
-                &#58; <span className="text-orange-700">&#34;Jeffry&#34;</span>,
+              <div>
+                <code>
+                  dict1 &#61; &#123; <br />
+                  &nbsp;<span className="text-orange-700">&#34;nama&#34;</span>
+                  &#58;{" "}
+                  <span className="text-orange-700">&#34;Jeffry&#34;</span>,
+                  <br />
+                  &nbsp;<span className="text-orange-700">&#34;umur&#34;</span>
+                  &#58; <span className="text-red-700">24</span>,
+                  <br />
+                  &nbsp;
+                  <span className="text-orange-700">
+                    &#34;jenis kelamin&#34;
+                  </span>
+                  &#58;{" "}
+                  <span className="text-orange-700">&#34;laki-laki&#34;</span>
+                  <br />
+                  &#125;
+                </code>
                 <br />
-                &nbsp;<span className="text-orange-700">&#34;umur&#34;</span>
-                &#58; <span className="text-red-700">24</span>,
                 <br />
-                &nbsp;
-                <span className="text-orange-700">&#34;jenis kelamin&#34;</span>
-                &#58; <span className="text-red-700">&#34;laki-laki&#34;</span>
+                <code>x = dict1.items()</code>
                 <br />
-                &#125;
-              </code>
-              <br />
-              <br />
-              <code>x = dict1.items()</code>
-              <br />
-              <code>
-                <span className="text-violet-800">print</span>(x)
-              </code>
+                <code>
+                  <span className="text-violet-800">print</span>(x)
+                </code>
+              </div>
+              <div className="mt-6 mb-2">
+                <button
+                  className="bg-blue-600 hover:bg-blue-500 rounded-md text-white px-2 py-1"
+                  onClick={() => copyCode(code4)}
+                >
+                  Salin kode
+                </button>
+              </div>
             </div>
           </div>
         </div>

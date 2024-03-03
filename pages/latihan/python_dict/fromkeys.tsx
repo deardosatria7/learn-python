@@ -3,6 +3,14 @@ import Header from "@/sections/Header";
 import {useRouter} from "next/router";
 import Footer from "@/sections/Footer";
 
+const code1 =
+  "x = ('key1', 'key2', 'key3') \ny = 0 \n\ndictBaru = dict.fromkeys(x, y) \nprint(dictBaru)";
+
+// Function copy code button
+function copyCode(code: string) {
+  navigator.clipboard.writeText(code);
+}
+
 const PythonDictionaryFromKeys = () => {
   const router = useRouter();
   return (
@@ -53,27 +61,37 @@ const PythonDictionaryFromKeys = () => {
         <p className="py-3 pl-1">
           Metode{" "}
           <code className="bg-neutral-200 px-1 rounded-sm">fromkeys()</code>{" "}
-          mengembalikan dictionary dengan key dan value yang telah dibuat.
+          membuat dictionary baru dengan key dan value dari variabel tertentu.
           Berikut adalah contohnya.
         </p>
         <div className="pt-2 text-sm sm:text-md">
           <div className="flex flex-col">
             <div className="bg-neutral-200 p-2 rounded-md">
-              <code>
-                x &#61; &#40;
-                <span className="text-orange-700">&#39;key1&#39;</span>,{" "}
-                <span className="text-orange-700">&#39;key2&#39;</span>,{" "}
-                <span className="text-orange-700">&#39;key3&#39;</span>
-                &#41;
-              </code>
-              <br />y &#61; <span className="text-red-700">0</span>
-              <br />
-              <br />
-              <code>dictBaru &#61; dict.fromkeys&#40;x, y&#41;</code>
-              <br />
-              <code>
-                <span className="text-violet-800">print</span>(dictBaru)
-              </code>
+              <div>
+                <code>
+                  x &#61; &#40;
+                  <span className="text-orange-700">&#39;key1&#39;</span>,{" "}
+                  <span className="text-orange-700">&#39;key2&#39;</span>,{" "}
+                  <span className="text-orange-700">&#39;key3&#39;</span>
+                  &#41;
+                </code>
+                <br />y &#61; <span className="text-red-700">0</span>
+                <br />
+                <br />
+                <code>dictBaru &#61; dict.fromkeys&#40;x, y&#41;</code>
+                <br />
+                <code>
+                  <span className="text-violet-800">print</span>(dictBaru)
+                </code>
+              </div>
+              <div className="mt-6 mb-2">
+                <button
+                  className="bg-blue-600 hover:bg-blue-500 rounded-md text-white px-2 py-1"
+                  onClick={() => copyCode(code1)}
+                >
+                  Salin kode
+                </button>
+              </div>
             </div>
           </div>
         </div>

@@ -3,6 +3,14 @@ import Header from "@/sections/Header";
 import {useRouter} from "next/router";
 import Footer from "@/sections/Footer";
 
+const code1 =
+  'set1 = {"a", "b", "c", "d", "e", "f"} \nset2 = {"c", "b", "a"} \n\nx = set2.issubset(set1) \nprint(x)';
+
+// Function copy code button
+function copyCode(code: string) {
+  navigator.clipboard.writeText(code);
+}
+
 const SetIsSubset = () => {
   const router = useRouter();
   return (
@@ -54,37 +62,47 @@ const SetIsSubset = () => {
           Metode{" "}
           <code className="bg-neutral-200 py-1 rounded-md">issubset()</code>{" "}
           digunakan untuk mengecek data dari kedua set yang berbeda. Apabila
-          seluruh data dari set pertama terdapat pada set kedua, maka akan
+          seluruh data dari set kedua terdapat pada set pertama, maka akan
           mengembalikan nilai True.
         </p>
         <div className="pt-3 text-sm sm:text-md">
           <div className="flex flex-col">
             <div className="bg-neutral-200 p-2 rounded-md">
-              <code>
-                set1 &#61; &#123;
-                <span className="text-orange-700">&#34;a&#34;</span>,{" "}
-                <span className="text-orange-700">&#34;b&#34;</span>,{" "}
-                <span className="text-orange-700">&#34;c&#34;</span>,{" "}
-                <span className="text-orange-700">&#34;d&#34;</span>,{" "}
-                <span className="text-orange-700">&#34;e&#34;</span>,{" "}
-                <span className="text-orange-700">&#34;f&#34;</span>
-                &#125;
-              </code>
-              <br />
-              <code>
-                set2 &#61; &#123;
-                <span className="text-orange-700">&#34;c&#34;</span>,{" "}
-                <span className="text-orange-700">&#34;b&#34;</span>,{" "}
-                <span className="text-orange-700">&#34;a&#34;</span>
-                &#125;
-              </code>
-              <br />
-              <br />
-              <code>x = set2.issubset(set1)</code>
-              <br />
-              <code>
-                <span className="text-violet-800">print</span> (x)
-              </code>
+              <div>
+                <code>
+                  set1 &#61; &#123;
+                  <span className="text-orange-700">&#34;a&#34;</span>,{" "}
+                  <span className="text-orange-700">&#34;b&#34;</span>,{" "}
+                  <span className="text-orange-700">&#34;c&#34;</span>,{" "}
+                  <span className="text-orange-700">&#34;d&#34;</span>,{" "}
+                  <span className="text-orange-700">&#34;e&#34;</span>,{" "}
+                  <span className="text-orange-700">&#34;f&#34;</span>
+                  &#125;
+                </code>
+                <br />
+                <code>
+                  set2 &#61; &#123;
+                  <span className="text-orange-700">&#34;c&#34;</span>,{" "}
+                  <span className="text-orange-700">&#34;b&#34;</span>,{" "}
+                  <span className="text-orange-700">&#34;a&#34;</span>
+                  &#125;
+                </code>
+                <br />
+                <br />
+                <code>x = set2.issubset(set1)</code>
+                <br />
+                <code>
+                  <span className="text-violet-800">print</span>(x)
+                </code>
+              </div>
+              <div className="mt-6 mb-2">
+                <button
+                  className="bg-blue-600 hover:bg-blue-500 rounded-md text-white px-2 py-1"
+                  onClick={() => copyCode(code1)}
+                >
+                  Salin kode
+                </button>
+              </div>
             </div>
           </div>
         </div>

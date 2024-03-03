@@ -84,7 +84,10 @@ const PythonDictionary6 = () => {
                   </code>
                 </Link>
               </td>
-              <td>Mengambil urutan/posisi data tertentu dalam tuple.</td>
+              <td>
+                Membuat dictionary baru dengan key dan value dari variabel
+                tertentu.
+              </td>
             </tr>
             <tr className="flex justify-start content-start gap-1 p-2">
               <td className="pr-8">
@@ -94,7 +97,9 @@ const PythonDictionary6 = () => {
                   </code>
                 </Link>
               </td>
-              <td>Mengambil urutan/posisi data tertentu dalam tuple.</td>
+              <td>
+                Mengambil value spesifik yang ditetapkan dalam dictionary.
+              </td>
             </tr>
           </table>
         </div>

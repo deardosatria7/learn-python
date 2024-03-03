@@ -3,6 +3,14 @@ import Header from "@/sections/Header";
 import {useRouter} from "next/router";
 import Footer from "@/sections/Footer";
 
+const code1 =
+  'dict1 = { \n "merk": "Asus", \n "model": "ROG", \n "cpu": "Intel" \n} \n\nx = dict1.copy() \nprint(x)';
+
+// Function copy code button
+function copyCode(code: string) {
+  navigator.clipboard.writeText(code);
+}
+
 const PythonDictionaryCopy = () => {
   const router = useRouter();
   return (
@@ -58,26 +66,37 @@ const PythonDictionaryCopy = () => {
         <div className="pt-2 text-sm sm:text-md">
           <div className="flex flex-col">
             <div className="bg-neutral-200 p-2 rounded-md">
-              <code>
-                dict1 &#61; &#123; <br />
-                &nbsp;<span className="text-orange-700">&#34;merk&#34;</span>
-                &#58; <span className="text-orange-700">&#34;asus&#34;</span>,
+              <div>
+                <code>
+                  dict1 &#61; &#123; <br />
+                  &nbsp;<span className="text-orange-700">&#34;merk&#34;</span>
+                  &#58; <span className="text-orange-700">&#34;Asus&#34;</span>,
+                  <br />
+                  &nbsp;<span className="text-orange-700">&#34;model&#34;</span>
+                  &#58; <span className="text-orange-700">&#34;ROG&#34;</span>,
+                  <br />
+                  &nbsp;<span className="text-orange-700">&#34;cpu&#34;</span>
+                  &#58; <span className="text-orange-700">&#34;Intel&#34;</span>
+                  ,
+                  <br />
+                  &#125;
+                </code>
                 <br />
-                &nbsp;<span className="text-orange-700">&#34;model&#34;</span>
-                &#58; <span className="text-orange-700">&#34;ROG&#34;</span>,
                 <br />
-                &nbsp;<span className="text-orange-700">&#34;cpu&#34;</span>
-                &#58; <span className="text-orange-700">&#34;intel&#34;</span>,
+                <code>x &#61; dict1.copy&#40;&#41;</code>
                 <br />
-                &#125;
-              </code>
-              <br />
-              <br />
-              <code>x &#61; dict1.copy&#40;&#41;</code>
-              <br />
-              <code>
-                <span className="text-violet-800">print</span>(x)
-              </code>
+                <code>
+                  <span className="text-violet-800">print</span>(x)
+                </code>
+              </div>
+              <div className="mt-6 mb-2">
+                <button
+                  className="bg-blue-600 hover:bg-blue-500 rounded-md text-white px-2 py-1"
+                  onClick={() => copyCode(code1)}
+                >
+                  Salin kode
+                </button>
+              </div>
             </div>
           </div>
         </div>

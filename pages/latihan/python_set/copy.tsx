@@ -3,6 +3,14 @@ import Header from "@/sections/Header";
 import {useRouter} from "next/router";
 import Footer from "@/sections/Footer";
 
+const code1 =
+  'laptop = {"asus", "lenovo", "dell", "hp"} \n\nx = laptop.copy()\nprint(x)';
+
+// Function copy code button
+function copyCode(code: string) {
+  navigator.clipboard.writeText(code);
+}
+
 const SetCopy = () => {
   const router = useRouter();
   return (
@@ -57,21 +65,31 @@ const SetCopy = () => {
         <div className="pt-3 text-sm sm:text-md">
           <div className="flex flex-col">
             <div className="bg-neutral-200 p-2 rounded-md">
-              <code>
-                laptop &#61; &#123;
-                <span className="text-orange-700">&#34;asus&#34;</span>,{" "}
-                <span className="text-orange-700">&#34;lenovo&#34;</span>,{" "}
-                <span className="text-orange-700">&#34;dell&#34;</span>,{" "}
-                <span className="text-orange-700">&#34;hp&#34;</span>
-                &#125;
-              </code>
-              <br />
-              <br />
-              <code>x = set1.copy()</code>
-              <br />
-              <code>
-                <span className="text-violet-800">print</span> (x)
-              </code>
+              <div>
+                <code>
+                  laptop &#61; &#123;
+                  <span className="text-orange-700">&#34;asus&#34;</span>,{" "}
+                  <span className="text-orange-700">&#34;lenovo&#34;</span>,{" "}
+                  <span className="text-orange-700">&#34;dell&#34;</span>,{" "}
+                  <span className="text-orange-700">&#34;hp&#34;</span>
+                  &#125;
+                </code>
+                <br />
+                <br />
+                <code>x = laptop.copy()</code>
+                <br />
+                <code>
+                  <span className="text-violet-800">print</span>(x)
+                </code>
+              </div>
+              <div className="mt-6 mb-2">
+                <button
+                  className="bg-blue-600 hover:bg-blue-500 rounded-md text-white px-2 py-1"
+                  onClick={() => copyCode(code1)}
+                >
+                  Salin kode
+                </button>
+              </div>
             </div>
           </div>
         </div>
