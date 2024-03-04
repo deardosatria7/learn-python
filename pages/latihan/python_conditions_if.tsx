@@ -5,6 +5,18 @@ import {useRouter} from "next/router";
 import Footer from "@/sections/Footer";
 import diagram_if from "@/public/diagram-if.jpg";
 
+const code1 =
+  'x = 100 \ny = 20 \n\nif (x > y): \n print("x lebih besar dari y")';
+const code2 =
+  'x = 55 \ny = 55 \n\nif (x > y): \n print("x lebih besar dari y") \nelif (x == y): \n print("x sama dengan y")';
+const code3 =
+  'x = 7 \n\nif (x > 0): \n print("x bilangan positif") \nelif (x < 0): \n print("x bilangan negatif") \nelse: \n print("x sama dengan nol")';
+
+// Function copy code button
+function copyCode(code: string) {
+  navigator.clipboard.writeText(code);
+}
+
 const PythonIf = () => {
   const router = useRouter();
   return (
@@ -51,36 +63,45 @@ const PythonIf = () => {
         <h1 className="text-2xl font-semibold">Python kondisional (if)</h1>
         <p className="py-3 pt-4 pl-1">
           Python kondisional if biasa digunakan dalam membandingkan dua buah
-          kondisi, contohnya seperti ini:{" "}
-          <i className="text-blue-800">
+          kondisi, contoh seperti ini:{" "}
+          <span className="text-blue-600 font-semibold">
             Apabila memenuhi kondisi 1, maka jalankan perintah A. Dan apabila
             memenuhi kondisi 2, maka jalankan perintah B.
-          </i>
+          </span>
           <br /> <br />
           Coba perhatikan contoh dibawah ini.
         </p>
         <div className="pt-3 text-sm sm:text-md">
           <div className="flex flex-col">
             <div className="bg-neutral-200 p-2 rounded-md">
-              <code>
-                x &#61; <span className="text-red-700">100</span> <br />y &#61;{" "}
-                <span className="text-red-700">20</span> <br />
-              </code>
-              <br />
-              <code>
-                <span className="text-violet-800">if</span> &#40;x &#62;
-                y&#41;&#58;
-              </code>
-              <br />
-              &nbsp;
-              <code>
-                <span className="text-violet-800">print</span> &#40;
-                <span className="text-orange-700">
-                  &#34;x lebih besar dari y&#34;
-                </span>
-                &#41;
-              </code>
-              <br />
+              <div>
+                <code>
+                  x &#61; <span className="text-red-700">100</span> <br />y
+                  &#61; <span className="text-red-700">20</span> <br />
+                </code>
+                <br />
+                <code>
+                  <span className="text-violet-800">if</span> &#40;x &#62;
+                  y&#41;&#58;
+                </code>
+                <br />
+                &nbsp;
+                <code>
+                  <span className="text-violet-800">print</span> &#40;
+                  <span className="text-orange-700">
+                    &#34;x lebih besar dari y&#34;
+                  </span>
+                  &#41;
+                </code>
+              </div>
+              <div className="mt-6 mb-2">
+                <button
+                  className="bg-blue-600 hover:bg-blue-500 rounded-md text-white px-2 py-1"
+                  onClick={() => copyCode(code1)}
+                >
+                  Salin kode
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -96,13 +117,12 @@ const PythonIf = () => {
           <b>pentingnya indentasi (tab) pada baris kode selanjutnya.</b> Jika
           tidak ada indentasi, maka akan muncul pesan error.
         </p>
-        <p className="py-2 pl-1 pt-4">
+        <p className="py-2 pl-1 pt-2">
           Operator yang paling sering digunakan adalah operator perbandingan
           seperti lebih besar dari &#40;&#62;&#41;, kurang dari &#40;&#60;&#41;,
           sama dengan &#40;&#61;&#61;&#41;, dan lain-lain.
         </p>
-        <hr className="my-8 h-0.5 border-t-0 bg-neutral-200 opacity-100" />
-        <p className="py-2 pl-1 pt-4">
+        <p className="py-2 pl-1 mt-20">
           Selain <code className="px-1 rounded-sm bg-neutral-200">if()</code>{" "}
           ada juga istilah{" "}
           <code className="px-1 rounded-sm bg-neutral-200">elif()</code>.{" "}
@@ -113,38 +133,48 @@ const PythonIf = () => {
         <div className="pt-3 text-sm sm:text-md">
           <div className="flex flex-col">
             <div className="bg-neutral-200 p-2 rounded-md">
-              <code>
-                x &#61; <span className="text-red-700">55</span> <br />y &#61;{" "}
-                <span className="text-red-700">55</span> <br />
-              </code>
-              <br />
-              <code>
-                <span className="text-violet-800">if</span> &#40;x &#62;
-                y&#41;&#58;
-              </code>
-              <br />
-              &nbsp;
-              <code>
-                <span className="text-violet-800">print</span> &#40;
-                <span className="text-orange-700">
-                  &#34;x lebih besar dari y&#34;
-                </span>
-                &#41;
-              </code>
-              <br />
-              <code>
-                <span className="text-violet-800">elif</span> &#40;x &#61;&#61;
-                y&#41;&#58;
-              </code>
-              <br />
-              &nbsp;
-              <code>
-                <span className="text-violet-800">print</span> &#40;
-                <span className="text-orange-700">
-                  &#34;x sama dengan y&#34;
-                </span>
-                &#41;
-              </code>
+              <div>
+                <code>
+                  x &#61; <span className="text-red-700">55</span> <br />y &#61;{" "}
+                  <span className="text-red-700">55</span> <br />
+                </code>
+                <br />
+                <code>
+                  <span className="text-violet-800">if</span> &#40;x &#62;
+                  y&#41;&#58;
+                </code>
+                <br />
+                &nbsp;
+                <code>
+                  <span className="text-violet-800">print</span> &#40;
+                  <span className="text-orange-700">
+                    &#34;x lebih besar dari y&#34;
+                  </span>
+                  &#41;
+                </code>
+                <br />
+                <code>
+                  <span className="text-violet-800">elif</span> &#40;x
+                  &#61;&#61; y&#41;&#58;
+                </code>
+                <br />
+                &nbsp;
+                <code>
+                  <span className="text-violet-800">print</span> &#40;
+                  <span className="text-orange-700">
+                    &#34;x sama dengan y&#34;
+                  </span>
+                  &#41;
+                </code>
+              </div>
+              <div className="mt-6 mb-2">
+                <button
+                  className="bg-blue-600 hover:bg-blue-500 rounded-md text-white px-2 py-1"
+                  onClick={() => copyCode(code2)}
+                >
+                  Salin kode
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -155,8 +185,8 @@ const PythonIf = () => {
           </Link>{" "}
           ini.
         </div>
-        <hr className="my-8 h-0.5 border-t-0 bg-neutral-200 opacity-100" />
-        <p className="py-2 pl-1 pt-4">
+
+        <p className="py-2 pl-1 mt-20">
           Apabila kondisi dalam <code>if</code> dan <code>elif</code> tidak
           terpenuhi, terakhir ada istilah{" "}
           <code className="px-1 rounded-sm bg-neutral-200 font-semibold">
@@ -174,51 +204,61 @@ const PythonIf = () => {
         <div className="pt-3 text-sm sm:text-md">
           <div className="flex flex-col">
             <div className="bg-neutral-200 p-2 rounded-md">
-              <code>
-                x &#61; <span className="text-red-700">10</span> <br />y &#61;{" "}
-                <span className="text-red-700">50</span> <br />
-              </code>
-              <br />
-              <code>
-                <span className="text-violet-800">if</span> &#40;x &#62;
-                y&#41;&#58;
-              </code>
-              <br />
-              &nbsp;
-              <code>
-                <span className="text-violet-800">print</span> &#40;
-                <span className="text-orange-700">
-                  &#34;x lebih besar dari y&#34;
-                </span>
-                &#41;
-              </code>
-              <br />
-              <code>
-                <span className="text-violet-800">elif</span> &#40;x &#61;&#61;
-                y&#41;&#58;
-              </code>
-              <br />
-              &nbsp;
-              <code>
-                <span className="text-violet-800">print</span> &#40;
-                <span className="text-orange-700">
-                  &#34;x sama dengan y&#34;
-                </span>
-                &#41;
-              </code>
-              <br />
-              <code>
-                <span className="text-violet-800">else</span>&#58;
-              </code>
-              <br />
-              &nbsp;
-              <code>
-                <span className="text-violet-800">print</span> &#40;
-                <span className="text-orange-700">
-                  &#34;x lebih kecil dari y&#34;
-                </span>
-                &#41;
-              </code>
+              <div>
+                <code>
+                  x &#61; <span className="text-red-700">7</span>
+                </code>
+                <br />
+                <br />
+                <code>
+                  <span className="text-violet-800">if</span> &#40;x &#62;
+                  0&#41;&#58;
+                </code>
+                <br />
+                &nbsp;
+                <code>
+                  <span className="text-violet-800">print</span> &#40;
+                  <span className="text-orange-700">
+                    &#34;x bilangan positif&#34;
+                  </span>
+                  &#41;
+                </code>
+                <br />
+                <code>
+                  <span className="text-violet-800">elif</span> &#40;x &#60;
+                  0&#41;&#58;
+                </code>
+                <br />
+                &nbsp;
+                <code>
+                  <span className="text-violet-800">print</span> &#40;
+                  <span className="text-orange-700">
+                    &#34;x bilangan negatif&#34;
+                  </span>
+                  &#41;
+                </code>
+                <br />
+                <code>
+                  <span className="text-violet-800">else</span>&#58;
+                </code>
+                <br />
+                &nbsp;
+                <code>
+                  <span className="text-violet-800">print</span> &#40;
+                  <span className="text-orange-700">
+                    &#34;x sama dengan nol&#34;
+                  </span>
+                  &#41;
+                </code>
+              </div>
+              <div className="mt-6 mb-2">
+                <button
+                  className="bg-blue-600 hover:bg-blue-500 rounded-md text-white px-2 py-1"
+                  onClick={() => copyCode(code3)}
+                >
+                  Salin kode
+                </button>
+              </div>
             </div>
           </div>
         </div>

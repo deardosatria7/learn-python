@@ -3,6 +3,20 @@ import Header from "@/sections/Header";
 import {useRouter} from "next/router";
 import Footer from "@/sections/Footer";
 
+const code1 =
+  "i = 0 \n\n#selama i kurang dari 7 \nwhile (i < 7): \n print(i) \n i += 1";
+const code2 =
+  "i = 0 \n\nwhile (i < 7): \n print(i) \n if (i == 3): \n  break \n i += 1";
+const code3 =
+  "i = 0 \n\nwhile (i < 7): \n i += 1 \n if (i == 3): \n  continue \n print(i)";
+const code4 =
+  'i = 0 \n\nwhile (i < 10): \n i += 1 \n print("*" * i) \nelse: \n print("i telah mencapai 10")';
+
+// Function copy code button
+function copyCode(code: string) {
+  navigator.clipboard.writeText(code);
+}
+
 const PythonWhile = () => {
   const router = useRouter();
   return (
@@ -58,27 +72,37 @@ const PythonWhile = () => {
         <div className="pt-3 text-sm sm:text-md">
           <div className="flex flex-col">
             <div className="bg-neutral-200 p-2 rounded-md">
-              <code>
-                i &#61; <span className="text-red-700">0</span>
-              </code>
-              <br />
-              <br />
-              <code className="text-orange-600">#selama i kurang dari 7</code>
-              <code>
+              <div>
+                <code>
+                  i &#61; <span className="text-red-700">0</span>
+                </code>
                 <br />
-                <span className="text-violet-800">while</span> &#40;i &#60;
-                7&#41;&#58;
-              </code>
-              <br />
-              &nbsp;
-              <code>
-                <span className="text-violet-800">print</span> &#40;
-                <span className="">i</span>
-                &#41;
-              </code>
-              <br />
-              &nbsp;
-              <code>i += 1</code>
+                <br />
+                <code className="text-orange-600">#selama i kurang dari 7</code>
+                <code>
+                  <br />
+                  <span className="text-violet-800">while</span> &#40;i &#60;
+                  7&#41;&#58;
+                </code>
+                <br />
+                &nbsp;
+                <code>
+                  <span className="text-violet-800">print</span> &#40;
+                  <span className="">i</span>
+                  &#41;
+                </code>
+                <br />
+                &nbsp;
+                <code>i += 1</code>
+              </div>
+              <div className="mt-6 mb-2">
+                <button
+                  className="bg-blue-600 hover:bg-blue-500 rounded-md text-white px-2 py-1"
+                  onClick={() => copyCode(code1)}
+                >
+                  Salin kode
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -95,9 +119,9 @@ const PythonWhile = () => {
           </Link>{" "}
           ini.
         </div>
-        <hr className="my-8 h-0.5 border-t-0 bg-neutral-200 opacity-100" />
-        <div className="text-lg font font-semibold">
-          Python <i>break</i>
+
+        <div className="text-lg font font-semibold mt-8">
+          While dengan <i>break</i>
         </div>
         <p className="py-2 pl-1 pt-3">
           Metode <code>break</code> dapat menghentikan proses pengulangan (loop)
@@ -107,35 +131,46 @@ const PythonWhile = () => {
         <div className="pt-3 text-sm sm:text-md">
           <div className="flex flex-col">
             <div className="bg-neutral-200 p-2 rounded-md">
-              <code>
-                i &#61; <span className="text-red-700">0</span>
-              </code>
-              <br />
-              <br />
-              <code>
-                <span className="text-violet-800">while</span> &#40;i &#60;
-                7&#41;&#58;
-              </code>
-              <br />
-              &nbsp;
-              <code>
-                <span className="text-violet-800">print</span> &#40;
-                <span className="">i</span>
-                &#41;
-              </code>
-              <br />
-              &nbsp;
-              <code>
-                <span className="text-violet-800">if</span> (i&#61;&#61;3)&#58;
-              </code>
-              <br />
-              &nbsp;&nbsp;
-              <code>
-                <span className="text-violet-800">break</span>
-              </code>
-              <br />
-              &nbsp;
-              <code>i += 1</code>
+              <div>
+                <code>
+                  i &#61; <span className="text-red-700">0</span>
+                </code>
+                <br />
+                <br />
+                <code>
+                  <span className="text-violet-800">while</span> &#40;i &#60;
+                  7&#41;&#58;
+                </code>
+                <br />
+                &nbsp;
+                <code>
+                  <span className="text-violet-800">print</span> &#40;
+                  <span className="">i</span>
+                  &#41;
+                </code>
+                <br />
+                &nbsp;
+                <code>
+                  <span className="text-violet-800">if</span>{" "}
+                  (i&#61;&#61;3)&#58;
+                </code>
+                <br />
+                &nbsp;&nbsp;
+                <code>
+                  <span className="text-violet-800">break</span>
+                </code>
+                <br />
+                &nbsp;
+                <code>i += 1</code>
+              </div>
+              <div className="mt-6 mb-2">
+                <button
+                  className="bg-blue-600 hover:bg-blue-500 rounded-md text-white px-2 py-1"
+                  onClick={() => copyCode(code2)}
+                >
+                  Salin kode
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -146,9 +181,9 @@ const PythonWhile = () => {
           </Link>{" "}
           ini.
         </div>
-        <hr className="my-8 h-0.5 border-t-0 bg-neutral-200 opacity-100" />
-        <div className="text-lg font font-semibold">
-          Python <i>continue</i>
+
+        <div className="text-lg font font-semibold mt-8">
+          While dengan <i>continue</i>
         </div>
         <p className="py-2 pl-1 pt-3">
           Metode <code>continue</code> dapat menghentikan proses yang{" "}
@@ -157,35 +192,46 @@ const PythonWhile = () => {
         <div className="pt-3 text-sm sm:text-md">
           <div className="flex flex-col">
             <div className="bg-neutral-200 p-2 rounded-md">
-              <code>
-                i &#61; <span className="text-red-700">0</span>
-              </code>
-              <br />
-              <br />
-              <code>
-                <span className="text-violet-800">while</span> &#40;i &#60;
-                7&#41;&#58;
-              </code>
-              <br />
-              &nbsp;
-              <code>i += 1</code>
-              <br />
-              &nbsp;
-              <code>
-                <span className="text-violet-800">if</span> (i&#61;&#61;3)&#58;
-              </code>
-              <br />
-              &nbsp;&nbsp;
-              <code>
-                <span className="text-violet-800">continue</span>
-              </code>
-              <br />
-              &nbsp;
-              <code>
-                <span className="text-violet-800">print</span> &#40;
-                <span className="">i</span>
-                &#41;
-              </code>
+              <div>
+                <code>
+                  i &#61; <span className="text-red-700">0</span>
+                </code>
+                <br />
+                <br />
+                <code>
+                  <span className="text-violet-800">while</span> &#40;i &#60;
+                  7&#41;&#58;
+                </code>
+                <br />
+                &nbsp;
+                <code>i += 1</code>
+                <br />
+                &nbsp;
+                <code>
+                  <span className="text-violet-800">if</span>{" "}
+                  (i&#61;&#61;3)&#58;
+                </code>
+                <br />
+                &nbsp;&nbsp;
+                <code>
+                  <span className="text-violet-800">continue</span>
+                </code>
+                <br />
+                &nbsp;
+                <code>
+                  <span className="text-violet-800">print</span> &#40;
+                  <span className="">i</span>
+                  &#41;
+                </code>
+              </div>
+              <div className="mt-6 mb-2">
+                <button
+                  className="bg-blue-600 hover:bg-blue-500 rounded-md text-white px-2 py-1"
+                  onClick={() => copyCode(code3)}
+                >
+                  Salin kode
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -196,8 +242,8 @@ const PythonWhile = () => {
           </Link>{" "}
           ini.
         </div>
-        <hr className="my-8 h-0.5 border-t-0 bg-neutral-200 opacity-100" />
-        <p className="py-2 pl-1 pt-4">
+
+        <p className="py-2 pl-1 mt-8">
           Kalian juga bisa menambahkan{" "}
           <code className="px-1 rounded-sm bg-neutral-200">else</code> kedalam
           perulangan while. Blok else akan dijalankan ketika perulangan while
@@ -206,36 +252,48 @@ const PythonWhile = () => {
         <div className="pt-3 text-sm sm:text-md">
           <div className="flex flex-col">
             <div className="bg-neutral-200 p-2 rounded-md">
-              <code>
-                x &#61; <span className="text-red-700">0</span>
-              </code>
-              <br />
-              <br />
-              <code>
-                <span className="text-violet-800">while</span> &#40;x &#60;
-                10&#41;&#58;
-              </code>
-              <br />
-              &nbsp;
-              <code>x += 1</code>
-              <br />
-              &nbsp;
-              <code>
-                <span className="text-violet-800">print</span> &#40;x&#41;
-              </code>
-              <br />
-              <code>
-                <span className="text-violet-800">else</span>&#58;
-              </code>
-              <br />
-              &nbsp;
-              <code>
-                <span className="text-violet-800">print</span> &#40;
-                <span className="text-orange-700">
-                  &#34;x telah mencapai 10&#34;
-                </span>
-                &#41;
-              </code>
+              <div>
+                <code>
+                  i &#61; <span className="text-red-700">0</span>
+                </code>
+                <br />
+                <br />
+                <code>
+                  <span className="text-violet-800">while</span> &#40;i &#60;
+                  10&#41;&#58;
+                </code>
+                <br />
+                &nbsp;
+                <code>i += 1</code>
+                <br />
+                &nbsp;
+                <code>
+                  <span className="text-violet-800">print</span> &#40;
+                  <span className="text-orange-600">&#34;&#42;&#34;</span> &#42;
+                  i&#41;
+                </code>
+                <br />
+                <code>
+                  <span className="text-violet-800">else</span>&#58;
+                </code>
+                <br />
+                &nbsp;
+                <code>
+                  <span className="text-violet-800">print</span> &#40;
+                  <span className="text-orange-600">
+                    &#34;i telah mencapai 10&#34;
+                  </span>
+                  &#41;
+                </code>
+              </div>
+              <div className="mt-6 mb-2">
+                <button
+                  className="bg-blue-600 hover:bg-blue-500 rounded-md text-white px-2 py-1"
+                  onClick={() => copyCode(code4)}
+                >
+                  Salin kode
+                </button>
+              </div>
             </div>
           </div>
         </div>

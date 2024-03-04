@@ -3,6 +3,19 @@ import Header from "@/sections/Header";
 import {useRouter} from "next/router";
 import Footer from "@/sections/Footer";
 
+const code1 = "for x in range(10): \n print (x)";
+const code2 = "for x in range(2, 10): \n print (x)";
+const code3 = "for x in range(2, 30, 3): \n print (x)";
+const code4 =
+  'for x in range (5): \n print (x) \nelse: \n print ("Proses selesai!")';
+const code5 =
+  'list1 = ["baju", "jas", "celana"] \nwarna = ["hitam", "merah", "putih"] \n\nfor x in list1: \n for y in warna: \n  print(x, y)';
+
+// Function copy code button
+function copyCode(code: string) {
+  navigator.clipboard.writeText(code);
+}
+
 const PythonFor2 = () => {
   return (
     <>
@@ -58,15 +71,25 @@ const PythonFor2 = () => {
         <div className="pt-3 text-sm sm:text-md">
           <div className="flex flex-col">
             <div className="bg-neutral-200 p-2 rounded-md">
-              <code>
-                <span className="text-violet-800">for</span> x{" "}
-                <span className="text-red-700">in range</span>(10)&#58;
-              </code>
-              <br />
-              &nbsp;
-              <code>
-                <span className="text-violet-800">print</span> &#40;x&#41;
-              </code>
+              <div>
+                <code>
+                  <span className="text-violet-800">for</span> x{" "}
+                  <span className="text-red-700">in range</span>(10)&#58;
+                </code>
+                <br />
+                &nbsp;
+                <code>
+                  <span className="text-violet-800">print</span> &#40;x&#41;
+                </code>
+              </div>
+              <div className="mt-6 mb-2">
+                <button
+                  className="bg-blue-600 hover:bg-blue-500 rounded-md text-white px-2 py-1"
+                  onClick={() => copyCode(code1)}
+                >
+                  Salin kode
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -78,15 +101,25 @@ const PythonFor2 = () => {
         <div className="pt-10 text-sm sm:text-md">
           <div className="flex flex-col">
             <div className="bg-neutral-200 p-2 rounded-md">
-              <code>
-                <span className="text-violet-800">for</span> x{" "}
-                <span className="text-red-700">in range</span>(2, 10)&#58;
-              </code>
-              <br />
-              &nbsp;
-              <code>
-                <span className="text-violet-800">print</span> &#40;x&#41;
-              </code>
+              <div>
+                <code>
+                  <span className="text-violet-800">for</span> x{" "}
+                  <span className="text-red-700">in range</span>(2, 10)&#58;
+                </code>
+                <br />
+                &nbsp;
+                <code>
+                  <span className="text-violet-800">print</span> &#40;x&#41;
+                </code>
+              </div>
+              <div className="mt-6 mb-2">
+                <button
+                  className="bg-blue-600 hover:bg-blue-500 rounded-md text-white px-2 py-1"
+                  onClick={() => copyCode(code2)}
+                >
+                  Salin kode
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -98,15 +131,25 @@ const PythonFor2 = () => {
         <div className="pt-10 text-sm sm:text-md">
           <div className="flex flex-col">
             <div className="bg-neutral-200 p-2 rounded-md">
-              <code>
-                <span className="text-violet-800">for</span> x{" "}
-                <span className="text-red-700">in range</span>(2, 30, 3)&#58;
-              </code>
-              <br />
-              &nbsp;
-              <code>
-                <span className="text-violet-800">print</span> &#40;x&#41;
-              </code>
+              <div>
+                <code>
+                  <span className="text-violet-800">for</span> x{" "}
+                  <span className="text-red-700">in range</span>(2, 30, 3)&#58;
+                </code>
+                <br />
+                &nbsp;
+                <code>
+                  <span className="text-violet-800">print</span> &#40;x&#41;
+                </code>
+              </div>
+              <div className="mt-6 mb-2">
+                <button
+                  className="bg-blue-600 hover:bg-blue-500 rounded-md text-white px-2 py-1"
+                  onClick={() => copyCode(code3)}
+                >
+                  Salin kode
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -123,8 +166,8 @@ const PythonFor2 = () => {
           </Link>{" "}
           ini.
         </div>
-        <hr className="my-8 h-0.5 border-t-0 bg-neutral-200 opacity-100" />
-        <div className="text-lg font font-semibold">For dengan else</div>
+
+        <div className="text-lg font font-semibold mt-12">For dengan else</div>
         <p className="py-2 pl-1 pt-3">
           Perulangan for juga mendukung blok else. Blok else akan dijalankan
           setelah perulangan for selesai.
@@ -132,26 +175,36 @@ const PythonFor2 = () => {
         <div className="pt-3 text-sm sm:text-md">
           <div className="flex flex-col">
             <div className="bg-neutral-200 p-2 rounded-md">
-              <code>
-                <span className="text-violet-800">for</span> x{" "}
-                <span className="text-red-700">in range</span> (5)&#58;
-              </code>
-              <br />
-              &nbsp;
-              <code>
-                <span className="text-violet-800">print</span> &#40;x&#41;
-              </code>
-              <br />
-              <code className="text-violet-800">else</code>&#58;
-              <br />
-              &nbsp;
-              <code>
-                <span className="text-violet-800">print</span>(
-                <span className="text-orange-700">
-                  &#34;Proses selesai!&#34;
-                </span>
-                )
-              </code>
+              <div>
+                <code>
+                  <span className="text-violet-800">for</span> x{" "}
+                  <span className="text-red-700">in range</span> (5)&#58;
+                </code>
+                <br />
+                &nbsp;
+                <code>
+                  <span className="text-violet-800">print</span> &#40;x&#41;
+                </code>
+                <br />
+                <code className="text-violet-800">else</code>&#58;
+                <br />
+                &nbsp;
+                <code>
+                  <span className="text-violet-800">print</span>(
+                  <span className="text-orange-700">
+                    &#34;Proses selesai!&#34;
+                  </span>
+                  )
+                </code>
+              </div>
+              <div className="mt-6 mb-2">
+                <button
+                  className="bg-blue-600 hover:bg-blue-500 rounded-md text-white px-2 py-1"
+                  onClick={() => copyCode(code4)}
+                >
+                  Salin kode
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -162,8 +215,8 @@ const PythonFor2 = () => {
           </Link>{" "}
           ini.
         </div>
-        <hr className="my-8 h-0.5 border-t-0 bg-neutral-200 opacity-100" />
-        <div className="text-lg font font-semibold">For didalam for</div>
+
+        <div className="text-lg font font-semibold mt-12">For didalam for</div>
         <p className="py-2 pl-1 pt-3">
           Kalian juga dapat memasukkan metode for didalam sebuah for lain. Lihat
           contoh dibawah ini.
@@ -171,36 +224,46 @@ const PythonFor2 = () => {
         <div className="pt-3 text-sm sm:text-md">
           <div className="flex flex-col">
             <div className="bg-neutral-200 p-2 rounded-md">
-              <code>
-                list1 &#61; &#91;
-                <span className="text-orange-700">&#34;baju&#34;</span>,{" "}
-                <span className="text-orange-700">&#34;jas&#34;</span>,{" "}
-                <span className="text-orange-700">&#34;celana&#34;</span>&#93;
-              </code>
-              <br />
-              <code>
-                warna &#61; &#91;
-                <span className="text-orange-700">&#34;hitam&#34;</span>,{" "}
-                <span className="text-orange-700">&#34;merah&#34;</span>,{" "}
-                <span className="text-orange-700">&#34;putih&#34;</span>&#93;
-              </code>
-              <br />
-              <br />
-              <code>
-                <span className="text-violet-800">for</span> x{" "}
-                <span className="text-red-700">in</span> list1&#58;
-              </code>
-              <br />
-              &nbsp;
-              <code>
-                <span className="text-violet-800">for</span> y{" "}
-                <span className="text-red-700">in</span> warna&#58;
-              </code>
-              <br />
-              &nbsp;&nbsp;
-              <code>
-                <span className="text-violet-800">print</span> &#40;x, y&#41;
-              </code>
+              <div>
+                <code>
+                  list1 &#61; &#91;
+                  <span className="text-orange-700">&#34;baju&#34;</span>,{" "}
+                  <span className="text-orange-700">&#34;jas&#34;</span>,{" "}
+                  <span className="text-orange-700">&#34;celana&#34;</span>&#93;
+                </code>
+                <br />
+                <code>
+                  warna &#61; &#91;
+                  <span className="text-orange-700">&#34;hitam&#34;</span>,{" "}
+                  <span className="text-orange-700">&#34;merah&#34;</span>,{" "}
+                  <span className="text-orange-700">&#34;putih&#34;</span>&#93;
+                </code>
+                <br />
+                <br />
+                <code>
+                  <span className="text-violet-800">for</span> x{" "}
+                  <span className="text-red-700">in</span> list1&#58;
+                </code>
+                <br />
+                &nbsp;
+                <code>
+                  <span className="text-violet-800">for</span> y{" "}
+                  <span className="text-red-700">in</span> warna&#58;
+                </code>
+                <br />
+                &nbsp;&nbsp;
+                <code>
+                  <span className="text-violet-800">print</span> &#40;x, y&#41;
+                </code>
+              </div>
+              <div className="mt-6 mb-2">
+                <button
+                  className="bg-blue-600 hover:bg-blue-500 rounded-md text-white px-2 py-1"
+                  onClick={() => copyCode(code5)}
+                >
+                  Salin kode
+                </button>
+              </div>
             </div>
           </div>
         </div>
