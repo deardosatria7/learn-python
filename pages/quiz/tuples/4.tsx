@@ -14,13 +14,9 @@ export default function PageQuizTuples4() {
     //answer form
     const jawaban1 = (document.getElementById("jawaban1") as HTMLInputElement)
       .value;
-    const jawaban2 = (document.getElementById("jawaban2") as HTMLInputElement)
-      .value;
-    const jawaban3 = (document.getElementById("jawaban3") as HTMLInputElement)
-      .value;
 
     //checking answer
-    if (jawaban1 == "tuple1" && jawaban2 == "+" && jawaban3 == "tuple2") {
+    if (jawaban1 == "tuple(list1)") {
       //show btn_selanjutnya when answer is correct
       setShowSelanjutnya(true);
       alert("Benar!!");
@@ -29,7 +25,10 @@ export default function PageQuizTuples4() {
     }
   }
 
-  //function to show answer
+  //function to show hint
+  function showHint() {
+    alert("Gunakan metode berikut! tuple(nama_list)");
+  }
 
   return (
     <>
@@ -79,35 +78,32 @@ export default function PageQuizTuples4() {
         <div className="mt-4 gap-2 bg-neutral-200 p-4 rounded-md">
           <div className="flex flex-col">
             <code>
-              tuple1 = &#40;
+              list1 = &#91;
               <span className="text-orange-700">&#34;a&#34;</span>,{" "}
               <span className="text-orange-700">&#34;b&#34;</span>,{" "}
-              <span className="text-orange-700">&#34;c&#34;</span>&#41;
-            </code>
-            <code>
-              tuple2 = &#40;
-              <span className="text-orange-700">&#34;1&#34;</span>,{" "}
-              <span className="text-orange-700">&#34;2&#34;</span>,{" "}
-              <span className="text-orange-700">&#34;3&#34;</span>&#41;
+              <span className="text-orange-700">&#34;c&#34;</span>,{" "}
+              <span className="text-orange-700">&#34;d&#34;</span>,{" "}
+              <span className="text-orange-700">&#34;e&#34;</span>&#93;
             </code>
             <code className="mt-3">
-              tuple3 = <input type="text" id="jawaban1" className="w-14" />{" "}
-              <input type="text" id="jawaban2" className="w-6" />{" "}
-              <input type="text" id="jawaban3" className="w-14" />
+              tuple1 = <input type="text" id="jawaban1" className="w-32" />{" "}
             </code>
 
-            <p className="mt-5">
-              Lengkapi kode diatas agar tuple3 berisi gabungan data tuple1 dan
-              tuple2.
-            </p>
+            <p className="mt-5">Ubah list diatas menjadi sebuah tuple.</p>
           </div>
-          <div className="mt-10">
+          <div className="flex mt-10">
             <button
               className="px-3 py-1 bg-red-600 text-white rounded-md border-black"
               onClick={checkAnswers}
               id="submit_button"
             >
               Submit
+            </button>
+            <button
+              className="ml-4 underline text-neutral-600"
+              onClick={showHint}
+            >
+              Petunjuk
             </button>
           </div>
         </div>
