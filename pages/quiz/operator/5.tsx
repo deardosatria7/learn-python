@@ -24,6 +24,10 @@ export default function PageQuizOperator5() {
       alert("Oops, coba lagi!");
     }
   }
+
+  function showHint() {
+    alert('Operator logika: "or", "and", atau "not"');
+  }
   return (
     <>
       <Header>
@@ -83,12 +87,18 @@ export default function PageQuizOperator5() {
               bernilai benar.
             </p>
           </div>
-          <div className="mt-10">
+          <div className="flex mt-10">
             <button
               className="px-3 py-1 bg-red-600 text-white rounded-md border-black"
               onClick={checkAnswers}
             >
               Submit
+            </button>
+            <button
+              className="ml-4 underline text-neutral-600"
+              onClick={showHint}
+            >
+              Petunjuk
             </button>
           </div>
         </div>

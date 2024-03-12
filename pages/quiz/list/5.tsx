@@ -25,8 +25,10 @@ export default function PageQuizList5() {
     }
   }
 
-  //function to show answer
-
+  //function to show hint
+  function showHint() {
+    alert("Mungkin jawabannya (1:)?");
+  }
   return (
     <>
       <Header>
@@ -92,13 +94,19 @@ export default function PageQuizList5() {
               <code>(&#34;BMW&#34;)</code> hingga terakhir.
             </p>
           </div>
-          <div className="mt-10">
+          <div className="flex mt-10">
             <button
               className="px-3 py-1 bg-red-600 text-white rounded-md border-black"
               onClick={checkAnswers}
               id="submit_button"
             >
               Submit
+            </button>
+            <button
+              className="ml-4 underline text-neutral-600"
+              onClick={showHint}
+            >
+              Petunjuk
             </button>
           </div>
         </div>

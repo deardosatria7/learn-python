@@ -16,7 +16,7 @@ export default function PageQuizList3() {
       .value;
 
     //checking answer
-    if (jawaban1 == 'mobil.append("mercedes")') {
+    if (jawaban1 == 'mobil.append("Mercedes")') {
       //show btn_selanjutnya when answer is correct
       setShowSelanjutnya(true);
       alert("Benar!!");
@@ -25,7 +25,10 @@ export default function PageQuizList3() {
     }
   }
 
-  //function to show answer
+  //function to show hint
+  function showHint() {
+    alert('Gunakan metode append! Perhatikan contoh: \nbuah.append("jeruk")');
+  }
 
   return (
     <>
@@ -85,16 +88,22 @@ export default function PageQuizList3() {
               </code>
             </div>
             <p className="mt-5">
-              Tambahkan data &#34;mercedes&#34; dalam list diatas.
+              Tambahkan data &#34;Mercedes&#34; dalam list diatas.
             </p>
           </div>
-          <div className="mt-10">
+          <div className="flex mt-10">
             <button
               className="px-3 py-1 bg-red-600 text-white rounded-md border-black"
               onClick={checkAnswers}
               id="submit_button"
             >
               Submit
+            </button>
+            <button
+              className="ml-4 underline text-neutral-600"
+              onClick={showHint}
+            >
+              Petunjuk
             </button>
           </div>
         </div>
