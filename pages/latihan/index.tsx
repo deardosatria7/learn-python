@@ -47,14 +47,19 @@ const Latihan = () => {
       <section className="p-4">
         <h1 className="text-2xl font-semibold">Pengenalan Python</h1>
         <p className="pt-3 pl-1">
-          Python merupakan salah satu bahasa pemrograman yang populer di zaman
-          sekarang. Bahasa pemrograman python dapat digunakan oleh pemula maupun
-          ahli dalam otomasi tugas, pembuatan game, analisis data,{" "}
-          <i>machine learning</i>, dan masih banyak lagi.
+          Python merupakan merupakan salah satu bahasa pemrograman paling banyak
+          digunakan di dunia internasional. Bagian yang unik dari bahasa python
+          adalah sifatnya yang interpretatif. Python menekankan pada keterbacaan
+          kode agar lebih mudah dipahami.
         </p>
         <p className="pt-3 pl-1">
-          Selain itu, bahasa pemrograman python mudah untuk dipahami. Mari kita
-          coba jalankan kode python di bawah ini.
+          Sehingga bahasa pemrograman python mudah dibaca oleh pemula dan dapat
+          digunakan para ahli dalam otomasi tugas, pembuatan game, analisis
+          data, <i>machine learning</i>, dan masih banyak lagi.
+        </p>
+        <p className="pt-3 pl-1">
+          Berikut ini adalah contoh bahasa pemrograman python, mari kita coba
+          perhatikan bersama-sama.
         </p>
         <Link
           href={"../playground"}

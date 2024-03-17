@@ -82,6 +82,13 @@ const variabelString = () => {
             </button>
           </div>
         </div>
+        <p className="mt-4 pl-1 text-sm">
+          Catatan: <br />
+          <code className="px-1 rounded-md bg-neutral-200">
+            print(type())
+          </code>{" "}
+          digunakan untuk menampilkan jenis data dari suatu variabel.
+        </p>
         <p className="pt-3 pl-1 mb-20">
           Salin kode diatas dan coba jalankan pada{" "}
           <Link href="../uji_kode" className="text-blue-700 underline">

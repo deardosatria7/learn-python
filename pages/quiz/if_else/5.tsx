@@ -16,7 +16,7 @@ export default function PageQuizIfElse5() {
       .value;
 
     //checking answer
-    if (jawaban1 == "Hai") {
+    if (jawaban1 == "Hola") {
       //show btn_selanjutnya when answer is correct
       setShowSelanjutnya(true);
       alert("Benar!!");
@@ -75,7 +75,7 @@ export default function PageQuizIfElse5() {
         <div className="mt-4 gap-2 bg-neutral-200 p-4 rounded-md">
           <div className="flex flex-col">
             <code>
-              x &#61; -10 <br />
+              x &#61; 0 <br />
               <br />
             </code>
             <code>
@@ -108,7 +108,7 @@ export default function PageQuizIfElse5() {
               &#41;
             </code>
             <p className="mt-7">
-              Menurut kalian, output apakah yang akan ditampilkan di terminal?
+              Output apakah yang akan ditampilkan di terminal?
               <br />
             </p>
           </div>

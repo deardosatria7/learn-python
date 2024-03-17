@@ -3,7 +3,7 @@ import Editor from "@/components/Editor";
 import Link from "next/link";
 import Footer from "@/sections/Footer";
 
-const code = "harga = 250\nprint(type(harga)) #tipe data integer/int\n";
+const code = "harga = 250\nprint(harga) #tipe data integer";
 // Function definition
 function copyCode() {
   navigator.clipboard.writeText(code);
@@ -66,8 +66,7 @@ const pagePendahuluan = () => {
             <code>
               harga &#61; <span className="text-red-600">250</span>
               <br />
-              <span className="text-violet-700">print</span>&#40;
-              <span className="text-violet-700">type</span>&#40;harga&#41;&#41;
+              <span className="text-violet-700">print</span>&#40;harga&#41;
             </code>
           </div>
           <div className="mt-6">
@@ -79,23 +78,18 @@ const pagePendahuluan = () => {
             </button>
           </div>
         </div>
-        <p className="pt-3 pl-1">
+        <p className="mt-4 pl-1 text-sm ">
+          Catatan: <br />
+          <code className="px-1 rounded-md bg-neutral-200">print()</code>{" "}
+          digunakan untuk menampilkan data dari suatu variabel.
+        </p>
+        <p className="mt-4 pl-1 mb-20">
           Salin kode diatas dan coba jalankan pada{" "}
           <Link href="../uji_kode" className="text-blue-700 underline">
             terminal ini
           </Link>
           .
         </p>
-        <p className="mt-4 pl-1 text-sm mb-20">
-          Catatan: <br />
-          <code className="px-1 rounded-md bg-neutral-200">
-            print(type())
-          </code>{" "}
-          digunakan untuk menampilkan jenis tipe data dari suatu variabel.
-        </p>
-        <div className="hidden">
-          <textarea id="codeToCopy" name="message"></textarea>
-        </div>
       </section>
 
       <Footer>

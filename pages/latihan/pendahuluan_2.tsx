@@ -86,17 +86,12 @@ const pagePendahuluan2 = () => {
             </button>
           </div>
         </div>
-        <p className="pt-3 pl-1">
+        <p className="pt-3 pl-1 mb-20">
           Salin kode diatas dan coba jalankan pada{" "}
           <Link href="../uji_kode" className="text-blue-700 underline">
             terminal ini
           </Link>
           .
-        </p>
-        <p className="mt-4 pl-1 text-sm mb-20">
-          Catatan: <br />
-          <code className="px-1 rounded-md bg-neutral-200">print</code>{" "}
-          digunakan untuk menampilkan teks ke terminal output.
         </p>
       </section>
 
