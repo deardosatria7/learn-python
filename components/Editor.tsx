@@ -6,7 +6,7 @@ const Editor = ({children}: any) => {
       <Head>
         <link
           rel="stylesheet"
-          href="https://pyscript.net/latest/pyscript.css"
+          href="https://cdn.jsdelivr.net/gh/deardosatria7/pyscript-conf/latest/pyscript.css"
         />
         <script defer src="https://pyscript.net/latest/pyscript.js"></script>
       </Head>
