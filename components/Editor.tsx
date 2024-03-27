@@ -6,12 +6,9 @@ const Editor = ({children}: any) => {
       <Head>
         <link
           rel="stylesheet"
-          href="https://cdn.jsdelivr.net/gh/deardosatria7/pyscript-conf/pyscript.css"
+          href="https://cdn.jsdelivr.net/gh/deardosatria7/pyscript-conf/src/core.css"
         />
-        <script
-          defer
-          src="https://cdn.jsdelivr.net/gh/deardosatria7/pyscript-conf/pyscript.js"
-        ></script>
+        <script defer src="https://pyscript.net/latest/pyscript.js"></script>
       </Head>
       <div>
         <div className="pt-5 pr-5 pl-5 pb-3">{children}</div>
