@@ -399,7 +399,7 @@ const PythonFor2 = () => {
                     Sebelumnya
                   </Link>
                   <Link
-                    href={"/latihan/python_for2"}
+                    href={"/latihan/coming_soon"}
                     className="text-white bg-blue-600 hover:bg-blue-500 px-4 py-2 rounded-md"
                   >
                     Selanjutnya
