@@ -10,7 +10,7 @@ const Editor = ({children}: any) => {
         />
         <script
           defer
-          src="https://cdn.jsdelivr.net/gh/deardosatria7/pyscript-configuration/latest/pyscript.min.js"
+          src="https://cdn.jsdelivr.net/gh/deardosatria7/pyscript-configuration/latest/pyscript.js"
         ></script>
       </Head>
       <div>
