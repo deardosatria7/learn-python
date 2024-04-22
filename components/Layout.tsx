@@ -14,7 +14,10 @@ const Layout = ({children}: any) => {
         />
         <meta name="keywords" content="belajar, python, gratis, indonesia" />
       </Head>
-      <section>{children}</section>
+      <section>
+        {children}
+        <Analytics />
+      </section>
     </>
   );
 };
