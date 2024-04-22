@@ -1,4 +1,5 @@
 import Header from "@/sections/Header";
+import Editor from "@/components/Editor";
 import Link from "next/link";
 import Footer from "@/sections/Footer";
 
