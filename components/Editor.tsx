@@ -4,11 +4,8 @@ const Editor = ({children}: any) => {
   return (
     <>
       <Head>
-        <link
-          rel="stylesheet"
-          href="https://cdn.jsdelivr.net/gh/deardosatria7/pyscript-configuration/latest/pyscript.min.css"
-        />
-        <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+        <link rel="stylesheet" href="../public/pyscript/core.css" />
+        <script defer type="module" src="../public/pyscript/core.js"></script>
       </Head>
       <div>
         <div className="pt-5 pr-5 pl-5 pb-3">{children}</div>
