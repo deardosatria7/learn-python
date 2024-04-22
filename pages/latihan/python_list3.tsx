@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Header from "@/sections/Header";
-import Editor from "@/components/Editor";
 import Footer from "@/sections/Footer";
 
 const code =
