@@ -24,11 +24,6 @@ const Uji_kode = () => {
               </div>
             </button>
           </div>
-          <div className="ml-5 mt-5">
-            <span className="text-neutral-500 italic">
-              Mungkin butuh beberapa detik untuk memuat.
-            </span>
-          </div>
           <div>
             <Editor>
               <div
@@ -39,6 +34,11 @@ const Uji_kode = () => {
                 }}
               />
             </Editor>
+          </div>
+          <div className="pt-5 pl-5 italic">
+            Tips: Biarkan halaman ini terbuka dilatar belakang untuk mempercepat
+            loading halaman. Mungkin memerlukan beberapa detik untuk proses
+            loading.
           </div>
           <div className="pl-5 mt-20 bg-neutral-200 px-4 py-6 rounded-md">
             <div className="font-semibold text-md">
@@ -60,7 +60,7 @@ const Uji_kode = () => {
                 <Image
                   src={tutor1}
                   layout="responsive"
-                  alt=""
+                  alt="Tutorial running kode"
                   className="max-w-lg"
                 />
               </div>
@@ -68,7 +68,7 @@ const Uji_kode = () => {
                 <Image
                   src={tutor2}
                   layout="responsive"
-                  alt=""
+                  alt="Tutorial running kode"
                   className="max-w-lg"
                 />
               </div>
