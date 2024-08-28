@@ -1,7 +1,6 @@
 import Header from "@/sections/Header";
 import Link from "next/link";
 import Footer from "@/sections/Footer";
-import OpenOrFocusTab from "@/components/HrefTerminal";
 
 const code = "harga = 250\nprint(harga) #tipe data integer";
 // Function definition
@@ -190,7 +189,10 @@ const pagePendahuluan = () => {
             </p>
             <p className="mt-4 pl-1 mb-20">
               Salin kode diatas dan coba jalankan pada{" "}
-              <OpenOrFocusTab linkText="terminal ini" />.
+              <Link href={"../uji_kode"} className="underline text-blue-500">
+                terminal
+              </Link>
+              .
             </p>
             <div className="hidden md:flex flex-row">
               <div className="flex flex-row">
